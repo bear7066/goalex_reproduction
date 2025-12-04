@@ -1,0 +1,21 @@
+{
+  "goal": "I would like to cluster them based on topic; each cluster should have a description of 'has a topic of <something>'",
+  "example_descriptions": [
+    "has a topic of what sports to do to improve your health.",
+    "has a topic of a love story between to two celebrities."
+  ],
+  "texts": [
+    "Mentioning positive online reviews accentuates personal credibility. Recommending testimonials by prior employers bolsters candidate integrity.",
+    "The animation universe prepares to welcome a captivating new creation, bound to leave viewers spellbound. The combination of mesmerizing visuals and grandiose storytelling promises to make this upcoming release truly unforgettable.",
+    "Say goodbye to sticky residues and grime: mix equal parts white vinegar and water to create a highly effective cleaning solution. Try it on glass surfaces or countertops for a quick, streak-free shine.",
+    "Implementing digital minimalism\u2014stripping away unnecessary digital distractions\u2014can generate a sharper focus on essential tasks.",
+    "Michigan State University credits its boost in rankings to the development of groundbreaking research centers and a renewed commitment to the land-grant mission.",
+    "New Zealand Prime Minister Jacinda Ardern welcomed discussions with Indian Prime Minister Narendra Modi to enhance bilateral ties in trade, defense, and climate change. Can this connection advance global goals?",
+    "Mexican President Andres Manuel Lopez Obrador and Brazilian President Jair Bolsonaro have had disagreements on numerous occasions, highlighting the ongoing tensions between the two leaders.",
+    "Utilize toothpaste to erase scuff marks on leather furniture, restoring their sleek, polished appearance.",
+    "Ben & Jerry's ongoing partnership with the Fair Trade Certified\u2122 initiative illuminates its dedication to equitable trade and labor practices. The internationally acclaimed ice cream brand shows its devotion to making a legitimate and ethical impact in the world.",
+    "The well-regarded archaeology program at Elderwood University flourishes, owing to frequent opportunities for hands-on excavation experience. As a result, the struggling anthropology department at Willow College weathers yet another blow to its reputation.",
+    "Manchester United bolsters their roster by securing rising Brazilian star Lucas Paquet\u00e1, a center forward with astonishing talent; can he help bring the Premier League title back to Old Trafford?",
+    "Canadian universities, including the University of British Columbia and McGill University, gain ground on their counterparts in the United States. The availability of government funding for research and the attraction of international faculty may be driving these advances."
+    ]
+}
