@@ -147,6 +147,7 @@ def propose_descriptions(
     if log_propose_prompt == 0:
         print("Proposer model response:")
         print(raw_response)
+        print(f"Proposer Cost: ${chat_gpt_query_model.cost:.6f}")
     if raw_response is None:
         return ClusterProposerResponse(
             descriptions=[],
@@ -243,7 +244,7 @@ def propose_descriptions_multi_round(
         else:
             example_descriptions = random.sample(
                 proposer_responses[0].descriptions,
-                len(example_descriptions) if len(example_descriptions) != 0 else 2,
+                min(len(proposer_responses[0].descriptions), len(example_descriptions) if len(example_descriptions) != 0 else 2),
             )
             proposer_response = propose_descriptions(
                 problem=problem,

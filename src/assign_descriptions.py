@@ -506,7 +506,7 @@ def assign_descriptions(
 
 
 def get_assigner(assigner_name, verbose=False, **kwargs):
-    gpt_assigner_names = ["gpt-4", "gpt-3.5-turbo", "gpt-oss-20b"]
+    gpt_assigner_names = ["gpt-4", "gpt-3.5-turbo", "gpt-oss:20b"]
     if assigner_name in gpt_assigner_names:
         return GPTAssigner(assigner_name, verbose=verbose, **kwargs)
     else:

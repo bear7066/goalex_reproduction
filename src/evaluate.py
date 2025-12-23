@@ -92,12 +92,13 @@ def evaluate(data_path, exp_dir):
         print("No samples were clustered.")
         return
 
-    nmi, ari, macro_f1 = utils_performance.get_cluster_performance(matched_gt, matched_pred)
+    nmi, ari, macro_f1, accuracy = utils_performance.get_cluster_performance(matched_gt, matched_pred)
     
     print("\nEvaluation Results (on matched texts):")
     print(f"Normalized Mutual Info (NMI): {nmi:.4f}")
     print(f"Adjusted Rand Index (ARI):    {ari:.4f}")
     print(f"Macro F1 Score:               {macro_f1:.4f}")
+    print(f"Accuracy (Hungarian):         {accuracy:.4f}")
 
     # Print mapping
     true_descriptions = label.class_descriptions

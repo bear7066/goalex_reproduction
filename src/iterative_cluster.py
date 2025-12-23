@@ -149,7 +149,18 @@ def estimate_cost_for_clustering(
         f"Each round costs {each_iteration_cost:.2f}, proposer spending {proposer_cost_per_iteration:.2f}, assigner spending {assigner_cost_per_iteration:.2f}. The final assignment costs {final_assignment_cost:.2f}."
     )
     print(f"Total cost is {total + final_assignment_cost:.2f}")
-    return total
+    cost_info = {
+        "total_cost": total + final_assignment_cost,
+        "each_iteration_cost": each_iteration_cost,
+        "proposer_cost_per_iteration": proposer_cost_per_iteration,
+        "assigner_cost_per_iteration": assigner_cost_per_iteration,
+        "final_assignment_cost": final_assignment_cost,
+        "proposer_one_prompt_tokens": proposer_one_prompt_tokens,
+        "proposer_one_completion_tokens": proposer_one_completion_tokens,
+        # Add other token counts if needed, but these are local variable and migth not be easily accessible unless we restructure more.
+        # For now, let's return the key cost components.
+    }
+    return cost_info
 
 
 def prune_descriptions(
@@ -459,7 +470,7 @@ def run(
         get_max_num_samples_in_proposer(problem.texts, proposer_model), 50
     )  # don't give too much samples
 
-    estimate_cost_for_clustering(  # arguments above
+    cost_estimate = estimate_cost_for_clustering(  # arguments above
         problem=problem,
         proposer_model=proposer_model,
         proposer_num_descriptions_to_propose=proposer_num_descriptions_to_propose,
@@ -473,6 +484,7 @@ def run(
         cluster_num_clusters=cluster_num_clusters,
         iterative_max_rounds=iterative_max_rounds,
     )
+    recorder.record_cost(cost_estimate)
     if approve_cost_before_running:
         feedback = input("Do you want to continue? (y/n)")
         if feedback != "y":
@@ -631,7 +643,7 @@ if __name__ == "__main__":
     parser.add_argument("--min_cluster_fraction", type=float, default=0.0)
     parser.add_argument("--max_cluster_fraction", type=float, default=0.4)
 
-    parser.add_argument("--proposer_model", type=str, default="gpt-oss-20b")
+    parser.add_argument("--proposer_model", type=str, default="gpt-oss:20b")
     parser.add_argument("--proposer_num_descriptions_to_propose", type=int, default=30)
     parser.add_argument("--proposer_num_rounds_to_propose", type=int, default=None)
     parser.add_argument("--proposer_num_descriptions_per_round", type=int, default=8)
@@ -641,7 +653,7 @@ if __name__ == "__main__":
         default="templates/gpt_cluster_proposer_short.txt",
     )
 
-    parser.add_argument("--assigner_name", type=str, default="gpt-oss-20b")
+    parser.add_argument("--assigner_name", type=str, default="gpt-oss:20b")
     parser.add_argument(
         "--assigner_for_proposed_descriptions_template",
         type=str,

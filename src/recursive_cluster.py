@@ -123,8 +123,8 @@ def print_taxonomy(taxonomy: Taxonomy, indent: int = 0):
 def depth2_clustering(
     problem: Problem,
     problem_id: int = -1,
-    proposer_model: str = "gpt-oss-20b",
-    assigner_name: str = "gpt-oss-20b",
+    proposer_model: str = "gpt-oss:20b",
+    assigner_name: str = "gpt-oss:20b",
     num_clusters: int = 8,
     overlap_penalty: float = 0.5,
     not_cover_penalty: float = 1,

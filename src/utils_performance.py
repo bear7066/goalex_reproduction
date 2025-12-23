@@ -153,7 +153,10 @@ def get_cluster_performance(
     macro_f1 = sklearn.metrics.f1_score(
         ground_truth_labels, max_assignment_based_labels, average="macro"
     )
-    return normalized_mutial_info, adjusted_rand_index, macro_f1
+    accuracy = sklearn.metrics.accuracy_score(
+        ground_truth_labels, max_assignment_based_labels
+    )
+    return normalized_mutial_info, adjusted_rand_index, macro_f1, accuracy
 
 
 def get_cluster_performance_generalized(ground_truth_labels, predicted_labels):

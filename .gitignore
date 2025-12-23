@@ -10,3 +10,4 @@ results
 # working on
 __pycache__ 
 scratch.txt
+.DS_Store

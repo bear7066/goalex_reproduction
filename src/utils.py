@@ -9,17 +9,21 @@ import openai
 import random
 import numpy as np
 
-openai.api_key = os.environ["OPENAI_API_KEY"]
+
+openai.api_key = os.environ.get("OPENAI_API_KEY", "")
 GPT2TOKENIZER = GPT2Tokenizer.from_pretrained("gpt2")
 
 def setup_openai_api(model_name):
-    if model_name == "gpt-oss-20b":
-        openai.api_base = os.environ.get("OPENAI_API_BASE", "http://localhost:11434/v1")
-        openai.api_key = "ollama"
+    if model_name == "gpt-oss:20b":
+        return openai.OpenAI(
+            base_url=os.environ.get("OPENAI_API_BASE", "http://127.0.0.1:11434/v1"),
+            api_key="ollama"
+        )
     else:
-        openai.api_base = "https://api.openai.com/v1"
-        openai.api_key = os.environ.get("OPENAI_API_KEY", "")
-
+        return openai.OpenAI(
+            base_url="https://api.openai.com/v1",
+            api_key=os.environ.get("OPENAI_API_KEY", "")
+        )
 
 
 DEFAULT_MESSAGE = [
@@ -50,8 +54,12 @@ def chat_gpt_wrapper(**args) -> Union[None, List[str]]:
 
     for _ in range(10):
         try:
-            setup_openai_api(args.get("model"))
-            responses = openai.ChatCompletion.create(**args)
+            client = setup_openai_api(args.get("model"))
+            # Remove model from args as it's passed to setup_openai_api but also needed for create
+            # However, client.chat.completions.create needs 'model' in args.
+            # setup_openai_api doesn't consume it from args, so it's fine.
+            
+            responses = client.chat.completions.create(**args)
             all_text_content_responses = [c.message.content for c in responses.choices]
             print(all_text_content_responses)
             return all_text_content_responses
@@ -86,8 +94,8 @@ def estimate_querying_cost(
     """
 
     if model == "gpt-3.5-turbo":
-        cost_per_prompt_token = 0.002 / 1000
-        cost_per_completion_token = 0.002 / 1000
+        cost_per_prompt_token = 0.0005 / 1000
+        cost_per_completion_token = 0.0015 / 1000
     elif model == "gpt-4":
         cost_per_prompt_token = 0.03 / 1000
         cost_per_completion_token = 0.06 / 1000
@@ -97,7 +105,7 @@ def estimate_querying_cost(
     elif model.startswith("text-davinci-"):
         cost_per_prompt_token = 0.02 / 1000
         cost_per_completion_token = 0.02 / 1000
-    elif model == "gpt-oss-20b":
+    elif model == "gpt-oss:20b":
         cost_per_prompt_token = 0
         cost_per_completion_token = 0
     else:
@@ -142,13 +150,13 @@ class ChatGPTWrapperWithCost:
 
         for _ in range(10):
             try:
-                setup_openai_api(args.get("model"))
-                responses = openai.ChatCompletion.create(**args)
+                client = setup_openai_api(args.get("model"))
+                responses = client.chat.completions.create(**args)
                 self.num_queries += 1
-                self.num_tokens += responses.usage["total_tokens"]
+                self.num_tokens += responses.usage.total_tokens
                 self.cost += estimate_querying_cost(
-                    responses.usage["prompt_tokens"],
-                    responses.usage["completion_tokens"],
+                    responses.usage.prompt_tokens,
+                    responses.usage.completion_tokens,
                     args["model"],
                 )
                 all_text_content_responses = [
@@ -164,7 +172,7 @@ class ChatGPTWrapperWithCost:
         return None
 
 
-def gpt3wrapper(max_repeat=20, **arguments) -> Union[None, openai.Completion]:
+def gpt3wrapper(max_repeat=20, **arguments) -> Union[None, object]:
     """
     A wrapper for openai.Completion.create() that retries 20 times if it fails.
 
@@ -185,8 +193,8 @@ def gpt3wrapper(max_repeat=20, **arguments) -> Union[None, openai.Completion]:
     while i < max_repeat:
         try:
             start_time = time.time()
-            setup_openai_api(arguments.get("model"))
-            response = openai.Completion.create(**arguments)
+            client = setup_openai_api(arguments.get("model"))
+            response = client.completions.create(**arguments)
             end_time = time.time()
             # print('completed one query in', end_time - start_time)
             return response
@@ -222,9 +230,9 @@ def gpt3wrapper_texts(max_repeat=20, **arguments) -> Union[None, str, List[str]]
     if response is None:
         return None
     if type(arguments["prompt"]) == list:
-        return [r["text"] for r in response["choices"]]
+        return [r.text for r in response.choices]
     else:
-        return response["choices"][0]["text"]
+        return response.choices[0].text
 
 
 def gpt3wrapper_texts_batch_iter(max_repeat=20, bsize=20, verbose=False, **arguments):
@@ -248,8 +256,6 @@ def gpt3wrapper_texts_batch_iter(max_repeat=20, bsize=20, verbose=False, **argum
         The response from the API.
     """
 
-    openai.api_key = os.environ["OPENAI_API_KEY"]
-
     # make sure the prompt is a list
     prompt = arguments["prompt"]
     assert type(prompt) == list
@@ -269,7 +275,7 @@ def gpt3wrapper_texts_batch_iter(max_repeat=20, bsize=20, verbose=False, **argum
             for _ in range(len(arg_copy["prompt"])):
                 yield None
         else:
-            for text in [r["text"] for r in response["choices"]]:
+            for text in [r.text for r in response.choices]:
                 yield text
 
 
@@ -321,8 +327,8 @@ def get_context_length(model: str) -> int:
         return 32000
     elif model == "gpt-3.5-turbo":
         return 4096
-    elif model == "gpt-oss-20b":
-        return 4096
+    elif model == "gpt-oss:20b":
+        return 2048
     else:
         raise ValueError(f"Unknown model {model}")
 

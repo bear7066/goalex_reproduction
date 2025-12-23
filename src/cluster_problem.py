@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 from dataclasses import dataclass
 from dataclasses_json import dataclass_json
 
@@ -8,7 +8,7 @@ from dataclasses_json import dataclass_json
 class ClusterProblem:
     goal: str
     texts: List[str]
-    example_descriptions: List[str] = None
+    example_descriptions: Optional[List[str]] = None
 
 
 @dataclass_json

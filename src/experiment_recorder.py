@@ -69,6 +69,7 @@ class ExperimentRecorder:
                 normalized_mutial_info,
                 adjusted_rand_index,
                 macro_f1,
+                accuracy,
             ) = utils_performance.get_cluster_performance(
                 labels[~unmatched_text_indices],
                 cluster_predictions[~unmatched_text_indices],
@@ -79,6 +80,7 @@ class ExperimentRecorder:
                 normalized_mutial_info,
                 adjusted_rand_index,
                 macro_f1,
+                accuracy,
             )
             true_descriptions = self.label.class_descriptions
             _, mapping = utils_performance.assign_labels(
@@ -112,6 +114,7 @@ class ExperimentRecorder:
                         "normalized_mutial_info": normalized_mutial_info,
                         "adjusted_rand_index": adjusted_rand_index,
                         "macro_f1": macro_f1,
+                        "accuracy": accuracy,
                         "mapped_descriptions": mapped_descriptions,
                         "num_unmatched_text_indices": np.sum(
                             unmatched_text_indices
@@ -131,6 +134,10 @@ class ExperimentRecorder:
                 },
                 f,
             )
+
+    def record_cost(self, cost_estimate):
+        with open(os.path.join(self.output_dir, "cost_estimate.json"), "w") as f:
+            json.dump(cost_estimate, f, indent=2)
 
     def next_iteration(self):
         self.iteration += 1
