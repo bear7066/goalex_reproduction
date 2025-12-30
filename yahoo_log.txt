@@ -1,0 +1,693 @@
+10hrs
+Unmatched count: 372 -> 295
+
+Here's a rough estimate of the cost; it might not be accurate and we are not responsible for any cost incurred.
+Each round costs 1.98, proposer spending 0.01, assigner spending 1.97. The final assignment costs 0.00.
+Total cost is 3.96
+Do you want to continue? (y/n)Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. how am i got to get a list of phone numbers from telekom malaysia? i want a 2006 list of phone numbers that has been provided by telekom Malaysia in selangor. 1. Consult the thick yellowpages, or\n2. Browse www.yellowpages.com.my\n\nHope the above helps....\nOh..btw.... watch your grammar...and sentence structure..\nDid u mean... a list of 2006 (different) phone numbers, or list of phone numbers for year 2006?
+1. I kissed my boyfriend at school. I came home to re-imagine it. I closed my eyes and saw me kissing another guy This is not the first time I re-imagined me and my boyfriend kiss, but it's the first time that I went to do it and another guy came up as him. What can possible be making these allusions? You're going insane...?
+2. why do men cheat then have the audacity to lie about it to your face? (*) Because men are cowards.  We would rather cut off our right arm than admit we don't or no longer love you.\n(*) Because men (and women) have this stupid thing called pride, and it gets in the way.  'Pride cometh before a fall.'\n(*) Because men really hate to admin they are wrong, even when they know they are wrong.  Even when they know you know they are wrong.  Think: getting lost and asking for directions.  It's normally the girl who asks, right?\n(*) Because they (mistakenly) believe the lie will cause you less pain than the (whole / half) truth.\n\nShould you wish to discuss specifics, get back to me, as I've just been there, and might be able to relate.
+3. How will you meet the love of your life? My scenario: \nI will meet them probably at some bad social function/occasion i'm forced to go too. I'll be in the back by the punch bowl. The love of my life will be like "this really sucks, I was dragged to this.." "I'd be like yeah..this sucks.." We'll both be really cynical and antisocial. It will be fate. IM SURE IT WILL BE SOME1 THAT IM FIGHTING WITH FOR W/E REASON,IM A FIESTY MAMA! LOL I LIKE SOME1 TO CHALLENGE ME,THAT INTRIGUES ME,ESP IF THEY CAN PROVE THEIR POINT,TO WHERE IM LOST FOR WORDS,THAT WILL BE HIM! LOL CRAZY HUH?
+4. Who would u perfer having sex with Hillary Duff or Brittany Spears? Yuck. Neither. Britney Spears was hot a few years ago, but definitely not now. And I've never seen the appeal in Hillary Duff.
+5. why do woman cheat on there husband or boyfriend and dont reply we dont cheat? A+ for Genuwine.\nNobody's a saint.  Some cheat, some don't.  Some are men, some are women.\nGet over it.
+6. who is the most sexiest music singer ever??!? anybody you tell me! female i say jennifer lopez she has a booty \nmale i say deangelo there is not a soul alive who couldnt help but drool when they saw that video how does it feel when he was naked
+7. I was just trying to be honest with him...How do I get him back?? AFTER 6 MONTHS OF US BEING TOGETHER I FOUND OUT THAT FOR THE FIRST WEEK WE WERE TOGETHER HE WAS STILL WITH HIS EX. OF COURSE I GOT REALLY UPSET SO I BROKE UP WITH HIM. ABOUT TWO WEEKS AFTER THAT ONE OF HIS FRIENDS AND I STARTED TALKING AND AFTER THAT WE KIND OF DEVELOPED A "RELATIONSHIP" BUT TO ME IT WASNT SERIOUS AT ALL BECAUSE THE ONLY REASON WHY I EVEN STARED TALKING TO HIM WAS BECAUSE I WAS HURT ABOUT MY EX AT THE TIME HAD "CHEATED" ON ME. WE EVENTUALLY GOT BACK TOGETHER AND I DECIDED TO TELL HIM ABOUT ME N HIS FRIEND. HE TOOK IT EXTREMELY OUT OF PROPORTION AND BROKE UP WITH ME. A YEAR AND 1/2 OF ME N HIM WAS ALL THROWN AWAY BECAUSE I DECIDED TO BE HONEST WITH HIM. WHAT SHOULD I DO I LOVE HIM AND I KNOW HW STILL LOVES ME BUT HE SAID THAT HE DOESNT THINK ANYTHING CAN MAKE UP FOR WHAT I DID. WHEN IN REALITY I DIDNT REALLY DO ANYTHING...KIND OF. OH YEAH AND HE CALLED ME LAST NIGHT BUT I MISSED HIS CALL AND WHEN I CALLED BACK HE IGNORED IT. I NEED HELP ASAP!! Ok...this sounds like the same stuff that I have went through before..Bottom line is ..it was ok as far as he was concerned to do what he did..but when you got him back and was honest he had a problem with it...Girl..Im glad to hear you did this to him. He is a jerk that thinks its ok for men to just f around on women but you showed his a s s didnt you..YOU GO GIRL!! I know you still care for him and thats normal...Just stay cool..he will come around..but in the meantime talk to as many guys as u can...
+8. Ladies, choose one - Mr. Sex or Mr. Nice Guy? Ladies, just trying to figure out what's really important to you. Which guy would you have (cant have both) forever? Choose between the guys described below:\n\nMr. Sex - This guys knows how to do you right and is exciting, adventurous and handsome. He's the best you have ever bedded. He doesn't have a steady job, you suspect he cheats on you, he's not into the 'mushy stuff' like buying you flowers. \n\nMr. Nice Guy - This guy is the nicest person you know, treats you like a lady, remembers your birthday, genuinely cares for you and will make a good responsible father. He has a good 8 to 5 office job. He's also not good in bed at all (cant take u to orgasm except by cunniligu.s.), he's too "goody goody" and generally not 'manly' in the traditional sense. \n\nChoose one of the guys and explain why Neither!!!! Maybe that's why I am still single, but I am waiting for the guy that is nice and can rock my world. Settling for Mr. Sex can lead to heartache and Mr. Nice guy probably gets a lot of girls married but it's probably why there is so much cheating going on. Women settle then can't contain themselves when the one they should have waited for comes along. I also think this is why women get accused of being much less interested in sex than their husbands. They settle for Mr. Nice guy but the sex sucks so it's "honey I got a headache" when it comes to booty time. I rather be alone than in bad (Mr. sex) or lousy (Mr. Nice guy) company.
+9. can anyone help me to get a new boyfriend? i am really getting mad with all this ruts in my all the old boyfriends please help me get someone new i am really fed up of all of them now. hi there, depending what you for in a guy and what u are looking for, tyr not too look at the same type of people, or maybe try looking in a different social group?
+10. If ur boyfriend of  5yrs found out u cheated on him&stayed w/u,is it ok for him to always use it against u? This happened almost 3yrs. ago. & After he found out,he wanted to stay with me. We are still together now,but he uses it against me all the time. Any time we have an argument,he throws it in my face. It doesn't matter if he is right or wrong,when it comes down to it everything is my fault because of what I did. Shouldn't he leave if he isn't happy? I can understand how he would feel hurt and angry towards you, however, since he chose to stay with you after finding out, he needs to come to terms with his feelings.  If he can't then he's not being fair to you or to himself.  He either needs to let it go, or if he can not, then he needs to let you go.
+11. can any one.....................? tell me wat is the biggest fright you eva got seeing u in the morning hhhhhh im kidding u look sweet from ur name ;-)\n\nfor me sometimes its dark and graves in the night
+12. Do guys in general NOT like girls who are "plain" ? I'm a girl who is shy (not as shy as I was in hs but I can approach strangers & ask them Qs... depends on what the Q is, like today I was asking peeps if they wanted to buy a ticket for Countryfest) & I sometimes dress plain & don't really do anything fancy w/ my hair. I don't have many friends & when I go to the bar I go to visit my friend Chris who works there. How many guys actually care bout personality ? Some have said that I could have my pick of any guy... but since I'm very picky there aren't a whole lot to choose fr anywayz. I don't smoke, drink or do drugs. A lot of peeps who I know do @ least one of those things. And why are guys so in to looks ? I'm skinny but "plain." You're exhibiting the lack of the #1 quality that us men devour; confidence.  It's hard being a woman I would imagine when you're constantly bombarded with what society thinks is attractive and desirable; and even that changes year-to-year so even Eva Longoria will be plain in a couple of years.\n\nConfidence does not come with make-up, clothing, or other earthy trappings.  It's something you build up over time when you get to understand who you are.\n\nThe quickest path to getting confidence is to stop wasting energy on what the world thinks of you and spend time on caring about what you think of you.  Once you love yourself, it will exude in a way that convinces other people they should be confident about you as well.
+13. Love Problems? i am in love with one of my friend she is amazing and i know that i love her my problem is that she was the fiance of my best friend who died in march. i promised him that i would look after her and help her but now i'm finding myself loving her. i don't know what to do on the one hand i love her and on the other i don't want to lose her as a friend \n\ni haven't spoken to my friend about my feelings i see her every weekend and we always have a great time together. What's happening seems natural. \nSince you told your friend that you would take care of her, you have to really carefully analyze whether what you feel could last forever, or whether it's just passion, as if it were just a momentary desire for her, you would break the promise made to your friend. \nI think that, if you really love her, and want to spend your time with her, there is nothing wrong, and nothing that interferes with the promise made to your friend. \nThe next step is the difficult one, which is bringing the subject up to her and having her feel the same for you. \nIf you have been getting together very often she probably will end up sharing your feelings, and wanting to be with you in a more complete way. You have to be very sensitive, though: if you friend died only this march, she's probably not at all ready to take on another relationship. Even if she thought she were, it could be an illusion, or just a desire to be fine again. \nPeople need some time to fully recover from shocks as the death of someone loved, and don't get back to their normal selves (although they sometimes are not really aware of this) until some time has gone by. \nGive things time, and take them with a lot of patience: always show her your love, but don't ask her to love you back until she's ready, and don't bring the issue up until she shows you some hints pointing at her love for you.\nGood luck, and best wishes.
+14. Why is my exs ex best friend still trying to get with me? Ok so over the long weekend me and my exs at the time best friend did stuff and my ex found out about it and was mad at us both and then yesterday my ex told me she wanted to fix things between us. I asked her why did she give me another chance and not her friend and she told me to leave it and be happy. So today her ex best friend starts hitting on me again telling me how she always wanted and stuff. I dont get caz two months ago she was calling me names and saying she wasnt impressed with me. So why now, why the changed in attitdue about me? Why is she trying to get me to be her bf? What should I do? she's desperate
+15. I need help finding my biological mom any suggestions on what to do and how to do it? Any one willing to help? do you have your biological mother's full name and possibly her address? maybe you can get information like these first, then probably try to get her number of her friends' or relatives' numbers.\n\ni think you should approach radio stations or any organization who does public services.\n\nor if you could be bolder or braver, and would want to go more public, you can contact maury povich, so you can be on his show. i've watched some people looking for their biological parent/s there and he was able to help some of them. if you're interested on this, you can go to his website: http://www.mauryshow.com/\n\ngood luck. i hope you'll find your mother.
+16. Would you Cheat if you were me? I have 2 ex girl friends coming to my party on Friday, and my current girlfriend is away for a week and I know I can definatly get away with it... I do love latest girl friend alot though??? NOPE!
+
+Here is our goal: Represent the content types of QA documents for clustering, such as  Business, Society , Mathematics, Computer, Sports, Music, Politics, Government, Health. Please cluster them into 10 groups, with each group containing at least 3 items and representing a distinct content type. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"inquires about finding people"
+"seeks advice on personal matters"
+
+
+Again, here's the goal: Represent the content types of QA documents for clustering, such as  Business, Society , Mathematics, Computer, Sports, Music, Politics, Government, Health. Please cluster them into 10 groups, with each group containing at least 3 items and representing a distinct content type.. Your responses are:
+- "
+Proposer model response:
+['- "asks for relationship advice"\n- "discusses infidelity in relationships"\n- "seeks help in finding biological relatives"\n- "inquires about love and friendship dynamics"\n- "discusses preferences in romantic partners"\n- "asks for opinions on choosing between partners"\n- "seeks advice on handling past relationship issues"\n- "discusses loyalty and trust in relationships"\n- "inquires about cheating in relationships"\n- "asks for opinions on relationship dilemmas"']
+Proposer Cost: $0.001870
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. How will you meet the love of your life? My scenario: \nI will meet them probably at some bad social function/occasion i'm forced to go too. I'll be in the back by the punch bowl. The love of my life will be like "this really sucks, I was dragged to this.." "I'd be like yeah..this sucks.." We'll both be really cynical and antisocial. It will be fate. IM SURE IT WILL BE SOME1 THAT IM FIGHTING WITH FOR W/E REASON,IM A FIESTY MAMA! LOL I LIKE SOME1 TO CHALLENGE ME,THAT INTRIGUES ME,ESP IF THEY CAN PROVE THEIR POINT,TO WHERE IM LOST FOR WORDS,THAT WILL BE HIM! LOL CRAZY HUH?
+1. I kissed my boyfriend at school. I came home to re-imagine it. I closed my eyes and saw me kissing another guy This is not the first time I re-imagined me and my boyfriend kiss, but it's the first time that I went to do it and another guy came up as him. What can possible be making these allusions? You're going insane...?
+2. why do men cheat then have the audacity to lie about it to your face? (*) Because men are cowards.  We would rather cut off our right arm than admit we don't or no longer love you.\n(*) Because men (and women) have this stupid thing called pride, and it gets in the way.  'Pride cometh before a fall.'\n(*) Because men really hate to admin they are wrong, even when they know they are wrong.  Even when they know you know they are wrong.  Think: getting lost and asking for directions.  It's normally the girl who asks, right?\n(*) Because they (mistakenly) believe the lie will cause you less pain than the (whole / half) truth.\n\nShould you wish to discuss specifics, get back to me, as I've just been there, and might be able to relate.
+3. I need help finding my biological mom any suggestions on what to do and how to do it? Any one willing to help? do you have your biological mother's full name and possibly her address? maybe you can get information like these first, then probably try to get her number of her friends' or relatives' numbers.\n\ni think you should approach radio stations or any organization who does public services.\n\nor if you could be bolder or braver, and would want to go more public, you can contact maury povich, so you can be on his show. i've watched some people looking for their biological parent/s there and he was able to help some of them. if you're interested on this, you can go to his website: http://www.mauryshow.com/\n\ngood luck. i hope you'll find your mother.
+4. Why is my exs ex best friend still trying to get with me? Ok so over the long weekend me and my exs at the time best friend did stuff and my ex found out about it and was mad at us both and then yesterday my ex told me she wanted to fix things between us. I asked her why did she give me another chance and not her friend and she told me to leave it and be happy. So today her ex best friend starts hitting on me again telling me how she always wanted and stuff. I dont get caz two months ago she was calling me names and saying she wasnt impressed with me. So why now, why the changed in attitdue about me? Why is she trying to get me to be her bf? What should I do? she's desperate
+5. who is the most sexiest music singer ever??!? anybody you tell me! female i say jennifer lopez she has a booty \nmale i say deangelo there is not a soul alive who couldnt help but drool when they saw that video how does it feel when he was naked
+6. Would you Cheat if you were me? I have 2 ex girl friends coming to my party on Friday, and my current girlfriend is away for a week and I know I can definatly get away with it... I do love latest girl friend alot though??? NOPE!
+7. how am i got to get a list of phone numbers from telekom malaysia? i want a 2006 list of phone numbers that has been provided by telekom Malaysia in selangor. 1. Consult the thick yellowpages, or\n2. Browse www.yellowpages.com.my\n\nHope the above helps....\nOh..btw.... watch your grammar...and sentence structure..\nDid u mean... a list of 2006 (different) phone numbers, or list of phone numbers for year 2006?
+8. Do guys in general NOT like girls who are "plain" ? I'm a girl who is shy (not as shy as I was in hs but I can approach strangers & ask them Qs... depends on what the Q is, like today I was asking peeps if they wanted to buy a ticket for Countryfest) & I sometimes dress plain & don't really do anything fancy w/ my hair. I don't have many friends & when I go to the bar I go to visit my friend Chris who works there. How many guys actually care bout personality ? Some have said that I could have my pick of any guy... but since I'm very picky there aren't a whole lot to choose fr anywayz. I don't smoke, drink or do drugs. A lot of peeps who I know do @ least one of those things. And why are guys so in to looks ? I'm skinny but "plain." You're exhibiting the lack of the #1 quality that us men devour; confidence.  It's hard being a woman I would imagine when you're constantly bombarded with what society thinks is attractive and desirable; and even that changes year-to-year so even Eva Longoria will be plain in a couple of years.\n\nConfidence does not come with make-up, clothing, or other earthy trappings.  It's something you build up over time when you get to understand who you are.\n\nThe quickest path to getting confidence is to stop wasting energy on what the world thinks of you and spend time on caring about what you think of you.  Once you love yourself, it will exude in a way that convinces other people they should be confident about you as well.
+9. Ladies, choose one - Mr. Sex or Mr. Nice Guy? Ladies, just trying to figure out what's really important to you. Which guy would you have (cant have both) forever? Choose between the guys described below:\n\nMr. Sex - This guys knows how to do you right and is exciting, adventurous and handsome. He's the best you have ever bedded. He doesn't have a steady job, you suspect he cheats on you, he's not into the 'mushy stuff' like buying you flowers. \n\nMr. Nice Guy - This guy is the nicest person you know, treats you like a lady, remembers your birthday, genuinely cares for you and will make a good responsible father. He has a good 8 to 5 office job. He's also not good in bed at all (cant take u to orgasm except by cunniligu.s.), he's too "goody goody" and generally not 'manly' in the traditional sense. \n\nChoose one of the guys and explain why Neither!!!! Maybe that's why I am still single, but I am waiting for the guy that is nice and can rock my world. Settling for Mr. Sex can lead to heartache and Mr. Nice guy probably gets a lot of girls married but it's probably why there is so much cheating going on. Women settle then can't contain themselves when the one they should have waited for comes along. I also think this is why women get accused of being much less interested in sex than their husbands. They settle for Mr. Nice guy but the sex sucks so it's "honey I got a headache" when it comes to booty time. I rather be alone than in bad (Mr. sex) or lousy (Mr. Nice guy) company.
+10. If ur boyfriend of  5yrs found out u cheated on him&stayed w/u,is it ok for him to always use it against u? This happened almost 3yrs. ago. & After he found out,he wanted to stay with me. We are still together now,but he uses it against me all the time. Any time we have an argument,he throws it in my face. It doesn't matter if he is right or wrong,when it comes down to it everything is my fault because of what I did. Shouldn't he leave if he isn't happy? I can understand how he would feel hurt and angry towards you, however, since he chose to stay with you after finding out, he needs to come to terms with his feelings.  If he can't then he's not being fair to you or to himself.  He either needs to let it go, or if he can not, then he needs to let you go.
+11. can any one.....................? tell me wat is the biggest fright you eva got seeing u in the morning hhhhhh im kidding u look sweet from ur name ;-)\n\nfor me sometimes its dark and graves in the night
+12. I was just trying to be honest with him...How do I get him back?? AFTER 6 MONTHS OF US BEING TOGETHER I FOUND OUT THAT FOR THE FIRST WEEK WE WERE TOGETHER HE WAS STILL WITH HIS EX. OF COURSE I GOT REALLY UPSET SO I BROKE UP WITH HIM. ABOUT TWO WEEKS AFTER THAT ONE OF HIS FRIENDS AND I STARTED TALKING AND AFTER THAT WE KIND OF DEVELOPED A "RELATIONSHIP" BUT TO ME IT WASNT SERIOUS AT ALL BECAUSE THE ONLY REASON WHY I EVEN STARED TALKING TO HIM WAS BECAUSE I WAS HURT ABOUT MY EX AT THE TIME HAD "CHEATED" ON ME. WE EVENTUALLY GOT BACK TOGETHER AND I DECIDED TO TELL HIM ABOUT ME N HIS FRIEND. HE TOOK IT EXTREMELY OUT OF PROPORTION AND BROKE UP WITH ME. A YEAR AND 1/2 OF ME N HIM WAS ALL THROWN AWAY BECAUSE I DECIDED TO BE HONEST WITH HIM. WHAT SHOULD I DO I LOVE HIM AND I KNOW HW STILL LOVES ME BUT HE SAID THAT HE DOESNT THINK ANYTHING CAN MAKE UP FOR WHAT I DID. WHEN IN REALITY I DIDNT REALLY DO ANYTHING...KIND OF. OH YEAH AND HE CALLED ME LAST NIGHT BUT I MISSED HIS CALL AND WHEN I CALLED BACK HE IGNORED IT. I NEED HELP ASAP!! Ok...this sounds like the same stuff that I have went through before..Bottom line is ..it was ok as far as he was concerned to do what he did..but when you got him back and was honest he had a problem with it...Girl..Im glad to hear you did this to him. He is a jerk that thinks its ok for men to just f around on women but you showed his a s s didnt you..YOU GO GIRL!! I know you still care for him and thats normal...Just stay cool..he will come around..but in the meantime talk to as many guys as u can...
+13. Love Problems? i am in love with one of my friend she is amazing and i know that i love her my problem is that she was the fiance of my best friend who died in march. i promised him that i would look after her and help her but now i'm finding myself loving her. i don't know what to do on the one hand i love her and on the other i don't want to lose her as a friend \n\ni haven't spoken to my friend about my feelings i see her every weekend and we always have a great time together. What's happening seems natural. \nSince you told your friend that you would take care of her, you have to really carefully analyze whether what you feel could last forever, or whether it's just passion, as if it were just a momentary desire for her, you would break the promise made to your friend. \nI think that, if you really love her, and want to spend your time with her, there is nothing wrong, and nothing that interferes with the promise made to your friend. \nThe next step is the difficult one, which is bringing the subject up to her and having her feel the same for you. \nIf you have been getting together very often she probably will end up sharing your feelings, and wanting to be with you in a more complete way. You have to be very sensitive, though: if you friend died only this march, she's probably not at all ready to take on another relationship. Even if she thought she were, it could be an illusion, or just a desire to be fine again. \nPeople need some time to fully recover from shocks as the death of someone loved, and don't get back to their normal selves (although they sometimes are not really aware of this) until some time has gone by. \nGive things time, and take them with a lot of patience: always show her your love, but don't ask her to love you back until she's ready, and don't bring the issue up until she shows you some hints pointing at her love for you.\nGood luck, and best wishes.
+14. Who would u perfer having sex with Hillary Duff or Brittany Spears? Yuck. Neither. Britney Spears was hot a few years ago, but definitely not now. And I've never seen the appeal in Hillary Duff.
+15. why do woman cheat on there husband or boyfriend and dont reply we dont cheat? A+ for Genuwine.\nNobody's a saint.  Some cheat, some don't.  Some are men, some are women.\nGet over it.
+16. can anyone help me to get a new boyfriend? i am really getting mad with all this ruts in my all the old boyfriends please help me get someone new i am really fed up of all of them now. hi there, depending what you for in a guy and what u are looking for, tyr not too look at the same type of people, or maybe try looking in a different social group?
+
+Here is our goal: Represent the content types of QA documents for clustering, such as  Business, Society , Mathematics, Computer, Sports, Music, Politics, Government, Health. Please cluster them into 10 groups, with each group containing at least 3 items and representing a distinct content type. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"seeks advice on personal matters"
+"- "discusses relationship issues"
+
+
+Again, here's the goal: Represent the content types of QA documents for clustering, such as  Business, Society , Mathematics, Computer, Sports, Music, Politics, Government, Health. Please cluster them into 10 groups, with each group containing at least 3 items and representing a distinct content type.. Your responses are:
+- "
+Proposer model response:
+['"discusses relationship issues"\n- "seeks advice on personal matters"\n- "analyzes societal norms and behaviors"\n- "explores ethical dilemmas in relationships"\n- "discusses challenges in finding biological family members"\n- "seeks advice on infidelity"\n- "discusses preferences in relationships"\n- "seeks advice on handling past mistakes in relationships"\n- "explores love and friendship dynamics"\n- "discusses challenges in love relationships"']
+Proposer Cost: $0.001867
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. Who would u perfer having sex with Hillary Duff or Brittany Spears? Yuck. Neither. Britney Spears was hot a few years ago, but definitely not now. And I've never seen the appeal in Hillary Duff.
+1. how am i got to get a list of phone numbers from telekom malaysia? i want a 2006 list of phone numbers that has been provided by telekom Malaysia in selangor. 1. Consult the thick yellowpages, or\n2. Browse www.yellowpages.com.my\n\nHope the above helps....\nOh..btw.... watch your grammar...and sentence structure..\nDid u mean... a list of 2006 (different) phone numbers, or list of phone numbers for year 2006?
+2. I need help finding my biological mom any suggestions on what to do and how to do it? Any one willing to help? do you have your biological mother's full name and possibly her address? maybe you can get information like these first, then probably try to get her number of her friends' or relatives' numbers.\n\ni think you should approach radio stations or any organization who does public services.\n\nor if you could be bolder or braver, and would want to go more public, you can contact maury povich, so you can be on his show. i've watched some people looking for their biological parent/s there and he was able to help some of them. if you're interested on this, you can go to his website: http://www.mauryshow.com/\n\ngood luck. i hope you'll find your mother.
+3. Do guys in general NOT like girls who are "plain" ? I'm a girl who is shy (not as shy as I was in hs but I can approach strangers & ask them Qs... depends on what the Q is, like today I was asking peeps if they wanted to buy a ticket for Countryfest) & I sometimes dress plain & don't really do anything fancy w/ my hair. I don't have many friends & when I go to the bar I go to visit my friend Chris who works there. How many guys actually care bout personality ? Some have said that I could have my pick of any guy... but since I'm very picky there aren't a whole lot to choose fr anywayz. I don't smoke, drink or do drugs. A lot of peeps who I know do @ least one of those things. And why are guys so in to looks ? I'm skinny but "plain." You're exhibiting the lack of the #1 quality that us men devour; confidence.  It's hard being a woman I would imagine when you're constantly bombarded with what society thinks is attractive and desirable; and even that changes year-to-year so even Eva Longoria will be plain in a couple of years.\n\nConfidence does not come with make-up, clothing, or other earthy trappings.  It's something you build up over time when you get to understand who you are.\n\nThe quickest path to getting confidence is to stop wasting energy on what the world thinks of you and spend time on caring about what you think of you.  Once you love yourself, it will exude in a way that convinces other people they should be confident about you as well.
+4. why do men cheat then have the audacity to lie about it to your face? (*) Because men are cowards.  We would rather cut off our right arm than admit we don't or no longer love you.\n(*) Because men (and women) have this stupid thing called pride, and it gets in the way.  'Pride cometh before a fall.'\n(*) Because men really hate to admin they are wrong, even when they know they are wrong.  Even when they know you know they are wrong.  Think: getting lost and asking for directions.  It's normally the girl who asks, right?\n(*) Because they (mistakenly) believe the lie will cause you less pain than the (whole / half) truth.\n\nShould you wish to discuss specifics, get back to me, as I've just been there, and might be able to relate.
+5. Would you Cheat if you were me? I have 2 ex girl friends coming to my party on Friday, and my current girlfriend is away for a week and I know I can definatly get away with it... I do love latest girl friend alot though??? NOPE!
+6. can anyone help me to get a new boyfriend? i am really getting mad with all this ruts in my all the old boyfriends please help me get someone new i am really fed up of all of them now. hi there, depending what you for in a guy and what u are looking for, tyr not too look at the same type of people, or maybe try looking in a different social group?
+7. How will you meet the love of your life? My scenario: \nI will meet them probably at some bad social function/occasion i'm forced to go too. I'll be in the back by the punch bowl. The love of my life will be like "this really sucks, I was dragged to this.." "I'd be like yeah..this sucks.." We'll both be really cynical and antisocial. It will be fate. IM SURE IT WILL BE SOME1 THAT IM FIGHTING WITH FOR W/E REASON,IM A FIESTY MAMA! LOL I LIKE SOME1 TO CHALLENGE ME,THAT INTRIGUES ME,ESP IF THEY CAN PROVE THEIR POINT,TO WHERE IM LOST FOR WORDS,THAT WILL BE HIM! LOL CRAZY HUH?
+8. can any one.....................? tell me wat is the biggest fright you eva got seeing u in the morning hhhhhh im kidding u look sweet from ur name ;-)\n\nfor me sometimes its dark and graves in the night
+9. why do woman cheat on there husband or boyfriend and dont reply we dont cheat? A+ for Genuwine.\nNobody's a saint.  Some cheat, some don't.  Some are men, some are women.\nGet over it.
+10. I kissed my boyfriend at school. I came home to re-imagine it. I closed my eyes and saw me kissing another guy This is not the first time I re-imagined me and my boyfriend kiss, but it's the first time that I went to do it and another guy came up as him. What can possible be making these allusions? You're going insane...?
+11. Why is my exs ex best friend still trying to get with me? Ok so over the long weekend me and my exs at the time best friend did stuff and my ex found out about it and was mad at us both and then yesterday my ex told me she wanted to fix things between us. I asked her why did she give me another chance and not her friend and she told me to leave it and be happy. So today her ex best friend starts hitting on me again telling me how she always wanted and stuff. I dont get caz two months ago she was calling me names and saying she wasnt impressed with me. So why now, why the changed in attitdue about me? Why is she trying to get me to be her bf? What should I do? she's desperate
+12. who is the most sexiest music singer ever??!? anybody you tell me! female i say jennifer lopez she has a booty \nmale i say deangelo there is not a soul alive who couldnt help but drool when they saw that video how does it feel when he was naked
+13. Love Problems? i am in love with one of my friend she is amazing and i know that i love her my problem is that she was the fiance of my best friend who died in march. i promised him that i would look after her and help her but now i'm finding myself loving her. i don't know what to do on the one hand i love her and on the other i don't want to lose her as a friend \n\ni haven't spoken to my friend about my feelings i see her every weekend and we always have a great time together. What's happening seems natural. \nSince you told your friend that you would take care of her, you have to really carefully analyze whether what you feel could last forever, or whether it's just passion, as if it were just a momentary desire for her, you would break the promise made to your friend. \nI think that, if you really love her, and want to spend your time with her, there is nothing wrong, and nothing that interferes with the promise made to your friend. \nThe next step is the difficult one, which is bringing the subject up to her and having her feel the same for you. \nIf you have been getting together very often she probably will end up sharing your feelings, and wanting to be with you in a more complete way. You have to be very sensitive, though: if you friend died only this march, she's probably not at all ready to take on another relationship. Even if she thought she were, it could be an illusion, or just a desire to be fine again. \nPeople need some time to fully recover from shocks as the death of someone loved, and don't get back to their normal selves (although they sometimes are not really aware of this) until some time has gone by. \nGive things time, and take them with a lot of patience: always show her your love, but don't ask her to love you back until she's ready, and don't bring the issue up until she shows you some hints pointing at her love for you.\nGood luck, and best wishes.
+14. I was just trying to be honest with him...How do I get him back?? AFTER 6 MONTHS OF US BEING TOGETHER I FOUND OUT THAT FOR THE FIRST WEEK WE WERE TOGETHER HE WAS STILL WITH HIS EX. OF COURSE I GOT REALLY UPSET SO I BROKE UP WITH HIM. ABOUT TWO WEEKS AFTER THAT ONE OF HIS FRIENDS AND I STARTED TALKING AND AFTER THAT WE KIND OF DEVELOPED A "RELATIONSHIP" BUT TO ME IT WASNT SERIOUS AT ALL BECAUSE THE ONLY REASON WHY I EVEN STARED TALKING TO HIM WAS BECAUSE I WAS HURT ABOUT MY EX AT THE TIME HAD "CHEATED" ON ME. WE EVENTUALLY GOT BACK TOGETHER AND I DECIDED TO TELL HIM ABOUT ME N HIS FRIEND. HE TOOK IT EXTREMELY OUT OF PROPORTION AND BROKE UP WITH ME. A YEAR AND 1/2 OF ME N HIM WAS ALL THROWN AWAY BECAUSE I DECIDED TO BE HONEST WITH HIM. WHAT SHOULD I DO I LOVE HIM AND I KNOW HW STILL LOVES ME BUT HE SAID THAT HE DOESNT THINK ANYTHING CAN MAKE UP FOR WHAT I DID. WHEN IN REALITY I DIDNT REALLY DO ANYTHING...KIND OF. OH YEAH AND HE CALLED ME LAST NIGHT BUT I MISSED HIS CALL AND WHEN I CALLED BACK HE IGNORED IT. I NEED HELP ASAP!! Ok...this sounds like the same stuff that I have went through before..Bottom line is ..it was ok as far as he was concerned to do what he did..but when you got him back and was honest he had a problem with it...Girl..Im glad to hear you did this to him. He is a jerk that thinks its ok for men to just f around on women but you showed his a s s didnt you..YOU GO GIRL!! I know you still care for him and thats normal...Just stay cool..he will come around..but in the meantime talk to as many guys as u can...
+15. Ladies, choose one - Mr. Sex or Mr. Nice Guy? Ladies, just trying to figure out what's really important to you. Which guy would you have (cant have both) forever? Choose between the guys described below:\n\nMr. Sex - This guys knows how to do you right and is exciting, adventurous and handsome. He's the best you have ever bedded. He doesn't have a steady job, you suspect he cheats on you, he's not into the 'mushy stuff' like buying you flowers. \n\nMr. Nice Guy - This guy is the nicest person you know, treats you like a lady, remembers your birthday, genuinely cares for you and will make a good responsible father. He has a good 8 to 5 office job. He's also not good in bed at all (cant take u to orgasm except by cunniligu.s.), he's too "goody goody" and generally not 'manly' in the traditional sense. \n\nChoose one of the guys and explain why Neither!!!! Maybe that's why I am still single, but I am waiting for the guy that is nice and can rock my world. Settling for Mr. Sex can lead to heartache and Mr. Nice guy probably gets a lot of girls married but it's probably why there is so much cheating going on. Women settle then can't contain themselves when the one they should have waited for comes along. I also think this is why women get accused of being much less interested in sex than their husbands. They settle for Mr. Nice guy but the sex sucks so it's "honey I got a headache" when it comes to booty time. I rather be alone than in bad (Mr. sex) or lousy (Mr. Nice guy) company.
+16. If ur boyfriend of  5yrs found out u cheated on him&stayed w/u,is it ok for him to always use it against u? This happened almost 3yrs. ago. & After he found out,he wanted to stay with me. We are still together now,but he uses it against me all the time. Any time we have an argument,he throws it in my face. It doesn't matter if he is right or wrong,when it comes down to it everything is my fault because of what I did. Shouldn't he leave if he isn't happy? I can understand how he would feel hurt and angry towards you, however, since he chose to stay with you after finding out, he needs to come to terms with his feelings.  If he can't then he's not being fair to you or to himself.  He either needs to let it go, or if he can not, then he needs to let you go.
+
+Here is our goal: Represent the content types of QA documents for clustering, such as  Business, Society , Mathematics, Computer, Sports, Music, Politics, Government, Health. Please cluster them into 10 groups, with each group containing at least 3 items and representing a distinct content type. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"inquires about finding people"
+"seeks advice on personal matters"
+
+
+Again, here's the goal: Represent the content types of QA documents for clustering, such as  Business, Society , Mathematics, Computer, Sports, Music, Politics, Government, Health. Please cluster them into 10 groups, with each group containing at least 3 items and representing a distinct content type.. Your responses are:
+- "
+Proposer model response:
+['- "discusses relationship issues"\n- "seeks advice on love and friendship"\n- "asks for opinions on cheating"\n- "inquires about finding biological relatives"\n- "discusses preferences in relationships"\n- "asks for help in finding phone numbers"\n- "seeks advice on honesty in relationships"\n- "discusses preferences in partners"\n- "seeks advice on love and loyalty"\n- "asks for opinions on choosing partners"']
+Proposer Cost: $0.001861
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. Who would u perfer having sex with Hillary Duff or Brittany Spears? Yuck. Neither. Britney Spears was hot a few years ago, but definitely not now. And I've never seen the appeal in Hillary Duff.
+1. Do guys in general NOT like girls who are "plain" ? I'm a girl who is shy (not as shy as I was in hs but I can approach strangers & ask them Qs... depends on what the Q is, like today I was asking peeps if they wanted to buy a ticket for Countryfest) & I sometimes dress plain & don't really do anything fancy w/ my hair. I don't have many friends & when I go to the bar I go to visit my friend Chris who works there. How many guys actually care bout personality ? Some have said that I could have my pick of any guy... but since I'm very picky there aren't a whole lot to choose fr anywayz. I don't smoke, drink or do drugs. A lot of peeps who I know do @ least one of those things. And why are guys so in to looks ? I'm skinny but "plain." You're exhibiting the lack of the #1 quality that us men devour; confidence.  It's hard being a woman I would imagine when you're constantly bombarded with what society thinks is attractive and desirable; and even that changes year-to-year so even Eva Longoria will be plain in a couple of years.\n\nConfidence does not come with make-up, clothing, or other earthy trappings.  It's something you build up over time when you get to understand who you are.\n\nThe quickest path to getting confidence is to stop wasting energy on what the world thinks of you and spend time on caring about what you think of you.  Once you love yourself, it will exude in a way that convinces other people they should be confident about you as well.
+2. How will you meet the love of your life? My scenario: \nI will meet them probably at some bad social function/occasion i'm forced to go too. I'll be in the back by the punch bowl. The love of my life will be like "this really sucks, I was dragged to this.." "I'd be like yeah..this sucks.." We'll both be really cynical and antisocial. It will be fate. IM SURE IT WILL BE SOME1 THAT IM FIGHTING WITH FOR W/E REASON,IM A FIESTY MAMA! LOL I LIKE SOME1 TO CHALLENGE ME,THAT INTRIGUES ME,ESP IF THEY CAN PROVE THEIR POINT,TO WHERE IM LOST FOR WORDS,THAT WILL BE HIM! LOL CRAZY HUH?
+3. who is the most sexiest music singer ever??!? anybody you tell me! female i say jennifer lopez she has a booty \nmale i say deangelo there is not a soul alive who couldnt help but drool when they saw that video how does it feel when he was naked
+4. I was just trying to be honest with him...How do I get him back?? AFTER 6 MONTHS OF US BEING TOGETHER I FOUND OUT THAT FOR THE FIRST WEEK WE WERE TOGETHER HE WAS STILL WITH HIS EX. OF COURSE I GOT REALLY UPSET SO I BROKE UP WITH HIM. ABOUT TWO WEEKS AFTER THAT ONE OF HIS FRIENDS AND I STARTED TALKING AND AFTER THAT WE KIND OF DEVELOPED A "RELATIONSHIP" BUT TO ME IT WASNT SERIOUS AT ALL BECAUSE THE ONLY REASON WHY I EVEN STARED TALKING TO HIM WAS BECAUSE I WAS HURT ABOUT MY EX AT THE TIME HAD "CHEATED" ON ME. WE EVENTUALLY GOT BACK TOGETHER AND I DECIDED TO TELL HIM ABOUT ME N HIS FRIEND. HE TOOK IT EXTREMELY OUT OF PROPORTION AND BROKE UP WITH ME. A YEAR AND 1/2 OF ME N HIM WAS ALL THROWN AWAY BECAUSE I DECIDED TO BE HONEST WITH HIM. WHAT SHOULD I DO I LOVE HIM AND I KNOW HW STILL LOVES ME BUT HE SAID THAT HE DOESNT THINK ANYTHING CAN MAKE UP FOR WHAT I DID. WHEN IN REALITY I DIDNT REALLY DO ANYTHING...KIND OF. OH YEAH AND HE CALLED ME LAST NIGHT BUT I MISSED HIS CALL AND WHEN I CALLED BACK HE IGNORED IT. I NEED HELP ASAP!! Ok...this sounds like the same stuff that I have went through before..Bottom line is ..it was ok as far as he was concerned to do what he did..but when you got him back and was honest he had a problem with it...Girl..Im glad to hear you did this to him. He is a jerk that thinks its ok for men to just f around on women but you showed his a s s didnt you..YOU GO GIRL!! I know you still care for him and thats normal...Just stay cool..he will come around..but in the meantime talk to as many guys as u can...
+5. why do men cheat then have the audacity to lie about it to your face? (*) Because men are cowards.  We would rather cut off our right arm than admit we don't or no longer love you.\n(*) Because men (and women) have this stupid thing called pride, and it gets in the way.  'Pride cometh before a fall.'\n(*) Because men really hate to admin they are wrong, even when they know they are wrong.  Even when they know you know they are wrong.  Think: getting lost and asking for directions.  It's normally the girl who asks, right?\n(*) Because they (mistakenly) believe the lie will cause you less pain than the (whole / half) truth.\n\nShould you wish to discuss specifics, get back to me, as I've just been there, and might be able to relate.
+6. I kissed my boyfriend at school. I came home to re-imagine it. I closed my eyes and saw me kissing another guy This is not the first time I re-imagined me and my boyfriend kiss, but it's the first time that I went to do it and another guy came up as him. What can possible be making these allusions? You're going insane...?
+7. Love Problems? i am in love with one of my friend she is amazing and i know that i love her my problem is that she was the fiance of my best friend who died in march. i promised him that i would look after her and help her but now i'm finding myself loving her. i don't know what to do on the one hand i love her and on the other i don't want to lose her as a friend \n\ni haven't spoken to my friend about my feelings i see her every weekend and we always have a great time together. What's happening seems natural. \nSince you told your friend that you would take care of her, you have to really carefully analyze whether what you feel could last forever, or whether it's just passion, as if it were just a momentary desire for her, you would break the promise made to your friend. \nI think that, if you really love her, and want to spend your time with her, there is nothing wrong, and nothing that interferes with the promise made to your friend. \nThe next step is the difficult one, which is bringing the subject up to her and having her feel the same for you. \nIf you have been getting together very often she probably will end up sharing your feelings, and wanting to be with you in a more complete way. You have to be very sensitive, though: if you friend died only this march, she's probably not at all ready to take on another relationship. Even if she thought she were, it could be an illusion, or just a desire to be fine again. \nPeople need some time to fully recover from shocks as the death of someone loved, and don't get back to their normal selves (although they sometimes are not really aware of this) until some time has gone by. \nGive things time, and take them with a lot of patience: always show her your love, but don't ask her to love you back until she's ready, and don't bring the issue up until she shows you some hints pointing at her love for you.\nGood luck, and best wishes.
+8. Why is my exs ex best friend still trying to get with me? Ok so over the long weekend me and my exs at the time best friend did stuff and my ex found out about it and was mad at us both and then yesterday my ex told me she wanted to fix things between us. I asked her why did she give me another chance and not her friend and she told me to leave it and be happy. So today her ex best friend starts hitting on me again telling me how she always wanted and stuff. I dont get caz two months ago she was calling me names and saying she wasnt impressed with me. So why now, why the changed in attitdue about me? Why is she trying to get me to be her bf? What should I do? she's desperate
+9. can any one.....................? tell me wat is the biggest fright you eva got seeing u in the morning hhhhhh im kidding u look sweet from ur name ;-)\n\nfor me sometimes its dark and graves in the night
+10. Ladies, choose one - Mr. Sex or Mr. Nice Guy? Ladies, just trying to figure out what's really important to you. Which guy would you have (cant have both) forever? Choose between the guys described below:\n\nMr. Sex - This guys knows how to do you right and is exciting, adventurous and handsome. He's the best you have ever bedded. He doesn't have a steady job, you suspect he cheats on you, he's not into the 'mushy stuff' like buying you flowers. \n\nMr. Nice Guy - This guy is the nicest person you know, treats you like a lady, remembers your birthday, genuinely cares for you and will make a good responsible father. He has a good 8 to 5 office job. He's also not good in bed at all (cant take u to orgasm except by cunniligu.s.), he's too "goody goody" and generally not 'manly' in the traditional sense. \n\nChoose one of the guys and explain why Neither!!!! Maybe that's why I am still single, but I am waiting for the guy that is nice and can rock my world. Settling for Mr. Sex can lead to heartache and Mr. Nice guy probably gets a lot of girls married but it's probably why there is so much cheating going on. Women settle then can't contain themselves when the one they should have waited for comes along. I also think this is why women get accused of being much less interested in sex than their husbands. They settle for Mr. Nice guy but the sex sucks so it's "honey I got a headache" when it comes to booty time. I rather be alone than in bad (Mr. sex) or lousy (Mr. Nice guy) company.
+11. how am i got to get a list of phone numbers from telekom malaysia? i want a 2006 list of phone numbers that has been provided by telekom Malaysia in selangor. 1. Consult the thick yellowpages, or\n2. Browse www.yellowpages.com.my\n\nHope the above helps....\nOh..btw.... watch your grammar...and sentence structure..\nDid u mean... a list of 2006 (different) phone numbers, or list of phone numbers for year 2006?
+12. Would you Cheat if you were me? I have 2 ex girl friends coming to my party on Friday, and my current girlfriend is away for a week and I know I can definatly get away with it... I do love latest girl friend alot though??? NOPE!
+13. can anyone help me to get a new boyfriend? i am really getting mad with all this ruts in my all the old boyfriends please help me get someone new i am really fed up of all of them now. hi there, depending what you for in a guy and what u are looking for, tyr not too look at the same type of people, or maybe try looking in a different social group?
+14. why do woman cheat on there husband or boyfriend and dont reply we dont cheat? A+ for Genuwine.\nNobody's a saint.  Some cheat, some don't.  Some are men, some are women.\nGet over it.
+15. If ur boyfriend of  5yrs found out u cheated on him&stayed w/u,is it ok for him to always use it against u? This happened almost 3yrs. ago. & After he found out,he wanted to stay with me. We are still together now,but he uses it against me all the time. Any time we have an argument,he throws it in my face. It doesn't matter if he is right or wrong,when it comes down to it everything is my fault because of what I did. Shouldn't he leave if he isn't happy? I can understand how he would feel hurt and angry towards you, however, since he chose to stay with you after finding out, he needs to come to terms with his feelings.  If he can't then he's not being fair to you or to himself.  He either needs to let it go, or if he can not, then he needs to let you go.
+16. I need help finding my biological mom any suggestions on what to do and how to do it? Any one willing to help? do you have your biological mother's full name and possibly her address? maybe you can get information like these first, then probably try to get her number of her friends' or relatives' numbers.\n\ni think you should approach radio stations or any organization who does public services.\n\nor if you could be bolder or braver, and would want to go more public, you can contact maury povich, so you can be on his show. i've watched some people looking for their biological parent/s there and he was able to help some of them. if you're interested on this, you can go to his website: http://www.mauryshow.com/\n\ngood luck. i hope you'll find your mother.
+
+Here is our goal: Represent the content types of QA documents for clustering, such as  Business, Society , Mathematics, Computer, Sports, Music, Politics, Government, Health. Please cluster them into 10 groups, with each group containing at least 3 items and representing a distinct content type. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"seeks advice on personal matters"
+"- "discusses relationship issues"
+
+
+Again, here's the goal: Represent the content types of QA documents for clustering, such as  Business, Society , Mathematics, Computer, Sports, Music, Politics, Government, Health. Please cluster them into 10 groups, with each group containing at least 3 items and representing a distinct content type.. Your responses are:
+- "
+Proposer model response:
+['"discusses relationship issues"\n- "seeks advice on personal matters"\n- "asks for opinions on ethical dilemmas"\n- "discusses celebrity gossip"\n- "seeks help on finding missing persons"\n- "asks for advice on cheating in relationships"\n- "discusses preferences in romantic partners"\n- "seeks help on legal matters"\n- "discusses societal norms and expectations"\n- "asks for opinions on moral values"']
+Proposer Cost: $0.001860
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. If ur boyfriend of  5yrs found out u cheated on him&stayed w/u,is it ok for him to always use it against u? This happened almost 3yrs. ago. & After he found out,he wanted to stay with me. We are still together now,but he uses it against me all the time. Any time we have an argument,he throws it in my face. It doesn't matter if he is right or wrong,when it comes down to it everything is my fault because of what I did. Shouldn't he leave if he isn't happy? I can understand how he would feel hurt and angry towards you, however, since he chose to stay with you after finding out, he needs to come to terms with his feelings.  If he can't then he's not being fair to you or to himself.  He either needs to let it go, or if he can not, then he needs to let you go.
+1. who is the most sexiest music singer ever??!? anybody you tell me! female i say jennifer lopez she has a booty \nmale i say deangelo there is not a soul alive who couldnt help but drool when they saw that video how does it feel when he was naked
+2. why do woman cheat on there husband or boyfriend and dont reply we dont cheat? A+ for Genuwine.\nNobody's a saint.  Some cheat, some don't.  Some are men, some are women.\nGet over it.
+3. Why is my exs ex best friend still trying to get with me? Ok so over the long weekend me and my exs at the time best friend did stuff and my ex found out about it and was mad at us both and then yesterday my ex told me she wanted to fix things between us. I asked her why did she give me another chance and not her friend and she told me to leave it and be happy. So today her ex best friend starts hitting on me again telling me how she always wanted and stuff. I dont get caz two months ago she was calling me names and saying she wasnt impressed with me. So why now, why the changed in attitdue about me? Why is she trying to get me to be her bf? What should I do? she's desperate
+4. can anyone help me to get a new boyfriend? i am really getting mad with all this ruts in my all the old boyfriends please help me get someone new i am really fed up of all of them now. hi there, depending what you for in a guy and what u are looking for, tyr not too look at the same type of people, or maybe try looking in a different social group?
+5. Would you Cheat if you were me? I have 2 ex girl friends coming to my party on Friday, and my current girlfriend is away for a week and I know I can definatly get away with it... I do love latest girl friend alot though??? NOPE!
+6. why do men cheat then have the audacity to lie about it to your face? (*) Because men are cowards.  We would rather cut off our right arm than admit we don't or no longer love you.\n(*) Because men (and women) have this stupid thing called pride, and it gets in the way.  'Pride cometh before a fall.'\n(*) Because men really hate to admin they are wrong, even when they know they are wrong.  Even when they know you know they are wrong.  Think: getting lost and asking for directions.  It's normally the girl who asks, right?\n(*) Because they (mistakenly) believe the lie will cause you less pain than the (whole / half) truth.\n\nShould you wish to discuss specifics, get back to me, as I've just been there, and might be able to relate.
+7. can any one.....................? tell me wat is the biggest fright you eva got seeing u in the morning hhhhhh im kidding u look sweet from ur name ;-)\n\nfor me sometimes its dark and graves in the night
+8. Who would u perfer having sex with Hillary Duff or Brittany Spears? Yuck. Neither. Britney Spears was hot a few years ago, but definitely not now. And I've never seen the appeal in Hillary Duff.
+9. Ladies, choose one - Mr. Sex or Mr. Nice Guy? Ladies, just trying to figure out what's really important to you. Which guy would you have (cant have both) forever? Choose between the guys described below:\n\nMr. Sex - This guys knows how to do you right and is exciting, adventurous and handsome. He's the best you have ever bedded. He doesn't have a steady job, you suspect he cheats on you, he's not into the 'mushy stuff' like buying you flowers. \n\nMr. Nice Guy - This guy is the nicest person you know, treats you like a lady, remembers your birthday, genuinely cares for you and will make a good responsible father. He has a good 8 to 5 office job. He's also not good in bed at all (cant take u to orgasm except by cunniligu.s.), he's too "goody goody" and generally not 'manly' in the traditional sense. \n\nChoose one of the guys and explain why Neither!!!! Maybe that's why I am still single, but I am waiting for the guy that is nice and can rock my world. Settling for Mr. Sex can lead to heartache and Mr. Nice guy probably gets a lot of girls married but it's probably why there is so much cheating going on. Women settle then can't contain themselves when the one they should have waited for comes along. I also think this is why women get accused of being much less interested in sex than their husbands. They settle for Mr. Nice guy but the sex sucks so it's "honey I got a headache" when it comes to booty time. I rather be alone than in bad (Mr. sex) or lousy (Mr. Nice guy) company.
+10. I need help finding my biological mom any suggestions on what to do and how to do it? Any one willing to help? do you have your biological mother's full name and possibly her address? maybe you can get information like these first, then probably try to get her number of her friends' or relatives' numbers.\n\ni think you should approach radio stations or any organization who does public services.\n\nor if you could be bolder or braver, and would want to go more public, you can contact maury povich, so you can be on his show. i've watched some people looking for their biological parent/s there and he was able to help some of them. if you're interested on this, you can go to his website: http://www.mauryshow.com/\n\ngood luck. i hope you'll find your mother.
+11. Do guys in general NOT like girls who are "plain" ? I'm a girl who is shy (not as shy as I was in hs but I can approach strangers & ask them Qs... depends on what the Q is, like today I was asking peeps if they wanted to buy a ticket for Countryfest) & I sometimes dress plain & don't really do anything fancy w/ my hair. I don't have many friends & when I go to the bar I go to visit my friend Chris who works there. How many guys actually care bout personality ? Some have said that I could have my pick of any guy... but since I'm very picky there aren't a whole lot to choose fr anywayz. I don't smoke, drink or do drugs. A lot of peeps who I know do @ least one of those things. And why are guys so in to looks ? I'm skinny but "plain." You're exhibiting the lack of the #1 quality that us men devour; confidence.  It's hard being a woman I would imagine when you're constantly bombarded with what society thinks is attractive and desirable; and even that changes year-to-year so even Eva Longoria will be plain in a couple of years.\n\nConfidence does not come with make-up, clothing, or other earthy trappings.  It's something you build up over time when you get to understand who you are.\n\nThe quickest path to getting confidence is to stop wasting energy on what the world thinks of you and spend time on caring about what you think of you.  Once you love yourself, it will exude in a way that convinces other people they should be confident about you as well.
+12. How will you meet the love of your life? My scenario: \nI will meet them probably at some bad social function/occasion i'm forced to go too. I'll be in the back by the punch bowl. The love of my life will be like "this really sucks, I was dragged to this.." "I'd be like yeah..this sucks.." We'll both be really cynical and antisocial. It will be fate. IM SURE IT WILL BE SOME1 THAT IM FIGHTING WITH FOR W/E REASON,IM A FIESTY MAMA! LOL I LIKE SOME1 TO CHALLENGE ME,THAT INTRIGUES ME,ESP IF THEY CAN PROVE THEIR POINT,TO WHERE IM LOST FOR WORDS,THAT WILL BE HIM! LOL CRAZY HUH?
+13. I was just trying to be honest with him...How do I get him back?? AFTER 6 MONTHS OF US BEING TOGETHER I FOUND OUT THAT FOR THE FIRST WEEK WE WERE TOGETHER HE WAS STILL WITH HIS EX. OF COURSE I GOT REALLY UPSET SO I BROKE UP WITH HIM. ABOUT TWO WEEKS AFTER THAT ONE OF HIS FRIENDS AND I STARTED TALKING AND AFTER THAT WE KIND OF DEVELOPED A "RELATIONSHIP" BUT TO ME IT WASNT SERIOUS AT ALL BECAUSE THE ONLY REASON WHY I EVEN STARED TALKING TO HIM WAS BECAUSE I WAS HURT ABOUT MY EX AT THE TIME HAD "CHEATED" ON ME. WE EVENTUALLY GOT BACK TOGETHER AND I DECIDED TO TELL HIM ABOUT ME N HIS FRIEND. HE TOOK IT EXTREMELY OUT OF PROPORTION AND BROKE UP WITH ME. A YEAR AND 1/2 OF ME N HIM WAS ALL THROWN AWAY BECAUSE I DECIDED TO BE HONEST WITH HIM. WHAT SHOULD I DO I LOVE HIM AND I KNOW HW STILL LOVES ME BUT HE SAID THAT HE DOESNT THINK ANYTHING CAN MAKE UP FOR WHAT I DID. WHEN IN REALITY I DIDNT REALLY DO ANYTHING...KIND OF. OH YEAH AND HE CALLED ME LAST NIGHT BUT I MISSED HIS CALL AND WHEN I CALLED BACK HE IGNORED IT. I NEED HELP ASAP!! Ok...this sounds like the same stuff that I have went through before..Bottom line is ..it was ok as far as he was concerned to do what he did..but when you got him back and was honest he had a problem with it...Girl..Im glad to hear you did this to him. He is a jerk that thinks its ok for men to just f around on women but you showed his a s s didnt you..YOU GO GIRL!! I know you still care for him and thats normal...Just stay cool..he will come around..but in the meantime talk to as many guys as u can...
+14. how am i got to get a list of phone numbers from telekom malaysia? i want a 2006 list of phone numbers that has been provided by telekom Malaysia in selangor. 1. Consult the thick yellowpages, or\n2. Browse www.yellowpages.com.my\n\nHope the above helps....\nOh..btw.... watch your grammar...and sentence structure..\nDid u mean... a list of 2006 (different) phone numbers, or list of phone numbers for year 2006?
+15. I kissed my boyfriend at school. I came home to re-imagine it. I closed my eyes and saw me kissing another guy This is not the first time I re-imagined me and my boyfriend kiss, but it's the first time that I went to do it and another guy came up as him. What can possible be making these allusions? You're going insane...?
+16. Love Problems? i am in love with one of my friend she is amazing and i know that i love her my problem is that she was the fiance of my best friend who died in march. i promised him that i would look after her and help her but now i'm finding myself loving her. i don't know what to do on the one hand i love her and on the other i don't want to lose her as a friend \n\ni haven't spoken to my friend about my feelings i see her every weekend and we always have a great time together. What's happening seems natural. \nSince you told your friend that you would take care of her, you have to really carefully analyze whether what you feel could last forever, or whether it's just passion, as if it were just a momentary desire for her, you would break the promise made to your friend. \nI think that, if you really love her, and want to spend your time with her, there is nothing wrong, and nothing that interferes with the promise made to your friend. \nThe next step is the difficult one, which is bringing the subject up to her and having her feel the same for you. \nIf you have been getting together very often she probably will end up sharing your feelings, and wanting to be with you in a more complete way. You have to be very sensitive, though: if you friend died only this march, she's probably not at all ready to take on another relationship. Even if she thought she were, it could be an illusion, or just a desire to be fine again. \nPeople need some time to fully recover from shocks as the death of someone loved, and don't get back to their normal selves (although they sometimes are not really aware of this) until some time has gone by. \nGive things time, and take them with a lot of patience: always show her your love, but don't ask her to love you back until she's ready, and don't bring the issue up until she shows you some hints pointing at her love for you.\nGood luck, and best wishes.
+
+Here is our goal: Represent the content types of QA documents for clustering, such as  Business, Society , Mathematics, Computer, Sports, Music, Politics, Government, Health. Please cluster them into 10 groups, with each group containing at least 3 items and representing a distinct content type. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"- "discusses relationship issues"
+"inquires about finding people"
+
+
+Again, here's the goal: Represent the content types of QA documents for clustering, such as  Business, Society , Mathematics, Computer, Sports, Music, Politics, Government, Health. Please cluster them into 10 groups, with each group containing at least 3 items and representing a distinct content type.. Your responses are:
+- "
+Proposer model response:
+['- "discusses relationship issues"\n- "asks for advice on love and relationships"\n- "seeks help in finding biological family"\n- "inquires about cheating in relationships"\n- "asks for opinions on attractiveness and relationships"']
+Proposer Cost: $0.001796
+30 descriptions proposed in total. Here are the descriptions:
+asks for opinions on attractiveness and relationships
+asks for advice on love and relationships
+inquires about finding biological relatives
+explores ethical dilemmas in relationships
+discusses preferences in relationships
+asks for opinions on cheating
+seeks advice on handling past relationship issues
+discusses celebrity gossip
+asks for help in finding phone numbers
+"discusses relationship issues
+- "asks for relationship advice
+asks for opinions on ethical dilemmas
+discusses preferences in partners
+discusses infidelity in relationships
+seeks advice on honesty in relationships
+seeks advice on love and friendship
+asks for opinions on choosing between partners
+seeks advice on handling past mistakes in relationships
+discusses preferences in romantic partners
+seeks advice on infidelity
+seeks help in finding biological relatives
+seeks help on legal matters
+seeks advice on personal matters
+- "discusses relationship issues
+seeks help in finding biological family
+discusses challenges in finding biological family members
+discusses loyalty and trust in relationships
+asks for advice on cheating in relationships
+inquires about love and friendship dynamics
+inquires about cheating in relationships
+GPTAssigner Cost 1.6154100000000078 $
+Stage Assign assign
+Assigned all recall: 0.32
+Assigned all precision: 0.33125
+Assigned description: asks for opinions on attractiveness and relationships. recall: 0.038 precision: 0.0
+Assigned description: asks for advice on love and relationships. recall: 0.074 precision: 0.0
+Assigned description: inquires about finding biological relatives. recall: 0.02 precision: 0.1
+Assigned description: explores ethical dilemmas in relationships. recall: 0.062 precision: 0.0
+Assigned description: discusses preferences in relationships. recall: 0.068 precision: 0.029411764705882353
+Assigned description: asks for opinions on cheating. recall: 0.05 precision: 0.08
+Assigned description: seeks advice on handling past relationship issues. recall: 0.01 precision: 0.0
+Assigned description: discusses celebrity gossip. recall: 0.014 precision: 0.42857142857142855
+Assigned description: asks for help in finding phone numbers. recall: 0.05 precision: 0.28
+Assigned description: "discusses relationship issues. recall: 0.108 precision: 0.0
+Assigned description: - "asks for relationship advice. recall: 0.044 precision: 0.09090909090909091
+Assigned description: asks for opinions on ethical dilemmas. recall: 0.082 precision: 0.21951219512195122
+Assigned description: discusses preferences in partners. recall: 0.07 precision: 0.05714285714285714
+Assigned description: discusses infidelity in relationships. recall: 0.048 precision: 0.041666666666666664
+Assigned description: seeks advice on honesty in relationships. recall: 0.0 precision: 0.0
+Assigned description: seeks advice on love and friendship. recall: 0.06 precision: 0.0
+Assigned description: asks for opinions on choosing between partners. recall: 0.038 precision: 0.0
+Assigned description: seeks advice on handling past mistakes in relationships. recall: 0.004 precision: 0.0
+Assigned description: discusses preferences in romantic partners. recall: 0.034 precision: 0.0
+Assigned description: seeks advice on infidelity. recall: 0.028 precision: 0.0
+Assigned description: seeks help in finding biological relatives. recall: 0.01 precision: 0.0
+Assigned description: seeks help on legal matters. recall: 0.08 precision: 0.125
+Assigned description: seeks advice on personal matters. recall: 0.162 precision: 0.19753086419753085
+Assigned description: - "discusses relationship issues. recall: 0.102 precision: 0.0196078431372549
+Assigned description: seeks help in finding biological family. recall: 0.01 precision: 0.0
+Assigned description: discusses challenges in finding biological family members. recall: 0.01 precision: 0.0
+Assigned description: discusses loyalty and trust in relationships. recall: 0.046 precision: 0.043478260869565216
+Assigned description: asks for advice on cheating in relationships. recall: 0.008 precision: 0.0
+Assigned description: inquires about love and friendship dynamics. recall: 0.11 precision: 0.03636363636363636
+Assigned description: inquires about cheating in relationships. recall: 0.032 precision: 0.0
+Dropping 0 descriptions because they are too popular or too unpopular:
+Stage select select
+Unmatched count: 372
+Description: discusses celebrity gossip. Count: 7
+Description: asks for help in finding phone numbers. Count: 23
+Description: asks for opinions on ethical dilemmas. Count: 35
+Description: discusses infidelity in relationships. Count: 20
+Description: seeks advice on personal matters. Count: 43
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. A boy and a girl ..............????????? Well this is serious. Can a boy and a girl become FRIENDs. Well i hav seen in lot of cases that a boy and a girl used to be friends but ended somthing else Well i mean one of them will used to hav somthingelse other than friendship in their mind?? Well i also have seen this kind of thing happening. But everyone has their own way. One can hav something else in their mind but that doesnt mean that boyz and galz cant be friends.
+1. who is the most sexiest music singer ever??!? anybody you tell me! female i say jennifer lopez she has a booty \nmale i say deangelo there is not a soul alive who couldnt help but drool when they saw that video how does it feel when he was naked
+2. Why do girlfriends always want to makeout with their guys after they get to know them? Aaaaaaand you're having trouble with this WHY? Common sense dude. She's comfortable with you now. She feels secure. She's opening up. This would be a GOOD thing.
+3. Who would u perfer having sex with Hillary Duff or Brittany Spears? Yuck. Neither. Britney Spears was hot a few years ago, but definitely not now. And I've never seen the appeal in Hillary Duff.
+4. does he like me or not?? ok we were in class and he was butt-butting me in a game (that wasnt needed) then at a FFA convention he was asking me if I could see his nipple through his shirt...and he was nervous about doing it because his friend had to push him closer to me and he said "just ask her dude" and then he asked me if i could see his nipple and i said i don't know...but then he deleted me on yahoo messenger\ni think he likes me but doesnt want to talk to me when we are alone but likes to talk to me when we are in a group of people what do u think?? Are you sure he wasn't asking to see your nipple?\n\n\n\nJust kidding, thats a tough one to figure.  He either likes you or he is gay.
+5. why is it so easy for women talk about sex than to do it.?
+6. william pearson captained a ship called the Pryde of Whitby around the 1860's i want any info about him or the Check out these two sites ,  www.merchant-navy.net    ,  . . .  or . . .  www.allatsea.cx   .   These are both excellent sites for seafaring types and very helpull in finding info on anything nautical and could probably tell you who invented the oar . . . Good Luck .
+7. If you have a co-worker...? If you have a co-worker that is just drop dead gorgeous.  If you were able to sleep with them would you? (If you knew that it wouldn't go anwhere and you both wouldn't try to make anymore out of it then just a physical tense. ) no,no,no,   rumors get started real easy that way
+8. can anyone help me to get a new boyfriend? i am really getting mad with all this ruts in my all the old boyfriends please help me get someone new i am really fed up of all of them now. hi there, depending what you for in a guy and what u are looking for, tyr not too look at the same type of people, or maybe try looking in a different social group?
+9. wanna be frendz  with me and share the happiness of friendship? hi soumita ,\nmy id is cute_sukanya13@yahoo.co.in
+10. Do you have big breasts? ia have :) medium brest :) or if you wanna know the size email me:))
+11. can any one.....................? tell me wat is the biggest fright you eva got seeing u in the morning hhhhhh im kidding u look sweet from ur name ;-)\n\nfor me sometimes its dark and graves in the night
+12. mature person no rubbish chat to on my e mail? Well done\n\nExcellent\n\nThant's super
+13. Would you have trouble marrying an athesist? My fiance is not an athesist but she claims not be believe in a God.  She is the most spiritual person that I have ever known.  I am a member of A.A. and as such have come to believe in a power greater than me, and I know for a fact that she sees things in a very similar manner.
+14. why do people judge you before they know all the facts? i only got out some of the problem. i read a mean message from a person answering my question. i know online dating is wierd but we was going to meet but i got hurt got sent into the hospital thats when he cheated on me so i canceld the trip.  so im not on a CRAZY TRAIN ....so why are there mean people in here send a answer that hurts why? 1st thing mean stuff you shouldn't even read. People do this to make themselves feel better, like, "Oh ha-ha I told him/her/them off see I'm cool they're not!" But the only thing is they may seem so to themselves but how long does it last? I mean can anybody remember what you typed into a yahoo answer box that made you feel sooo cool a week later? Or the next day. Nah this is human nature...\n\nhttp://www.total-knowledge.com/~willyblues/
+15. Denying without being a jerk? Ok so I'm getting the hint that my relationship with my ex is never going to work. It's all one sided (she does whatever she wants, if I bring up the past it's blown out of proportion but if she does it's fine, hangs up on me expecting me to call back and etc.) I'm a sweetheart and I've had a hot 38 year old tell me this that I'm a hottie and I have a great personality. Thankfully my ex moved out of state so I don't have to run into her, but my question is. When I date another girl and she finds out, how do I tell her that I don't want to be with her without sounding like an a55? She wants me to be one and gets me to the point where I am so she has some leverage in an argument. How do I just rid of her? I want to move away so when she does come back she'll never find me. This is a situation of be who you were or stay out of my life for good. Any suggestions. I don't want to be looked at as someone I'm not. How old are you?\nIf you don't want to be looked at as someone you're not then you better start figuring out who you are! It's easy to tell that you have no clue. If you did you wouldn't be wanting to run from this situation. \nYour priority right now should be to focus on just that-- finding out who you are. Naturally this takes years and years, but you can jump start this by:\nConcentrating on improving your health, body, mind, spirit, and soul.\nGet a better education\nVolunteer and help those less fortunate than you are\nTake some "fun" classes\nRead some self help books\nKeep a journal\nPray daily\nLearn to be more musical\nWrite about fifty essays beginning with the words "I believe..."\nSpice up your social life by getting involved in some new activities or clubs (not party clubs-- clubs that promote growth and learning) \nJoin a yoga class.\nMeditate daily.\nWrite a list of the principles you call your own and hold most dear\nStart a new exercise\nConcentrate on learning and loving YOU for now.\n\nAnd about the ex:\nIf you have kids together your s.o.l. You are stuck together for life to one degree or another unless-- God forbid-- something happen to the kid(s).\nIf you don't have kids together then just grab hold of... your courage... and tell the lady you are moving on. Tell her you tried. It didn't work. You see now that it will not work. You do not need her drama games. You are going to stop contacting her. You want her to stop contacting you. And you should both move on with your lives and (eventually) see other people.\nBut be sure this is what you want before you do it!\nHave you guys tried counseling? \nP.S: Don't date the 38 year old... Why?\n1. It's TOO SOON!\n2. She's an opportunist and probably a barracuda (gold digger/clingy emotional drama game player and general sucker of men's time/money/etc.)\n3. Any 38 year old that tells you you're a "hottie" is trying too hard to be "hip".\nP.P.S: Don't date "girls". \nDon't date ANYONE until you stop calling grown women "girls".
+16. Do men get upset when their girl makes more money than they do? Hell no!!  I love a woman that can bring home the cash. LOL....seriously when I changed careers, my wife made ALOT more than I did.  It just the insecure guys that get upset by that, the same ones that are defined by their jobs.\n\nI feel bad for them....
+
+Here is our goal: Represent the content types of QA documents for clustering, such as  Business, Society , Mathematics, Computer, Sports, Music, Politics, Government, Health. Please cluster them into 10 groups, with each group containing at least 3 items and representing a distinct content type. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"seeks advice on dealing with ex-partners"
+"inquires about spirituality and beliefs"
+
+
+Again, here's the goal: Represent the content types of QA documents for clustering, such as  Business, Society , Mathematics, Computer, Sports, Music, Politics, Government, Health. Please cluster them into 10 groups, with each group containing at least 3 items and representing a distinct content type.. Your responses are:
+- "
+Proposer model response:
+['- "Seeks advice on relationships"\n- "Inquires about celebrities and pop culture"\n- "Asks for personal opinions on sensitive topics"\n- "Seeks information on sexual relationships"\n- "Inquires about historical figures and events"\n- "Asks for advice on personal development"\n- "Seeks opinions on gender roles"\n- "Inquires about online interactions and social behavior"\n- "Asks for advice on career and education"\n- "Inquires about financial situations"']
+Proposer Cost: $0.001349
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. Who would u perfer having sex with Hillary Duff or Brittany Spears? Yuck. Neither. Britney Spears was hot a few years ago, but definitely not now. And I've never seen the appeal in Hillary Duff.
+1. who is the most sexiest music singer ever??!? anybody you tell me! female i say jennifer lopez she has a booty \nmale i say deangelo there is not a soul alive who couldnt help but drool when they saw that video how does it feel when he was naked
+2. Why do girlfriends always want to makeout with their guys after they get to know them? Aaaaaaand you're having trouble with this WHY? Common sense dude. She's comfortable with you now. She feels secure. She's opening up. This would be a GOOD thing.
+3. Denying without being a jerk? Ok so I'm getting the hint that my relationship with my ex is never going to work. It's all one sided (she does whatever she wants, if I bring up the past it's blown out of proportion but if she does it's fine, hangs up on me expecting me to call back and etc.) I'm a sweetheart and I've had a hot 38 year old tell me this that I'm a hottie and I have a great personality. Thankfully my ex moved out of state so I don't have to run into her, but my question is. When I date another girl and she finds out, how do I tell her that I don't want to be with her without sounding like an a55? She wants me to be one and gets me to the point where I am so she has some leverage in an argument. How do I just rid of her? I want to move away so when she does come back she'll never find me. This is a situation of be who you were or stay out of my life for good. Any suggestions. I don't want to be looked at as someone I'm not. How old are you?\nIf you don't want to be looked at as someone you're not then you better start figuring out who you are! It's easy to tell that you have no clue. If you did you wouldn't be wanting to run from this situation. \nYour priority right now should be to focus on just that-- finding out who you are. Naturally this takes years and years, but you can jump start this by:\nConcentrating on improving your health, body, mind, spirit, and soul.\nGet a better education\nVolunteer and help those less fortunate than you are\nTake some "fun" classes\nRead some self help books\nKeep a journal\nPray daily\nLearn to be more musical\nWrite about fifty essays beginning with the words "I believe..."\nSpice up your social life by getting involved in some new activities or clubs (not party clubs-- clubs that promote growth and learning) \nJoin a yoga class.\nMeditate daily.\nWrite a list of the principles you call your own and hold most dear\nStart a new exercise\nConcentrate on learning and loving YOU for now.\n\nAnd about the ex:\nIf you have kids together your s.o.l. You are stuck together for life to one degree or another unless-- God forbid-- something happen to the kid(s).\nIf you don't have kids together then just grab hold of... your courage... and tell the lady you are moving on. Tell her you tried. It didn't work. You see now that it will not work. You do not need her drama games. You are going to stop contacting her. You want her to stop contacting you. And you should both move on with your lives and (eventually) see other people.\nBut be sure this is what you want before you do it!\nHave you guys tried counseling? \nP.S: Don't date the 38 year old... Why?\n1. It's TOO SOON!\n2. She's an opportunist and probably a barracuda (gold digger/clingy emotional drama game player and general sucker of men's time/money/etc.)\n3. Any 38 year old that tells you you're a "hottie" is trying too hard to be "hip".\nP.P.S: Don't date "girls". \nDon't date ANYONE until you stop calling grown women "girls".
+4. why do people judge you before they know all the facts? i only got out some of the problem. i read a mean message from a person answering my question. i know online dating is wierd but we was going to meet but i got hurt got sent into the hospital thats when he cheated on me so i canceld the trip.  so im not on a CRAZY TRAIN ....so why are there mean people in here send a answer that hurts why? 1st thing mean stuff you shouldn't even read. People do this to make themselves feel better, like, "Oh ha-ha I told him/her/them off see I'm cool they're not!" But the only thing is they may seem so to themselves but how long does it last? I mean can anybody remember what you typed into a yahoo answer box that made you feel sooo cool a week later? Or the next day. Nah this is human nature...\n\nhttp://www.total-knowledge.com/~willyblues/
+5. william pearson captained a ship called the Pryde of Whitby around the 1860's i want any info about him or the Check out these two sites ,  www.merchant-navy.net    ,  . . .  or . . .  www.allatsea.cx   .   These are both excellent sites for seafaring types and very helpull in finding info on anything nautical and could probably tell you who invented the oar . . . Good Luck .
+6. Do men get upset when their girl makes more money than they do? Hell no!!  I love a woman that can bring home the cash. LOL....seriously when I changed careers, my wife made ALOT more than I did.  It just the insecure guys that get upset by that, the same ones that are defined by their jobs.\n\nI feel bad for them....
+7. A boy and a girl ..............????????? Well this is serious. Can a boy and a girl become FRIENDs. Well i hav seen in lot of cases that a boy and a girl used to be friends but ended somthing else Well i mean one of them will used to hav somthingelse other than friendship in their mind?? Well i also have seen this kind of thing happening. But everyone has their own way. One can hav something else in their mind but that doesnt mean that boyz and galz cant be friends.
+8. mature person no rubbish chat to on my e mail? Well done\n\nExcellent\n\nThant's super
+9. can anyone help me to get a new boyfriend? i am really getting mad with all this ruts in my all the old boyfriends please help me get someone new i am really fed up of all of them now. hi there, depending what you for in a guy and what u are looking for, tyr not too look at the same type of people, or maybe try looking in a different social group?
+10. Do you have big breasts? ia have :) medium brest :) or if you wanna know the size email me:))
+11. can any one.....................? tell me wat is the biggest fright you eva got seeing u in the morning hhhhhh im kidding u look sweet from ur name ;-)\n\nfor me sometimes its dark and graves in the night
+12. If you have a co-worker...? If you have a co-worker that is just drop dead gorgeous.  If you were able to sleep with them would you? (If you knew that it wouldn't go anwhere and you both wouldn't try to make anymore out of it then just a physical tense. ) no,no,no,   rumors get started real easy that way
+13. Would you have trouble marrying an athesist? My fiance is not an athesist but she claims not be believe in a God.  She is the most spiritual person that I have ever known.  I am a member of A.A. and as such have come to believe in a power greater than me, and I know for a fact that she sees things in a very similar manner.
+14. does he like me or not?? ok we were in class and he was butt-butting me in a game (that wasnt needed) then at a FFA convention he was asking me if I could see his nipple through his shirt...and he was nervous about doing it because his friend had to push him closer to me and he said "just ask her dude" and then he asked me if i could see his nipple and i said i don't know...but then he deleted me on yahoo messenger\ni think he likes me but doesnt want to talk to me when we are alone but likes to talk to me when we are in a group of people what do u think?? Are you sure he wasn't asking to see your nipple?\n\n\n\nJust kidding, thats a tough one to figure.  He either likes you or he is gay.
+15. why is it so easy for women talk about sex than to do it.?
+16. wanna be frendz  with me and share the happiness of friendship? hi soumita ,\nmy id is cute_sukanya13@yahoo.co.in
+
+Here is our goal: Represent the content types of QA documents for clustering, such as  Business, Society , Mathematics, Computer, Sports, Music, Politics, Government, Health. Please cluster them into 10 groups, with each group containing at least 3 items and representing a distinct content type. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"seeks advice on dealing with ex-partners"
+"discusses financial matters"
+
+
+Again, here's the goal: Represent the content types of QA documents for clustering, such as  Business, Society , Mathematics, Computer, Sports, Music, Politics, Government, Health. Please cluster them into 10 groups, with each group containing at least 3 items and representing a distinct content type.. Your responses are:
+- "
+Proposer model response:
+['"seeks advice on relationship issues"\n- "asks for information on historical figures"\n- "discusses gender dynamics"\n- "seeks help on personal development"\n- "inquires about career choices"\n- "asks for advice on social interactions"\n- "seeks information on maritime history"\n- "discusses spirituality and beliefs"\n- "inquires about romantic relationships"\n- "asks for advice on dealing with difficult situations"']
+Proposer Cost: $0.001332
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. does he like me or not?? ok we were in class and he was butt-butting me in a game (that wasnt needed) then at a FFA convention he was asking me if I could see his nipple through his shirt...and he was nervous about doing it because his friend had to push him closer to me and he said "just ask her dude" and then he asked me if i could see his nipple and i said i don't know...but then he deleted me on yahoo messenger\ni think he likes me but doesnt want to talk to me when we are alone but likes to talk to me when we are in a group of people what do u think?? Are you sure he wasn't asking to see your nipple?\n\n\n\nJust kidding, thats a tough one to figure.  He either likes you or he is gay.
+1. A boy and a girl ..............????????? Well this is serious. Can a boy and a girl become FRIENDs. Well i hav seen in lot of cases that a boy and a girl used to be friends but ended somthing else Well i mean one of them will used to hav somthingelse other than friendship in their mind?? Well i also have seen this kind of thing happening. But everyone has their own way. One can hav something else in their mind but that doesnt mean that boyz and galz cant be friends.
+2. Denying without being a jerk? Ok so I'm getting the hint that my relationship with my ex is never going to work. It's all one sided (she does whatever she wants, if I bring up the past it's blown out of proportion but if she does it's fine, hangs up on me expecting me to call back and etc.) I'm a sweetheart and I've had a hot 38 year old tell me this that I'm a hottie and I have a great personality. Thankfully my ex moved out of state so I don't have to run into her, but my question is. When I date another girl and she finds out, how do I tell her that I don't want to be with her without sounding like an a55? She wants me to be one and gets me to the point where I am so she has some leverage in an argument. How do I just rid of her? I want to move away so when she does come back she'll never find me. This is a situation of be who you were or stay out of my life for good. Any suggestions. I don't want to be looked at as someone I'm not. How old are you?\nIf you don't want to be looked at as someone you're not then you better start figuring out who you are! It's easy to tell that you have no clue. If you did you wouldn't be wanting to run from this situation. \nYour priority right now should be to focus on just that-- finding out who you are. Naturally this takes years and years, but you can jump start this by:\nConcentrating on improving your health, body, mind, spirit, and soul.\nGet a better education\nVolunteer and help those less fortunate than you are\nTake some "fun" classes\nRead some self help books\nKeep a journal\nPray daily\nLearn to be more musical\nWrite about fifty essays beginning with the words "I believe..."\nSpice up your social life by getting involved in some new activities or clubs (not party clubs-- clubs that promote growth and learning) \nJoin a yoga class.\nMeditate daily.\nWrite a list of the principles you call your own and hold most dear\nStart a new exercise\nConcentrate on learning and loving YOU for now.\n\nAnd about the ex:\nIf you have kids together your s.o.l. You are stuck together for life to one degree or another unless-- God forbid-- something happen to the kid(s).\nIf you don't have kids together then just grab hold of... your courage... and tell the lady you are moving on. Tell her you tried. It didn't work. You see now that it will not work. You do not need her drama games. You are going to stop contacting her. You want her to stop contacting you. And you should both move on with your lives and (eventually) see other people.\nBut be sure this is what you want before you do it!\nHave you guys tried counseling? \nP.S: Don't date the 38 year old... Why?\n1. It's TOO SOON!\n2. She's an opportunist and probably a barracuda (gold digger/clingy emotional drama game player and general sucker of men's time/money/etc.)\n3. Any 38 year old that tells you you're a "hottie" is trying too hard to be "hip".\nP.P.S: Don't date "girls". \nDon't date ANYONE until you stop calling grown women "girls".
+3. mature person no rubbish chat to on my e mail? Well done\n\nExcellent\n\nThant's super
+4. Why do girlfriends always want to makeout with their guys after they get to know them? Aaaaaaand you're having trouble with this WHY? Common sense dude. She's comfortable with you now. She feels secure. She's opening up. This would be a GOOD thing.
+5. Do men get upset when their girl makes more money than they do? Hell no!!  I love a woman that can bring home the cash. LOL....seriously when I changed careers, my wife made ALOT more than I did.  It just the insecure guys that get upset by that, the same ones that are defined by their jobs.\n\nI feel bad for them....
+6. wanna be frendz  with me and share the happiness of friendship? hi soumita ,\nmy id is cute_sukanya13@yahoo.co.in
+7. Who would u perfer having sex with Hillary Duff or Brittany Spears? Yuck. Neither. Britney Spears was hot a few years ago, but definitely not now. And I've never seen the appeal in Hillary Duff.
+8. can any one.....................? tell me wat is the biggest fright you eva got seeing u in the morning hhhhhh im kidding u look sweet from ur name ;-)\n\nfor me sometimes its dark and graves in the night
+9. why is it so easy for women talk about sex than to do it.?
+10. who is the most sexiest music singer ever??!? anybody you tell me! female i say jennifer lopez she has a booty \nmale i say deangelo there is not a soul alive who couldnt help but drool when they saw that video how does it feel when he was naked
+11. why do people judge you before they know all the facts? i only got out some of the problem. i read a mean message from a person answering my question. i know online dating is wierd but we was going to meet but i got hurt got sent into the hospital thats when he cheated on me so i canceld the trip.  so im not on a CRAZY TRAIN ....so why are there mean people in here send a answer that hurts why? 1st thing mean stuff you shouldn't even read. People do this to make themselves feel better, like, "Oh ha-ha I told him/her/them off see I'm cool they're not!" But the only thing is they may seem so to themselves but how long does it last? I mean can anybody remember what you typed into a yahoo answer box that made you feel sooo cool a week later? Or the next day. Nah this is human nature...\n\nhttp://www.total-knowledge.com/~willyblues/
+12. william pearson captained a ship called the Pryde of Whitby around the 1860's i want any info about him or the Check out these two sites ,  www.merchant-navy.net    ,  . . .  or . . .  www.allatsea.cx   .   These are both excellent sites for seafaring types and very helpull in finding info on anything nautical and could probably tell you who invented the oar . . . Good Luck .
+13. Would you have trouble marrying an athesist? My fiance is not an athesist but she claims not be believe in a God.  She is the most spiritual person that I have ever known.  I am a member of A.A. and as such have come to believe in a power greater than me, and I know for a fact that she sees things in a very similar manner.
+14. If you have a co-worker...? If you have a co-worker that is just drop dead gorgeous.  If you were able to sleep with them would you? (If you knew that it wouldn't go anwhere and you both wouldn't try to make anymore out of it then just a physical tense. ) no,no,no,   rumors get started real easy that way
+15. can anyone help me to get a new boyfriend? i am really getting mad with all this ruts in my all the old boyfriends please help me get someone new i am really fed up of all of them now. hi there, depending what you for in a guy and what u are looking for, tyr not too look at the same type of people, or maybe try looking in a different social group?
+16. Do you have big breasts? ia have :) medium brest :) or if you wanna know the size email me:))
+
+Here is our goal: Represent the content types of QA documents for clustering, such as  Business, Society , Mathematics, Computer, Sports, Music, Politics, Government, Health. Please cluster them into 10 groups, with each group containing at least 3 items and representing a distinct content type. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"inquires about spirituality and beliefs"
+"seeks advice on dealing with ex-partners"
+
+
+Again, here's the goal: Represent the content types of QA documents for clustering, such as  Business, Society , Mathematics, Computer, Sports, Music, Politics, Government, Health. Please cluster them into 10 groups, with each group containing at least 3 items and representing a distinct content type.. Your responses are:
+- "
+Proposer model response:
+['- "seeks relationship advice"\n- "discusses gender dynamics"\n- "asks about celebrities"\n- "inquires about personal experiences"\n- "seeks advice on dealing with difficult situations"']
+Proposer Cost: $0.001262
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. does he like me or not?? ok we were in class and he was butt-butting me in a game (that wasnt needed) then at a FFA convention he was asking me if I could see his nipple through his shirt...and he was nervous about doing it because his friend had to push him closer to me and he said "just ask her dude" and then he asked me if i could see his nipple and i said i don't know...but then he deleted me on yahoo messenger\ni think he likes me but doesnt want to talk to me when we are alone but likes to talk to me when we are in a group of people what do u think?? Are you sure he wasn't asking to see your nipple?\n\n\n\nJust kidding, thats a tough one to figure.  He either likes you or he is gay.
+1. mature person no rubbish chat to on my e mail? Well done\n\nExcellent\n\nThant's super
+2. Who would u perfer having sex with Hillary Duff or Brittany Spears? Yuck. Neither. Britney Spears was hot a few years ago, but definitely not now. And I've never seen the appeal in Hillary Duff.
+3. william pearson captained a ship called the Pryde of Whitby around the 1860's i want any info about him or the Check out these two sites ,  www.merchant-navy.net    ,  . . .  or . . .  www.allatsea.cx   .   These are both excellent sites for seafaring types and very helpull in finding info on anything nautical and could probably tell you who invented the oar . . . Good Luck .
+4. If you have a co-worker...? If you have a co-worker that is just drop dead gorgeous.  If you were able to sleep with them would you? (If you knew that it wouldn't go anwhere and you both wouldn't try to make anymore out of it then just a physical tense. ) no,no,no,   rumors get started real easy that way
+5. Why do girlfriends always want to makeout with their guys after they get to know them? Aaaaaaand you're having trouble with this WHY? Common sense dude. She's comfortable with you now. She feels secure. She's opening up. This would be a GOOD thing.
+6. who is the most sexiest music singer ever??!? anybody you tell me! female i say jennifer lopez she has a booty \nmale i say deangelo there is not a soul alive who couldnt help but drool when they saw that video how does it feel when he was naked
+7. Would you have trouble marrying an athesist? My fiance is not an athesist but she claims not be believe in a God.  She is the most spiritual person that I have ever known.  I am a member of A.A. and as such have come to believe in a power greater than me, and I know for a fact that she sees things in a very similar manner.
+8. why do people judge you before they know all the facts? i only got out some of the problem. i read a mean message from a person answering my question. i know online dating is wierd but we was going to meet but i got hurt got sent into the hospital thats when he cheated on me so i canceld the trip.  so im not on a CRAZY TRAIN ....so why are there mean people in here send a answer that hurts why? 1st thing mean stuff you shouldn't even read. People do this to make themselves feel better, like, "Oh ha-ha I told him/her/them off see I'm cool they're not!" But the only thing is they may seem so to themselves but how long does it last? I mean can anybody remember what you typed into a yahoo answer box that made you feel sooo cool a week later? Or the next day. Nah this is human nature...\n\nhttp://www.total-knowledge.com/~willyblues/
+9. can any one.....................? tell me wat is the biggest fright you eva got seeing u in the morning hhhhhh im kidding u look sweet from ur name ;-)\n\nfor me sometimes its dark and graves in the night
+10. can anyone help me to get a new boyfriend? i am really getting mad with all this ruts in my all the old boyfriends please help me get someone new i am really fed up of all of them now. hi there, depending what you for in a guy and what u are looking for, tyr not too look at the same type of people, or maybe try looking in a different social group?
+11. A boy and a girl ..............????????? Well this is serious. Can a boy and a girl become FRIENDs. Well i hav seen in lot of cases that a boy and a girl used to be friends but ended somthing else Well i mean one of them will used to hav somthingelse other than friendship in their mind?? Well i also have seen this kind of thing happening. But everyone has their own way. One can hav something else in their mind but that doesnt mean that boyz and galz cant be friends.
+12. Do men get upset when their girl makes more money than they do? Hell no!!  I love a woman that can bring home the cash. LOL....seriously when I changed careers, my wife made ALOT more than I did.  It just the insecure guys that get upset by that, the same ones that are defined by their jobs.\n\nI feel bad for them....
+13. wanna be frendz  with me and share the happiness of friendship? hi soumita ,\nmy id is cute_sukanya13@yahoo.co.in
+14. why is it so easy for women talk about sex than to do it.?
+15. Do you have big breasts? ia have :) medium brest :) or if you wanna know the size email me:))
+16. Denying without being a jerk? Ok so I'm getting the hint that my relationship with my ex is never going to work. It's all one sided (she does whatever she wants, if I bring up the past it's blown out of proportion but if she does it's fine, hangs up on me expecting me to call back and etc.) I'm a sweetheart and I've had a hot 38 year old tell me this that I'm a hottie and I have a great personality. Thankfully my ex moved out of state so I don't have to run into her, but my question is. When I date another girl and she finds out, how do I tell her that I don't want to be with her without sounding like an a55? She wants me to be one and gets me to the point where I am so she has some leverage in an argument. How do I just rid of her? I want to move away so when she does come back she'll never find me. This is a situation of be who you were or stay out of my life for good. Any suggestions. I don't want to be looked at as someone I'm not. How old are you?\nIf you don't want to be looked at as someone you're not then you better start figuring out who you are! It's easy to tell that you have no clue. If you did you wouldn't be wanting to run from this situation. \nYour priority right now should be to focus on just that-- finding out who you are. Naturally this takes years and years, but you can jump start this by:\nConcentrating on improving your health, body, mind, spirit, and soul.\nGet a better education\nVolunteer and help those less fortunate than you are\nTake some "fun" classes\nRead some self help books\nKeep a journal\nPray daily\nLearn to be more musical\nWrite about fifty essays beginning with the words "I believe..."\nSpice up your social life by getting involved in some new activities or clubs (not party clubs-- clubs that promote growth and learning) \nJoin a yoga class.\nMeditate daily.\nWrite a list of the principles you call your own and hold most dear\nStart a new exercise\nConcentrate on learning and loving YOU for now.\n\nAnd about the ex:\nIf you have kids together your s.o.l. You are stuck together for life to one degree or another unless-- God forbid-- something happen to the kid(s).\nIf you don't have kids together then just grab hold of... your courage... and tell the lady you are moving on. Tell her you tried. It didn't work. You see now that it will not work. You do not need her drama games. You are going to stop contacting her. You want her to stop contacting you. And you should both move on with your lives and (eventually) see other people.\nBut be sure this is what you want before you do it!\nHave you guys tried counseling? \nP.S: Don't date the 38 year old... Why?\n1. It's TOO SOON!\n2. She's an opportunist and probably a barracuda (gold digger/clingy emotional drama game player and general sucker of men's time/money/etc.)\n3. Any 38 year old that tells you you're a "hottie" is trying too hard to be "hip".\nP.P.S: Don't date "girls". \nDon't date ANYONE until you stop calling grown women "girls".
+
+Here is our goal: Represent the content types of QA documents for clustering, such as  Business, Society , Mathematics, Computer, Sports, Music, Politics, Government, Health. Please cluster them into 10 groups, with each group containing at least 3 items and representing a distinct content type. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"asks for help in finding a new partner"
+"discusses financial matters"
+
+
+Again, here's the goal: Represent the content types of QA documents for clustering, such as  Business, Society , Mathematics, Computer, Sports, Music, Politics, Government, Health. Please cluster them into 10 groups, with each group containing at least 3 items and representing a distinct content type.. Your responses are:
+- "
+Proposer model response:
+['"asks for relationship advice"\n- "seeks information on historical figures"\n- "discusses workplace dynamics"']
+Proposer Cost: $0.001236
+58 descriptions proposed in total. Here are the descriptions:
+asks for opinions on attractiveness and relationships
+asks for advice on love and relationships
+inquires about finding biological relatives
+explores ethical dilemmas in relationships
+discusses preferences in relationships
+asks for opinions on cheating
+seeks advice on handling past relationship issues
+discusses celebrity gossip
+asks for help in finding phone numbers
+"discusses relationship issues
+- "asks for relationship advice
+asks for opinions on ethical dilemmas
+discusses preferences in partners
+discusses infidelity in relationships
+seeks advice on honesty in relationships
+seeks advice on love and friendship
+asks for opinions on choosing between partners
+seeks advice on handling past mistakes in relationships
+discusses preferences in romantic partners
+seeks advice on infidelity
+seeks help in finding biological relatives
+seeks help on legal matters
+seeks advice on personal matters
+- "discusses relationship issues
+seeks help in finding biological family
+discusses challenges in finding biological family members
+discusses loyalty and trust in relationships
+asks for advice on cheating in relationships
+inquires about love and friendship dynamics
+inquires about cheating in relationships
+Seeks opinions on gender roles
+Inquires about historical figures and events
+"asks for relationship advice
+seeks help on personal development
+seeks information on historical figures
+inquires about personal experiences
+discusses gender dynamics
+inquires about career choices
+seeks advice on dealing with ex-partners
+inquires about gender dynamics in relationships
+- "Seeks advice on relationships
+Inquires about online interactions and social behavior
+discusses spirituality and beliefs
+asks about celebrities
+asks for help in finding a new partner
+Asks for personal opinions on sensitive topics
+asks for information on historical figures
+seeks information on maritime history
+inquires about spirituality and beliefs
+asks for advice on social interactions
+- "seeks relationship advice
+asks for personal opinions on celebrities
+Asks for advice on personal development
+discusses workplace dynamics
+discusses financial matters
+Inquires about celebrities and pop culture
+"seeks advice on relationship issues
+seeks advice on dealing with difficult situations
+GPTAssigner Cost 1.5668919999999968 $
+Stage Assign assign
+Assigned all recall: 0.602
+Assigned all precision: 0.2724252491694352
+Assigned description: asks for opinions on attractiveness and relationships. recall: 0.038 precision: 0.0
+Assigned description: asks for advice on love and relationships. recall: 0.074 precision: 0.0
+Assigned description: inquires about finding biological relatives. recall: 0.02 precision: 0.1
+Assigned description: explores ethical dilemmas in relationships. recall: 0.062 precision: 0.0
+Assigned description: discusses preferences in relationships. recall: 0.068 precision: 0.0
+Assigned description: asks for opinions on cheating. recall: 0.05 precision: 0.04
+Assigned description: seeks advice on handling past relationship issues. recall: 0.01 precision: 0.0
+Assigned description: discusses celebrity gossip. recall: 0.014 precision: 0.0
+Assigned description: asks for help in finding phone numbers. recall: 0.05 precision: 0.08
+Assigned description: "discusses relationship issues. recall: 0.108 precision: 0.0
+Assigned description: - "asks for relationship advice. recall: 0.044 precision: 0.0
+Assigned description: asks for opinions on ethical dilemmas. recall: 0.082 precision: 0.024390243902439025
+Assigned description: discusses preferences in partners. recall: 0.07 precision: 0.0
+Assigned description: discusses infidelity in relationships. recall: 0.048 precision: 0.041666666666666664
+Assigned description: seeks advice on honesty in relationships. recall: 0.0 precision: 0.0
+Assigned description: seeks advice on love and friendship. recall: 0.06 precision: 0.0
+Assigned description: asks for opinions on choosing between partners. recall: 0.038 precision: 0.0
+Assigned description: seeks advice on handling past mistakes in relationships. recall: 0.004 precision: 0.0
+Assigned description: discusses preferences in romantic partners. recall: 0.034 precision: 0.0
+Assigned description: seeks advice on infidelity. recall: 0.028 precision: 0.0
+Assigned description: seeks help in finding biological relatives. recall: 0.01 precision: 0.0
+Assigned description: seeks help on legal matters. recall: 0.08 precision: 0.05
+Assigned description: seeks advice on personal matters. recall: 0.162 precision: 0.012345679012345678
+Assigned description: - "discusses relationship issues. recall: 0.102 precision: 0.0
+Assigned description: seeks help in finding biological family. recall: 0.01 precision: 0.0
+Assigned description: discusses challenges in finding biological family members. recall: 0.01 precision: 0.0
+Assigned description: discusses loyalty and trust in relationships. recall: 0.046 precision: 0.0
+Assigned description: asks for advice on cheating in relationships. recall: 0.008 precision: 0.0
+Assigned description: inquires about love and friendship dynamics. recall: 0.11 precision: 0.01818181818181818
+Assigned description: inquires about cheating in relationships. recall: 0.032 precision: 0.0
+Assigned description: Seeks opinions on gender roles. recall: 0.032 precision: 0.0
+Assigned description: Inquires about historical figures and events. recall: 0.088 precision: 0.09090909090909091
+Assigned description: "asks for relationship advice. recall: 0.052 precision: 0.0
+Assigned description: seeks help on personal development. recall: 0.04 precision: 0.0
+Assigned description: seeks information on historical figures. recall: 0.06 precision: 0.0
+Assigned description: inquires about personal experiences. recall: 0.322 precision: 0.13043478260869565
+Assigned description: discusses gender dynamics. recall: 0.128 precision: 0.03125
+Assigned description: inquires about career choices. recall: 0.076 precision: 0.10526315789473684
+Assigned description: seeks advice on dealing with ex-partners. recall: 0.022 precision: 0.0
+Assigned description: inquires about gender dynamics in relationships. recall: 0.074 precision: 0.0
+Assigned description: - "Seeks advice on relationships. recall: 0.052 precision: 0.0
+Assigned description: Inquires about online interactions and social behavior. recall: 0.162 precision: 0.04938271604938271
+Assigned description: discusses spirituality and beliefs. recall: 0.084 precision: 0.0
+Assigned description: asks about celebrities. recall: 0.04 precision: 0.05
+Assigned description: asks for help in finding a new partner. recall: 0.034 precision: 0.0
+Assigned description: Asks for personal opinions on sensitive topics. recall: 0.238 precision: 0.11764705882352941
+Assigned description: asks for information on historical figures. recall: 0.05 precision: 0.0
+Assigned description: seeks information on maritime history. recall: 0.01 precision: 0.2
+Assigned description: inquires about spirituality and beliefs. recall: 0.088 precision: 0.0
+Assigned description: asks for advice on social interactions. recall: 0.124 precision: 0.0
+Assigned description: - "seeks relationship advice. recall: 0.04 precision: 0.0
+Assigned description: asks for personal opinions on celebrities. recall: 0.054 precision: 0.0
+Assigned description: Asks for advice on personal development. recall: 0.062 precision: 0.03225806451612903
+Assigned description: discusses workplace dynamics. recall: 0.064 precision: 0.0625
+Assigned description: discusses financial matters. recall: 0.064 precision: 0.0625
+Assigned description: Inquires about celebrities and pop culture. recall: 0.076 precision: 0.3157894736842105
+Assigned description: "seeks advice on relationship issues. recall: 0.054 precision: 0.0
+Assigned description: seeks advice on dealing with difficult situations. recall: 0.162 precision: 0.04938271604938271
+Dropping 0 descriptions because they are too popular or too unpopular:
+Stage select select
+Unmatched count: 295
+Description: Inquires about historical figures and events. Count: 44
+Description: inquires about personal experiences. Count: 136
+Description: Inquires about celebrities and pop culture. Count: 25
+Clustering results saved at:  experiments/yahoo/2025-12-05-14-40-55

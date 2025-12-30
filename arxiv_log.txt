@@ -1,0 +1,1648 @@
+9hr+48m
+Unmatched count: 276 -> 260
+
+Here's a rough estimate of the cost; it might not be accurate and we are not responsible for any cost incurred.
+Each round costs 2.83, proposer spending 0.01, assigner spending 2.83. The final assignment costs 0.00.
+Total cost is 5.67
+Do you want to continue? (y/n)Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. We show that using nearest neighbours in the latent space of autoencoders
+(AE) significantly improves performance of semi-supervised novelty detection in
+both single and multi-class contexts. Autoencoding methods detect novelty by
+learning to differentiate between the non-novel training class(es) and all
+other unseen classes. Our method harnesses a combination of the reconstructions
+of the nearest neighbours and the latent-neighbour distances of a given input's
+latent representation. We demonstrate that our nearest-latent-neighbours (NLN)
+algorithm is memory and time efficient, does not require significant data
+augmentation, nor is reliant on pre-trained networks. Furthermore, we show that
+the NLN-algorithm is easily applicable to multiple datasets without
+modification. Additionally, the proposed algorithm is agnostic to autoencoder
+architecture and reconstruction error method. We validate our method across
+several standard datasets for a variety of different autoencoding architectures
+such as vanilla, adversarial and variational autoencoders using either
+reconstruction, residual or feature consistent losses. The results show that
+the NLN algorithm grants up to a 17% increase in Area Under the Receiver
+Operating Characteristics (AUROC) curve performance for the multi-class case
+and 8% for single-class novelty detection.
+1. We revisit the standard formulation of tabular actor-critic algorithm as a
+two time-scale stochastic approximation with value function computed on a
+faster time-scale and policy computed on a slower time-scale. This emulates
+policy iteration. We observe that reversal of the time scales will in fact
+emulate value iteration and is a legitimate algorithm. We provide a proof of
+convergence and compare the two empirically with and without function
+approximation (with both linear and nonlinear function approximators) and
+observe that our proposed critic-actor algorithm performs on par with
+actor-critic in terms of both accuracy and computational effort.
+2. Biclustering is a powerful approach to search for patterns in data, as it can
+be driven by a function that measures the quality of diverse types of patterns
+of interest. However, due to its computational complexity, the exploration of
+the search space is usually guided by an algorithmic strategy, sometimes
+introducing random factors that simplify the computational cost (e.g. greedy
+search or evolutionary computation).
+  Shifting patterns are specially interesting as they account constant
+fluctuations in data, i.e. they capture situations in which all the values in
+the pattern move up or down for one dimension maintaining the range amplitude
+for all the dimensions. This behaviour is very common in nature, e.g. in the
+analysis of gene expression data, where a subset of genes might go up or down
+for a subset of patients or experimental conditions, identifying functionally
+coherent categories.
+  Boolean reasoning was recently revealed as an appropriate methodology to
+address the search for constant biclusters. In this work, this direction is
+extended to search for more general biclusters that include shifting patterns.
+The mathematical foundations are described in order to associate Boolean
+concepts with shifting patterns, and the methodology is presented to show that
+the induction of shifting patterns by means of Boolean reasoning is due to the
+ability of finding all inclusion--maximal {\delta}-shifting patterns.
+  Experiments with a real dataset show the potential of our approach at finding
+biclusters with {\delta}-shifting patterns, which have been evaluated with the
+mean squared residue (MSR), providing an excellent performance at finding
+results very close to zero.
+3. Class imbalance is a common problem in supervised learning and impedes the
+predictive performance of classification models. Popular countermeasures
+include oversampling the minority class. Standard methods like SMOTE rely on
+finding nearest neighbours and linear interpolations which are problematic in
+case of high-dimensional, complex data distributions. Generative Adversarial
+Networks (GANs) have been proposed as an alternative method for generating
+artificial minority examples as they can model complex distributions. However,
+prior research on GAN-based oversampling does not incorporate recent
+advancements from the literature on generating realistic tabular data with
+GANs. Previous studies also focus on numerical variables whereas categorical
+features are common in many business applications of classification methods
+such as credit scoring. The paper propoes an oversampling method based on a
+conditional Wasserstein GAN that can effectively model tabular datasets with
+numerical and categorical variables and pays special attention to the
+down-stream classification task through an auxiliary classifier loss. We
+benchmark our method against standard oversampling methods and the imbalanced
+baseline on seven real-world datasets. Empirical results evidence the
+competitiveness of GAN-based oversampling.
+4. We introduce Universum learning for multiclass problems and propose a novel
+formulation for multiclass universum SVM (MU-SVM). We also propose a span bound
+for MU-SVM that can be used for model selection thereby avoiding resampling.
+Empirical results demonstrate the effectiveness of MU-SVM and the proposed
+bound.
+5. Reward-free reinforcement learning (RL) is a framework which is suitable for
+both the batch RL setting and the setting where there are many reward functions
+of interest. During the exploration phase, an agent collects samples without
+using a pre-specified reward function. After the exploration phase, a reward
+function is given, and the agent uses samples collected during the exploration
+phase to compute a near-optimal policy. Jin et al. [2020] showed that in the
+tabular setting, the agent only needs to collect polynomial number of samples
+(in terms of the number states, the number of actions, and the planning
+horizon) for reward-free RL. However, in practice, the number of states and
+actions can be large, and thus function approximation schemes are required for
+generalization. In this work, we give both positive and negative results for
+reward-free RL with linear function approximation. We give an algorithm for
+reward-free RL in the linear Markov decision process setting where both the
+transition and the reward admit linear representations. The sample complexity
+of our algorithm is polynomial in the feature dimension and the planning
+horizon, and is completely independent of the number of states and actions. We
+further give an exponential lower bound for reward-free RL in the setting where
+only the optimal $Q$-function admits a linear representation. Our results imply
+several interesting exponential separations on the sample complexity of
+reward-free RL.
+6. Several papers argue that wide minima generalize better than narrow minima.
+In this paper, through detailed experiments that not only corroborate the
+generalization properties of wide minima, we also provide empirical evidence
+for a new hypothesis that the density of wide minima is likely lower than the
+density of narrow minima. Further, motivated by this hypothesis, we design a
+novel explore-exploit learning rate schedule. On a variety of image and natural
+language datasets, compared to their original hand-tuned learning rate
+baselines, we show that our explore-exploit schedule can result in either up to
+0.84% higher absolute accuracy using the original training budget or up to 57%
+reduced training time while achieving the original reported accuracy. For
+example, we achieve state-of-the-art (SOTA) accuracy for IWSLT'14 (DE-EN)
+dataset by just modifying the learning rate schedule of a high performing
+model.
+7. We propose a new method of program learning in a Domain Specific Language
+(DSL) which is based on gradient descent with no direct search. The first
+component of our method is a probabilistic representation of the DSL variables.
+At each timestep in the program sequence, different DSL functions are applied
+on the DSL variables with a certain probability, leading to different possible
+outcomes. Rather than handling all these outputs separately, whose number grows
+exponentially with each timestep, we collect them into a superposition of
+variables which captures the information in a single, but fuzzy, state. This
+state is to be contrasted at the final timestep with the ground-truth output,
+through a loss function. The second component of our method is an
+attention-based recurrent neural network, which provides an appropriate
+initialization point for the gradient descent that optimizes the probabilistic
+representation. The method we have developed surpasses the state-of-the-art for
+synthesising long programs and is able to learn programs under noise.
+8. Canonical Correlation Analysis (CCA) is widely used for multimodal data
+analysis and, more recently, for discriminative tasks such as multi-view
+learning; however, it makes no use of class labels. Recent CCA methods have
+started to address this weakness but are limited in that they do not
+simultaneously optimize the CCA projection for discrimination and the CCA
+projection itself, or they are linear only. We address these deficiencies by
+simultaneously optimizing a CCA-based and a task objective in an end-to-end
+manner. Together, these two objectives learn a non-linear CCA projection to a
+shared latent space that is highly correlated and discriminative. Our method
+shows a significant improvement over previous state-of-the-art (including deep
+supervised approaches) for cross-view classification, regularization with a
+second view, and semi-supervised learning on real data.
+
+Here is our goal: Represent the scientific articles by their primary research subfield for clustering, for example, machine learning, Robotics, Cryptography, Signal Processing, Information Retrieval, computer vision, human-computer interaction. Please cluster them into 9 groups. Each group should contain at least 3 articles. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"introduces universum learning for multiclass problems"
+"investigates reward-free reinforcement learning"
+
+
+Again, here's the goal: Represent the scientific articles by their primary research subfield for clustering, for example, machine learning, Robotics, Cryptography, Signal Processing, Information Retrieval, computer vision, human-computer interaction. Please cluster them into 9 groups. Each group should contain at least 3 articles.. Your responses are:
+- "
+Proposer model response:
+['- "proposes a novel algorithm for novelty detection using autoencoders"\n- "explores the convergence of actor-critic algorithms"\n- "discusses the application of biclustering in data analysis"\n- "addresses class imbalance in supervised learning using GANs"\n- "introduces Universum learning for multiclass problems"\n- "investigates reward-free reinforcement learning with linear function approximation"\n- "examines the generalization properties of wide minima in machine learning"\n- "presents a new method of program learning in a Domain Specific Language (DSL)"\n- "optimizes CCA projection for discrimination and shared latent space"']
+Proposer Cost: $0.001367
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. Class imbalance is a common problem in supervised learning and impedes the
+predictive performance of classification models. Popular countermeasures
+include oversampling the minority class. Standard methods like SMOTE rely on
+finding nearest neighbours and linear interpolations which are problematic in
+case of high-dimensional, complex data distributions. Generative Adversarial
+Networks (GANs) have been proposed as an alternative method for generating
+artificial minority examples as they can model complex distributions. However,
+prior research on GAN-based oversampling does not incorporate recent
+advancements from the literature on generating realistic tabular data with
+GANs. Previous studies also focus on numerical variables whereas categorical
+features are common in many business applications of classification methods
+such as credit scoring. The paper propoes an oversampling method based on a
+conditional Wasserstein GAN that can effectively model tabular datasets with
+numerical and categorical variables and pays special attention to the
+down-stream classification task through an auxiliary classifier loss. We
+benchmark our method against standard oversampling methods and the imbalanced
+baseline on seven real-world datasets. Empirical results evidence the
+competitiveness of GAN-based oversampling.
+1. We revisit the standard formulation of tabular actor-critic algorithm as a
+two time-scale stochastic approximation with value function computed on a
+faster time-scale and policy computed on a slower time-scale. This emulates
+policy iteration. We observe that reversal of the time scales will in fact
+emulate value iteration and is a legitimate algorithm. We provide a proof of
+convergence and compare the two empirically with and without function
+approximation (with both linear and nonlinear function approximators) and
+observe that our proposed critic-actor algorithm performs on par with
+actor-critic in terms of both accuracy and computational effort.
+2. Biclustering is a powerful approach to search for patterns in data, as it can
+be driven by a function that measures the quality of diverse types of patterns
+of interest. However, due to its computational complexity, the exploration of
+the search space is usually guided by an algorithmic strategy, sometimes
+introducing random factors that simplify the computational cost (e.g. greedy
+search or evolutionary computation).
+  Shifting patterns are specially interesting as they account constant
+fluctuations in data, i.e. they capture situations in which all the values in
+the pattern move up or down for one dimension maintaining the range amplitude
+for all the dimensions. This behaviour is very common in nature, e.g. in the
+analysis of gene expression data, where a subset of genes might go up or down
+for a subset of patients or experimental conditions, identifying functionally
+coherent categories.
+  Boolean reasoning was recently revealed as an appropriate methodology to
+address the search for constant biclusters. In this work, this direction is
+extended to search for more general biclusters that include shifting patterns.
+The mathematical foundations are described in order to associate Boolean
+concepts with shifting patterns, and the methodology is presented to show that
+the induction of shifting patterns by means of Boolean reasoning is due to the
+ability of finding all inclusion--maximal {\delta}-shifting patterns.
+  Experiments with a real dataset show the potential of our approach at finding
+biclusters with {\delta}-shifting patterns, which have been evaluated with the
+mean squared residue (MSR), providing an excellent performance at finding
+results very close to zero.
+3. We show that using nearest neighbours in the latent space of autoencoders
+(AE) significantly improves performance of semi-supervised novelty detection in
+both single and multi-class contexts. Autoencoding methods detect novelty by
+learning to differentiate between the non-novel training class(es) and all
+other unseen classes. Our method harnesses a combination of the reconstructions
+of the nearest neighbours and the latent-neighbour distances of a given input's
+latent representation. We demonstrate that our nearest-latent-neighbours (NLN)
+algorithm is memory and time efficient, does not require significant data
+augmentation, nor is reliant on pre-trained networks. Furthermore, we show that
+the NLN-algorithm is easily applicable to multiple datasets without
+modification. Additionally, the proposed algorithm is agnostic to autoencoder
+architecture and reconstruction error method. We validate our method across
+several standard datasets for a variety of different autoencoding architectures
+such as vanilla, adversarial and variational autoencoders using either
+reconstruction, residual or feature consistent losses. The results show that
+the NLN algorithm grants up to a 17% increase in Area Under the Receiver
+Operating Characteristics (AUROC) curve performance for the multi-class case
+and 8% for single-class novelty detection.
+4. Several papers argue that wide minima generalize better than narrow minima.
+In this paper, through detailed experiments that not only corroborate the
+generalization properties of wide minima, we also provide empirical evidence
+for a new hypothesis that the density of wide minima is likely lower than the
+density of narrow minima. Further, motivated by this hypothesis, we design a
+novel explore-exploit learning rate schedule. On a variety of image and natural
+language datasets, compared to their original hand-tuned learning rate
+baselines, we show that our explore-exploit schedule can result in either up to
+0.84% higher absolute accuracy using the original training budget or up to 57%
+reduced training time while achieving the original reported accuracy. For
+example, we achieve state-of-the-art (SOTA) accuracy for IWSLT'14 (DE-EN)
+dataset by just modifying the learning rate schedule of a high performing
+model.
+5. Canonical Correlation Analysis (CCA) is widely used for multimodal data
+analysis and, more recently, for discriminative tasks such as multi-view
+learning; however, it makes no use of class labels. Recent CCA methods have
+started to address this weakness but are limited in that they do not
+simultaneously optimize the CCA projection for discrimination and the CCA
+projection itself, or they are linear only. We address these deficiencies by
+simultaneously optimizing a CCA-based and a task objective in an end-to-end
+manner. Together, these two objectives learn a non-linear CCA projection to a
+shared latent space that is highly correlated and discriminative. Our method
+shows a significant improvement over previous state-of-the-art (including deep
+supervised approaches) for cross-view classification, regularization with a
+second view, and semi-supervised learning on real data.
+6. Reward-free reinforcement learning (RL) is a framework which is suitable for
+both the batch RL setting and the setting where there are many reward functions
+of interest. During the exploration phase, an agent collects samples without
+using a pre-specified reward function. After the exploration phase, a reward
+function is given, and the agent uses samples collected during the exploration
+phase to compute a near-optimal policy. Jin et al. [2020] showed that in the
+tabular setting, the agent only needs to collect polynomial number of samples
+(in terms of the number states, the number of actions, and the planning
+horizon) for reward-free RL. However, in practice, the number of states and
+actions can be large, and thus function approximation schemes are required for
+generalization. In this work, we give both positive and negative results for
+reward-free RL with linear function approximation. We give an algorithm for
+reward-free RL in the linear Markov decision process setting where both the
+transition and the reward admit linear representations. The sample complexity
+of our algorithm is polynomial in the feature dimension and the planning
+horizon, and is completely independent of the number of states and actions. We
+further give an exponential lower bound for reward-free RL in the setting where
+only the optimal $Q$-function admits a linear representation. Our results imply
+several interesting exponential separations on the sample complexity of
+reward-free RL.
+7. We propose a new method of program learning in a Domain Specific Language
+(DSL) which is based on gradient descent with no direct search. The first
+component of our method is a probabilistic representation of the DSL variables.
+At each timestep in the program sequence, different DSL functions are applied
+on the DSL variables with a certain probability, leading to different possible
+outcomes. Rather than handling all these outputs separately, whose number grows
+exponentially with each timestep, we collect them into a superposition of
+variables which captures the information in a single, but fuzzy, state. This
+state is to be contrasted at the final timestep with the ground-truth output,
+through a loss function. The second component of our method is an
+attention-based recurrent neural network, which provides an appropriate
+initialization point for the gradient descent that optimizes the probabilistic
+representation. The method we have developed surpasses the state-of-the-art for
+synthesising long programs and is able to learn programs under noise.
+8. We introduce Universum learning for multiclass problems and propose a novel
+formulation for multiclass universum SVM (MU-SVM). We also propose a span bound
+for MU-SVM that can be used for model selection thereby avoiding resampling.
+Empirical results demonstrate the effectiveness of MU-SVM and the proposed
+bound.
+
+Here is our goal: Represent the scientific articles by their primary research subfield for clustering, for example, machine learning, Robotics, Cryptography, Signal Processing, Information Retrieval, computer vision, human-computer interaction. Please cluster them into 9 groups. Each group should contain at least 3 articles. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"explores biclustering for pattern search in data"
+"enhances novelty detection using autoencoders"
+
+
+Again, here's the goal: Represent the scientific articles by their primary research subfield for clustering, for example, machine learning, Robotics, Cryptography, Signal Processing, Information Retrieval, computer vision, human-computer interaction. Please cluster them into 9 groups. Each group should contain at least 3 articles.. Your responses are:
+- "
+Proposer model response:
+['"introduces a novel method for program learning in a Domain Specific Language (DSL)"\n- "proposes Universum learning for multiclass problems with MU-SVM"\n- "explores the use of Canonical Correlation Analysis (CCA) for discriminative tasks"\n- "presents a method for reward-free reinforcement learning with linear function approximation"\n- "investigates the effectiveness of GAN-based oversampling for imbalanced datasets"\n- "discusses the application of tabular actor-critic algorithm for policy iteration"\n- "explores biclustering for pattern search in data with shifting patterns"\n- "enhances novelty detection using nearest neighbours in the latent space of autoencoders"\n- "studies the generalization properties of wide minima in machine learning"']
+Proposer Cost: $0.001405
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. We introduce Universum learning for multiclass problems and propose a novel
+formulation for multiclass universum SVM (MU-SVM). We also propose a span bound
+for MU-SVM that can be used for model selection thereby avoiding resampling.
+Empirical results demonstrate the effectiveness of MU-SVM and the proposed
+bound.
+1. We show that using nearest neighbours in the latent space of autoencoders
+(AE) significantly improves performance of semi-supervised novelty detection in
+both single and multi-class contexts. Autoencoding methods detect novelty by
+learning to differentiate between the non-novel training class(es) and all
+other unseen classes. Our method harnesses a combination of the reconstructions
+of the nearest neighbours and the latent-neighbour distances of a given input's
+latent representation. We demonstrate that our nearest-latent-neighbours (NLN)
+algorithm is memory and time efficient, does not require significant data
+augmentation, nor is reliant on pre-trained networks. Furthermore, we show that
+the NLN-algorithm is easily applicable to multiple datasets without
+modification. Additionally, the proposed algorithm is agnostic to autoencoder
+architecture and reconstruction error method. We validate our method across
+several standard datasets for a variety of different autoencoding architectures
+such as vanilla, adversarial and variational autoencoders using either
+reconstruction, residual or feature consistent losses. The results show that
+the NLN algorithm grants up to a 17% increase in Area Under the Receiver
+Operating Characteristics (AUROC) curve performance for the multi-class case
+and 8% for single-class novelty detection.
+2. Several papers argue that wide minima generalize better than narrow minima.
+In this paper, through detailed experiments that not only corroborate the
+generalization properties of wide minima, we also provide empirical evidence
+for a new hypothesis that the density of wide minima is likely lower than the
+density of narrow minima. Further, motivated by this hypothesis, we design a
+novel explore-exploit learning rate schedule. On a variety of image and natural
+language datasets, compared to their original hand-tuned learning rate
+baselines, we show that our explore-exploit schedule can result in either up to
+0.84% higher absolute accuracy using the original training budget or up to 57%
+reduced training time while achieving the original reported accuracy. For
+example, we achieve state-of-the-art (SOTA) accuracy for IWSLT'14 (DE-EN)
+dataset by just modifying the learning rate schedule of a high performing
+model.
+3. Reward-free reinforcement learning (RL) is a framework which is suitable for
+both the batch RL setting and the setting where there are many reward functions
+of interest. During the exploration phase, an agent collects samples without
+using a pre-specified reward function. After the exploration phase, a reward
+function is given, and the agent uses samples collected during the exploration
+phase to compute a near-optimal policy. Jin et al. [2020] showed that in the
+tabular setting, the agent only needs to collect polynomial number of samples
+(in terms of the number states, the number of actions, and the planning
+horizon) for reward-free RL. However, in practice, the number of states and
+actions can be large, and thus function approximation schemes are required for
+generalization. In this work, we give both positive and negative results for
+reward-free RL with linear function approximation. We give an algorithm for
+reward-free RL in the linear Markov decision process setting where both the
+transition and the reward admit linear representations. The sample complexity
+of our algorithm is polynomial in the feature dimension and the planning
+horizon, and is completely independent of the number of states and actions. We
+further give an exponential lower bound for reward-free RL in the setting where
+only the optimal $Q$-function admits a linear representation. Our results imply
+several interesting exponential separations on the sample complexity of
+reward-free RL.
+4. Biclustering is a powerful approach to search for patterns in data, as it can
+be driven by a function that measures the quality of diverse types of patterns
+of interest. However, due to its computational complexity, the exploration of
+the search space is usually guided by an algorithmic strategy, sometimes
+introducing random factors that simplify the computational cost (e.g. greedy
+search or evolutionary computation).
+  Shifting patterns are specially interesting as they account constant
+fluctuations in data, i.e. they capture situations in which all the values in
+the pattern move up or down for one dimension maintaining the range amplitude
+for all the dimensions. This behaviour is very common in nature, e.g. in the
+analysis of gene expression data, where a subset of genes might go up or down
+for a subset of patients or experimental conditions, identifying functionally
+coherent categories.
+  Boolean reasoning was recently revealed as an appropriate methodology to
+address the search for constant biclusters. In this work, this direction is
+extended to search for more general biclusters that include shifting patterns.
+The mathematical foundations are described in order to associate Boolean
+concepts with shifting patterns, and the methodology is presented to show that
+the induction of shifting patterns by means of Boolean reasoning is due to the
+ability of finding all inclusion--maximal {\delta}-shifting patterns.
+  Experiments with a real dataset show the potential of our approach at finding
+biclusters with {\delta}-shifting patterns, which have been evaluated with the
+mean squared residue (MSR), providing an excellent performance at finding
+results very close to zero.
+5. Class imbalance is a common problem in supervised learning and impedes the
+predictive performance of classification models. Popular countermeasures
+include oversampling the minority class. Standard methods like SMOTE rely on
+finding nearest neighbours and linear interpolations which are problematic in
+case of high-dimensional, complex data distributions. Generative Adversarial
+Networks (GANs) have been proposed as an alternative method for generating
+artificial minority examples as they can model complex distributions. However,
+prior research on GAN-based oversampling does not incorporate recent
+advancements from the literature on generating realistic tabular data with
+GANs. Previous studies also focus on numerical variables whereas categorical
+features are common in many business applications of classification methods
+such as credit scoring. The paper propoes an oversampling method based on a
+conditional Wasserstein GAN that can effectively model tabular datasets with
+numerical and categorical variables and pays special attention to the
+down-stream classification task through an auxiliary classifier loss. We
+benchmark our method against standard oversampling methods and the imbalanced
+baseline on seven real-world datasets. Empirical results evidence the
+competitiveness of GAN-based oversampling.
+6. We propose a new method of program learning in a Domain Specific Language
+(DSL) which is based on gradient descent with no direct search. The first
+component of our method is a probabilistic representation of the DSL variables.
+At each timestep in the program sequence, different DSL functions are applied
+on the DSL variables with a certain probability, leading to different possible
+outcomes. Rather than handling all these outputs separately, whose number grows
+exponentially with each timestep, we collect them into a superposition of
+variables which captures the information in a single, but fuzzy, state. This
+state is to be contrasted at the final timestep with the ground-truth output,
+through a loss function. The second component of our method is an
+attention-based recurrent neural network, which provides an appropriate
+initialization point for the gradient descent that optimizes the probabilistic
+representation. The method we have developed surpasses the state-of-the-art for
+synthesising long programs and is able to learn programs under noise.
+7. Canonical Correlation Analysis (CCA) is widely used for multimodal data
+analysis and, more recently, for discriminative tasks such as multi-view
+learning; however, it makes no use of class labels. Recent CCA methods have
+started to address this weakness but are limited in that they do not
+simultaneously optimize the CCA projection for discrimination and the CCA
+projection itself, or they are linear only. We address these deficiencies by
+simultaneously optimizing a CCA-based and a task objective in an end-to-end
+manner. Together, these two objectives learn a non-linear CCA projection to a
+shared latent space that is highly correlated and discriminative. Our method
+shows a significant improvement over previous state-of-the-art (including deep
+supervised approaches) for cross-view classification, regularization with a
+second view, and semi-supervised learning on real data.
+8. We revisit the standard formulation of tabular actor-critic algorithm as a
+two time-scale stochastic approximation with value function computed on a
+faster time-scale and policy computed on a slower time-scale. This emulates
+policy iteration. We observe that reversal of the time scales will in fact
+emulate value iteration and is a legitimate algorithm. We provide a proof of
+convergence and compare the two empirically with and without function
+approximation (with both linear and nonlinear function approximators) and
+observe that our proposed critic-actor algorithm performs on par with
+actor-critic in terms of both accuracy and computational effort.
+
+Here is our goal: Represent the scientific articles by their primary research subfield for clustering, for example, machine learning, Robotics, Cryptography, Signal Processing, Information Retrieval, computer vision, human-computer interaction. Please cluster them into 9 groups. Each group should contain at least 3 articles. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"addresses class imbalance in supervised learning"
+"enhances novelty detection using autoencoders"
+
+
+Again, here's the goal: Represent the scientific articles by their primary research subfield for clustering, for example, machine learning, Robotics, Cryptography, Signal Processing, Information Retrieval, computer vision, human-computer interaction. Please cluster them into 9 groups. Each group should contain at least 3 articles.. Your responses are:
+- "
+Proposer model response:
+['"introduces a novel formulation for multiclass universum SVM"\n- "improves semi-supervised novelty detection using autoencoders"\n- "explores generalization properties of wide minima"\n- "discusses reward-free reinforcement learning"\n- "utilizes biclustering for pattern search"\n- "addresses class imbalance in supervised learning"\n- "proposes a new method for program learning in a DSL"\n- "optimizes CCA projection for discrimination"\n- "revisits tabular actor-critic algorithm formulation"']
+Proposer Cost: $0.001332
+30 descriptions proposed in total. Here are the descriptions:
+"introduces a novel method for program learning in a Domain Specific Language (DSL)
+explores generalization properties of wide minima
+- "proposes a novel algorithm for novelty detection using autoencoders
+Enhances novelty detection using autoencoders
+presents a new method of program learning in a Domain Specific Language (DSL)
+addresses class imbalance in supervised learning
+presents a method for reward-free reinforcement learning with linear function approximation
+investigates reward-free reinforcement learning with linear function approximation
+Investigates reward-free reinforcement learning
+Revisits tabular actor-critic algorithm formulation
+examines the generalization properties of wide minima in machine learning
+addresses class imbalance in supervised learning using GANs
+discusses the application of biclustering in data analysis
+investigates the effectiveness of GAN-based oversampling for imbalanced datasets
+- "Focuses on program learning in Domain Specific Language
+optimizes CCA projection for discrimination
+"introduces a novel formulation for multiclass universum SVM
+explores the use of Canonical Correlation Analysis (CCA) for discriminative tasks
+enhances novelty detection using nearest neighbours in the latent space of autoencoders
+discusses reward-free reinforcement learning
+Explores biclustering for pattern search in data
+improves semi-supervised novelty detection using autoencoders
+explores the convergence of actor-critic algorithms
+utilizes biclustering for pattern search
+explores biclustering for pattern search in data with shifting patterns
+introduces Universum learning for multiclass problems
+discusses the application of tabular actor-critic algorithm for policy iteration
+Addresses class imbalance in supervised learning
+Optimizes Canonical Correlation Analysis for discriminative tasks
+proposes a new method for program learning in a DSL
+GPTAssigner Cost 2.4310094999999943 $
+Stage Assign assign
+Assigned all recall: 0.6865079365079365
+Assigned all precision: 0.2630057803468208
+Assigned description: "introduces a novel method for program learning in a Domain Specific Language (DSL). recall: 0.33134920634920634 precision: 0.04790419161676647
+Assigned description: explores generalization properties of wide minima. recall: 0.12103174603174603 precision: 0.11475409836065574
+Assigned description: - "proposes a novel algorithm for novelty detection using autoencoders. recall: 0.12301587301587301 precision: 0.0
+Assigned description: Enhances novelty detection using autoencoders. recall: 0.2261904761904762 precision: 0.043859649122807015
+Assigned description: presents a new method of program learning in a Domain Specific Language (DSL). recall: 0.21031746031746032 precision: 0.04716981132075472
+Assigned description: addresses class imbalance in supervised learning. recall: 0.16865079365079366 precision: 0.07058823529411765
+Assigned description: presents a method for reward-free reinforcement learning with linear function approximation. recall: 0.005952380952380952 precision: 0.0
+Assigned description: investigates reward-free reinforcement learning with linear function approximation. recall: 0.007936507936507936 precision: 0.0
+Assigned description: Investigates reward-free reinforcement learning. recall: 0.07142857142857142 precision: 0.027777777777777776
+Assigned description: Revisits tabular actor-critic algorithm formulation. recall: 0.017857142857142856 precision: 0.1111111111111111
+Assigned description: examines the generalization properties of wide minima in machine learning. recall: 0.013888888888888888 precision: 0.0
+Assigned description: addresses class imbalance in supervised learning using GANs. recall: 0.05555555555555555 precision: 0.0
+Assigned description: discusses the application of biclustering in data analysis. recall: 0.05555555555555555 precision: 0.0
+Assigned description: investigates the effectiveness of GAN-based oversampling for imbalanced datasets. recall: 0.015873015873015872 precision: 0.0
+Assigned description: - "Focuses on program learning in Domain Specific Language. recall: 0.08333333333333333 precision: 0.09523809523809523
+Assigned description: optimizes CCA projection for discrimination. recall: 0.125 precision: 0.031746031746031744
+Assigned description: "introduces a novel formulation for multiclass universum SVM. recall: 0.04365079365079365 precision: 0.045454545454545456
+Assigned description: explores the use of Canonical Correlation Analysis (CCA) for discriminative tasks. recall: 0.01984126984126984 precision: 0.0
+Assigned description: enhances novelty detection using nearest neighbours in the latent space of autoencoders. recall: 0.011904761904761904 precision: 0.0
+Assigned description: discusses reward-free reinforcement learning. recall: 0.037698412698412696 precision: 0.05263157894736842
+Assigned description: Explores biclustering for pattern search in data. recall: 0.10515873015873016 precision: 0.0
+Assigned description: improves semi-supervised novelty detection using autoencoders. recall: 0.07341269841269842 precision: 0.0
+Assigned description: explores the convergence of actor-critic algorithms. recall: 0.05952380952380952 precision: 0.0
+Assigned description: utilizes biclustering for pattern search. recall: 0.047619047619047616 precision: 0.0
+Assigned description: explores biclustering for pattern search in data with shifting patterns. recall: 0.005952380952380952 precision: 0.0
+Assigned description: introduces Universum learning for multiclass problems. recall: 0.05555555555555555 precision: 0.0
+Assigned description: discusses the application of tabular actor-critic algorithm for policy iteration. recall: 0.00992063492063492 precision: 0.0
+Assigned description: Addresses class imbalance in supervised learning. recall: 0.125 precision: 0.047619047619047616
+Assigned description: Optimizes Canonical Correlation Analysis for discriminative tasks. recall: 0.03968253968253968 precision: 0.0
+Assigned description: proposes a new method for program learning in a DSL. recall: 0.5277777777777778 precision: 0.17669172932330826
+Dropping 1 descriptions because they are too popular or too unpopular:
+Stage select select
+Unmatched count: 276
+Description: "introduces a novel method for program learning in a Domain Specific Language (DSL). Count: 167
+Description: explores generalization properties of wide minima. Count: 27
+Description: addresses class imbalance in supervised learning. Count: 34
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. Explaining machine learning models is an important and increasingly popular
+area of research interest. The Shapley value from game theory has been proposed
+as a prime approach to compute feature importance towards model predictions on
+images, text, tabular data, and recently graph neural networks (GNNs) on
+graphs. In this work, we revisit the appropriateness of the Shapley value for
+GNN explanation, where the task is to identify the most important subgraph and
+constituent nodes for GNN predictions. We claim that the Shapley value is a
+non-ideal choice for graph data because it is by definition not
+structure-aware. We propose a Graph Structure-aware eXplanation (GStarX) method
+to leverage the critical graph structure information to improve the
+explanation. Specifically, we define a scoring function based on a new
+structure-aware value from the cooperative game theory proposed by Hamiache and
+Navarro (HN). When used to score node importance, the HN value utilizes graph
+structures to attribute cooperation surplus between neighbor nodes, resembling
+message passing in GNNs, so that node importance scores reflect not only the
+node feature importance, but also the node structural roles. We demonstrate
+that GStarX produces qualitatively more intuitive explanations, and
+quantitatively improves explanation fidelity over strong baselines on chemical
+graph property prediction and text graph sentiment classification.
+1. We show that using nearest neighbours in the latent space of autoencoders
+(AE) significantly improves performance of semi-supervised novelty detection in
+both single and multi-class contexts. Autoencoding methods detect novelty by
+learning to differentiate between the non-novel training class(es) and all
+other unseen classes. Our method harnesses a combination of the reconstructions
+of the nearest neighbours and the latent-neighbour distances of a given input's
+latent representation. We demonstrate that our nearest-latent-neighbours (NLN)
+algorithm is memory and time efficient, does not require significant data
+augmentation, nor is reliant on pre-trained networks. Furthermore, we show that
+the NLN-algorithm is easily applicable to multiple datasets without
+modification. Additionally, the proposed algorithm is agnostic to autoencoder
+architecture and reconstruction error method. We validate our method across
+several standard datasets for a variety of different autoencoding architectures
+such as vanilla, adversarial and variational autoencoders using either
+reconstruction, residual or feature consistent losses. The results show that
+the NLN algorithm grants up to a 17% increase in Area Under the Receiver
+Operating Characteristics (AUROC) curve performance for the multi-class case
+and 8% for single-class novelty detection.
+2. Machine unlearning (MU) aims to eliminate information that has been learned
+from specific training data, namely forgetting data, from a pre-trained model.
+Currently, the mainstream of existing MU methods involves modifying the
+forgetting data with incorrect labels and subsequently fine-tuning the model.
+While learning such incorrect information can indeed remove knowledge, the
+process is quite unnatural as the unlearning process undesirably reinforces the
+incorrect information and leads to over-forgetting. Towards more
+\textit{natural} machine unlearning, we inject correct information from the
+remaining data to the forgetting samples when changing their labels. Through
+pairing these adjusted samples with their labels, the model will tend to use
+the injected correct information and naturally suppress the information meant
+to be forgotten. Albeit straightforward, such a first step towards natural
+machine unlearning can significantly outperform current state-of-the-art
+approaches. In particular, our method substantially reduces the over-forgetting
+and leads to strong robustness to hyperparameters, making it a promising
+candidate for practical machine unlearning.
+3. We revisit the standard formulation of tabular actor-critic algorithm as a
+two time-scale stochastic approximation with value function computed on a
+faster time-scale and policy computed on a slower time-scale. This emulates
+policy iteration. We observe that reversal of the time scales will in fact
+emulate value iteration and is a legitimate algorithm. We provide a proof of
+convergence and compare the two empirically with and without function
+approximation (with both linear and nonlinear function approximators) and
+observe that our proposed critic-actor algorithm performs on par with
+actor-critic in terms of both accuracy and computational effort.
+4. To date, various neural methods have been proposed for causal effect
+estimation based on observational data, where a default assumption is the same
+distribution and availability of variables at both training and inference
+(i.e., runtime) stages. However, distribution shift (i.e., domain shift) could
+happen during runtime, and bigger challenges arise from the impaired
+accessibility of variables. This is commonly caused by increasing privacy and
+ethical concerns, which can make arbitrary variables unavailable in the entire
+runtime data and imputation impractical. We term the co-occurrence of domain
+shift and inaccessible variables runtime domain corruption, which seriously
+impairs the generalizability of a trained counterfactual predictor. To counter
+runtime domain corruption, we subsume counterfactual prediction under the
+notion of domain adaptation. Specifically, we upper-bound the error w.r.t. the
+target domain (i.e., runtime covariates) by the sum of source domain error and
+inter-domain distribution distance. In addition, we build an adversarially
+unified variational causal effect model, named VEGAN, with a novel two-stage
+adversarial domain adaptation scheme to reduce the latent distribution
+disparity between treated and control groups first, and between training and
+runtime variables afterwards. We demonstrate that VEGAN outperforms other
+state-of-the-art baselines on individual-level treatment effect estimation in
+the presence of runtime domain corruption on benchmark datasets.
+5. Reducing traffic accidents is a crucial global public safety concern.
+Accident prediction is key to improving traffic safety, enabling proactive
+measures to be taken before a crash occurs, and informing safety policies,
+regulations, and targeted interventions. Despite numerous studies on accident
+prediction over the past decades, many have limitations in terms of
+generalizability, reproducibility, or feasibility for practical use due to
+input data or problem formulation. To address existing shortcomings, we propose
+CrashFormer, a multi-modal architecture that utilizes comprehensive (but
+relatively easy to obtain) inputs such as the history of accidents, weather
+information, map images, and demographic information. The model predicts the
+future risk of accidents on a reasonably acceptable cadence (i.e., every six
+hours) for a geographical location of 5.161 square kilometers. CrashFormer is
+composed of five components: a sequential encoder to utilize historical
+accidents and weather data, an image encoder to use map imagery data, a raw
+data encoder to utilize demographic information, a feature fusion module for
+aggregating the encoded features, and a classifier that accepts the aggregated
+data and makes predictions accordingly. Results from extensive real-world
+experiments in 10 major US cities show that CrashFormer outperforms
+state-of-the-art sequential and non-sequential models by 1.8% in F1-score on
+average when using ``sparse'' input data.
+6. Explanations of time series models are useful for high stakes applications
+like healthcare but have received little attention in machine learning
+literature. We propose FIT, a framework that evaluates the importance of
+observations for a multivariate time-series black-box model by quantifying the
+shift in the predictive distribution over time. FIT defines the importance of
+an observation based on its contribution to the distributional shift under a
+KL-divergence that contrasts the predictive distribution against a
+counterfactual where the rest of the features are unobserved. We also
+demonstrate the need to control for time-dependent distribution shifts. We
+compare with state-of-the-art baselines on simulated and real-world clinical
+data and demonstrate that our approach is superior in identifying important
+time points and observations throughout the time series.
+7. In this paper, we study the robustness of graph convolutional networks
+(GCNs). Despite the good performance of GCNs on graph semi-supervised learning
+tasks, previous works have shown that the original GCNs are very unstable to
+adversarial perturbations. In particular, we can observe a severe performance
+degradation by slightly changing the graph adjacency matrix or the features of
+a few nodes, making it unsuitable for security-critical applications. Inspired
+by the previous works on adversarial defense for deep neural networks, and
+especially adversarial training algorithm, we propose a method called
+GraphDefense to defend against the adversarial perturbations. In addition, for
+our defense method, we could still maintain semi-supervised learning settings,
+without a large label rate. We also show that adversarial training in features
+is equivalent to adversarial training for edges with a small perturbation. Our
+experiments show that the proposed defense methods successfully increase the
+robustness of Graph Convolutional Networks. Furthermore, we show that with
+careful design, our proposed algorithm can scale to large graphs, such as
+Reddit dataset.
+8. There is often variation in the shape and size of input data used for deep
+learning. In many cases, such data can be represented using tensors with
+non-uniform shapes, or ragged tensors. Due to limited and non-portable support
+for efficient execution on ragged tensors, current deep learning frameworks
+generally use techniques such as padding and masking to make the data shapes
+uniform and then offload the computations to optimized kernels for dense tensor
+algebra. Such techniques can, however, lead to a lot of wasted computation and
+therefore, a loss in performance. This paper presents CoRa, a tensor compiler
+that allows users to easily generate efficient code for ragged tensor operators
+targeting a wide range of CPUs and GPUs. Evaluating CoRa on a variety of
+operators on ragged tensors as well as on an encoder layer of the transformer
+model, we find that CoRa (i)performs competitively with hand-optimized
+implementations of the operators and the transformer encoder and (ii) achieves,
+over PyTorch, a 1.6X geomean speedup for the encoder on an Nvidia GPU and a
+1.86X geomean speedup for the multi-head attention module used in transformers
+on an ARM CPU.
+
+Here is our goal: Represent the scientific articles by their primary research subfield for clustering, for example, machine learning, Robotics, Cryptography, Signal Processing, Information Retrieval, computer vision, human-computer interaction. Please cluster them into 9 groups. Each group should contain at least 3 articles. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"addresses runtime domain corruption in causal effect estimation"
+"presents crashformer for accident prediction"
+
+
+Again, here's the goal: Represent the scientific articles by their primary research subfield for clustering, for example, machine learning, Robotics, Cryptography, Signal Processing, Information Retrieval, computer vision, human-computer interaction. Please cluster them into 9 groups. Each group should contain at least 3 articles.. Your responses are:
+- "
+Proposer model response:
+['"proposes Graph Structure-aware eXplanation (GStarX) method for GNN explanation"\n- "utilizes nearest neighbours in latent space for semi-supervised novelty detection"\n- "introduces natural machine unlearning method"\n- "revisits tabular actor-critic algorithm formulation"\n- "addresses runtime domain corruption in causal effect estimation"\n- "presents CrashFormer for accident prediction"\n- "evaluates FIT framework for time series model explanations"\n- "studies robustness of graph convolutional networks (GCNs)"\n- "introduces CoRa tensor compiler for ragged tensor operations"']
+Proposer Cost: $0.001477
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. We revisit the standard formulation of tabular actor-critic algorithm as a
+two time-scale stochastic approximation with value function computed on a
+faster time-scale and policy computed on a slower time-scale. This emulates
+policy iteration. We observe that reversal of the time scales will in fact
+emulate value iteration and is a legitimate algorithm. We provide a proof of
+convergence and compare the two empirically with and without function
+approximation (with both linear and nonlinear function approximators) and
+observe that our proposed critic-actor algorithm performs on par with
+actor-critic in terms of both accuracy and computational effort.
+1. We show that using nearest neighbours in the latent space of autoencoders
+(AE) significantly improves performance of semi-supervised novelty detection in
+both single and multi-class contexts. Autoencoding methods detect novelty by
+learning to differentiate between the non-novel training class(es) and all
+other unseen classes. Our method harnesses a combination of the reconstructions
+of the nearest neighbours and the latent-neighbour distances of a given input's
+latent representation. We demonstrate that our nearest-latent-neighbours (NLN)
+algorithm is memory and time efficient, does not require significant data
+augmentation, nor is reliant on pre-trained networks. Furthermore, we show that
+the NLN-algorithm is easily applicable to multiple datasets without
+modification. Additionally, the proposed algorithm is agnostic to autoencoder
+architecture and reconstruction error method. We validate our method across
+several standard datasets for a variety of different autoencoding architectures
+such as vanilla, adversarial and variational autoencoders using either
+reconstruction, residual or feature consistent losses. The results show that
+the NLN algorithm grants up to a 17% increase in Area Under the Receiver
+Operating Characteristics (AUROC) curve performance for the multi-class case
+and 8% for single-class novelty detection.
+2. Machine unlearning (MU) aims to eliminate information that has been learned
+from specific training data, namely forgetting data, from a pre-trained model.
+Currently, the mainstream of existing MU methods involves modifying the
+forgetting data with incorrect labels and subsequently fine-tuning the model.
+While learning such incorrect information can indeed remove knowledge, the
+process is quite unnatural as the unlearning process undesirably reinforces the
+incorrect information and leads to over-forgetting. Towards more
+\textit{natural} machine unlearning, we inject correct information from the
+remaining data to the forgetting samples when changing their labels. Through
+pairing these adjusted samples with their labels, the model will tend to use
+the injected correct information and naturally suppress the information meant
+to be forgotten. Albeit straightforward, such a first step towards natural
+machine unlearning can significantly outperform current state-of-the-art
+approaches. In particular, our method substantially reduces the over-forgetting
+and leads to strong robustness to hyperparameters, making it a promising
+candidate for practical machine unlearning.
+3. Explaining machine learning models is an important and increasingly popular
+area of research interest. The Shapley value from game theory has been proposed
+as a prime approach to compute feature importance towards model predictions on
+images, text, tabular data, and recently graph neural networks (GNNs) on
+graphs. In this work, we revisit the appropriateness of the Shapley value for
+GNN explanation, where the task is to identify the most important subgraph and
+constituent nodes for GNN predictions. We claim that the Shapley value is a
+non-ideal choice for graph data because it is by definition not
+structure-aware. We propose a Graph Structure-aware eXplanation (GStarX) method
+to leverage the critical graph structure information to improve the
+explanation. Specifically, we define a scoring function based on a new
+structure-aware value from the cooperative game theory proposed by Hamiache and
+Navarro (HN). When used to score node importance, the HN value utilizes graph
+structures to attribute cooperation surplus between neighbor nodes, resembling
+message passing in GNNs, so that node importance scores reflect not only the
+node feature importance, but also the node structural roles. We demonstrate
+that GStarX produces qualitatively more intuitive explanations, and
+quantitatively improves explanation fidelity over strong baselines on chemical
+graph property prediction and text graph sentiment classification.
+4. Explanations of time series models are useful for high stakes applications
+like healthcare but have received little attention in machine learning
+literature. We propose FIT, a framework that evaluates the importance of
+observations for a multivariate time-series black-box model by quantifying the
+shift in the predictive distribution over time. FIT defines the importance of
+an observation based on its contribution to the distributional shift under a
+KL-divergence that contrasts the predictive distribution against a
+counterfactual where the rest of the features are unobserved. We also
+demonstrate the need to control for time-dependent distribution shifts. We
+compare with state-of-the-art baselines on simulated and real-world clinical
+data and demonstrate that our approach is superior in identifying important
+time points and observations throughout the time series.
+5. There is often variation in the shape and size of input data used for deep
+learning. In many cases, such data can be represented using tensors with
+non-uniform shapes, or ragged tensors. Due to limited and non-portable support
+for efficient execution on ragged tensors, current deep learning frameworks
+generally use techniques such as padding and masking to make the data shapes
+uniform and then offload the computations to optimized kernels for dense tensor
+algebra. Such techniques can, however, lead to a lot of wasted computation and
+therefore, a loss in performance. This paper presents CoRa, a tensor compiler
+that allows users to easily generate efficient code for ragged tensor operators
+targeting a wide range of CPUs and GPUs. Evaluating CoRa on a variety of
+operators on ragged tensors as well as on an encoder layer of the transformer
+model, we find that CoRa (i)performs competitively with hand-optimized
+implementations of the operators and the transformer encoder and (ii) achieves,
+over PyTorch, a 1.6X geomean speedup for the encoder on an Nvidia GPU and a
+1.86X geomean speedup for the multi-head attention module used in transformers
+on an ARM CPU.
+6. Reducing traffic accidents is a crucial global public safety concern.
+Accident prediction is key to improving traffic safety, enabling proactive
+measures to be taken before a crash occurs, and informing safety policies,
+regulations, and targeted interventions. Despite numerous studies on accident
+prediction over the past decades, many have limitations in terms of
+generalizability, reproducibility, or feasibility for practical use due to
+input data or problem formulation. To address existing shortcomings, we propose
+CrashFormer, a multi-modal architecture that utilizes comprehensive (but
+relatively easy to obtain) inputs such as the history of accidents, weather
+information, map images, and demographic information. The model predicts the
+future risk of accidents on a reasonably acceptable cadence (i.e., every six
+hours) for a geographical location of 5.161 square kilometers. CrashFormer is
+composed of five components: a sequential encoder to utilize historical
+accidents and weather data, an image encoder to use map imagery data, a raw
+data encoder to utilize demographic information, a feature fusion module for
+aggregating the encoded features, and a classifier that accepts the aggregated
+data and makes predictions accordingly. Results from extensive real-world
+experiments in 10 major US cities show that CrashFormer outperforms
+state-of-the-art sequential and non-sequential models by 1.8% in F1-score on
+average when using ``sparse'' input data.
+7. In this paper, we study the robustness of graph convolutional networks
+(GCNs). Despite the good performance of GCNs on graph semi-supervised learning
+tasks, previous works have shown that the original GCNs are very unstable to
+adversarial perturbations. In particular, we can observe a severe performance
+degradation by slightly changing the graph adjacency matrix or the features of
+a few nodes, making it unsuitable for security-critical applications. Inspired
+by the previous works on adversarial defense for deep neural networks, and
+especially adversarial training algorithm, we propose a method called
+GraphDefense to defend against the adversarial perturbations. In addition, for
+our defense method, we could still maintain semi-supervised learning settings,
+without a large label rate. We also show that adversarial training in features
+is equivalent to adversarial training for edges with a small perturbation. Our
+experiments show that the proposed defense methods successfully increase the
+robustness of Graph Convolutional Networks. Furthermore, we show that with
+careful design, our proposed algorithm can scale to large graphs, such as
+Reddit dataset.
+8. To date, various neural methods have been proposed for causal effect
+estimation based on observational data, where a default assumption is the same
+distribution and availability of variables at both training and inference
+(i.e., runtime) stages. However, distribution shift (i.e., domain shift) could
+happen during runtime, and bigger challenges arise from the impaired
+accessibility of variables. This is commonly caused by increasing privacy and
+ethical concerns, which can make arbitrary variables unavailable in the entire
+runtime data and imputation impractical. We term the co-occurrence of domain
+shift and inaccessible variables runtime domain corruption, which seriously
+impairs the generalizability of a trained counterfactual predictor. To counter
+runtime domain corruption, we subsume counterfactual prediction under the
+notion of domain adaptation. Specifically, we upper-bound the error w.r.t. the
+target domain (i.e., runtime covariates) by the sum of source domain error and
+inter-domain distribution distance. In addition, we build an adversarially
+unified variational causal effect model, named VEGAN, with a novel two-stage
+adversarial domain adaptation scheme to reduce the latent distribution
+disparity between treated and control groups first, and between training and
+runtime variables afterwards. We demonstrate that VEGAN outperforms other
+state-of-the-art baselines on individual-level treatment effect estimation in
+the presence of runtime domain corruption on benchmark datasets.
+
+Here is our goal: Represent the scientific articles by their primary research subfield for clustering, for example, machine learning, Robotics, Cryptography, Signal Processing, Information Retrieval, computer vision, human-computer interaction. Please cluster them into 9 groups. Each group should contain at least 3 articles. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"introduces a natural machine unlearning approach"
+"explores the use of shapley value for gnn explanation"
+
+
+Again, here's the goal: Represent the scientific articles by their primary research subfield for clustering, for example, machine learning, Robotics, Cryptography, Signal Processing, Information Retrieval, computer vision, human-computer interaction. Please cluster them into 9 groups. Each group should contain at least 3 articles.. Your responses are:
+- "
+Proposer model response:
+['"discusses actor-critic algorithms in reinforcement learning"\n"improves semi-supervised novelty detection using autoencoders"\n"proposes a natural machine unlearning method"\n"evaluates Shapley value for GNN explanation"\n"introduces a framework for importance evaluation in time series models"\n"presents a tensor compiler for efficient execution on ragged tensors"\n"develops a multi-modal architecture for accident prediction"\n"studies the robustness of graph convolutional networks"\n"proposes a causal effect estimation method with domain adaptation"']
+Proposer Cost: $0.001461
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. To date, various neural methods have been proposed for causal effect
+estimation based on observational data, where a default assumption is the same
+distribution and availability of variables at both training and inference
+(i.e., runtime) stages. However, distribution shift (i.e., domain shift) could
+happen during runtime, and bigger challenges arise from the impaired
+accessibility of variables. This is commonly caused by increasing privacy and
+ethical concerns, which can make arbitrary variables unavailable in the entire
+runtime data and imputation impractical. We term the co-occurrence of domain
+shift and inaccessible variables runtime domain corruption, which seriously
+impairs the generalizability of a trained counterfactual predictor. To counter
+runtime domain corruption, we subsume counterfactual prediction under the
+notion of domain adaptation. Specifically, we upper-bound the error w.r.t. the
+target domain (i.e., runtime covariates) by the sum of source domain error and
+inter-domain distribution distance. In addition, we build an adversarially
+unified variational causal effect model, named VEGAN, with a novel two-stage
+adversarial domain adaptation scheme to reduce the latent distribution
+disparity between treated and control groups first, and between training and
+runtime variables afterwards. We demonstrate that VEGAN outperforms other
+state-of-the-art baselines on individual-level treatment effect estimation in
+the presence of runtime domain corruption on benchmark datasets.
+1. Explaining machine learning models is an important and increasingly popular
+area of research interest. The Shapley value from game theory has been proposed
+as a prime approach to compute feature importance towards model predictions on
+images, text, tabular data, and recently graph neural networks (GNNs) on
+graphs. In this work, we revisit the appropriateness of the Shapley value for
+GNN explanation, where the task is to identify the most important subgraph and
+constituent nodes for GNN predictions. We claim that the Shapley value is a
+non-ideal choice for graph data because it is by definition not
+structure-aware. We propose a Graph Structure-aware eXplanation (GStarX) method
+to leverage the critical graph structure information to improve the
+explanation. Specifically, we define a scoring function based on a new
+structure-aware value from the cooperative game theory proposed by Hamiache and
+Navarro (HN). When used to score node importance, the HN value utilizes graph
+structures to attribute cooperation surplus between neighbor nodes, resembling
+message passing in GNNs, so that node importance scores reflect not only the
+node feature importance, but also the node structural roles. We demonstrate
+that GStarX produces qualitatively more intuitive explanations, and
+quantitatively improves explanation fidelity over strong baselines on chemical
+graph property prediction and text graph sentiment classification.
+2. Explanations of time series models are useful for high stakes applications
+like healthcare but have received little attention in machine learning
+literature. We propose FIT, a framework that evaluates the importance of
+observations for a multivariate time-series black-box model by quantifying the
+shift in the predictive distribution over time. FIT defines the importance of
+an observation based on its contribution to the distributional shift under a
+KL-divergence that contrasts the predictive distribution against a
+counterfactual where the rest of the features are unobserved. We also
+demonstrate the need to control for time-dependent distribution shifts. We
+compare with state-of-the-art baselines on simulated and real-world clinical
+data and demonstrate that our approach is superior in identifying important
+time points and observations throughout the time series.
+3. Reducing traffic accidents is a crucial global public safety concern.
+Accident prediction is key to improving traffic safety, enabling proactive
+measures to be taken before a crash occurs, and informing safety policies,
+regulations, and targeted interventions. Despite numerous studies on accident
+prediction over the past decades, many have limitations in terms of
+generalizability, reproducibility, or feasibility for practical use due to
+input data or problem formulation. To address existing shortcomings, we propose
+CrashFormer, a multi-modal architecture that utilizes comprehensive (but
+relatively easy to obtain) inputs such as the history of accidents, weather
+information, map images, and demographic information. The model predicts the
+future risk of accidents on a reasonably acceptable cadence (i.e., every six
+hours) for a geographical location of 5.161 square kilometers. CrashFormer is
+composed of five components: a sequential encoder to utilize historical
+accidents and weather data, an image encoder to use map imagery data, a raw
+data encoder to utilize demographic information, a feature fusion module for
+aggregating the encoded features, and a classifier that accepts the aggregated
+data and makes predictions accordingly. Results from extensive real-world
+experiments in 10 major US cities show that CrashFormer outperforms
+state-of-the-art sequential and non-sequential models by 1.8% in F1-score on
+average when using ``sparse'' input data.
+4. Machine unlearning (MU) aims to eliminate information that has been learned
+from specific training data, namely forgetting data, from a pre-trained model.
+Currently, the mainstream of existing MU methods involves modifying the
+forgetting data with incorrect labels and subsequently fine-tuning the model.
+While learning such incorrect information can indeed remove knowledge, the
+process is quite unnatural as the unlearning process undesirably reinforces the
+incorrect information and leads to over-forgetting. Towards more
+\textit{natural} machine unlearning, we inject correct information from the
+remaining data to the forgetting samples when changing their labels. Through
+pairing these adjusted samples with their labels, the model will tend to use
+the injected correct information and naturally suppress the information meant
+to be forgotten. Albeit straightforward, such a first step towards natural
+machine unlearning can significantly outperform current state-of-the-art
+approaches. In particular, our method substantially reduces the over-forgetting
+and leads to strong robustness to hyperparameters, making it a promising
+candidate for practical machine unlearning.
+5. We revisit the standard formulation of tabular actor-critic algorithm as a
+two time-scale stochastic approximation with value function computed on a
+faster time-scale and policy computed on a slower time-scale. This emulates
+policy iteration. We observe that reversal of the time scales will in fact
+emulate value iteration and is a legitimate algorithm. We provide a proof of
+convergence and compare the two empirically with and without function
+approximation (with both linear and nonlinear function approximators) and
+observe that our proposed critic-actor algorithm performs on par with
+actor-critic in terms of both accuracy and computational effort.
+6. In this paper, we study the robustness of graph convolutional networks
+(GCNs). Despite the good performance of GCNs on graph semi-supervised learning
+tasks, previous works have shown that the original GCNs are very unstable to
+adversarial perturbations. In particular, we can observe a severe performance
+degradation by slightly changing the graph adjacency matrix or the features of
+a few nodes, making it unsuitable for security-critical applications. Inspired
+by the previous works on adversarial defense for deep neural networks, and
+especially adversarial training algorithm, we propose a method called
+GraphDefense to defend against the adversarial perturbations. In addition, for
+our defense method, we could still maintain semi-supervised learning settings,
+without a large label rate. We also show that adversarial training in features
+is equivalent to adversarial training for edges with a small perturbation. Our
+experiments show that the proposed defense methods successfully increase the
+robustness of Graph Convolutional Networks. Furthermore, we show that with
+careful design, our proposed algorithm can scale to large graphs, such as
+Reddit dataset.
+7. There is often variation in the shape and size of input data used for deep
+learning. In many cases, such data can be represented using tensors with
+non-uniform shapes, or ragged tensors. Due to limited and non-portable support
+for efficient execution on ragged tensors, current deep learning frameworks
+generally use techniques such as padding and masking to make the data shapes
+uniform and then offload the computations to optimized kernels for dense tensor
+algebra. Such techniques can, however, lead to a lot of wasted computation and
+therefore, a loss in performance. This paper presents CoRa, a tensor compiler
+that allows users to easily generate efficient code for ragged tensor operators
+targeting a wide range of CPUs and GPUs. Evaluating CoRa on a variety of
+operators on ragged tensors as well as on an encoder layer of the transformer
+model, we find that CoRa (i)performs competitively with hand-optimized
+implementations of the operators and the transformer encoder and (ii) achieves,
+over PyTorch, a 1.6X geomean speedup for the encoder on an Nvidia GPU and a
+1.86X geomean speedup for the multi-head attention module used in transformers
+on an ARM CPU.
+8. We show that using nearest neighbours in the latent space of autoencoders
+(AE) significantly improves performance of semi-supervised novelty detection in
+both single and multi-class contexts. Autoencoding methods detect novelty by
+learning to differentiate between the non-novel training class(es) and all
+other unseen classes. Our method harnesses a combination of the reconstructions
+of the nearest neighbours and the latent-neighbour distances of a given input's
+latent representation. We demonstrate that our nearest-latent-neighbours (NLN)
+algorithm is memory and time efficient, does not require significant data
+augmentation, nor is reliant on pre-trained networks. Furthermore, we show that
+the NLN-algorithm is easily applicable to multiple datasets without
+modification. Additionally, the proposed algorithm is agnostic to autoencoder
+architecture and reconstruction error method. We validate our method across
+several standard datasets for a variety of different autoencoding architectures
+such as vanilla, adversarial and variational autoencoders using either
+reconstruction, residual or feature consistent losses. The results show that
+the NLN algorithm grants up to a 17% increase in Area Under the Receiver
+Operating Characteristics (AUROC) curve performance for the multi-class case
+and 8% for single-class novelty detection.
+
+Here is our goal: Represent the scientific articles by their primary research subfield for clustering, for example, machine learning, Robotics, Cryptography, Signal Processing, Information Retrieval, computer vision, human-computer interaction. Please cluster them into 9 groups. Each group should contain at least 3 articles. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"analyzes the actor-critic algorithm in reinforcement learning"
+"explores the use of shapley value for gnn explanation"
+
+
+Again, here's the goal: Represent the scientific articles by their primary research subfield for clustering, for example, machine learning, Robotics, Cryptography, Signal Processing, Information Retrieval, computer vision, human-computer interaction. Please cluster them into 9 groups. Each group should contain at least 3 articles.. Your responses are:
+- "
+Proposer model response:
+['- "proposes a method for machine unlearning"\n- "studies the robustness of graph convolutional networks"\n- "introduces a framework for evaluating time series model explanations"']
+Proposer Cost: $0.001353
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. To date, various neural methods have been proposed for causal effect
+estimation based on observational data, where a default assumption is the same
+distribution and availability of variables at both training and inference
+(i.e., runtime) stages. However, distribution shift (i.e., domain shift) could
+happen during runtime, and bigger challenges arise from the impaired
+accessibility of variables. This is commonly caused by increasing privacy and
+ethical concerns, which can make arbitrary variables unavailable in the entire
+runtime data and imputation impractical. We term the co-occurrence of domain
+shift and inaccessible variables runtime domain corruption, which seriously
+impairs the generalizability of a trained counterfactual predictor. To counter
+runtime domain corruption, we subsume counterfactual prediction under the
+notion of domain adaptation. Specifically, we upper-bound the error w.r.t. the
+target domain (i.e., runtime covariates) by the sum of source domain error and
+inter-domain distribution distance. In addition, we build an adversarially
+unified variational causal effect model, named VEGAN, with a novel two-stage
+adversarial domain adaptation scheme to reduce the latent distribution
+disparity between treated and control groups first, and between training and
+runtime variables afterwards. We demonstrate that VEGAN outperforms other
+state-of-the-art baselines on individual-level treatment effect estimation in
+the presence of runtime domain corruption on benchmark datasets.
+1. Reducing traffic accidents is a crucial global public safety concern.
+Accident prediction is key to improving traffic safety, enabling proactive
+measures to be taken before a crash occurs, and informing safety policies,
+regulations, and targeted interventions. Despite numerous studies on accident
+prediction over the past decades, many have limitations in terms of
+generalizability, reproducibility, or feasibility for practical use due to
+input data or problem formulation. To address existing shortcomings, we propose
+CrashFormer, a multi-modal architecture that utilizes comprehensive (but
+relatively easy to obtain) inputs such as the history of accidents, weather
+information, map images, and demographic information. The model predicts the
+future risk of accidents on a reasonably acceptable cadence (i.e., every six
+hours) for a geographical location of 5.161 square kilometers. CrashFormer is
+composed of five components: a sequential encoder to utilize historical
+accidents and weather data, an image encoder to use map imagery data, a raw
+data encoder to utilize demographic information, a feature fusion module for
+aggregating the encoded features, and a classifier that accepts the aggregated
+data and makes predictions accordingly. Results from extensive real-world
+experiments in 10 major US cities show that CrashFormer outperforms
+state-of-the-art sequential and non-sequential models by 1.8% in F1-score on
+average when using ``sparse'' input data.
+2. We revisit the standard formulation of tabular actor-critic algorithm as a
+two time-scale stochastic approximation with value function computed on a
+faster time-scale and policy computed on a slower time-scale. This emulates
+policy iteration. We observe that reversal of the time scales will in fact
+emulate value iteration and is a legitimate algorithm. We provide a proof of
+convergence and compare the two empirically with and without function
+approximation (with both linear and nonlinear function approximators) and
+observe that our proposed critic-actor algorithm performs on par with
+actor-critic in terms of both accuracy and computational effort.
+3. There is often variation in the shape and size of input data used for deep
+learning. In many cases, such data can be represented using tensors with
+non-uniform shapes, or ragged tensors. Due to limited and non-portable support
+for efficient execution on ragged tensors, current deep learning frameworks
+generally use techniques such as padding and masking to make the data shapes
+uniform and then offload the computations to optimized kernels for dense tensor
+algebra. Such techniques can, however, lead to a lot of wasted computation and
+therefore, a loss in performance. This paper presents CoRa, a tensor compiler
+that allows users to easily generate efficient code for ragged tensor operators
+targeting a wide range of CPUs and GPUs. Evaluating CoRa on a variety of
+operators on ragged tensors as well as on an encoder layer of the transformer
+model, we find that CoRa (i)performs competitively with hand-optimized
+implementations of the operators and the transformer encoder and (ii) achieves,
+over PyTorch, a 1.6X geomean speedup for the encoder on an Nvidia GPU and a
+1.86X geomean speedup for the multi-head attention module used in transformers
+on an ARM CPU.
+4. Machine unlearning (MU) aims to eliminate information that has been learned
+from specific training data, namely forgetting data, from a pre-trained model.
+Currently, the mainstream of existing MU methods involves modifying the
+forgetting data with incorrect labels and subsequently fine-tuning the model.
+While learning such incorrect information can indeed remove knowledge, the
+process is quite unnatural as the unlearning process undesirably reinforces the
+incorrect information and leads to over-forgetting. Towards more
+\textit{natural} machine unlearning, we inject correct information from the
+remaining data to the forgetting samples when changing their labels. Through
+pairing these adjusted samples with their labels, the model will tend to use
+the injected correct information and naturally suppress the information meant
+to be forgotten. Albeit straightforward, such a first step towards natural
+machine unlearning can significantly outperform current state-of-the-art
+approaches. In particular, our method substantially reduces the over-forgetting
+and leads to strong robustness to hyperparameters, making it a promising
+candidate for practical machine unlearning.
+5. Explanations of time series models are useful for high stakes applications
+like healthcare but have received little attention in machine learning
+literature. We propose FIT, a framework that evaluates the importance of
+observations for a multivariate time-series black-box model by quantifying the
+shift in the predictive distribution over time. FIT defines the importance of
+an observation based on its contribution to the distributional shift under a
+KL-divergence that contrasts the predictive distribution against a
+counterfactual where the rest of the features are unobserved. We also
+demonstrate the need to control for time-dependent distribution shifts. We
+compare with state-of-the-art baselines on simulated and real-world clinical
+data and demonstrate that our approach is superior in identifying important
+time points and observations throughout the time series.
+6. In this paper, we study the robustness of graph convolutional networks
+(GCNs). Despite the good performance of GCNs on graph semi-supervised learning
+tasks, previous works have shown that the original GCNs are very unstable to
+adversarial perturbations. In particular, we can observe a severe performance
+degradation by slightly changing the graph adjacency matrix or the features of
+a few nodes, making it unsuitable for security-critical applications. Inspired
+by the previous works on adversarial defense for deep neural networks, and
+especially adversarial training algorithm, we propose a method called
+GraphDefense to defend against the adversarial perturbations. In addition, for
+our defense method, we could still maintain semi-supervised learning settings,
+without a large label rate. We also show that adversarial training in features
+is equivalent to adversarial training for edges with a small perturbation. Our
+experiments show that the proposed defense methods successfully increase the
+robustness of Graph Convolutional Networks. Furthermore, we show that with
+careful design, our proposed algorithm can scale to large graphs, such as
+Reddit dataset.
+7. Explaining machine learning models is an important and increasingly popular
+area of research interest. The Shapley value from game theory has been proposed
+as a prime approach to compute feature importance towards model predictions on
+images, text, tabular data, and recently graph neural networks (GNNs) on
+graphs. In this work, we revisit the appropriateness of the Shapley value for
+GNN explanation, where the task is to identify the most important subgraph and
+constituent nodes for GNN predictions. We claim that the Shapley value is a
+non-ideal choice for graph data because it is by definition not
+structure-aware. We propose a Graph Structure-aware eXplanation (GStarX) method
+to leverage the critical graph structure information to improve the
+explanation. Specifically, we define a scoring function based on a new
+structure-aware value from the cooperative game theory proposed by Hamiache and
+Navarro (HN). When used to score node importance, the HN value utilizes graph
+structures to attribute cooperation surplus between neighbor nodes, resembling
+message passing in GNNs, so that node importance scores reflect not only the
+node feature importance, but also the node structural roles. We demonstrate
+that GStarX produces qualitatively more intuitive explanations, and
+quantitatively improves explanation fidelity over strong baselines on chemical
+graph property prediction and text graph sentiment classification.
+8. We show that using nearest neighbours in the latent space of autoencoders
+(AE) significantly improves performance of semi-supervised novelty detection in
+both single and multi-class contexts. Autoencoding methods detect novelty by
+learning to differentiate between the non-novel training class(es) and all
+other unseen classes. Our method harnesses a combination of the reconstructions
+of the nearest neighbours and the latent-neighbour distances of a given input's
+latent representation. We demonstrate that our nearest-latent-neighbours (NLN)
+algorithm is memory and time efficient, does not require significant data
+augmentation, nor is reliant on pre-trained networks. Furthermore, we show that
+the NLN-algorithm is easily applicable to multiple datasets without
+modification. Additionally, the proposed algorithm is agnostic to autoencoder
+architecture and reconstruction error method. We validate our method across
+several standard datasets for a variety of different autoencoding architectures
+such as vanilla, adversarial and variational autoencoders using either
+reconstruction, residual or feature consistent losses. The results show that
+the NLN algorithm grants up to a 17% increase in Area Under the Receiver
+Operating Characteristics (AUROC) curve performance for the multi-class case
+and 8% for single-class novelty detection.
+
+Here is our goal: Represent the scientific articles by their primary research subfield for clustering, for example, machine learning, Robotics, Cryptography, Signal Processing, Information Retrieval, computer vision, human-computer interaction. Please cluster them into 9 groups. Each group should contain at least 3 articles. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"presents crashformer for accident prediction"
+"develops cora for efficient execution on ragged tensors"
+
+
+Again, here's the goal: Represent the scientific articles by their primary research subfield for clustering, for example, machine learning, Robotics, Cryptography, Signal Processing, Information Retrieval, computer vision, human-computer interaction. Please cluster them into 9 groups. Each group should contain at least 3 articles.. Your responses are:
+- "
+Proposer model response:
+['"proposes VEGAN for counterfactual prediction under domain adaptation"\n- "introduces CrashFormer for accident prediction using multi-modal architecture"\n- "analyzes the convergence of tabular actor-critic algorithm"\n- "presents CoRa for efficient execution on ragged tensors"\n- "develops a method for natural machine unlearning"\n- "proposes FIT for evaluating time series model explanations"\n- "proposes GraphDefense for robustness of Graph Convolutional Networks"\n- "introduces GStarX for improving explanation fidelity in GNNs"\n- "develops NLN algorithm for semi-supervised novelty detection using autoencoders"']
+Proposer Cost: $0.001494
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. Reducing traffic accidents is a crucial global public safety concern.
+Accident prediction is key to improving traffic safety, enabling proactive
+measures to be taken before a crash occurs, and informing safety policies,
+regulations, and targeted interventions. Despite numerous studies on accident
+prediction over the past decades, many have limitations in terms of
+generalizability, reproducibility, or feasibility for practical use due to
+input data or problem formulation. To address existing shortcomings, we propose
+CrashFormer, a multi-modal architecture that utilizes comprehensive (but
+relatively easy to obtain) inputs such as the history of accidents, weather
+information, map images, and demographic information. The model predicts the
+future risk of accidents on a reasonably acceptable cadence (i.e., every six
+hours) for a geographical location of 5.161 square kilometers. CrashFormer is
+composed of five components: a sequential encoder to utilize historical
+accidents and weather data, an image encoder to use map imagery data, a raw
+data encoder to utilize demographic information, a feature fusion module for
+aggregating the encoded features, and a classifier that accepts the aggregated
+data and makes predictions accordingly. Results from extensive real-world
+experiments in 10 major US cities show that CrashFormer outperforms
+state-of-the-art sequential and non-sequential models by 1.8% in F1-score on
+average when using ``sparse'' input data.
+1. There is often variation in the shape and size of input data used for deep
+learning. In many cases, such data can be represented using tensors with
+non-uniform shapes, or ragged tensors. Due to limited and non-portable support
+for efficient execution on ragged tensors, current deep learning frameworks
+generally use techniques such as padding and masking to make the data shapes
+uniform and then offload the computations to optimized kernels for dense tensor
+algebra. Such techniques can, however, lead to a lot of wasted computation and
+therefore, a loss in performance. This paper presents CoRa, a tensor compiler
+that allows users to easily generate efficient code for ragged tensor operators
+targeting a wide range of CPUs and GPUs. Evaluating CoRa on a variety of
+operators on ragged tensors as well as on an encoder layer of the transformer
+model, we find that CoRa (i)performs competitively with hand-optimized
+implementations of the operators and the transformer encoder and (ii) achieves,
+over PyTorch, a 1.6X geomean speedup for the encoder on an Nvidia GPU and a
+1.86X geomean speedup for the multi-head attention module used in transformers
+on an ARM CPU.
+2. In this paper, we study the robustness of graph convolutional networks
+(GCNs). Despite the good performance of GCNs on graph semi-supervised learning
+tasks, previous works have shown that the original GCNs are very unstable to
+adversarial perturbations. In particular, we can observe a severe performance
+degradation by slightly changing the graph adjacency matrix or the features of
+a few nodes, making it unsuitable for security-critical applications. Inspired
+by the previous works on adversarial defense for deep neural networks, and
+especially adversarial training algorithm, we propose a method called
+GraphDefense to defend against the adversarial perturbations. In addition, for
+our defense method, we could still maintain semi-supervised learning settings,
+without a large label rate. We also show that adversarial training in features
+is equivalent to adversarial training for edges with a small perturbation. Our
+experiments show that the proposed defense methods successfully increase the
+robustness of Graph Convolutional Networks. Furthermore, we show that with
+careful design, our proposed algorithm can scale to large graphs, such as
+Reddit dataset.
+3. Explanations of time series models are useful for high stakes applications
+like healthcare but have received little attention in machine learning
+literature. We propose FIT, a framework that evaluates the importance of
+observations for a multivariate time-series black-box model by quantifying the
+shift in the predictive distribution over time. FIT defines the importance of
+an observation based on its contribution to the distributional shift under a
+KL-divergence that contrasts the predictive distribution against a
+counterfactual where the rest of the features are unobserved. We also
+demonstrate the need to control for time-dependent distribution shifts. We
+compare with state-of-the-art baselines on simulated and real-world clinical
+data and demonstrate that our approach is superior in identifying important
+time points and observations throughout the time series.
+4. Machine unlearning (MU) aims to eliminate information that has been learned
+from specific training data, namely forgetting data, from a pre-trained model.
+Currently, the mainstream of existing MU methods involves modifying the
+forgetting data with incorrect labels and subsequently fine-tuning the model.
+While learning such incorrect information can indeed remove knowledge, the
+process is quite unnatural as the unlearning process undesirably reinforces the
+incorrect information and leads to over-forgetting. Towards more
+\textit{natural} machine unlearning, we inject correct information from the
+remaining data to the forgetting samples when changing their labels. Through
+pairing these adjusted samples with their labels, the model will tend to use
+the injected correct information and naturally suppress the information meant
+to be forgotten. Albeit straightforward, such a first step towards natural
+machine unlearning can significantly outperform current state-of-the-art
+approaches. In particular, our method substantially reduces the over-forgetting
+and leads to strong robustness to hyperparameters, making it a promising
+candidate for practical machine unlearning.
+5. We revisit the standard formulation of tabular actor-critic algorithm as a
+two time-scale stochastic approximation with value function computed on a
+faster time-scale and policy computed on a slower time-scale. This emulates
+policy iteration. We observe that reversal of the time scales will in fact
+emulate value iteration and is a legitimate algorithm. We provide a proof of
+convergence and compare the two empirically with and without function
+approximation (with both linear and nonlinear function approximators) and
+observe that our proposed critic-actor algorithm performs on par with
+actor-critic in terms of both accuracy and computational effort.
+6. We show that using nearest neighbours in the latent space of autoencoders
+(AE) significantly improves performance of semi-supervised novelty detection in
+both single and multi-class contexts. Autoencoding methods detect novelty by
+learning to differentiate between the non-novel training class(es) and all
+other unseen classes. Our method harnesses a combination of the reconstructions
+of the nearest neighbours and the latent-neighbour distances of a given input's
+latent representation. We demonstrate that our nearest-latent-neighbours (NLN)
+algorithm is memory and time efficient, does not require significant data
+augmentation, nor is reliant on pre-trained networks. Furthermore, we show that
+the NLN-algorithm is easily applicable to multiple datasets without
+modification. Additionally, the proposed algorithm is agnostic to autoencoder
+architecture and reconstruction error method. We validate our method across
+several standard datasets for a variety of different autoencoding architectures
+such as vanilla, adversarial and variational autoencoders using either
+reconstruction, residual or feature consistent losses. The results show that
+the NLN algorithm grants up to a 17% increase in Area Under the Receiver
+Operating Characteristics (AUROC) curve performance for the multi-class case
+and 8% for single-class novelty detection.
+7. To date, various neural methods have been proposed for causal effect
+estimation based on observational data, where a default assumption is the same
+distribution and availability of variables at both training and inference
+(i.e., runtime) stages. However, distribution shift (i.e., domain shift) could
+happen during runtime, and bigger challenges arise from the impaired
+accessibility of variables. This is commonly caused by increasing privacy and
+ethical concerns, which can make arbitrary variables unavailable in the entire
+runtime data and imputation impractical. We term the co-occurrence of domain
+shift and inaccessible variables runtime domain corruption, which seriously
+impairs the generalizability of a trained counterfactual predictor. To counter
+runtime domain corruption, we subsume counterfactual prediction under the
+notion of domain adaptation. Specifically, we upper-bound the error w.r.t. the
+target domain (i.e., runtime covariates) by the sum of source domain error and
+inter-domain distribution distance. In addition, we build an adversarially
+unified variational causal effect model, named VEGAN, with a novel two-stage
+adversarial domain adaptation scheme to reduce the latent distribution
+disparity between treated and control groups first, and between training and
+runtime variables afterwards. We demonstrate that VEGAN outperforms other
+state-of-the-art baselines on individual-level treatment effect estimation in
+the presence of runtime domain corruption on benchmark datasets.
+8. Explaining machine learning models is an important and increasingly popular
+area of research interest. The Shapley value from game theory has been proposed
+as a prime approach to compute feature importance towards model predictions on
+images, text, tabular data, and recently graph neural networks (GNNs) on
+graphs. In this work, we revisit the appropriateness of the Shapley value for
+GNN explanation, where the task is to identify the most important subgraph and
+constituent nodes for GNN predictions. We claim that the Shapley value is a
+non-ideal choice for graph data because it is by definition not
+structure-aware. We propose a Graph Structure-aware eXplanation (GStarX) method
+to leverage the critical graph structure information to improve the
+explanation. Specifically, we define a scoring function based on a new
+structure-aware value from the cooperative game theory proposed by Hamiache and
+Navarro (HN). When used to score node importance, the HN value utilizes graph
+structures to attribute cooperation surplus between neighbor nodes, resembling
+message passing in GNNs, so that node importance scores reflect not only the
+node feature importance, but also the node structural roles. We demonstrate
+that GStarX produces qualitatively more intuitive explanations, and
+quantitatively improves explanation fidelity over strong baselines on chemical
+graph property prediction and text graph sentiment classification.
+
+Here is our goal: Represent the scientific articles by their primary research subfield for clustering, for example, machine learning, Robotics, Cryptography, Signal Processing, Information Retrieval, computer vision, human-computer interaction. Please cluster them into 9 groups. Each group should contain at least 3 articles. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"- "proposes a method for adversarial defense in graph convolutional networks"
+"explores the use of shapley value for gnn explanation"
+
+
+Again, here's the goal: Represent the scientific articles by their primary research subfield for clustering, for example, machine learning, Robotics, Cryptography, Signal Processing, Information Retrieval, computer vision, human-computer interaction. Please cluster them into 9 groups. Each group should contain at least 3 articles.. Your responses are:
+- "
+Proposer model response:
+['- "introduces CrashFormer for accident prediction"\n- "presents CoRa for efficient execution on ragged tensors"\n- "proposes GraphDefense for defending against adversarial perturbations"\n- "develops FIT framework for evaluating time series model explanations"\n- "introduces natural machine unlearning method"\n- "revisits tabular actor-critic algorithm formulation"\n- "improves semi-supervised novelty detection using autoencoders"\n- "addresses runtime domain corruption in causal effect estimation"\n- "proposes GStarX for graph structure-aware explanation in GNNs"']
+Proposer Cost: $0.001478
+59 descriptions proposed in total. Here are the descriptions:
+"introduces a novel method for program learning in a Domain Specific Language (DSL)
+explores generalization properties of wide minima
+- "proposes a novel algorithm for novelty detection using autoencoders
+Enhances novelty detection using autoencoders
+presents a new method of program learning in a Domain Specific Language (DSL)
+addresses class imbalance in supervised learning
+presents a method for reward-free reinforcement learning with linear function approximation
+investigates reward-free reinforcement learning with linear function approximation
+Investigates reward-free reinforcement learning
+Revisits tabular actor-critic algorithm formulation
+examines the generalization properties of wide minima in machine learning
+addresses class imbalance in supervised learning using GANs
+discusses the application of biclustering in data analysis
+investigates the effectiveness of GAN-based oversampling for imbalanced datasets
+- "Focuses on program learning in Domain Specific Language
+optimizes CCA projection for discrimination
+"introduces a novel formulation for multiclass universum SVM
+explores the use of Canonical Correlation Analysis (CCA) for discriminative tasks
+enhances novelty detection using nearest neighbours in the latent space of autoencoders
+discusses reward-free reinforcement learning
+Explores biclustering for pattern search in data
+improves semi-supervised novelty detection using autoencoders
+explores the convergence of actor-critic algorithms
+utilizes biclustering for pattern search
+explores biclustering for pattern search in data with shifting patterns
+introduces Universum learning for multiclass problems
+discusses the application of tabular actor-critic algorithm for policy iteration
+Addresses class imbalance in supervised learning
+Optimizes Canonical Correlation Analysis for discriminative tasks
+proposes a new method for program learning in a DSL
+Analyzes the actor-critic algorithm in reinforcement learning
+- "Proposes a method for adversarial defense in Graph Convolutional Networks
+Introduces a natural machine unlearning approach
+Improves semi-supervised novelty detection using autoencoders
+proposes GraphDefense for robustness of Graph Convolutional Networks
+- "introduces CrashFormer for accident prediction
+Explores the use of Shapley value for GNN explanation
+introduces GStarX for improving explanation fidelity in GNNs
+presents CrashFormer for accident prediction
+evaluates FIT framework for time series model explanations
+addresses runtime domain corruption in causal effect estimation
+studies robustness of graph convolutional networks (GCNs)
+develops a method for natural machine unlearning
+revisits tabular actor-critic algorithm formulation
+Develops CoRa for efficient execution on ragged tensors
+Presents CrashFormer for accident prediction
+analyzes the convergence of tabular actor-critic algorithm
+proposes GraphDefense for defending against adversarial perturbations
+develops FIT framework for evaluating time series model explanations
+utilizes nearest neighbours in latent space for semi-supervised novelty detection
+"discusses actor-critic algorithms in reinforcement learning"
+"improves semi-supervised novelty detection using autoencoders"
+"proposes a natural machine unlearning method"
+"evaluates Shapley value for GNN explanation"
+"introduces a framework for importance evaluation in time series models"
+"presents a tensor compiler for efficient execution on ragged tensors"
+"develops a multi-modal architecture for accident prediction"
+"studies the robustness of graph convolutional networks"
+"proposes a causal effect estimation method with domain adaptation
+Addresses runtime domain corruption in causal effect estimation
+presents CoRa for efficient execution on ragged tensors
+"proposes Graph Structure-aware eXplanation (GStarX) method for GNN explanation
+proposes FIT for evaluating time series model explanations
+introduces a framework for evaluating time series model explanations
+"proposes VEGAN for counterfactual prediction under domain adaptation
+studies the robustness of graph convolutional networks
+- "proposes a method for machine unlearning
+GPTAssigner Cost 2.549158999999997 $
+Stage Assign assign
+Assigned all recall: 0.748015873015873
+Assigned all precision: 0.15915119363395225
+Assigned description: "introduces a novel method for program learning in a Domain Specific Language (DSL). recall: 0.33134920634920634 precision: 0.023952095808383235
+Assigned description: explores generalization properties of wide minima. recall: 0.12103174603174603 precision: 0.04918032786885246
+Assigned description: - "proposes a novel algorithm for novelty detection using autoencoders. recall: 0.12301587301587301 precision: 0.0
+Assigned description: Enhances novelty detection using autoencoders. recall: 0.2261904761904762 precision: 0.017543859649122806
+Assigned description: presents a new method of program learning in a Domain Specific Language (DSL). recall: 0.21031746031746032 precision: 0.018867924528301886
+Assigned description: addresses class imbalance in supervised learning. recall: 0.16865079365079366 precision: 0.058823529411764705
+Assigned description: presents a method for reward-free reinforcement learning with linear function approximation. recall: 0.005952380952380952 precision: 0.0
+Assigned description: investigates reward-free reinforcement learning with linear function approximation. recall: 0.007936507936507936 precision: 0.0
+Assigned description: Investigates reward-free reinforcement learning. recall: 0.07142857142857142 precision: 0.0
+Assigned description: Revisits tabular actor-critic algorithm formulation. recall: 0.017857142857142856 precision: 0.0
+Assigned description: examines the generalization properties of wide minima in machine learning. recall: 0.013888888888888888 precision: 0.0
+Assigned description: addresses class imbalance in supervised learning using GANs. recall: 0.05555555555555555 precision: 0.0
+Assigned description: discusses the application of biclustering in data analysis. recall: 0.05555555555555555 precision: 0.0
+Assigned description: investigates the effectiveness of GAN-based oversampling for imbalanced datasets. recall: 0.015873015873015872 precision: 0.0
+Assigned description: - "Focuses on program learning in Domain Specific Language. recall: 0.08333333333333333 precision: 0.047619047619047616
+Assigned description: optimizes CCA projection for discrimination. recall: 0.125 precision: 0.0
+Assigned description: "introduces a novel formulation for multiclass universum SVM. recall: 0.04365079365079365 precision: 0.0
+Assigned description: explores the use of Canonical Correlation Analysis (CCA) for discriminative tasks. recall: 0.01984126984126984 precision: 0.0
+Assigned description: enhances novelty detection using nearest neighbours in the latent space of autoencoders. recall: 0.011904761904761904 precision: 0.0
+Assigned description: discusses reward-free reinforcement learning. recall: 0.037698412698412696 precision: 0.0
+Assigned description: Explores biclustering for pattern search in data. recall: 0.10515873015873016 precision: 0.0
+Assigned description: improves semi-supervised novelty detection using autoencoders. recall: 0.07341269841269842 precision: 0.0
+Assigned description: explores the convergence of actor-critic algorithms. recall: 0.05952380952380952 precision: 0.0
+Assigned description: utilizes biclustering for pattern search. recall: 0.047619047619047616 precision: 0.0
+Assigned description: explores biclustering for pattern search in data with shifting patterns. recall: 0.005952380952380952 precision: 0.0
+Assigned description: introduces Universum learning for multiclass problems. recall: 0.05555555555555555 precision: 0.0
+Assigned description: discusses the application of tabular actor-critic algorithm for policy iteration. recall: 0.00992063492063492 precision: 0.0
+Assigned description: Addresses class imbalance in supervised learning. recall: 0.125 precision: 0.015873015873015872
+Assigned description: Optimizes Canonical Correlation Analysis for discriminative tasks. recall: 0.03968253968253968 precision: 0.0
+Assigned description: proposes a new method for program learning in a DSL. recall: 0.5277777777777778 precision: 0.08270676691729323
+Assigned description: Analyzes the actor-critic algorithm in reinforcement learning. recall: 0.025793650793650792 precision: 0.0
+Assigned description: - "Proposes a method for adversarial defense in Graph Convolutional Networks. recall: 0.13293650793650794 precision: 0.0
+Assigned description: Introduces a natural machine unlearning approach. recall: 0.23412698412698413 precision: 0.025423728813559324
+Assigned description: Improves semi-supervised novelty detection using autoencoders. recall: 0.11706349206349206 precision: 0.0
+Assigned description: proposes GraphDefense for robustness of Graph Convolutional Networks. recall: 0.03968253968253968 precision: 0.05
+Assigned description: - "introduces CrashFormer for accident prediction. recall: 0.015873015873015872 precision: 0.125
+Assigned description: Explores the use of Shapley value for GNN explanation. recall: 0.0496031746031746 precision: 0.0
+Assigned description: introduces GStarX for improving explanation fidelity in GNNs. recall: 0.017857142857142856 precision: 0.0
+Assigned description: presents CrashFormer for accident prediction. recall: 0.0496031746031746 precision: 0.04
+Assigned description: evaluates FIT framework for time series model explanations. recall: 0.051587301587301584 precision: 0.038461538461538464
+Assigned description: addresses runtime domain corruption in causal effect estimation. recall: 0.031746031746031744 precision: 0.0
+Assigned description: studies robustness of graph convolutional networks (GCNs). recall: 0.041666666666666664 precision: 0.0
+Assigned description: develops a method for natural machine unlearning. recall: 0.30952380952380953 precision: 0.03205128205128205
+Assigned description: revisits tabular actor-critic algorithm formulation. recall: 0.02976190476190476 precision: 0.06666666666666667
+Assigned description: Develops CoRa for efficient execution on ragged tensors. recall: 0.03571428571428571 precision: 0.0
+Assigned description: Presents CrashFormer for accident prediction. recall: 0.08928571428571429 precision: 0.022222222222222223
+Assigned description: analyzes the convergence of tabular actor-critic algorithm. recall: 0.00992063492063492 precision: 0.0
+Assigned description: proposes GraphDefense for defending against adversarial perturbations. recall: 0.03968253968253968 precision: 0.0
+Assigned description: develops FIT framework for evaluating time series model explanations. recall: 0.031746031746031744 precision: 0.0
+Assigned description: utilizes nearest neighbours in latent space for semi-supervised novelty detection. recall: 0.00992063492063492 precision: 0.2
+Assigned description: "discusses actor-critic algorithms in reinforcement learning"
+"improves semi-supervised novelty detection using autoencoders"
+"proposes a natural machine unlearning method"
+"evaluates Shapley value for GNN explanation"
+"introduces a framework for importance evaluation in time series models"
+"presents a tensor compiler for efficient execution on ragged tensors"
+"develops a multi-modal architecture for accident prediction"
+"studies the robustness of graph convolutional networks"
+"proposes a causal effect estimation method with domain adaptation. recall: 0.001984126984126984 precision: 0.0
+Assigned description: Addresses runtime domain corruption in causal effect estimation. recall: 0.02976190476190476 precision: 0.0
+Assigned description: presents CoRa for efficient execution on ragged tensors. recall: 0.005952380952380952 precision: 0.0
+Assigned description: "proposes Graph Structure-aware eXplanation (GStarX) method for GNN explanation. recall: 0.021825396825396824 precision: 0.0
+Assigned description: proposes FIT for evaluating time series model explanations. recall: 0.1626984126984127 precision: 0.012195121951219513
+Assigned description: introduces a framework for evaluating time series model explanations. recall: 0.1111111111111111 precision: 0.05357142857142857
+Assigned description: "proposes VEGAN for counterfactual prediction under domain adaptation. recall: 0.001984126984126984 precision: 0.0
+Assigned description: studies the robustness of graph convolutional networks. recall: 0.051587301587301584 precision: 0.0
+Assigned description: - "proposes a method for machine unlearning. recall: 0.2222222222222222 precision: 0.0
+Dropping 1 descriptions because they are too popular or too unpopular:
+Stage select select
+Unmatched count: 260
+Description: "introduces a novel method for program learning in a Domain Specific Language (DSL). Count: 167
+Description: develops a method for natural machine unlearning. Count: 76
+Description: "proposes VEGAN for counterfactual prediction under domain adaptation. Count: 1
+Clustering results saved at:  experiments/arxiv/2025-12-04-21-28-56

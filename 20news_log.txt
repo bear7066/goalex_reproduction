@@ -1,0 +1,2841 @@
+3:40 + 4:30 -> 8hr
+15000->15000
+Unmatched count: 453 -> 342
+
+Here's a rough estimate of the cost; it might not be accurate and we are not responsible for any cost incurred.
+Each round costs 2.92, proposer spending 0.01, assigner spending 2.91. The final assignment costs 0.00.
+Total cost is 5.84
+Do you want to continue? (y/n)Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. Archive-name: ripem/attacks
+Last-update: 31 Mar 93 21:00:00 -0500
+
+SOME POSSIBLE ATTACKS ON RIPEM
+------------------------------
+
+This is a living list of potential weaknesses to keep your eyes open
+for when using RIPEM for secure electronic mail.  It does not go into
+great detail, and is almost certainly not exhaustive.  Obviously, many
+of the weaknesses are weaknesses of cryptographically secured mail in
+general, and will pertain to secure mail programs other than RIPEM.
+It is maintained by Marc VanHeyningen <mvanheyn@cs.indiana.edu>.  It
+is posted monthly to a variety of news groups; followups pertaining
+specifically to RIPEM should go to alt.security.ripem.
+
+CRYPTANALYSIS ATTACKS
+---------------------
+
+- Breaking RSA would allow an attacker to find out your private key,
+  in which case he could read any mail encrypted to you and sign
+  messages with your private key.
+
+  RSA is generally believed to be resistant to all standard
+  cryptanalytic techniques.  Even a standard key (about 516 bits with
+  RIPEM) is long enough to render this impractical, barring a
+  huge investment in hardware or a breakthrough in factoring.
+
+- Breaking DES would allow an attacker to read any given message,
+  since the message itself is encrypted with DES.  It would not allow
+  an attacker to claim to be you.
+
+  DES has only 56 bits in its key, and thus could conceivably be
+  compromised by brute force with sufficient hardware, but few agencies
+  have such money to devote to simply read one message.  Since each
+  message has a different DES key, the work for each message would
+  remain high.
+
+KEY MANAGEMENT ATTACKS
+----------------------
+
+- Stealing your private key would allow the same benefits as breaking
+  RSA.  To safeguard it, it is encrypted with a DES key which is derived
+  from a passphrase you type in.  However, if an attacker can get a copy
+  of your private keyfile and your passphrase (by snooping network
+  packets, tapping lines, or whatever) he could break the whole scheme.
+
+  The main risk is that of transferring either the passphrase or the
+  private key file across an untrusted link.  So don't do that.  Run 
+  RIPEM on a trusted machine, preferably one sitting right in front of
+  you.  Ideally, your own machine in your own home (or maybe office)
+  which nobody else has physical access to.
+
+- Fooling you into accepting a bogus public key for someone else could 
+  allow an opponent to deceive you into sending secret messages to him
+  rather than to the real recipient.  If the enemy can fool your
+  intended recipient as well, he could re-encrypt the messages with
+  the other bogus public key and pass them along.
+
+  It is important to get the proper public keys of other people.
+  The most common mechanism for this is finger; assuming the opponent
+  has not compromised routers or daemons or such, finger can be 
+  given a fair amount of trust.  The strongest method of key
+  authentication is to exchange keys in person; however, this is
+  not always practical.  Having other people "vouch for you" by
+  signing a statement containing your key is possible, although 
+  RIPEM doesn't have features for doing this as automatically as
+  PGP.  RIPEM does generate and check MD5 fingerprints of public keys
+  in the key files; they may be exchanged via a separate channel for
+  authentication.
+
+PLAYBACK ATTACKS
+----------------
+
+- Even if an opponent cannot break the cryptography, an opponent could
+  still cause difficulties.  For example, suppose you send a message
+  with MIC-ONLY (a PEM mode which does not provide disclosure protection)
+  to Alice which says "OK, let's do that." Your opponent intercepts
+  it, and now resends it to Bob, who now has a message which is
+  authenticated as from you telling him to do that.  Of course, he may
+  interpret it in an entirely different context.  Or your opponent
+  could transmit the same message to the same recipient much later,
+  figuring it would be seen differently at a later time.  Or the
+  opponent could change the Originator-Name: to himself, register 
+  your public key as his, and send a message hoping the recipient
+  will send him return mail indicating (perhaps even quoting!) the
+  unknown message.
+
+  To defeat playback attacks, the plaintext of each message should 
+  include some indication of the sender and recipient, and a unique
+  identifier (typically the date).  A good front-end script for RIPEM
+  should do this automatically (IMHO).  As a recipient, you should be
+  sure that the Originator-Name: header and the sender indicated within
+  the plaintext are the same, that you really are a recipient, and that
+  the message is not an old one.  Some this also can and should be
+  automated.  The author of this FAQ has made a modest attempt at
+  automating the process of generating and checking encapsulated
+  headers; the programs are included in the standard distribution in
+  the utils directory.
+
+LOCAL ATTACKS
+-------------
+
+- Clearly, the security of RIPEM cannot be greater than the security of
+  the machine where the encryption is performed.  For example, under
+  UNIX, a super-user could manage to get at your encrypted mail,
+  although it would take some planning and effort to do something like
+  replace the RIPEM executable with a Trojan horse or to get a copy of
+  the plaintext, depending how it's stored.
+
+  In addition, the link between you and the machine running RIPEM is
+  an extension of that.  If you decrypt with RIPEM on a remote machine
+  which you are connected to via network (or, worse yet, modem), an
+  eavesdropper could see the plaintext (and probably also your
+  passphrase.)
+
+  RIPEM should only be executed on systems you trust, obviously.  In
+  the extreme case, RIPEM should only be used on your own machine,
+  which you have total control over and which nobody else has access
+  to, which has only carefully examined software known to be free of
+  viruses, and so on.  However, there's a very real trade-off between
+  convenience and security here.
+
+  A more moderately cautious user might use RIPEM on a UNIX workstation
+  where other people have access (even root access), but increase
+  security by keeping private keys and the (statically linked, of
+  course) executable on a floppy disk.
+
+  Some people will keep RIPEM on a multi-user system, but when dialing
+  in over an insecure line, they will download the message to their
+  own system and perform the RIPEM decryption there.  However, the
+  security provided by such a mechanism is somewhat illusory; since
+  you presumably type your cleartext password to log in, you've just
+  given away the store, since the attacker can now log in as you and
+  install traps in your account to steal your private key next time
+  you use it from a less insecure line.  This will likely remain the
+  situation as long as most systems use the rather quaint mechanism of
+  cleartext password authentication.
+
+  I find it nice to put a brief statement of how carefully I manage my
+  security arrangement in my .plan next to my public key, so that
+  potential correspondents can be aware what level of precautions are
+  in place.  Some people use two keys, a short one which is not
+  carefully managed for ordinary use and a longer one which is treated
+  with greater care for critical correspondence.
+
+UNTRUSTED PARTNER ATTACKS
+-------------------------
+
+- RIPEM's encryption will ensure that only a person with the private key
+  corresponding to the public key used to encrypt the data may read the
+  traffic.  However, once someone with that key gets the message, she
+  may always make whatever kind of transformations she wishes.  There 
+  exist no cryptographic barriers to a recipient, say, taking an
+  ENCRYPTED message and converting it to a MIC-ONLY message, signed by
+  you and readable by anyone, although RIPEM does not provide this
+  functionality.  Indeed, the latest PEM draft I have seen specifically
+  states that such transformations should be possible to allow
+  forwarding functions to work.
+1. "Deeply rooted rivalry?" Ahem, Jokerit have been around since 1967 and joined
+the top flight only in the early '70s. Helsingfors IFK have been around since
+1897 but fans only started taking hockey seriously in the 1960s so I think
+you're exagerating here.
+
+
+That's a rather bold claim, in the light of how successful the Canadian &
+American Olympic teams have been . . . and they've had to play according to our
+set of rules and on international ice. The 1992 Olympic teams contained about
+as much talent as your average expansion team. Canada had Eric Lindros, Sean
+Burke, Joe Juneau and Chris Kontos. Another four or five have been deep subs in
+the NHL. As for the Yanks, Keith Tkachuk, Scott Lachance, Bret Hedican, Shawn 
+McEachern, Steve Heintze, Ted Donato, Joe Sacco and Bill Guerin have been 
+3rd/4th line players in the NHL, while Robb Stauber has done well for the 
+Kings in goal. Nothing more. In fact, I'm sure that an All-Star team assembled
+from the best Finnish League teams would do no better in the NHL than Hartford 
+or Tampa Bay currently are doing.
+---
+But what happens if _all_ top-class Finnish & Swedish players gradually end up
+with Helsinki & Stockholm as the North American-based ones gradually retire and
+no Canadian/American team is allowed to draft new players from Scandinavia? 
+Here is what THE HOCKEY NEWS scouts think of our NHL-based players:
+
+(28-30=superstar)
+(23-27=star)
+(18-22=NHL regular+)
+(13-17=NHL regular)
+( 8-12=role player)
+
+FINLAND:  
+
+D-Jyrki Lumme.......20
+D-Teppo Numminen....20
+D-Peter Ahola.......13
+
+C-Jari Kurri........25
+C-Christian Ruuttu..16
+
+R-Teemu Selanne.....27
+
+L-Esa Tikkanen......20
+(Obviously, Selanne's ratings would be higher today than they were in January)
+
+SWEDEN:
+D-Ulf Samuelsson....21
+D-Fredrik Olausson..20
+D-Niklas Lidstrom...18
+D-Calle Johansson...18
+D-Kjell Samuelsson..17
+D-Tommy Sjodin......13
+D-Tommy Albelin......7
+
+C-Mats Sundin.......26
+C-Thomas Steen......18
+
+R-Thomas Sandstrom..22
+R-Ulf Dahlen........18
+R-Michael Nylander..13
+
+L-Per-Erik Eklund...18
+L-Johan Garpenlov...16
+L-Mikael Andersson..15
+L-Jan Erixon........14
+
+This would be interesting. Clearly, Finland's top five players (Winnipeg's
+Selanne & Numminen, Vancouver's Lumme, Los Angeles' Jari Kurri and New York's
+Tikkanen) are right up there with any five-man unit Pittsburgh & co. have. But
+I have my doubts about the home-based Finnish players - the national team did
+well in the Canada Cup and World Championships largely due to the efforts of
+Markus Ketterer (the goalie), 3-4 or the players listed above and luck. There's
+presumably a lot of decent players in Finland that wouldn't be superstars at
+the highest level but still valuable role players, however. My guess would be
+that the Finnish Canada Cup team would be a .500 team in the NHL.
+---
+Sweden is easier to judge because they have more players in North America.
+Their points total (16 players) is 274 - seven more than Ottawa's 22 top
+players combined! If we estimate there are six more NHL regulars back home in 
+Sweden, an all-Swedish team would assemble about 350-360 skill points.
+Deducting some points from Pittsburgh, NY Rangers and other teams that rely on
+Swedish players, the Swedish team would finish in sixth place - about as high
+as Boston, Vancouver, Calgary and Montreal on paper! So, the "dynasty" talk
+isn't completely unfounded here. An all-Finnish/all-Swedish team might have an
+advantage because the players would be playing at home half of the time,
+won't have to adapt to a foreign country and a foreign language, and presumably
+play the wide-open European variant of hockey rather than have to learn the
+North American checking game. However, if free agency becomes a factor the top 
+Scandinavian players still might end up playing for large-market teams after a 
+couple of years the same way Edmonton's "dynasty" crumbled in the late '80s. 
+Some fringe players likely will be drafted by other NHL teams as having an 
+exclusive talent pool might be a bit unfair after all. I'd settle for a 
+compromise, prohibit all European teams from signing a North American during 
+the first two rounds but allow them to keep their top two players. After this, 
+the amateur draft should be open to anyone.
+2. That is in fact the current version (it only came out in December).
+
+
+My test movie was created at 320*240 resolution, it wasn't being scaled up.
+Scaling was a very CPU-intensive operation with the original QuickTime (1.0);
+the current version has optimizations for ratios like 4:1 (160*120 -> 320*240),
+but even so, I'm prepared to believe that the performance isn't as good as
+with playing back an actual 320*240 movie. I haven't done any numerical
+measurements for scaled playback.
+3. This is pernicious nonsense!
+
+David
+4. Hi from Australia,
+
+I am a car enthusiast in Australia.
+ 
+I am particularly interested in American Muscle cars of the 
+1960s and 1970s. ALL MAKES: AMC, Ford, Chrysler/Mopar, GM.
+
+I will be in the USA for 6 weeks from May 2nd to -June 14 1993.
+
+Chicago: Sun May 2 -Thursday May 6
+Denver:  Friday May 7 - Sunday May 9
+Austin, Texas: Monday May 10- Friday May 21
+Oklahoma City: Friday May 21 - Monday May 24
+Anaheim, California: Tuesday May 25-Thursday May 27
+Las Vegas, Nevada:  Friday May 28- Sunday May 30
+Grand Canion, Monday May 31 - Tuesday June 1
+Las Angeles, San Diego and vicinity: Wednesday June 3-Sunday June 6 June
+South Lake Tahoe, Cal: Sunday June 6 - Wednesday June 9
+Reno: Thursday June 10
+San Fransisco: Thursday June 10 - Sunday June 13
+
+
+I was wondering if anyone could send me any information of 
+car shows, swap meets, drag meets, model car shows etc. during this period.
+Can anybody tell me when the Pomona Swap meet is on this year?
+
+Also, any places to visit (eg. car museums, private collections, 
+your collection? etc. Any bit of information is appreciated!
+
+I am also interested in finding some model cars (scale Models). 
+I am intersted in 1968-1974 AMC cars. Of particular interest is:
+1968-1970 AMX
+1968-1974 Javelin
+1969 SCRAMBLER
+1970 Rebel Machine
+and others
+
+If you have any kits, plastics, diecast etc and are interested in selling them,
+tell me, I will be interested.
+
+I can also send/bring you models of Australian High performance cars if 
+you are interested.
+
+
+Please reply by email to: johnt@spri.levels.unisa.edu.au
+
+
+Thanks,
+5. Dear friends,
+
+I am a graduate student in Education at the University of Tennessee. As part of
+the requirements for a research class in music education I designed a
+questionnaire to colect data for my research project. The study intends to
+determine which techniques (if any) have been used to teach music for the deaf.
+
+If you have any experience in music education for the deaf and would like to
+help me with this project, your help would be very much appreciated. 
+
+If you also want to exchange some ideas about the subject matter, feel yourself
+welcome. I have been working in this area for a while (in Brazil _ by the way,
+I am Brazilian _ and also in US) and I am very pleased with the results.
+
+I hope that this inquiry will not cause too many inconveniences. Thank you for
+or time and consideration.
+
+
+                         __QUESTIONNAIRE__
+                  Teaching Music for deaf children.
+
+NAME ________________________________
+ADDRESS/ E-MAIL _____________________
+EMPLOYING INSTITUTION _______________
+YEARS OF EXPERIENCE_________ GRADE LEVEL(S)____
+EDUCATIONAL BACKGROUND:BACHELOR__ MASTERS__ DOCTORATE__
+PROFESSIONAL FIELD:SPECIAL EDUC.__  MUSIC EDUC.__ OTHER*__
+*If you checked "other", please indicate your major: ____
+
+	Some school systems require music to be taught to deaf children, other
+school systems have not thought of the possibility to teach music for children
+with hearing limitations. The following questionnaire was designed to find out
+how teachers face the issue of teaching or not teaching music for the deaf.
+Also, a part of this study is to determine teachers attitudes towards music
+programs for deaf children.
+
+	DIRECTIONS:
+	READ THE FOLLOWING QUESTIONS AND CIRCLE THE NUMBER THAT BEST DESCRIBES
+YOUR ATTITUDE TOWARDS MUSIC FOR DEAF CHILDREN (LEFT COLUMN), AND CIRCLE THE
+APPROPRIATE "YES", "NO" OR "NOT APPLICABLE", WHETHER YOU DO THE TASK (RIGHT
+COLUMN).
+
+SD= Strongly disagree			Y= yes
+DIS= Disagree				N= no
+NEU= Neutral				N/A= not applicable
+AG= Agree
+SA= Strongly agree
+
+SD  DIS  NEU  AG  SA		COMPETENCIES			Y  N  N/A
+___________________________________________________________________________
+1   2    3    4   5	1.Deaf children can be educated in      y  n  n/a
+ 			music.
+1   2    3    4   5	2.Deaf children should have regular     y  n  n/a
+			music classes.
+1   2    3    4   5	3.A special music teacher must posses   y  n  n/a
+			an appropriate training in a variety
+			of communication methods to use with
+			deaf children.
+1   2    3    4   5	4.In preparing the lessons the teacher  y  n  n/a
+			must keep in mind that deaf children
+			may present special needs in order to
+			participate in musical activities.
+1   2   3     4   5	5.Deaf and normal hearing children   	y  n  n/a
+			should have music classes together.
+1   2   3     4   5	6. 80% of a succesful music experience  y  n  n/a
+			by a deaf child depends upon the
+			teacher's creativity and commitment
+			with the subject matter.
+1   2   3     4   5	7.Deaf children can learn to appreciate y  n  n/a
+			music but they will never be a musician
+			or a performer.
+1   2   3     4   5	8.Deaf children are not able to		y  n  n/a
+			discriminate and recognize sounds.
+1   2   3     4   5	9.Deaf children can not distinguish	y  n  n/a
+			among loud and soft sounds.
+1   2   3     4   5	10.Deaf children can never match the    y  n  n/a
+			music in their head to a note on a
+			musical instrument.
+1   2   3     4   5	11.The most appropriate material to	y  n  n/a
+			start music classes for the deaf
+			would be the folk songs said he would be replaced by the military commandant of
+Baku, police Major-General Abdullah Allakhverdiyev. There was no official
+confirmation.
+6. Wrong information. They just announced that Suhonen has made a deal with 
+Jokerit.
+7. I deleted much of the following article in order to discuss the 
+specific issue of whether it is acceptable to divorce.  
+
+
+
+I have thought about the implications, and it is scary.  
+
+We have a whole generation of families broken up because some men have 
+decided that is is okay to leave their wives and children for the
+thrill of a younger, more attractive woman.  If we accept that it is
+legitimate for Jane to have divorced, how can we not accept anyone's
+decision to divorce because he has found someone with whom he can
+have a more "deep, committed relationship."
+
+Marriage is not a state of being, it is a mutual journey in life.
+Love is not a passive feeling, it must be actively willed.
+
+Is it acceptable for an older executive to dump his wife of many 
+years who stayed home to care for the children because he
+can't be happy sexually unless he is with a beautiful
+young blonde?  The real solution for both in the couple to
+make a renewed effort.  
+
+Hold fast to the faith.  Has not the Lord repeatedly compared His
+relation to His people as a faithful and enduring husband?  We
+learn something very deep and very mystical when we marry and
+remain faithful through times of trial.
+
+My spouse has a brain tumor that has left her partially paralyzed.
+If it were to resume growing (it is in remission, thanks be to God!)
+then perhaps the time would come when we could not have sexual
+relations.  That's life...the Lord would certainly not give me
+permission to seek someone else to satisfy my "needs."  
+
+The idea that it is alright to divorce if a couple "grows apart"
+seems to me to lead to such a monstrous destruction of the meaning
+of marriage that I feel we must make every effort to avoid any hint
+of compromise.  We have become so petty and small-minded that
+some husbands are threatening to divorce their wives unless the
+wives lose weight!
+
+Here is our goal: Cluster the articles by their specific newsgroup community, for example, graphics, hardware, sport, medical, politics. Please cluster them into 12 groups. Each group should contain at least 3 articles.' 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"discusses divorce and marriage implications"
+"addresses concerns about cryptographic security"
+
+
+Again, here's the goal: Cluster the articles by their specific newsgroup community, for example, graphics, hardware, sport, medical, politics. Please cluster them into 12 groups. Each group should contain at least 3 articles.'. Your responses are:
+- "
+Proposer model response:
+['- "discusses cryptographic security vulnerabilities"\n- "evaluates the potential impact of divorce on families"\n- "inquires about teaching music for deaf children"\n- "shares travel plans and interests in car enthusiasts"\n- "raises questions about the future of Scandinavian hockey players"\n- "announces a deal with Jokerit hockey team"\n- "expresses concerns about the acceptability of divorce"\n- "proposes a questionnaire on teaching music for deaf children"\n- "discusses the implications of divorce and marriage"\n- "addresses concerns about the security of RIPEM encryption"\n- "shares concerns about the security of RIPEM encryption"\n- "discusses potential attacks on RIPEM encryption"']
+Proposer Cost: $0.002865
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. That is in fact the current version (it only came out in December).
+
+
+My test movie was created at 320*240 resolution, it wasn't being scaled up.
+Scaling was a very CPU-intensive operation with the original QuickTime (1.0);
+the current version has optimizations for ratios like 4:1 (160*120 -> 320*240),
+but even so, I'm prepared to believe that the performance isn't as good as
+with playing back an actual 320*240 movie. I haven't done any numerical
+measurements for scaled playback.
+1. This is pernicious nonsense!
+
+David
+2. Wrong information. They just announced that Suhonen has made a deal with 
+Jokerit.
+3. Archive-name: ripem/attacks
+Last-update: 31 Mar 93 21:00:00 -0500
+
+SOME POSSIBLE ATTACKS ON RIPEM
+------------------------------
+
+This is a living list of potential weaknesses to keep your eyes open
+for when using RIPEM for secure electronic mail.  It does not go into
+great detail, and is almost certainly not exhaustive.  Obviously, many
+of the weaknesses are weaknesses of cryptographically secured mail in
+general, and will pertain to secure mail programs other than RIPEM.
+It is maintained by Marc VanHeyningen <mvanheyn@cs.indiana.edu>.  It
+is posted monthly to a variety of news groups; followups pertaining
+specifically to RIPEM should go to alt.security.ripem.
+
+CRYPTANALYSIS ATTACKS
+---------------------
+
+- Breaking RSA would allow an attacker to find out your private key,
+  in which case he could read any mail encrypted to you and sign
+  messages with your private key.
+
+  RSA is generally believed to be resistant to all standard
+  cryptanalytic techniques.  Even a standard key (about 516 bits with
+  RIPEM) is long enough to render this impractical, barring a
+  huge investment in hardware or a breakthrough in factoring.
+
+- Breaking DES would allow an attacker to read any given message,
+  since the message itself is encrypted with DES.  It would not allow
+  an attacker to claim to be you.
+
+  DES has only 56 bits in its key, and thus could conceivably be
+  compromised by brute force with sufficient hardware, but few agencies
+  have such money to devote to simply read one message.  Since each
+  message has a different DES key, the work for each message would
+  remain high.
+
+KEY MANAGEMENT ATTACKS
+----------------------
+
+- Stealing your private key would allow the same benefits as breaking
+  RSA.  To safeguard it, it is encrypted with a DES key which is derived
+  from a passphrase you type in.  However, if an attacker can get a copy
+  of your private keyfile and your passphrase (by snooping network
+  packets, tapping lines, or whatever) he could break the whole scheme.
+
+  The main risk is that of transferring either the passphrase or the
+  private key file across an untrusted link.  So don't do that.  Run 
+  RIPEM on a trusted machine, preferably one sitting right in front of
+  you.  Ideally, your own machine in your own home (or maybe office)
+  which nobody else has physical access to.
+
+- Fooling you into accepting a bogus public key for someone else could 
+  allow an opponent to deceive you into sending secret messages to him
+  rather than to the real recipient.  If the enemy can fool your
+  intended recipient as well, he could re-encrypt the messages with
+  the other bogus public key and pass them along.
+
+  It is important to get the proper public keys of other people.
+  The most common mechanism for this is finger; assuming the opponent
+  has not compromised routers or daemons or such, finger can be 
+  given a fair amount of trust.  The strongest method of key
+  authentication is to exchange keys in person; however, this is
+  not always practical.  Having other people "vouch for you" by
+  signing a statement containing your key is possible, although 
+  RIPEM doesn't have features for doing this as automatically as
+  PGP.  RIPEM does generate and check MD5 fingerprints of public keys
+  in the key files; they may be exchanged via a separate channel for
+  authentication.
+
+PLAYBACK ATTACKS
+----------------
+
+- Even if an opponent cannot break the cryptography, an opponent could
+  still cause difficulties.  For example, suppose you send a message
+  with MIC-ONLY (a PEM mode which does not provide disclosure protection)
+  to Alice which says "OK, let's do that." Your opponent intercepts
+  it, and now resends it to Bob, who now has a message which is
+  authenticated as from you telling him to do that.  Of course, he may
+  interpret it in an entirely different context.  Or your opponent
+  could transmit the same message to the same recipient much later,
+  figuring it would be seen differently at a later time.  Or the
+  opponent could change the Originator-Name: to himself, register 
+  your public key as his, and send a message hoping the recipient
+  will send him return mail indicating (perhaps even quoting!) the
+  unknown message.
+
+  To defeat playback attacks, the plaintext of each message should 
+  include some indication of the sender and recipient, and a unique
+  identifier (typically the date).  A good front-end script for RIPEM
+  should do this automatically (IMHO).  As a recipient, you should be
+  sure that the Originator-Name: header and the sender indicated within
+  the plaintext are the same, that you really are a recipient, and that
+  the message is not an old one.  Some this also can and should be
+  automated.  The author of this FAQ has made a modest attempt at
+  automating the process of generating and checking encapsulated
+  headers; the programs are included in the standard distribution in
+  the utils directory.
+
+LOCAL ATTACKS
+-------------
+
+- Clearly, the security of RIPEM cannot be greater than the security of
+  the machine where the encryption is performed.  For example, under
+  UNIX, a super-user could manage to get at your encrypted mail,
+  although it would take some planning and effort to do something like
+  replace the RIPEM executable with a Trojan horse or to get a copy of
+  the plaintext, depending how it's stored.
+
+  In addition, the link between you and the machine running RIPEM is
+  an extension of that.  If you decrypt with RIPEM on a remote machine
+  which you are connected to via network (or, worse yet, modem), an
+  eavesdropper could see the plaintext (and probably also your
+  passphrase.)
+
+  RIPEM should only be executed on systems you trust, obviously.  In
+  the extreme case, RIPEM should only be used on your own machine,
+  which you have total control over and which nobody else has access
+  to, which has only carefully examined software known to be free of
+  viruses, and so on.  However, there's a very real trade-off between
+  convenience and security here.
+
+  A more moderately cautious user might use RIPEM on a UNIX workstation
+  where other people have access (even root access), but increase
+  security by keeping private keys and the (statically linked, of
+  course) executable on a floppy disk.
+
+  Some people will keep RIPEM on a multi-user system, but when dialing
+  in over an insecure line, they will download the message to their
+  own system and perform the RIPEM decryption there.  However, the
+  security provided by such a mechanism is somewhat illusory; since
+  you presumably type your cleartext password to log in, you've just
+  given away the store, since the attacker can now log in as you and
+  install traps in your account to steal your private key next time
+  you use it from a less insecure line.  This will likely remain the
+  situation as long as most systems use the rather quaint mechanism of
+  cleartext password authentication.
+
+  I find it nice to put a brief statement of how carefully I manage my
+  security arrangement in my .plan next to my public key, so that
+  potential correspondents can be aware what level of precautions are
+  in place.  Some people use two keys, a short one which is not
+  carefully managed for ordinary use and a longer one which is treated
+  with greater care for critical correspondence.
+
+UNTRUSTED PARTNER ATTACKS
+-------------------------
+
+- RIPEM's encryption will ensure that only a person with the private key
+  corresponding to the public key used to encrypt the data may read the
+  traffic.  However, once someone with that key gets the message, she
+  may always make whatever kind of transformations she wishes.  There 
+  exist no cryptographic barriers to a recipient, say, taking an
+  ENCRYPTED message and converting it to a MIC-ONLY message, signed by
+  you and readable by anyone, although RIPEM does not provide this
+  functionality.  Indeed, the latest PEM draft I have seen specifically
+  states that such transformations should be possible to allow
+  forwarding functions to work.
+4. Dear friends,
+
+I am a graduate student in Education at the University of Tennessee. As part of
+the requirements for a research class in music education I designed a
+questionnaire to colect data for my research project. The study intends to
+determine which techniques (if any) have been used to teach music for the deaf.
+
+If you have any experience in music education for the deaf and would like to
+help me with this project, your help would be very much appreciated. 
+
+If you also want to exchange some ideas about the subject matter, feel yourself
+welcome. I have been working in this area for a while (in Brazil _ by the way,
+I am Brazilian _ and also in US) and I am very pleased with the results.
+
+I hope that this inquiry will not cause too many inconveniences. Thank you for
+or time and consideration.
+
+
+                         __QUESTIONNAIRE__
+                  Teaching Music for deaf children.
+
+NAME ________________________________
+ADDRESS/ E-MAIL _____________________
+EMPLOYING INSTITUTION _______________
+YEARS OF EXPERIENCE_________ GRADE LEVEL(S)____
+EDUCATIONAL BACKGROUND:BACHELOR__ MASTERS__ DOCTORATE__
+PROFESSIONAL FIELD:SPECIAL EDUC.__  MUSIC EDUC.__ OTHER*__
+*If you checked "other", please indicate your major: ____
+
+	Some school systems require music to be taught to deaf children, other
+school systems have not thought of the possibility to teach music for children
+with hearing limitations. The following questionnaire was designed to find out
+how teachers face the issue of teaching or not teaching music for the deaf.
+Also, a part of this study is to determine teachers attitudes towards music
+programs for deaf children.
+
+	DIRECTIONS:
+	READ THE FOLLOWING QUESTIONS AND CIRCLE THE NUMBER THAT BEST DESCRIBES
+YOUR ATTITUDE TOWARDS MUSIC FOR DEAF CHILDREN (LEFT COLUMN), AND CIRCLE THE
+APPROPRIATE "YES", "NO" OR "NOT APPLICABLE", WHETHER YOU DO THE TASK (RIGHT
+COLUMN).
+
+SD= Strongly disagree			Y= yes
+DIS= Disagree				N= no
+NEU= Neutral				N/A= not applicable
+AG= Agree
+SA= Strongly agree
+
+SD  DIS  NEU  AG  SA		COMPETENCIES			Y  N  N/A
+___________________________________________________________________________
+1   2    3    4   5	1.Deaf children can be educated in      y  n  n/a
+ 			music.
+1   2    3    4   5	2.Deaf children should have regular     y  n  n/a
+			music classes.
+1   2    3    4   5	3.A special music teacher must posses   y  n  n/a
+			an appropriate training in a variety
+			of communication methods to use with
+			deaf children.
+1   2    3    4   5	4.In preparing the lessons the teacher  y  n  n/a
+			must keep in mind that deaf children
+			may present special needs in order to
+			participate in musical activities.
+1   2   3     4   5	5.Deaf and normal hearing children   	y  n  n/a
+			should have music classes together.
+1   2   3     4   5	6. 80% of a succesful music experience  y  n  n/a
+			by a deaf child depends upon the
+			teacher's creativity and commitment
+			with the subject matter.
+1   2   3     4   5	7.Deaf children can learn to appreciate y  n  n/a
+			music but they will never be a musician
+			or a performer.
+1   2   3     4   5	8.Deaf children are not able to		y  n  n/a
+			discriminate and recognize sounds.
+1   2   3     4   5	9.Deaf children can not distinguish	y  n  n/a
+			among loud and soft sounds.
+1   2   3     4   5	10.Deaf children can never match the    y  n  n/a
+			music in their head to a note on a
+			musical instrument.
+1   2   3     4   5	11.The most appropriate material to	y  n  n/a
+			start music classes for the deaf
+			would be the folk songs said he would be replaced by the military commandant of
+Baku, police Major-General Abdullah Allakhverdiyev. There was no official
+confirmation.
+5. "Deeply rooted rivalry?" Ahem, Jokerit have been around since 1967 and joined
+the top flight only in the early '70s. Helsingfors IFK have been around since
+1897 but fans only started taking hockey seriously in the 1960s so I think
+you're exagerating here.
+
+
+That's a rather bold claim, in the light of how successful the Canadian &
+American Olympic teams have been . . . and they've had to play according to our
+set of rules and on international ice. The 1992 Olympic teams contained about
+as much talent as your average expansion team. Canada had Eric Lindros, Sean
+Burke, Joe Juneau and Chris Kontos. Another four or five have been deep subs in
+the NHL. As for the Yanks, Keith Tkachuk, Scott Lachance, Bret Hedican, Shawn 
+McEachern, Steve Heintze, Ted Donato, Joe Sacco and Bill Guerin have been 
+3rd/4th line players in the NHL, while Robb Stauber has done well for the 
+Kings in goal. Nothing more. In fact, I'm sure that an All-Star team assembled
+from the best Finnish League teams would do no better in the NHL than Hartford 
+or Tampa Bay currently are doing.
+---
+But what happens if _all_ top-class Finnish & Swedish players gradually end up
+with Helsinki & Stockholm as the North American-based ones gradually retire and
+no Canadian/American team is allowed to draft new players from Scandinavia? 
+Here is what THE HOCKEY NEWS scouts think of our NHL-based players:
+
+(28-30=superstar)
+(23-27=star)
+(18-22=NHL regular+)
+(13-17=NHL regular)
+( 8-12=role player)
+
+FINLAND:  
+
+D-Jyrki Lumme.......20
+D-Teppo Numminen....20
+D-Peter Ahola.......13
+
+C-Jari Kurri........25
+C-Christian Ruuttu..16
+
+R-Teemu Selanne.....27
+
+L-Esa Tikkanen......20
+(Obviously, Selanne's ratings would be higher today than they were in January)
+
+SWEDEN:
+D-Ulf Samuelsson....21
+D-Fredrik Olausson..20
+D-Niklas Lidstrom...18
+D-Calle Johansson...18
+D-Kjell Samuelsson..17
+D-Tommy Sjodin......13
+D-Tommy Albelin......7
+
+C-Mats Sundin.......26
+C-Thomas Steen......18
+
+R-Thomas Sandstrom..22
+R-Ulf Dahlen........18
+R-Michael Nylander..13
+
+L-Per-Erik Eklund...18
+L-Johan Garpenlov...16
+L-Mikael Andersson..15
+L-Jan Erixon........14
+
+This would be interesting. Clearly, Finland's top five players (Winnipeg's
+Selanne & Numminen, Vancouver's Lumme, Los Angeles' Jari Kurri and New York's
+Tikkanen) are right up there with any five-man unit Pittsburgh & co. have. But
+I have my doubts about the home-based Finnish players - the national team did
+well in the Canada Cup and World Championships largely due to the efforts of
+Markus Ketterer (the goalie), 3-4 or the players listed above and luck. There's
+presumably a lot of decent players in Finland that wouldn't be superstars at
+the highest level but still valuable role players, however. My guess would be
+that the Finnish Canada Cup team would be a .500 team in the NHL.
+---
+Sweden is easier to judge because they have more players in North America.
+Their points total (16 players) is 274 - seven more than Ottawa's 22 top
+players combined! If we estimate there are six more NHL regulars back home in 
+Sweden, an all-Swedish team would assemble about 350-360 skill points.
+Deducting some points from Pittsburgh, NY Rangers and other teams that rely on
+Swedish players, the Swedish team would finish in sixth place - about as high
+as Boston, Vancouver, Calgary and Montreal on paper! So, the "dynasty" talk
+isn't completely unfounded here. An all-Finnish/all-Swedish team might have an
+advantage because the players would be playing at home half of the time,
+won't have to adapt to a foreign country and a foreign language, and presumably
+play the wide-open European variant of hockey rather than have to learn the
+North American checking game. However, if free agency becomes a factor the top 
+Scandinavian players still might end up playing for large-market teams after a 
+couple of years the same way Edmonton's "dynasty" crumbled in the late '80s. 
+Some fringe players likely will be drafted by other NHL teams as having an 
+exclusive talent pool might be a bit unfair after all. I'd settle for a 
+compromise, prohibit all European teams from signing a North American during 
+the first two rounds but allow them to keep their top two players. After this, 
+the amateur draft should be open to anyone.
+6. I deleted much of the following article in order to discuss the 
+specific issue of whether it is acceptable to divorce.  
+
+
+
+I have thought about the implications, and it is scary.  
+
+We have a whole generation of families broken up because some men have 
+decided that is is okay to leave their wives and children for the
+thrill of a younger, more attractive woman.  If we accept that it is
+legitimate for Jane to have divorced, how can we not accept anyone's
+decision to divorce because he has found someone with whom he can
+have a more "deep, committed relationship."
+
+Marriage is not a state of being, it is a mutual journey in life.
+Love is not a passive feeling, it must be actively willed.
+
+Is it acceptable for an older executive to dump his wife of many 
+years who stayed home to care for the children because he
+can't be happy sexually unless he is with a beautiful
+young blonde?  The real solution for both in the couple to
+make a renewed effort.  
+
+Hold fast to the faith.  Has not the Lord repeatedly compared His
+relation to His people as a faithful and enduring husband?  We
+learn something very deep and very mystical when we marry and
+remain faithful through times of trial.
+
+My spouse has a brain tumor that has left her partially paralyzed.
+If it were to resume growing (it is in remission, thanks be to God!)
+then perhaps the time would come when we could not have sexual
+relations.  That's life...the Lord would certainly not give me
+permission to seek someone else to satisfy my "needs."  
+
+The idea that it is alright to divorce if a couple "grows apart"
+seems to me to lead to such a monstrous destruction of the meaning
+of marriage that I feel we must make every effort to avoid any hint
+of compromise.  We have become so petty and small-minded that
+some husbands are threatening to divorce their wives unless the
+wives lose weight!
+7. Hi from Australia,
+
+I am a car enthusiast in Australia.
+ 
+I am particularly interested in American Muscle cars of the 
+1960s and 1970s. ALL MAKES: AMC, Ford, Chrysler/Mopar, GM.
+
+I will be in the USA for 6 weeks from May 2nd to -June 14 1993.
+
+Chicago: Sun May 2 -Thursday May 6
+Denver:  Friday May 7 - Sunday May 9
+Austin, Texas: Monday May 10- Friday May 21
+Oklahoma City: Friday May 21 - Monday May 24
+Anaheim, California: Tuesday May 25-Thursday May 27
+Las Vegas, Nevada:  Friday May 28- Sunday May 30
+Grand Canion, Monday May 31 - Tuesday June 1
+Las Angeles, San Diego and vicinity: Wednesday June 3-Sunday June 6 June
+South Lake Tahoe, Cal: Sunday June 6 - Wednesday June 9
+Reno: Thursday June 10
+San Fransisco: Thursday June 10 - Sunday June 13
+
+
+I was wondering if anyone could send me any information of 
+car shows, swap meets, drag meets, model car shows etc. during this period.
+Can anybody tell me when the Pomona Swap meet is on this year?
+
+Also, any places to visit (eg. car museums, private collections, 
+your collection? etc. Any bit of information is appreciated!
+
+I am also interested in finding some model cars (scale Models). 
+I am intersted in 1968-1974 AMC cars. Of particular interest is:
+1968-1970 AMX
+1968-1974 Javelin
+1969 SCRAMBLER
+1970 Rebel Machine
+and others
+
+If you have any kits, plastics, diecast etc and are interested in selling them,
+tell me, I will be interested.
+
+I can also send/bring you models of Australian High performance cars if 
+you are interested.
+
+
+Please reply by email to: johnt@spri.levels.unisa.edu.au
+
+
+Thanks,
+
+Here is our goal: Cluster the articles by their specific newsgroup community, for example, graphics, hardware, sport, medical, politics. Please cluster them into 12 groups. Each group should contain at least 3 articles.' 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"proposes a compromise for european teams in hockey"
+"discusses potential attacks on secure electronic mail"
+
+
+Again, here's the goal: Cluster the articles by their specific newsgroup community, for example, graphics, hardware, sport, medical, politics. Please cluster them into 12 groups. Each group should contain at least 3 articles.'. Your responses are:
+- "
+Proposer model response:
+['- "discusses potential attacks on secure electronic mail"\n- "addresses issues related to divorce and marriage"\n- "seeks information on car shows and model cars"\n- "shares experiences in music education for the deaf"\n- "analyzes the performance of Finnish and Swedish hockey players"\n- "questions the legitimacy of divorce"\n- "provides updates on hockey teams and players"\n- "seeks advice on teaching music to deaf children"\n- "discusses the implications of divorce on families"\n- "shares travel plans and interests in American muscle cars"\n- "proposes a compromise for European teams in hockey"\n- "provides information on potential weaknesses in secure electronic mail"']
+Proposer Cost: $0.002863
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. I deleted much of the following article in order to discuss the 
+specific issue of whether it is acceptable to divorce.  
+
+
+
+I have thought about the implications, and it is scary.  
+
+We have a whole generation of families broken up because some men have 
+decided that is is okay to leave their wives and children for the
+thrill of a younger, more attractive woman.  If we accept that it is
+legitimate for Jane to have divorced, how can we not accept anyone's
+decision to divorce because he has found someone with whom he can
+have a more "deep, committed relationship."
+
+Marriage is not a state of being, it is a mutual journey in life.
+Love is not a passive feeling, it must be actively willed.
+
+Is it acceptable for an older executive to dump his wife of many 
+years who stayed home to care for the children because he
+can't be happy sexually unless he is with a beautiful
+young blonde?  The real solution for both in the couple to
+make a renewed effort.  
+
+Hold fast to the faith.  Has not the Lord repeatedly compared His
+relation to His people as a faithful and enduring husband?  We
+learn something very deep and very mystical when we marry and
+remain faithful through times of trial.
+
+My spouse has a brain tumor that has left her partially paralyzed.
+If it were to resume growing (it is in remission, thanks be to God!)
+then perhaps the time would come when we could not have sexual
+relations.  That's life...the Lord would certainly not give me
+permission to seek someone else to satisfy my "needs."  
+
+The idea that it is alright to divorce if a couple "grows apart"
+seems to me to lead to such a monstrous destruction of the meaning
+of marriage that I feel we must make every effort to avoid any hint
+of compromise.  We have become so petty and small-minded that
+some husbands are threatening to divorce their wives unless the
+wives lose weight!
+1. "Deeply rooted rivalry?" Ahem, Jokerit have been around since 1967 and joined
+the top flight only in the early '70s. Helsingfors IFK have been around since
+1897 but fans only started taking hockey seriously in the 1960s so I think
+you're exagerating here.
+
+
+That's a rather bold claim, in the light of how successful the Canadian &
+American Olympic teams have been . . . and they've had to play according to our
+set of rules and on international ice. The 1992 Olympic teams contained about
+as much talent as your average expansion team. Canada had Eric Lindros, Sean
+Burke, Joe Juneau and Chris Kontos. Another four or five have been deep subs in
+the NHL. As for the Yanks, Keith Tkachuk, Scott Lachance, Bret Hedican, Shawn 
+McEachern, Steve Heintze, Ted Donato, Joe Sacco and Bill Guerin have been 
+3rd/4th line players in the NHL, while Robb Stauber has done well for the 
+Kings in goal. Nothing more. In fact, I'm sure that an All-Star team assembled
+from the best Finnish League teams would do no better in the NHL than Hartford 
+or Tampa Bay currently are doing.
+---
+But what happens if _all_ top-class Finnish & Swedish players gradually end up
+with Helsinki & Stockholm as the North American-based ones gradually retire and
+no Canadian/American team is allowed to draft new players from Scandinavia? 
+Here is what THE HOCKEY NEWS scouts think of our NHL-based players:
+
+(28-30=superstar)
+(23-27=star)
+(18-22=NHL regular+)
+(13-17=NHL regular)
+( 8-12=role player)
+
+FINLAND:  
+
+D-Jyrki Lumme.......20
+D-Teppo Numminen....20
+D-Peter Ahola.......13
+
+C-Jari Kurri........25
+C-Christian Ruuttu..16
+
+R-Teemu Selanne.....27
+
+L-Esa Tikkanen......20
+(Obviously, Selanne's ratings would be higher today than they were in January)
+
+SWEDEN:
+D-Ulf Samuelsson....21
+D-Fredrik Olausson..20
+D-Niklas Lidstrom...18
+D-Calle Johansson...18
+D-Kjell Samuelsson..17
+D-Tommy Sjodin......13
+D-Tommy Albelin......7
+
+C-Mats Sundin.......26
+C-Thomas Steen......18
+
+R-Thomas Sandstrom..22
+R-Ulf Dahlen........18
+R-Michael Nylander..13
+
+L-Per-Erik Eklund...18
+L-Johan Garpenlov...16
+L-Mikael Andersson..15
+L-Jan Erixon........14
+
+This would be interesting. Clearly, Finland's top five players (Winnipeg's
+Selanne & Numminen, Vancouver's Lumme, Los Angeles' Jari Kurri and New York's
+Tikkanen) are right up there with any five-man unit Pittsburgh & co. have. But
+I have my doubts about the home-based Finnish players - the national team did
+well in the Canada Cup and World Championships largely due to the efforts of
+Markus Ketterer (the goalie), 3-4 or the players listed above and luck. There's
+presumably a lot of decent players in Finland that wouldn't be superstars at
+the highest level but still valuable role players, however. My guess would be
+that the Finnish Canada Cup team would be a .500 team in the NHL.
+---
+Sweden is easier to judge because they have more players in North America.
+Their points total (16 players) is 274 - seven more than Ottawa's 22 top
+players combined! If we estimate there are six more NHL regulars back home in 
+Sweden, an all-Swedish team would assemble about 350-360 skill points.
+Deducting some points from Pittsburgh, NY Rangers and other teams that rely on
+Swedish players, the Swedish team would finish in sixth place - about as high
+as Boston, Vancouver, Calgary and Montreal on paper! So, the "dynasty" talk
+isn't completely unfounded here. An all-Finnish/all-Swedish team might have an
+advantage because the players would be playing at home half of the time,
+won't have to adapt to a foreign country and a foreign language, and presumably
+play the wide-open European variant of hockey rather than have to learn the
+North American checking game. However, if free agency becomes a factor the top 
+Scandinavian players still might end up playing for large-market teams after a 
+couple of years the same way Edmonton's "dynasty" crumbled in the late '80s. 
+Some fringe players likely will be drafted by other NHL teams as having an 
+exclusive talent pool might be a bit unfair after all. I'd settle for a 
+compromise, prohibit all European teams from signing a North American during 
+the first two rounds but allow them to keep their top two players. After this, 
+the amateur draft should be open to anyone.
+2. Wrong information. They just announced that Suhonen has made a deal with 
+Jokerit.
+3. Dear friends,
+
+I am a graduate student in Education at the University of Tennessee. As part of
+the requirements for a research class in music education I designed a
+questionnaire to colect data for my research project. The study intends to
+determine which techniques (if any) have been used to teach music for the deaf.
+
+If you have any experience in music education for the deaf and would like to
+help me with this project, your help would be very much appreciated. 
+
+If you also want to exchange some ideas about the subject matter, feel yourself
+welcome. I have been working in this area for a while (in Brazil _ by the way,
+I am Brazilian _ and also in US) and I am very pleased with the results.
+
+I hope that this inquiry will not cause too many inconveniences. Thank you for
+or time and consideration.
+
+
+                         __QUESTIONNAIRE__
+                  Teaching Music for deaf children.
+
+NAME ________________________________
+ADDRESS/ E-MAIL _____________________
+EMPLOYING INSTITUTION _______________
+YEARS OF EXPERIENCE_________ GRADE LEVEL(S)____
+EDUCATIONAL BACKGROUND:BACHELOR__ MASTERS__ DOCTORATE__
+PROFESSIONAL FIELD:SPECIAL EDUC.__  MUSIC EDUC.__ OTHER*__
+*If you checked "other", please indicate your major: ____
+
+	Some school systems require music to be taught to deaf children, other
+school systems have not thought of the possibility to teach music for children
+with hearing limitations. The following questionnaire was designed to find out
+how teachers face the issue of teaching or not teaching music for the deaf.
+Also, a part of this study is to determine teachers attitudes towards music
+programs for deaf children.
+
+	DIRECTIONS:
+	READ THE FOLLOWING QUESTIONS AND CIRCLE THE NUMBER THAT BEST DESCRIBES
+YOUR ATTITUDE TOWARDS MUSIC FOR DEAF CHILDREN (LEFT COLUMN), AND CIRCLE THE
+APPROPRIATE "YES", "NO" OR "NOT APPLICABLE", WHETHER YOU DO THE TASK (RIGHT
+COLUMN).
+
+SD= Strongly disagree			Y= yes
+DIS= Disagree				N= no
+NEU= Neutral				N/A= not applicable
+AG= Agree
+SA= Strongly agree
+
+SD  DIS  NEU  AG  SA		COMPETENCIES			Y  N  N/A
+___________________________________________________________________________
+1   2    3    4   5	1.Deaf children can be educated in      y  n  n/a
+ 			music.
+1   2    3    4   5	2.Deaf children should have regular     y  n  n/a
+			music classes.
+1   2    3    4   5	3.A special music teacher must posses   y  n  n/a
+			an appropriate training in a variety
+			of communication methods to use with
+			deaf children.
+1   2    3    4   5	4.In preparing the lessons the teacher  y  n  n/a
+			must keep in mind that deaf children
+			may present special needs in order to
+			participate in musical activities.
+1   2   3     4   5	5.Deaf and normal hearing children   	y  n  n/a
+			should have music classes together.
+1   2   3     4   5	6. 80% of a succesful music experience  y  n  n/a
+			by a deaf child depends upon the
+			teacher's creativity and commitment
+			with the subject matter.
+1   2   3     4   5	7.Deaf children can learn to appreciate y  n  n/a
+			music but they will never be a musician
+			or a performer.
+1   2   3     4   5	8.Deaf children are not able to		y  n  n/a
+			discriminate and recognize sounds.
+1   2   3     4   5	9.Deaf children can not distinguish	y  n  n/a
+			among loud and soft sounds.
+1   2   3     4   5	10.Deaf children can never match the    y  n  n/a
+			music in their head to a note on a
+			musical instrument.
+1   2   3     4   5	11.The most appropriate material to	y  n  n/a
+			start music classes for the deaf
+			would be the folk songs said he would be replaced by the military commandant of
+Baku, police Major-General Abdullah Allakhverdiyev. There was no official
+confirmation.
+4. Archive-name: ripem/attacks
+Last-update: 31 Mar 93 21:00:00 -0500
+
+SOME POSSIBLE ATTACKS ON RIPEM
+------------------------------
+
+This is a living list of potential weaknesses to keep your eyes open
+for when using RIPEM for secure electronic mail.  It does not go into
+great detail, and is almost certainly not exhaustive.  Obviously, many
+of the weaknesses are weaknesses of cryptographically secured mail in
+general, and will pertain to secure mail programs other than RIPEM.
+It is maintained by Marc VanHeyningen <mvanheyn@cs.indiana.edu>.  It
+is posted monthly to a variety of news groups; followups pertaining
+specifically to RIPEM should go to alt.security.ripem.
+
+CRYPTANALYSIS ATTACKS
+---------------------
+
+- Breaking RSA would allow an attacker to find out your private key,
+  in which case he could read any mail encrypted to you and sign
+  messages with your private key.
+
+  RSA is generally believed to be resistant to all standard
+  cryptanalytic techniques.  Even a standard key (about 516 bits with
+  RIPEM) is long enough to render this impractical, barring a
+  huge investment in hardware or a breakthrough in factoring.
+
+- Breaking DES would allow an attacker to read any given message,
+  since the message itself is encrypted with DES.  It would not allow
+  an attacker to claim to be you.
+
+  DES has only 56 bits in its key, and thus could conceivably be
+  compromised by brute force with sufficient hardware, but few agencies
+  have such money to devote to simply read one message.  Since each
+  message has a different DES key, the work for each message would
+  remain high.
+
+KEY MANAGEMENT ATTACKS
+----------------------
+
+- Stealing your private key would allow the same benefits as breaking
+  RSA.  To safeguard it, it is encrypted with a DES key which is derived
+  from a passphrase you type in.  However, if an attacker can get a copy
+  of your private keyfile and your passphrase (by snooping network
+  packets, tapping lines, or whatever) he could break the whole scheme.
+
+  The main risk is that of transferring either the passphrase or the
+  private key file across an untrusted link.  So don't do that.  Run 
+  RIPEM on a trusted machine, preferably one sitting right in front of
+  you.  Ideally, your own machine in your own home (or maybe office)
+  which nobody else has physical access to.
+
+- Fooling you into accepting a bogus public key for someone else could 
+  allow an opponent to deceive you into sending secret messages to him
+  rather than to the real recipient.  If the enemy can fool your
+  intended recipient as well, he could re-encrypt the messages with
+  the other bogus public key and pass them along.
+
+  It is important to get the proper public keys of other people.
+  The most common mechanism for this is finger; assuming the opponent
+  has not compromised routers or daemons or such, finger can be 
+  given a fair amount of trust.  The strongest method of key
+  authentication is to exchange keys in person; however, this is
+  not always practical.  Having other people "vouch for you" by
+  signing a statement containing your key is possible, although 
+  RIPEM doesn't have features for doing this as automatically as
+  PGP.  RIPEM does generate and check MD5 fingerprints of public keys
+  in the key files; they may be exchanged via a separate channel for
+  authentication.
+
+PLAYBACK ATTACKS
+----------------
+
+- Even if an opponent cannot break the cryptography, an opponent could
+  still cause difficulties.  For example, suppose you send a message
+  with MIC-ONLY (a PEM mode which does not provide disclosure protection)
+  to Alice which says "OK, let's do that." Your opponent intercepts
+  it, and now resends it to Bob, who now has a message which is
+  authenticated as from you telling him to do that.  Of course, he may
+  interpret it in an entirely different context.  Or your opponent
+  could transmit the same message to the same recipient much later,
+  figuring it would be seen differently at a later time.  Or the
+  opponent could change the Originator-Name: to himself, register 
+  your public key as his, and send a message hoping the recipient
+  will send him return mail indicating (perhaps even quoting!) the
+  unknown message.
+
+  To defeat playback attacks, the plaintext of each message should 
+  include some indication of the sender and recipient, and a unique
+  identifier (typically the date).  A good front-end script for RIPEM
+  should do this automatically (IMHO).  As a recipient, you should be
+  sure that the Originator-Name: header and the sender indicated within
+  the plaintext are the same, that you really are a recipient, and that
+  the message is not an old one.  Some this also can and should be
+  automated.  The author of this FAQ has made a modest attempt at
+  automating the process of generating and checking encapsulated
+  headers; the programs are included in the standard distribution in
+  the utils directory.
+
+LOCAL ATTACKS
+-------------
+
+- Clearly, the security of RIPEM cannot be greater than the security of
+  the machine where the encryption is performed.  For example, under
+  UNIX, a super-user could manage to get at your encrypted mail,
+  although it would take some planning and effort to do something like
+  replace the RIPEM executable with a Trojan horse or to get a copy of
+  the plaintext, depending how it's stored.
+
+  In addition, the link between you and the machine running RIPEM is
+  an extension of that.  If you decrypt with RIPEM on a remote machine
+  which you are connected to via network (or, worse yet, modem), an
+  eavesdropper could see the plaintext (and probably also your
+  passphrase.)
+
+  RIPEM should only be executed on systems you trust, obviously.  In
+  the extreme case, RIPEM should only be used on your own machine,
+  which you have total control over and which nobody else has access
+  to, which has only carefully examined software known to be free of
+  viruses, and so on.  However, there's a very real trade-off between
+  convenience and security here.
+
+  A more moderately cautious user might use RIPEM on a UNIX workstation
+  where other people have access (even root access), but increase
+  security by keeping private keys and the (statically linked, of
+  course) executable on a floppy disk.
+
+  Some people will keep RIPEM on a multi-user system, but when dialing
+  in over an insecure line, they will download the message to their
+  own system and perform the RIPEM decryption there.  However, the
+  security provided by such a mechanism is somewhat illusory; since
+  you presumably type your cleartext password to log in, you've just
+  given away the store, since the attacker can now log in as you and
+  install traps in your account to steal your private key next time
+  you use it from a less insecure line.  This will likely remain the
+  situation as long as most systems use the rather quaint mechanism of
+  cleartext password authentication.
+
+  I find it nice to put a brief statement of how carefully I manage my
+  security arrangement in my .plan next to my public key, so that
+  potential correspondents can be aware what level of precautions are
+  in place.  Some people use two keys, a short one which is not
+  carefully managed for ordinary use and a longer one which is treated
+  with greater care for critical correspondence.
+
+UNTRUSTED PARTNER ATTACKS
+-------------------------
+
+- RIPEM's encryption will ensure that only a person with the private key
+  corresponding to the public key used to encrypt the data may read the
+  traffic.  However, once someone with that key gets the message, she
+  may always make whatever kind of transformations she wishes.  There 
+  exist no cryptographic barriers to a recipient, say, taking an
+  ENCRYPTED message and converting it to a MIC-ONLY message, signed by
+  you and readable by anyone, although RIPEM does not provide this
+  functionality.  Indeed, the latest PEM draft I have seen specifically
+  states that such transformations should be possible to allow
+  forwarding functions to work.
+5. This is pernicious nonsense!
+
+David
+6. Hi from Australia,
+
+I am a car enthusiast in Australia.
+ 
+I am particularly interested in American Muscle cars of the 
+1960s and 1970s. ALL MAKES: AMC, Ford, Chrysler/Mopar, GM.
+
+I will be in the USA for 6 weeks from May 2nd to -June 14 1993.
+
+Chicago: Sun May 2 -Thursday May 6
+Denver:  Friday May 7 - Sunday May 9
+Austin, Texas: Monday May 10- Friday May 21
+Oklahoma City: Friday May 21 - Monday May 24
+Anaheim, California: Tuesday May 25-Thursday May 27
+Las Vegas, Nevada:  Friday May 28- Sunday May 30
+Grand Canion, Monday May 31 - Tuesday June 1
+Las Angeles, San Diego and vicinity: Wednesday June 3-Sunday June 6 June
+South Lake Tahoe, Cal: Sunday June 6 - Wednesday June 9
+Reno: Thursday June 10
+San Fransisco: Thursday June 10 - Sunday June 13
+
+
+I was wondering if anyone could send me any information of 
+car shows, swap meets, drag meets, model car shows etc. during this period.
+Can anybody tell me when the Pomona Swap meet is on this year?
+
+Also, any places to visit (eg. car museums, private collections, 
+your collection? etc. Any bit of information is appreciated!
+
+I am also interested in finding some model cars (scale Models). 
+I am intersted in 1968-1974 AMC cars. Of particular interest is:
+1968-1970 AMX
+1968-1974 Javelin
+1969 SCRAMBLER
+1970 Rebel Machine
+and others
+
+If you have any kits, plastics, diecast etc and are interested in selling them,
+tell me, I will be interested.
+
+I can also send/bring you models of Australian High performance cars if 
+you are interested.
+
+
+Please reply by email to: johnt@spri.levels.unisa.edu.au
+
+
+Thanks,
+7. That is in fact the current version (it only came out in December).
+
+
+My test movie was created at 320*240 resolution, it wasn't being scaled up.
+Scaling was a very CPU-intensive operation with the original QuickTime (1.0);
+the current version has optimizations for ratios like 4:1 (160*120 -> 320*240),
+but even so, I'm prepared to believe that the performance isn't as good as
+with playing back an actual 320*240 movie. I haven't done any numerical
+measurements for scaled playback.
+
+Here is our goal: Cluster the articles by their specific newsgroup community, for example, graphics, hardware, sport, medical, politics. Please cluster them into 12 groups. Each group should contain at least 3 articles.' 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"addresses concerns about cryptographic security"
+"discusses divorce and marriage implications"
+
+
+Again, here's the goal: Cluster the articles by their specific newsgroup community, for example, graphics, hardware, sport, medical, politics. Please cluster them into 12 groups. Each group should contain at least 3 articles.'. Your responses are:
+- "
+Proposer model response:
+['- "discusses implications of divorce and marriage"\n- "addresses concerns about cryptographic security"\n- "inquires about teaching music for deaf children"']
+Proposer Cost: $0.002699
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. I deleted much of the following article in order to discuss the 
+specific issue of whether it is acceptable to divorce.  
+
+
+
+I have thought about the implications, and it is scary.  
+
+We have a whole generation of families broken up because some men have 
+decided that is is okay to leave their wives and children for the
+thrill of a younger, more attractive woman.  If we accept that it is
+legitimate for Jane to have divorced, how can we not accept anyone's
+decision to divorce because he has found someone with whom he can
+have a more "deep, committed relationship."
+
+Marriage is not a state of being, it is a mutual journey in life.
+Love is not a passive feeling, it must be actively willed.
+
+Is it acceptable for an older executive to dump his wife of many 
+years who stayed home to care for the children because he
+can't be happy sexually unless he is with a beautiful
+young blonde?  The real solution for both in the couple to
+make a renewed effort.  
+
+Hold fast to the faith.  Has not the Lord repeatedly compared His
+relation to His people as a faithful and enduring husband?  We
+learn something very deep and very mystical when we marry and
+remain faithful through times of trial.
+
+My spouse has a brain tumor that has left her partially paralyzed.
+If it were to resume growing (it is in remission, thanks be to God!)
+then perhaps the time would come when we could not have sexual
+relations.  That's life...the Lord would certainly not give me
+permission to seek someone else to satisfy my "needs."  
+
+The idea that it is alright to divorce if a couple "grows apart"
+seems to me to lead to such a monstrous destruction of the meaning
+of marriage that I feel we must make every effort to avoid any hint
+of compromise.  We have become so petty and small-minded that
+some husbands are threatening to divorce their wives unless the
+wives lose weight!
+1. Archive-name: ripem/attacks
+Last-update: 31 Mar 93 21:00:00 -0500
+
+SOME POSSIBLE ATTACKS ON RIPEM
+------------------------------
+
+This is a living list of potential weaknesses to keep your eyes open
+for when using RIPEM for secure electronic mail.  It does not go into
+great detail, and is almost certainly not exhaustive.  Obviously, many
+of the weaknesses are weaknesses of cryptographically secured mail in
+general, and will pertain to secure mail programs other than RIPEM.
+It is maintained by Marc VanHeyningen <mvanheyn@cs.indiana.edu>.  It
+is posted monthly to a variety of news groups; followups pertaining
+specifically to RIPEM should go to alt.security.ripem.
+
+CRYPTANALYSIS ATTACKS
+---------------------
+
+- Breaking RSA would allow an attacker to find out your private key,
+  in which case he could read any mail encrypted to you and sign
+  messages with your private key.
+
+  RSA is generally believed to be resistant to all standard
+  cryptanalytic techniques.  Even a standard key (about 516 bits with
+  RIPEM) is long enough to render this impractical, barring a
+  huge investment in hardware or a breakthrough in factoring.
+
+- Breaking DES would allow an attacker to read any given message,
+  since the message itself is encrypted with DES.  It would not allow
+  an attacker to claim to be you.
+
+  DES has only 56 bits in its key, and thus could conceivably be
+  compromised by brute force with sufficient hardware, but few agencies
+  have such money to devote to simply read one message.  Since each
+  message has a different DES key, the work for each message would
+  remain high.
+
+KEY MANAGEMENT ATTACKS
+----------------------
+
+- Stealing your private key would allow the same benefits as breaking
+  RSA.  To safeguard it, it is encrypted with a DES key which is derived
+  from a passphrase you type in.  However, if an attacker can get a copy
+  of your private keyfile and your passphrase (by snooping network
+  packets, tapping lines, or whatever) he could break the whole scheme.
+
+  The main risk is that of transferring either the passphrase or the
+  private key file across an untrusted link.  So don't do that.  Run 
+  RIPEM on a trusted machine, preferably one sitting right in front of
+  you.  Ideally, your own machine in your own home (or maybe office)
+  which nobody else has physical access to.
+
+- Fooling you into accepting a bogus public key for someone else could 
+  allow an opponent to deceive you into sending secret messages to him
+  rather than to the real recipient.  If the enemy can fool your
+  intended recipient as well, he could re-encrypt the messages with
+  the other bogus public key and pass them along.
+
+  It is important to get the proper public keys of other people.
+  The most common mechanism for this is finger; assuming the opponent
+  has not compromised routers or daemons or such, finger can be 
+  given a fair amount of trust.  The strongest method of key
+  authentication is to exchange keys in person; however, this is
+  not always practical.  Having other people "vouch for you" by
+  signing a statement containing your key is possible, although 
+  RIPEM doesn't have features for doing this as automatically as
+  PGP.  RIPEM does generate and check MD5 fingerprints of public keys
+  in the key files; they may be exchanged via a separate channel for
+  authentication.
+
+PLAYBACK ATTACKS
+----------------
+
+- Even if an opponent cannot break the cryptography, an opponent could
+  still cause difficulties.  For example, suppose you send a message
+  with MIC-ONLY (a PEM mode which does not provide disclosure protection)
+  to Alice which says "OK, let's do that." Your opponent intercepts
+  it, and now resends it to Bob, who now has a message which is
+  authenticated as from you telling him to do that.  Of course, he may
+  interpret it in an entirely different context.  Or your opponent
+  could transmit the same message to the same recipient much later,
+  figuring it would be seen differently at a later time.  Or the
+  opponent could change the Originator-Name: to himself, register 
+  your public key as his, and send a message hoping the recipient
+  will send him return mail indicating (perhaps even quoting!) the
+  unknown message.
+
+  To defeat playback attacks, the plaintext of each message should 
+  include some indication of the sender and recipient, and a unique
+  identifier (typically the date).  A good front-end script for RIPEM
+  should do this automatically (IMHO).  As a recipient, you should be
+  sure that the Originator-Name: header and the sender indicated within
+  the plaintext are the same, that you really are a recipient, and that
+  the message is not an old one.  Some this also can and should be
+  automated.  The author of this FAQ has made a modest attempt at
+  automating the process of generating and checking encapsulated
+  headers; the programs are included in the standard distribution in
+  the utils directory.
+
+LOCAL ATTACKS
+-------------
+
+- Clearly, the security of RIPEM cannot be greater than the security of
+  the machine where the encryption is performed.  For example, under
+  UNIX, a super-user could manage to get at your encrypted mail,
+  although it would take some planning and effort to do something like
+  replace the RIPEM executable with a Trojan horse or to get a copy of
+  the plaintext, depending how it's stored.
+
+  In addition, the link between you and the machine running RIPEM is
+  an extension of that.  If you decrypt with RIPEM on a remote machine
+  which you are connected to via network (or, worse yet, modem), an
+  eavesdropper could see the plaintext (and probably also your
+  passphrase.)
+
+  RIPEM should only be executed on systems you trust, obviously.  In
+  the extreme case, RIPEM should only be used on your own machine,
+  which you have total control over and which nobody else has access
+  to, which has only carefully examined software known to be free of
+  viruses, and so on.  However, there's a very real trade-off between
+  convenience and security here.
+
+  A more moderately cautious user might use RIPEM on a UNIX workstation
+  where other people have access (even root access), but increase
+  security by keeping private keys and the (statically linked, of
+  course) executable on a floppy disk.
+
+  Some people will keep RIPEM on a multi-user system, but when dialing
+  in over an insecure line, they will download the message to their
+  own system and perform the RIPEM decryption there.  However, the
+  security provided by such a mechanism is somewhat illusory; since
+  you presumably type your cleartext password to log in, you've just
+  given away the store, since the attacker can now log in as you and
+  install traps in your account to steal your private key next time
+  you use it from a less insecure line.  This will likely remain the
+  situation as long as most systems use the rather quaint mechanism of
+  cleartext password authentication.
+
+  I find it nice to put a brief statement of how carefully I manage my
+  security arrangement in my .plan next to my public key, so that
+  potential correspondents can be aware what level of precautions are
+  in place.  Some people use two keys, a short one which is not
+  carefully managed for ordinary use and a longer one which is treated
+  with greater care for critical correspondence.
+
+UNTRUSTED PARTNER ATTACKS
+-------------------------
+
+- RIPEM's encryption will ensure that only a person with the private key
+  corresponding to the public key used to encrypt the data may read the
+  traffic.  However, once someone with that key gets the message, she
+  may always make whatever kind of transformations she wishes.  There 
+  exist no cryptographic barriers to a recipient, say, taking an
+  ENCRYPTED message and converting it to a MIC-ONLY message, signed by
+  you and readable by anyone, although RIPEM does not provide this
+  functionality.  Indeed, the latest PEM draft I have seen specifically
+  states that such transformations should be possible to allow
+  forwarding functions to work.
+2. That is in fact the current version (it only came out in December).
+
+
+My test movie was created at 320*240 resolution, it wasn't being scaled up.
+Scaling was a very CPU-intensive operation with the original QuickTime (1.0);
+the current version has optimizations for ratios like 4:1 (160*120 -> 320*240),
+but even so, I'm prepared to believe that the performance isn't as good as
+with playing back an actual 320*240 movie. I haven't done any numerical
+measurements for scaled playback.
+3. This is pernicious nonsense!
+
+David
+4. "Deeply rooted rivalry?" Ahem, Jokerit have been around since 1967 and joined
+the top flight only in the early '70s. Helsingfors IFK have been around since
+1897 but fans only started taking hockey seriously in the 1960s so I think
+you're exagerating here.
+
+
+That's a rather bold claim, in the light of how successful the Canadian &
+American Olympic teams have been . . . and they've had to play according to our
+set of rules and on international ice. The 1992 Olympic teams contained about
+as much talent as your average expansion team. Canada had Eric Lindros, Sean
+Burke, Joe Juneau and Chris Kontos. Another four or five have been deep subs in
+the NHL. As for the Yanks, Keith Tkachuk, Scott Lachance, Bret Hedican, Shawn 
+McEachern, Steve Heintze, Ted Donato, Joe Sacco and Bill Guerin have been 
+3rd/4th line players in the NHL, while Robb Stauber has done well for the 
+Kings in goal. Nothing more. In fact, I'm sure that an All-Star team assembled
+from the best Finnish League teams would do no better in the NHL than Hartford 
+or Tampa Bay currently are doing.
+---
+But what happens if _all_ top-class Finnish & Swedish players gradually end up
+with Helsinki & Stockholm as the North American-based ones gradually retire and
+no Canadian/American team is allowed to draft new players from Scandinavia? 
+Here is what THE HOCKEY NEWS scouts think of our NHL-based players:
+
+(28-30=superstar)
+(23-27=star)
+(18-22=NHL regular+)
+(13-17=NHL regular)
+( 8-12=role player)
+
+FINLAND:  
+
+D-Jyrki Lumme.......20
+D-Teppo Numminen....20
+D-Peter Ahola.......13
+
+C-Jari Kurri........25
+C-Christian Ruuttu..16
+
+R-Teemu Selanne.....27
+
+L-Esa Tikkanen......20
+(Obviously, Selanne's ratings would be higher today than they were in January)
+
+SWEDEN:
+D-Ulf Samuelsson....21
+D-Fredrik Olausson..20
+D-Niklas Lidstrom...18
+D-Calle Johansson...18
+D-Kjell Samuelsson..17
+D-Tommy Sjodin......13
+D-Tommy Albelin......7
+
+C-Mats Sundin.......26
+C-Thomas Steen......18
+
+R-Thomas Sandstrom..22
+R-Ulf Dahlen........18
+R-Michael Nylander..13
+
+L-Per-Erik Eklund...18
+L-Johan Garpenlov...16
+L-Mikael Andersson..15
+L-Jan Erixon........14
+
+This would be interesting. Clearly, Finland's top five players (Winnipeg's
+Selanne & Numminen, Vancouver's Lumme, Los Angeles' Jari Kurri and New York's
+Tikkanen) are right up there with any five-man unit Pittsburgh & co. have. But
+I have my doubts about the home-based Finnish players - the national team did
+well in the Canada Cup and World Championships largely due to the efforts of
+Markus Ketterer (the goalie), 3-4 or the players listed above and luck. There's
+presumably a lot of decent players in Finland that wouldn't be superstars at
+the highest level but still valuable role players, however. My guess would be
+that the Finnish Canada Cup team would be a .500 team in the NHL.
+---
+Sweden is easier to judge because they have more players in North America.
+Their points total (16 players) is 274 - seven more than Ottawa's 22 top
+players combined! If we estimate there are six more NHL regulars back home in 
+Sweden, an all-Swedish team would assemble about 350-360 skill points.
+Deducting some points from Pittsburgh, NY Rangers and other teams that rely on
+Swedish players, the Swedish team would finish in sixth place - about as high
+as Boston, Vancouver, Calgary and Montreal on paper! So, the "dynasty" talk
+isn't completely unfounded here. An all-Finnish/all-Swedish team might have an
+advantage because the players would be playing at home half of the time,
+won't have to adapt to a foreign country and a foreign language, and presumably
+play the wide-open European variant of hockey rather than have to learn the
+North American checking game. However, if free agency becomes a factor the top 
+Scandinavian players still might end up playing for large-market teams after a 
+couple of years the same way Edmonton's "dynasty" crumbled in the late '80s. 
+Some fringe players likely will be drafted by other NHL teams as having an 
+exclusive talent pool might be a bit unfair after all. I'd settle for a 
+compromise, prohibit all European teams from signing a North American during 
+the first two rounds but allow them to keep their top two players. After this, 
+the amateur draft should be open to anyone.
+5. Hi from Australia,
+
+I am a car enthusiast in Australia.
+ 
+I am particularly interested in American Muscle cars of the 
+1960s and 1970s. ALL MAKES: AMC, Ford, Chrysler/Mopar, GM.
+
+I will be in the USA for 6 weeks from May 2nd to -June 14 1993.
+
+Chicago: Sun May 2 -Thursday May 6
+Denver:  Friday May 7 - Sunday May 9
+Austin, Texas: Monday May 10- Friday May 21
+Oklahoma City: Friday May 21 - Monday May 24
+Anaheim, California: Tuesday May 25-Thursday May 27
+Las Vegas, Nevada:  Friday May 28- Sunday May 30
+Grand Canion, Monday May 31 - Tuesday June 1
+Las Angeles, San Diego and vicinity: Wednesday June 3-Sunday June 6 June
+South Lake Tahoe, Cal: Sunday June 6 - Wednesday June 9
+Reno: Thursday June 10
+San Fransisco: Thursday June 10 - Sunday June 13
+
+
+I was wondering if anyone could send me any information of 
+car shows, swap meets, drag meets, model car shows etc. during this period.
+Can anybody tell me when the Pomona Swap meet is on this year?
+
+Also, any places to visit (eg. car museums, private collections, 
+your collection? etc. Any bit of information is appreciated!
+
+I am also interested in finding some model cars (scale Models). 
+I am intersted in 1968-1974 AMC cars. Of particular interest is:
+1968-1970 AMX
+1968-1974 Javelin
+1969 SCRAMBLER
+1970 Rebel Machine
+and others
+
+If you have any kits, plastics, diecast etc and are interested in selling them,
+tell me, I will be interested.
+
+I can also send/bring you models of Australian High performance cars if 
+you are interested.
+
+
+Please reply by email to: johnt@spri.levels.unisa.edu.au
+
+
+Thanks,
+6. Wrong information. They just announced that Suhonen has made a deal with 
+Jokerit.
+7. Dear friends,
+
+I am a graduate student in Education at the University of Tennessee. As part of
+the requirements for a research class in music education I designed a
+questionnaire to colect data for my research project. The study intends to
+determine which techniques (if any) have been used to teach music for the deaf.
+
+If you have any experience in music education for the deaf and would like to
+help me with this project, your help would be very much appreciated. 
+
+If you also want to exchange some ideas about the subject matter, feel yourself
+welcome. I have been working in this area for a while (in Brazil _ by the way,
+I am Brazilian _ and also in US) and I am very pleased with the results.
+
+I hope that this inquiry will not cause too many inconveniences. Thank you for
+or time and consideration.
+
+
+                         __QUESTIONNAIRE__
+                  Teaching Music for deaf children.
+
+NAME ________________________________
+ADDRESS/ E-MAIL _____________________
+EMPLOYING INSTITUTION _______________
+YEARS OF EXPERIENCE_________ GRADE LEVEL(S)____
+EDUCATIONAL BACKGROUND:BACHELOR__ MASTERS__ DOCTORATE__
+PROFESSIONAL FIELD:SPECIAL EDUC.__  MUSIC EDUC.__ OTHER*__
+*If you checked "other", please indicate your major: ____
+
+	Some school systems require music to be taught to deaf children, other
+school systems have not thought of the possibility to teach music for children
+with hearing limitations. The following questionnaire was designed to find out
+how teachers face the issue of teaching or not teaching music for the deaf.
+Also, a part of this study is to determine teachers attitudes towards music
+programs for deaf children.
+
+	DIRECTIONS:
+	READ THE FOLLOWING QUESTIONS AND CIRCLE THE NUMBER THAT BEST DESCRIBES
+YOUR ATTITUDE TOWARDS MUSIC FOR DEAF CHILDREN (LEFT COLUMN), AND CIRCLE THE
+APPROPRIATE "YES", "NO" OR "NOT APPLICABLE", WHETHER YOU DO THE TASK (RIGHT
+COLUMN).
+
+SD= Strongly disagree			Y= yes
+DIS= Disagree				N= no
+NEU= Neutral				N/A= not applicable
+AG= Agree
+SA= Strongly agree
+
+SD  DIS  NEU  AG  SA		COMPETENCIES			Y  N  N/A
+___________________________________________________________________________
+1   2    3    4   5	1.Deaf children can be educated in      y  n  n/a
+ 			music.
+1   2    3    4   5	2.Deaf children should have regular     y  n  n/a
+			music classes.
+1   2    3    4   5	3.A special music teacher must posses   y  n  n/a
+			an appropriate training in a variety
+			of communication methods to use with
+			deaf children.
+1   2    3    4   5	4.In preparing the lessons the teacher  y  n  n/a
+			must keep in mind that deaf children
+			may present special needs in order to
+			participate in musical activities.
+1   2   3     4   5	5.Deaf and normal hearing children   	y  n  n/a
+			should have music classes together.
+1   2   3     4   5	6. 80% of a succesful music experience  y  n  n/a
+			by a deaf child depends upon the
+			teacher's creativity and commitment
+			with the subject matter.
+1   2   3     4   5	7.Deaf children can learn to appreciate y  n  n/a
+			music but they will never be a musician
+			or a performer.
+1   2   3     4   5	8.Deaf children are not able to		y  n  n/a
+			discriminate and recognize sounds.
+1   2   3     4   5	9.Deaf children can not distinguish	y  n  n/a
+			among loud and soft sounds.
+1   2   3     4   5	10.Deaf children can never match the    y  n  n/a
+			music in their head to a note on a
+			musical instrument.
+1   2   3     4   5	11.The most appropriate material to	y  n  n/a
+			start music classes for the deaf
+			would be the folk songs said he would be replaced by the military commandant of
+Baku, police Major-General Abdullah Allakhverdiyev. There was no official
+confirmation.
+
+Here is our goal: Cluster the articles by their specific newsgroup community, for example, graphics, hardware, sport, medical, politics. Please cluster them into 12 groups. Each group should contain at least 3 articles.' 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"- "discusses hockey teams and player ratings"
+"proposes a compromise for european teams in hockey"
+
+
+Again, here's the goal: Cluster the articles by their specific newsgroup community, for example, graphics, hardware, sport, medical, politics. Please cluster them into 12 groups. Each group should contain at least 3 articles.'. Your responses are:
+- "
+Proposer model response:
+['- "discusses the implications of divorce and marriage"\n- "lists potential attacks on secure electronic mail systems"\n- "analyzes the performance of movie scaling"\n- "critiques claims about hockey teams and player talent"\n- "seeks information on car events and model cars"\n- "reports on a deal between Suhonen and Jokerit"\n- "requests participation in a music education research project"']
+Proposer Cost: $0.002780
+30 descriptions proposed in total. Here are the descriptions:
+evaluates the potential impact of divorce on families
+shares information about car shows and model cars
+critiques claims about hockey teams and player talent
+provides updates on hockey teams and players
+- "discusses cryptographic security vulnerabilities
+reports on a deal between Suhonen and Jokerit
+shares experiences in music education for the deaf
+- "discusses hockey teams and player ratings
+seeks information on car events and model cars
+expresses concerns about the acceptability of divorce
+inquires about teaching music for deaf children
+discusses divorce and marriage implications
+shares travel plans and interests in car enthusiasts
+addresses concerns about cryptographic security
+questions the legitimacy of divorce
+- "discusses implications of divorce and marriage
+addresses issues related to divorce and marriage
+seeks information on car shows and model cars
+requests participation in a music education research project
+lists potential attacks on secure electronic mail systems
+proposes a questionnaire on teaching music for deaf children
+- "discusses potential attacks on secure electronic mail
+shares news about a deal with Jokerit
+analyzes the performance of Finnish and Swedish hockey players
+raises questions about the future of Scandinavian hockey players
+analyzes the performance of movie scaling
+announces a deal with Jokerit hockey team
+proposes a compromise for European teams in hockey
+- "discusses the implications of divorce and marriage
+discusses potential attacks on secure electronic mail
+GPTAssigner Cost 2.5167599999999934 $
+Stage Assign assign
+Assigned all recall: 0.122
+Assigned all precision: 0.4262295081967213
+Assigned description: evaluates the potential impact of divorce on families. recall: 0.0 precision: 0.0
+Assigned description: shares information about car shows and model cars. recall: 0.002 precision: 0.0
+Assigned description: critiques claims about hockey teams and player talent. recall: 0.004 precision: 0.5
+Assigned description: provides updates on hockey teams and players. recall: 0.01 precision: 0.4
+Assigned description: - "discusses cryptographic security vulnerabilities. recall: 0.042 precision: 0.19047619047619047
+Assigned description: reports on a deal between Suhonen and Jokerit. recall: 0.002 precision: 1.0
+Assigned description: shares experiences in music education for the deaf. recall: 0.002 precision: 0.0
+Assigned description: - "discusses hockey teams and player ratings. recall: 0.022 precision: 0.2727272727272727
+Assigned description: seeks information on car events and model cars. recall: 0.012 precision: 0.16666666666666666
+Assigned description: expresses concerns about the acceptability of divorce. recall: 0.018 precision: 0.1111111111111111
+Assigned description: inquires about teaching music for deaf children. recall: 0.01 precision: 0.0
+Assigned description: discusses divorce and marriage implications. recall: 0.016 precision: 0.0
+Assigned description: shares travel plans and interests in car enthusiasts. recall: 0.004 precision: 0.0
+Assigned description: addresses concerns about cryptographic security. recall: 0.042 precision: 0.2857142857142857
+Assigned description: questions the legitimacy of divorce. recall: 0.022 precision: 0.09090909090909091
+Assigned description: - "discusses implications of divorce and marriage. recall: 0.014 precision: 0.0
+Assigned description: addresses issues related to divorce and marriage. recall: 0.006 precision: 0.0
+Assigned description: seeks information on car shows and model cars. recall: 0.01 precision: 0.0
+Assigned description: requests participation in a music education research project. recall: 0.004 precision: 0.0
+Assigned description: lists potential attacks on secure electronic mail systems. recall: 0.026 precision: 0.15384615384615385
+Assigned description: proposes a questionnaire on teaching music for deaf children. recall: 0.004 precision: 0.0
+Assigned description: - "discusses potential attacks on secure electronic mail. recall: 0.022 precision: 0.09090909090909091
+Assigned description: shares news about a deal with Jokerit. recall: 0.002 precision: 0.0
+Assigned description: analyzes the performance of Finnish and Swedish hockey players. recall: 0.0 precision: 0.0
+Assigned description: raises questions about the future of Scandinavian hockey players. recall: 0.006 precision: 0.6666666666666666
+Assigned description: analyzes the performance of movie scaling. recall: 0.012 precision: 0.0
+Assigned description: announces a deal with Jokerit hockey team. recall: 0.002 precision: 0.0
+Assigned description: proposes a compromise for European teams in hockey. recall: 0.0 precision: 0.0
+Assigned description: - "discusses the implications of divorce and marriage. recall: 0.01 precision: 0.0
+Assigned description: discusses potential attacks on secure electronic mail. recall: 0.028 precision: 0.07142857142857142
+Dropping 0 descriptions because they are too popular or too unpopular:
+Stage select select
+Unmatched count: 453
+Description: critiques claims about hockey teams and player talent. Count: 2
+Description: reports on a deal between Suhonen and Jokerit. Count: 1
+Description: shares experiences in music education for the deaf. Count: 1
+Description: - "discusses hockey teams and player ratings. Count: 11
+Description: seeks information on car events and model cars. Count: 6
+Description: expresses concerns about the acceptability of divorce. Count: 7
+Description: addresses concerns about cryptographic security. Count: 17
+Description: raises questions about the future of Scandinavian hockey players. Count: 2
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. Pardon me for being a little confused, but at the beginning of your second 
+paragraph, you say, "God has one set of rules for all his people," yet at the 
+end of the same paragraph you declare, "please do not combine the ceremonial 
+and moral laws in one."  Not only do I not understand where in the Bible you 
+find the declaration that there are 2 laws (ceremonial and moral), but I am 
+also unclear on whether you think it is bad to have 2 sets of laws in the first 
+place.  If it's bad to have 2 sets of laws, how can there be a ceremonial law 
+that is different from the moral law (and vice versa)?
+
+I would also be interested in your comments on the passage in I Cor. 10:1-16, 
+where Paul teaches different rules for covering you head while praying 
+depending on whether you are a man or a woman.  Do you think the apostles can 
+prescribe different sets of rules for men and women?  If so, then why not for 
+Jews and Gentiles?  Also, why did Paul, who was so opposed to circumcising 
+Gentiles, voluntarily circumcise Timothy?
+1. If there are many as..., er, people in the USA who reason like the
+above, then it should not be surprising that the current plot has been
+allowed to happen...
+
+Regards,
+Vesselin
+2. That is in fact the current version (it only came out in December).
+
+
+My test movie was created at 320*240 resolution, it wasn't being scaled up.
+Scaling was a very CPU-intensive operation with the original QuickTime (1.0);
+the current version has optimizations for ratios like 4:1 (160*120 -> 320*240),
+but even so, I'm prepared to believe that the performance isn't as good as
+with playing back an actual 320*240 movie. I haven't done any numerical
+measurements for scaled playback.
+3. At the risk of starting the 'my gun is better than yours' flame
+war, I must disagree.
+	
+	There is no secret in handling a Glock.  In fact, it is often
+chosen (besides its other merits) because it shoots like a revolver does
+basically.  It can limit the training time (read budget $$$) due to the
+fact there are no 'external' safties other than the trigger, hence less
+training time required. 
+
+	Smith & Wesson (among other types) are chosen due to the fact taht
+they do have the external safties (hammer drop,as well as mag drop) which
+if properly used have saved many lives when 'Mr. Bad' snatched the gun
+from the officer and tried to shoot said officer the gun was on safe and
+would not fire.  This point had been made in many articles in various 
+gun magazines.  If fact, one author (can't remember who) staged a little
+test where he had a revolver and a S&W on safe laying on a table and asked
+people with little firearms experience to on his signal, grab the gun and
+shoot a target.  He timed the people using each gun.  The revolver times
+were pretty close, but some of the times with the S&W were in minutes, or
+the person just gave up because they could not figure out the saftey.
+
+	You don't often see Colt 45 autos issued due to the light trigger
+which can be accidentally fired in a stress situation, opening the issuing
+city,county, etc.. to lawsuits, bad press, etc..
+
+	Of course any problem can be overcome with enough training, but
+such training is not always available to budget crunched departments.  I
+know if I were a Cop I would want something like a S&W just for the off
+chance of the gun getting taken away.  The safety doesn't guarantee that
+'Mr. Bad' won't figure it out and shoot me, but it could buy enough time
+to draw a second gun and shoot 'Mr. Bad' before it's too late.
+
+	Don't think I am too biassed here just because I have had 3 Glocks
+in my possession at one time, because I have had a .45 as well.  In fact,
+it was my first handgun.  Remember, the ultimate 'safety' is YOU the
+operator, and no safety is going to stop an negligent discharge (note I
+don't say accidental) if you break the rules of gun handling.
+
+	As per the part of being light weight and looking cool, I agree
+100%.  I wouldn't rule it out as a first purchase.
+4. If these folks are who I think they are, Lyme-knowledgeable may
+mean a physician to whom everything that walks in the door is
+lyme disease, and you will be treated for lyme, whether or not
+you have it.  Hope you have good insurance.
+
+
+
+-- 
+----------------------------------------------------------------------------
+Gordon Banks  N3JXP      | "Skepticism is the chastity of the intellect, and
+geb@cadre.dsl.pitt.edu   |  it is shameful to surrender it too soon."
+5. This is pernicious nonsense!
+
+David
+6. This subject seems to be incredibly inflammatory.  Those who subscribe to
+_Biblical Archaeology Review_ will remember a spectacular letter battle set off when someone
+complained about a Franklin Mint ad.  (_BAR_ is a great magazine, but the
+contrast between the rather scholarly articles and the incredibly sleazy ads
+is extreme.)  In this ad, they were hawking a doll with a head based on the
+famous bust of Nefertiti, giving the face a typical doll-pink complexion.
+The letter complained about this as a misrepresentation on the grounds that
+Nefertiti was "a beautiful black queen."  This set off an exchange of
+hotheaded letters than ran for several issues, to the point where they had
+an article from an Egyptologist titled "Was Cleopatra Black?"  (The answer
+to the title is "no"-- she was greek.)
+
+I have to say that I hear a hysterical note in much of the complaining.  I
+personally have seen only one blond-haired Jesus (in the National Shrine in
+Wash. DC), and I found it very jarring.  Western representations vary
+enourmously, but in general the image of is of a youngish male with dark
+hair and beard, of a sort that can be found (modulo the nose) all up and
+down the Mediterranean.
+
+(Also, if what I remember is correct, the "Black Madonna" doesn't represent
+a person with negroid features.  It is black because of an accident.  Joe
+Buehler....?)
+
+In the presence of all those marble statues, one is prone to forget that
+greeks are rather likely to have black hair.  When one crosses the bosporus,
+the situation breaks down completely.  Are Turks white?  How about Persians,
+or various groups in the indian subcontinent?  Was Gandhi white?  How about
+the Arabs?  Or picture Nassar and Sadat standing side by side.  And then
+there are the Ethiopians....
+
+Those of a white racist bent are not likely to say that *any* of these
+people are "white" (i.e., of the racist's "race").  If I may risk a
+potentially inflammatory remark, one undercurrent of this seems to be the
+identification of modern jews as members of the oppressor race.  Considering
+the extreme dicotomy between medieval religion on the one hand and medieval
+antisemitism on the other, I don't think that this "Jesus was white" thesis
+ever played the roles that some hold it did.
+
+Representations of Jesus as black or korean or whatever are fine.  It seems
+awfully self-serving to insist that Jesus belongs to one's own racial group.
+7. I don't have nor Imagine nor Real 3d, but as old
+Amiga user I think you should take a look also to 
+Real 3d 2.0 for the Amiga. I saw Imagine 2.0 on the
+Amiga for a long time at my friend's home, and
+I've seen R3D 2.0 in action at Bit.Movie 93 in Riccione,
+Italy (an Italian Computer Graphics Contest).
+Many professionals using 3d Studio on PC, SoftImage
+for Silicon Graphics and Imagine on the Amiga were 
+*VERY IMPRESSED* by the power of this programs.
+Sorry, I've lost the posting with full description 
+of features of this great program.
+
+For more informations give a look in comp.sys.amiga.graphics.
+
+Representative of Activa International told me that
+it will be out in 2 weeks for the Amiga and that
+PC MS-Windows, Silicon Indigo and Unix version are 
+under development.
+
+Ciao,
+	Sergio
+
+Here is our goal: Cluster the articles by their specific newsgroup community, for example, graphics, hardware, sport, medical, politics. Please cluster them into 12 groups. Each group should contain at least 3 articles.' 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"analyzes religious laws and interpretations"
+"clarifies technical details about video resolution and playback performance"
+
+
+Again, here's the goal: Cluster the articles by their specific newsgroup community, for example, graphics, hardware, sport, medical, politics. Please cluster them into 12 groups. Each group should contain at least 3 articles.'. Your responses are:
+- "
+Proposer model response:
+['- "discusses interpretations of religious laws"\n- "shares opinions on gun safety and usage"\n- "critiques representations of historical figures"\n- "compares 3D graphics software"\n- "discusses firearm training and safety measures"\n- "analyzes racial representations in art and history"']
+Proposer Cost: $0.001235
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. That is in fact the current version (it only came out in December).
+
+
+My test movie was created at 320*240 resolution, it wasn't being scaled up.
+Scaling was a very CPU-intensive operation with the original QuickTime (1.0);
+the current version has optimizations for ratios like 4:1 (160*120 -> 320*240),
+but even so, I'm prepared to believe that the performance isn't as good as
+with playing back an actual 320*240 movie. I haven't done any numerical
+measurements for scaled playback.
+1. At the risk of starting the 'my gun is better than yours' flame
+war, I must disagree.
+	
+	There is no secret in handling a Glock.  In fact, it is often
+chosen (besides its other merits) because it shoots like a revolver does
+basically.  It can limit the training time (read budget $$$) due to the
+fact there are no 'external' safties other than the trigger, hence less
+training time required. 
+
+	Smith & Wesson (among other types) are chosen due to the fact taht
+they do have the external safties (hammer drop,as well as mag drop) which
+if properly used have saved many lives when 'Mr. Bad' snatched the gun
+from the officer and tried to shoot said officer the gun was on safe and
+would not fire.  This point had been made in many articles in various 
+gun magazines.  If fact, one author (can't remember who) staged a little
+test where he had a revolver and a S&W on safe laying on a table and asked
+people with little firearms experience to on his signal, grab the gun and
+shoot a target.  He timed the people using each gun.  The revolver times
+were pretty close, but some of the times with the S&W were in minutes, or
+the person just gave up because they could not figure out the saftey.
+
+	You don't often see Colt 45 autos issued due to the light trigger
+which can be accidentally fired in a stress situation, opening the issuing
+city,county, etc.. to lawsuits, bad press, etc..
+
+	Of course any problem can be overcome with enough training, but
+such training is not always available to budget crunched departments.  I
+know if I were a Cop I would want something like a S&W just for the off
+chance of the gun getting taken away.  The safety doesn't guarantee that
+'Mr. Bad' won't figure it out and shoot me, but it could buy enough time
+to draw a second gun and shoot 'Mr. Bad' before it's too late.
+
+	Don't think I am too biassed here just because I have had 3 Glocks
+in my possession at one time, because I have had a .45 as well.  In fact,
+it was my first handgun.  Remember, the ultimate 'safety' is YOU the
+operator, and no safety is going to stop an negligent discharge (note I
+don't say accidental) if you break the rules of gun handling.
+
+	As per the part of being light weight and looking cool, I agree
+100%.  I wouldn't rule it out as a first purchase.
+2. This subject seems to be incredibly inflammatory.  Those who subscribe to
+_Biblical Archaeology Review_ will remember a spectacular letter battle set off when someone
+complained about a Franklin Mint ad.  (_BAR_ is a great magazine, but the
+contrast between the rather scholarly articles and the incredibly sleazy ads
+is extreme.)  In this ad, they were hawking a doll with a head based on the
+famous bust of Nefertiti, giving the face a typical doll-pink complexion.
+The letter complained about this as a misrepresentation on the grounds that
+Nefertiti was "a beautiful black queen."  This set off an exchange of
+hotheaded letters than ran for several issues, to the point where they had
+an article from an Egyptologist titled "Was Cleopatra Black?"  (The answer
+to the title is "no"-- she was greek.)
+
+I have to say that I hear a hysterical note in much of the complaining.  I
+personally have seen only one blond-haired Jesus (in the National Shrine in
+Wash. DC), and I found it very jarring.  Western representations vary
+enourmously, but in general the image of is of a youngish male with dark
+hair and beard, of a sort that can be found (modulo the nose) all up and
+down the Mediterranean.
+
+(Also, if what I remember is correct, the "Black Madonna" doesn't represent
+a person with negroid features.  It is black because of an accident.  Joe
+Buehler....?)
+
+In the presence of all those marble statues, one is prone to forget that
+greeks are rather likely to have black hair.  When one crosses the bosporus,
+the situation breaks down completely.  Are Turks white?  How about Persians,
+or various groups in the indian subcontinent?  Was Gandhi white?  How about
+the Arabs?  Or picture Nassar and Sadat standing side by side.  And then
+there are the Ethiopians....
+
+Those of a white racist bent are not likely to say that *any* of these
+people are "white" (i.e., of the racist's "race").  If I may risk a
+potentially inflammatory remark, one undercurrent of this seems to be the
+identification of modern jews as members of the oppressor race.  Considering
+the extreme dicotomy between medieval religion on the one hand and medieval
+antisemitism on the other, I don't think that this "Jesus was white" thesis
+ever played the roles that some hold it did.
+
+Representations of Jesus as black or korean or whatever are fine.  It seems
+awfully self-serving to insist that Jesus belongs to one's own racial group.
+3. Pardon me for being a little confused, but at the beginning of your second 
+paragraph, you say, "God has one set of rules for all his people," yet at the 
+end of the same paragraph you declare, "please do not combine the ceremonial 
+and moral laws in one."  Not only do I not understand where in the Bible you 
+find the declaration that there are 2 laws (ceremonial and moral), but I am 
+also unclear on whether you think it is bad to have 2 sets of laws in the first 
+place.  If it's bad to have 2 sets of laws, how can there be a ceremonial law 
+that is different from the moral law (and vice versa)?
+
+I would also be interested in your comments on the passage in I Cor. 10:1-16, 
+where Paul teaches different rules for covering you head while praying 
+depending on whether you are a man or a woman.  Do you think the apostles can 
+prescribe different sets of rules for men and women?  If so, then why not for 
+Jews and Gentiles?  Also, why did Paul, who was so opposed to circumcising 
+Gentiles, voluntarily circumcise Timothy?
+4. This is pernicious nonsense!
+
+David
+5. If there are many as..., er, people in the USA who reason like the
+above, then it should not be surprising that the current plot has been
+allowed to happen...
+
+Regards,
+Vesselin
+6. I don't have nor Imagine nor Real 3d, but as old
+Amiga user I think you should take a look also to 
+Real 3d 2.0 for the Amiga. I saw Imagine 2.0 on the
+Amiga for a long time at my friend's home, and
+I've seen R3D 2.0 in action at Bit.Movie 93 in Riccione,
+Italy (an Italian Computer Graphics Contest).
+Many professionals using 3d Studio on PC, SoftImage
+for Silicon Graphics and Imagine on the Amiga were 
+*VERY IMPRESSED* by the power of this programs.
+Sorry, I've lost the posting with full description 
+of features of this great program.
+
+For more informations give a look in comp.sys.amiga.graphics.
+
+Representative of Activa International told me that
+it will be out in 2 weeks for the Amiga and that
+PC MS-Windows, Silicon Indigo and Unix version are 
+under development.
+
+Ciao,
+	Sergio
+7. If these folks are who I think they are, Lyme-knowledgeable may
+mean a physician to whom everything that walks in the door is
+lyme disease, and you will be treated for lyme, whether or not
+you have it.  Hope you have good insurance.
+
+
+
+-- 
+----------------------------------------------------------------------------
+Gordon Banks  N3JXP      | "Skepticism is the chastity of the intellect, and
+geb@cadre.dsl.pitt.edu   |  it is shameful to surrender it too soon."
+
+Here is our goal: Cluster the articles by their specific newsgroup community, for example, graphics, hardware, sport, medical, politics. Please cluster them into 12 groups. Each group should contain at least 3 articles.' 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"critiques nonsensical claims"
+"examines societal reasoning and political events"
+
+
+Again, here's the goal: Cluster the articles by their specific newsgroup community, for example, graphics, hardware, sport, medical, politics. Please cluster them into 12 groups. Each group should contain at least 3 articles.'. Your responses are:
+- "
+Proposer model response:
+['- "discusses gun handling and safety"\n- "analyzes historical and cultural representations"\n- "questions religious interpretations and practices"']
+Proposer Cost: $0.001184
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. I don't have nor Imagine nor Real 3d, but as old
+Amiga user I think you should take a look also to 
+Real 3d 2.0 for the Amiga. I saw Imagine 2.0 on the
+Amiga for a long time at my friend's home, and
+I've seen R3D 2.0 in action at Bit.Movie 93 in Riccione,
+Italy (an Italian Computer Graphics Contest).
+Many professionals using 3d Studio on PC, SoftImage
+for Silicon Graphics and Imagine on the Amiga were 
+*VERY IMPRESSED* by the power of this programs.
+Sorry, I've lost the posting with full description 
+of features of this great program.
+
+For more informations give a look in comp.sys.amiga.graphics.
+
+Representative of Activa International told me that
+it will be out in 2 weeks for the Amiga and that
+PC MS-Windows, Silicon Indigo and Unix version are 
+under development.
+
+Ciao,
+	Sergio
+1. If there are many as..., er, people in the USA who reason like the
+above, then it should not be surprising that the current plot has been
+allowed to happen...
+
+Regards,
+Vesselin
+2. This subject seems to be incredibly inflammatory.  Those who subscribe to
+_Biblical Archaeology Review_ will remember a spectacular letter battle set off when someone
+complained about a Franklin Mint ad.  (_BAR_ is a great magazine, but the
+contrast between the rather scholarly articles and the incredibly sleazy ads
+is extreme.)  In this ad, they were hawking a doll with a head based on the
+famous bust of Nefertiti, giving the face a typical doll-pink complexion.
+The letter complained about this as a misrepresentation on the grounds that
+Nefertiti was "a beautiful black queen."  This set off an exchange of
+hotheaded letters than ran for several issues, to the point where they had
+an article from an Egyptologist titled "Was Cleopatra Black?"  (The answer
+to the title is "no"-- she was greek.)
+
+I have to say that I hear a hysterical note in much of the complaining.  I
+personally have seen only one blond-haired Jesus (in the National Shrine in
+Wash. DC), and I found it very jarring.  Western representations vary
+enourmously, but in general the image of is of a youngish male with dark
+hair and beard, of a sort that can be found (modulo the nose) all up and
+down the Mediterranean.
+
+(Also, if what I remember is correct, the "Black Madonna" doesn't represent
+a person with negroid features.  It is black because of an accident.  Joe
+Buehler....?)
+
+In the presence of all those marble statues, one is prone to forget that
+greeks are rather likely to have black hair.  When one crosses the bosporus,
+the situation breaks down completely.  Are Turks white?  How about Persians,
+or various groups in the indian subcontinent?  Was Gandhi white?  How about
+the Arabs?  Or picture Nassar and Sadat standing side by side.  And then
+there are the Ethiopians....
+
+Those of a white racist bent are not likely to say that *any* of these
+people are "white" (i.e., of the racist's "race").  If I may risk a
+potentially inflammatory remark, one undercurrent of this seems to be the
+identification of modern jews as members of the oppressor race.  Considering
+the extreme dicotomy between medieval religion on the one hand and medieval
+antisemitism on the other, I don't think that this "Jesus was white" thesis
+ever played the roles that some hold it did.
+
+Representations of Jesus as black or korean or whatever are fine.  It seems
+awfully self-serving to insist that Jesus belongs to one's own racial group.
+3. This is pernicious nonsense!
+
+David
+4. Pardon me for being a little confused, but at the beginning of your second 
+paragraph, you say, "God has one set of rules for all his people," yet at the 
+end of the same paragraph you declare, "please do not combine the ceremonial 
+and moral laws in one."  Not only do I not understand where in the Bible you 
+find the declaration that there are 2 laws (ceremonial and moral), but I am 
+also unclear on whether you think it is bad to have 2 sets of laws in the first 
+place.  If it's bad to have 2 sets of laws, how can there be a ceremonial law 
+that is different from the moral law (and vice versa)?
+
+I would also be interested in your comments on the passage in I Cor. 10:1-16, 
+where Paul teaches different rules for covering you head while praying 
+depending on whether you are a man or a woman.  Do you think the apostles can 
+prescribe different sets of rules for men and women?  If so, then why not for 
+Jews and Gentiles?  Also, why did Paul, who was so opposed to circumcising 
+Gentiles, voluntarily circumcise Timothy?
+5. At the risk of starting the 'my gun is better than yours' flame
+war, I must disagree.
+	
+	There is no secret in handling a Glock.  In fact, it is often
+chosen (besides its other merits) because it shoots like a revolver does
+basically.  It can limit the training time (read budget $$$) due to the
+fact there are no 'external' safties other than the trigger, hence less
+training time required. 
+
+	Smith & Wesson (among other types) are chosen due to the fact taht
+they do have the external safties (hammer drop,as well as mag drop) which
+if properly used have saved many lives when 'Mr. Bad' snatched the gun
+from the officer and tried to shoot said officer the gun was on safe and
+would not fire.  This point had been made in many articles in various 
+gun magazines.  If fact, one author (can't remember who) staged a little
+test where he had a revolver and a S&W on safe laying on a table and asked
+people with little firearms experience to on his signal, grab the gun and
+shoot a target.  He timed the people using each gun.  The revolver times
+were pretty close, but some of the times with the S&W were in minutes, or
+the person just gave up because they could not figure out the saftey.
+
+	You don't often see Colt 45 autos issued due to the light trigger
+which can be accidentally fired in a stress situation, opening the issuing
+city,county, etc.. to lawsuits, bad press, etc..
+
+	Of course any problem can be overcome with enough training, but
+such training is not always available to budget crunched departments.  I
+know if I were a Cop I would want something like a S&W just for the off
+chance of the gun getting taken away.  The safety doesn't guarantee that
+'Mr. Bad' won't figure it out and shoot me, but it could buy enough time
+to draw a second gun and shoot 'Mr. Bad' before it's too late.
+
+	Don't think I am too biassed here just because I have had 3 Glocks
+in my possession at one time, because I have had a .45 as well.  In fact,
+it was my first handgun.  Remember, the ultimate 'safety' is YOU the
+operator, and no safety is going to stop an negligent discharge (note I
+don't say accidental) if you break the rules of gun handling.
+
+	As per the part of being light weight and looking cool, I agree
+100%.  I wouldn't rule it out as a first purchase.
+6. If these folks are who I think they are, Lyme-knowledgeable may
+mean a physician to whom everything that walks in the door is
+lyme disease, and you will be treated for lyme, whether or not
+you have it.  Hope you have good insurance.
+
+
+
+-- 
+----------------------------------------------------------------------------
+Gordon Banks  N3JXP      | "Skepticism is the chastity of the intellect, and
+geb@cadre.dsl.pitt.edu   |  it is shameful to surrender it too soon."
+7. That is in fact the current version (it only came out in December).
+
+
+My test movie was created at 320*240 resolution, it wasn't being scaled up.
+Scaling was a very CPU-intensive operation with the original QuickTime (1.0);
+the current version has optimizations for ratios like 4:1 (160*120 -> 320*240),
+but even so, I'm prepared to believe that the performance isn't as good as
+with playing back an actual 320*240 movie. I haven't done any numerical
+measurements for scaled playback.
+
+Here is our goal: Cluster the articles by their specific newsgroup community, for example, graphics, hardware, sport, medical, politics. Please cluster them into 12 groups. Each group should contain at least 3 articles.' 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"clarifies technical details about video resolution and playback performance"
+"analyzes religious laws and interpretations"
+
+
+Again, here's the goal: Cluster the articles by their specific newsgroup community, for example, graphics, hardware, sport, medical, politics. Please cluster them into 12 groups. Each group should contain at least 3 articles.'. Your responses are:
+- "
+Proposer model response:
+['- "discusses 3D graphics software and hardware"\n- "debates on historical and cultural representations"\n- "critiques religious interpretations and practices"\n- "compares different gun models for law enforcement"\n- "discusses medical diagnosis practices"\n- "shares insights on Lyme disease treatment"\n- "analyzes video resolution and playback performance"']
+Proposer Cost: $0.001250
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. I don't have nor Imagine nor Real 3d, but as old
+Amiga user I think you should take a look also to 
+Real 3d 2.0 for the Amiga. I saw Imagine 2.0 on the
+Amiga for a long time at my friend's home, and
+I've seen R3D 2.0 in action at Bit.Movie 93 in Riccione,
+Italy (an Italian Computer Graphics Contest).
+Many professionals using 3d Studio on PC, SoftImage
+for Silicon Graphics and Imagine on the Amiga were 
+*VERY IMPRESSED* by the power of this programs.
+Sorry, I've lost the posting with full description 
+of features of this great program.
+
+For more informations give a look in comp.sys.amiga.graphics.
+
+Representative of Activa International told me that
+it will be out in 2 weeks for the Amiga and that
+PC MS-Windows, Silicon Indigo and Unix version are 
+under development.
+
+Ciao,
+	Sergio
+1. Pardon me for being a little confused, but at the beginning of your second 
+paragraph, you say, "God has one set of rules for all his people," yet at the 
+end of the same paragraph you declare, "please do not combine the ceremonial 
+and moral laws in one."  Not only do I not understand where in the Bible you 
+find the declaration that there are 2 laws (ceremonial and moral), but I am 
+also unclear on whether you think it is bad to have 2 sets of laws in the first 
+place.  If it's bad to have 2 sets of laws, how can there be a ceremonial law 
+that is different from the moral law (and vice versa)?
+
+I would also be interested in your comments on the passage in I Cor. 10:1-16, 
+where Paul teaches different rules for covering you head while praying 
+depending on whether you are a man or a woman.  Do you think the apostles can 
+prescribe different sets of rules for men and women?  If so, then why not for 
+Jews and Gentiles?  Also, why did Paul, who was so opposed to circumcising 
+Gentiles, voluntarily circumcise Timothy?
+2. That is in fact the current version (it only came out in December).
+
+
+My test movie was created at 320*240 resolution, it wasn't being scaled up.
+Scaling was a very CPU-intensive operation with the original QuickTime (1.0);
+the current version has optimizations for ratios like 4:1 (160*120 -> 320*240),
+but even so, I'm prepared to believe that the performance isn't as good as
+with playing back an actual 320*240 movie. I haven't done any numerical
+measurements for scaled playback.
+3. At the risk of starting the 'my gun is better than yours' flame
+war, I must disagree.
+	
+	There is no secret in handling a Glock.  In fact, it is often
+chosen (besides its other merits) because it shoots like a revolver does
+basically.  It can limit the training time (read budget $$$) due to the
+fact there are no 'external' safties other than the trigger, hence less
+training time required. 
+
+	Smith & Wesson (among other types) are chosen due to the fact taht
+they do have the external safties (hammer drop,as well as mag drop) which
+if properly used have saved many lives when 'Mr. Bad' snatched the gun
+from the officer and tried to shoot said officer the gun was on safe and
+would not fire.  This point had been made in many articles in various 
+gun magazines.  If fact, one author (can't remember who) staged a little
+test where he had a revolver and a S&W on safe laying on a table and asked
+people with little firearms experience to on his signal, grab the gun and
+shoot a target.  He timed the people using each gun.  The revolver times
+were pretty close, but some of the times with the S&W were in minutes, or
+the person just gave up because they could not figure out the saftey.
+
+	You don't often see Colt 45 autos issued due to the light trigger
+which can be accidentally fired in a stress situation, opening the issuing
+city,county, etc.. to lawsuits, bad press, etc..
+
+	Of course any problem can be overcome with enough training, but
+such training is not always available to budget crunched departments.  I
+know if I were a Cop I would want something like a S&W just for the off
+chance of the gun getting taken away.  The safety doesn't guarantee that
+'Mr. Bad' won't figure it out and shoot me, but it could buy enough time
+to draw a second gun and shoot 'Mr. Bad' before it's too late.
+
+	Don't think I am too biassed here just because I have had 3 Glocks
+in my possession at one time, because I have had a .45 as well.  In fact,
+it was my first handgun.  Remember, the ultimate 'safety' is YOU the
+operator, and no safety is going to stop an negligent discharge (note I
+don't say accidental) if you break the rules of gun handling.
+
+	As per the part of being light weight and looking cool, I agree
+100%.  I wouldn't rule it out as a first purchase.
+4. If there are many as..., er, people in the USA who reason like the
+above, then it should not be surprising that the current plot has been
+allowed to happen...
+
+Regards,
+Vesselin
+5. If these folks are who I think they are, Lyme-knowledgeable may
+mean a physician to whom everything that walks in the door is
+lyme disease, and you will be treated for lyme, whether or not
+you have it.  Hope you have good insurance.
+
+
+
+-- 
+----------------------------------------------------------------------------
+Gordon Banks  N3JXP      | "Skepticism is the chastity of the intellect, and
+geb@cadre.dsl.pitt.edu   |  it is shameful to surrender it too soon."
+6. This subject seems to be incredibly inflammatory.  Those who subscribe to
+_Biblical Archaeology Review_ will remember a spectacular letter battle set off when someone
+complained about a Franklin Mint ad.  (_BAR_ is a great magazine, but the
+contrast between the rather scholarly articles and the incredibly sleazy ads
+is extreme.)  In this ad, they were hawking a doll with a head based on the
+famous bust of Nefertiti, giving the face a typical doll-pink complexion.
+The letter complained about this as a misrepresentation on the grounds that
+Nefertiti was "a beautiful black queen."  This set off an exchange of
+hotheaded letters than ran for several issues, to the point where they had
+an article from an Egyptologist titled "Was Cleopatra Black?"  (The answer
+to the title is "no"-- she was greek.)
+
+I have to say that I hear a hysterical note in much of the complaining.  I
+personally have seen only one blond-haired Jesus (in the National Shrine in
+Wash. DC), and I found it very jarring.  Western representations vary
+enourmously, but in general the image of is of a youngish male with dark
+hair and beard, of a sort that can be found (modulo the nose) all up and
+down the Mediterranean.
+
+(Also, if what I remember is correct, the "Black Madonna" doesn't represent
+a person with negroid features.  It is black because of an accident.  Joe
+Buehler....?)
+
+In the presence of all those marble statues, one is prone to forget that
+greeks are rather likely to have black hair.  When one crosses the bosporus,
+the situation breaks down completely.  Are Turks white?  How about Persians,
+or various groups in the indian subcontinent?  Was Gandhi white?  How about
+the Arabs?  Or picture Nassar and Sadat standing side by side.  And then
+there are the Ethiopians....
+
+Those of a white racist bent are not likely to say that *any* of these
+people are "white" (i.e., of the racist's "race").  If I may risk a
+potentially inflammatory remark, one undercurrent of this seems to be the
+identification of modern jews as members of the oppressor race.  Considering
+the extreme dicotomy between medieval religion on the one hand and medieval
+antisemitism on the other, I don't think that this "Jesus was white" thesis
+ever played the roles that some hold it did.
+
+Representations of Jesus as black or korean or whatever are fine.  It seems
+awfully self-serving to insist that Jesus belongs to one's own racial group.
+7. This is pernicious nonsense!
+
+David
+
+Here is our goal: Cluster the articles by their specific newsgroup community, for example, graphics, hardware, sport, medical, politics. Please cluster them into 12 groups. Each group should contain at least 3 articles.' 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"- "discusses archaeological controversies and historical representations"
+"critiques nonsensical claims"
+
+
+Again, here's the goal: Cluster the articles by their specific newsgroup community, for example, graphics, hardware, sport, medical, politics. Please cluster them into 12 groups. Each group should contain at least 3 articles.'. Your responses are:
+- "
+Proposer model response:
+['- "discusses 3D modeling software and graphics contests"\n- "questions biblical interpretations and religious laws"\n- "discusses video resolution and performance optimizations"\n- "debates gun safety features and training methods"\n- "critiques societal attitudes and behaviors"\n- "discusses medical misdiagnosis and insurance concerns"']
+Proposer Cost: $0.001241
+60 descriptions proposed in total. Here are the descriptions:
+evaluates the potential impact of divorce on families
+shares information about car shows and model cars
+critiques claims about hockey teams and player talent
+provides updates on hockey teams and players
+- "discusses cryptographic security vulnerabilities
+reports on a deal between Suhonen and Jokerit
+shares experiences in music education for the deaf
+- "discusses hockey teams and player ratings
+seeks information on car events and model cars
+expresses concerns about the acceptability of divorce
+inquires about teaching music for deaf children
+discusses divorce and marriage implications
+shares travel plans and interests in car enthusiasts
+addresses concerns about cryptographic security
+questions the legitimacy of divorce
+- "discusses implications of divorce and marriage
+addresses issues related to divorce and marriage
+seeks information on car shows and model cars
+requests participation in a music education research project
+lists potential attacks on secure electronic mail systems
+proposes a questionnaire on teaching music for deaf children
+- "discusses potential attacks on secure electronic mail
+shares news about a deal with Jokerit
+analyzes the performance of Finnish and Swedish hockey players
+raises questions about the future of Scandinavian hockey players
+analyzes the performance of movie scaling
+announces a deal with Jokerit hockey team
+proposes a compromise for European teams in hockey
+- "discusses the implications of divorce and marriage
+discusses potential attacks on secure electronic mail
+analyzes racial representations in art and history
+analyzes historical and cultural representations
+shares opinions on gun safety and usage
+- "discusses archaeological controversies and historical representations
+analyzes video resolution and playback performance
+- "discusses 3D graphics software and hardware
+critiques religious interpretations and practices
+discusses medical diagnosis practices
+compares different types of firearms and their safety features
+discusses firearm training and safety measures
+- "discusses interpretations of religious laws
+discusses medical misdiagnosis and insurance concerns
+compares 3D graphics software
+debates on historical and cultural representations
+analyzes religious laws and interpretations
+shares information about 3D modeling software and computer graphics
+questions religious interpretations and practices
+compares different gun models for law enforcement
+critiques representations of historical figures
+critiques nonsensical claims
+shares insights on Lyme disease treatment
+- "discusses 3D modeling software and graphics contests
+critiques societal attitudes and behaviors
+discusses video resolution and performance optimizations
+examines societal reasoning and political events
+questions biblical interpretations and religious laws
+debates gun safety features and training methods
+- "discusses gun handling and safety
+discusses medical practices and insurance concerns
+clarifies technical details about video resolution and playback performance
+GPTAssigner Cost 2.4688319999999937 $
+Stage Assign assign
+Assigned all recall: 0.386
+Assigned all precision: 0.37305699481865284
+Assigned description: evaluates the potential impact of divorce on families. recall: 0.0 precision: 0.0
+Assigned description: shares information about car shows and model cars. recall: 0.002 precision: 0.0
+Assigned description: critiques claims about hockey teams and player talent. recall: 0.004 precision: 0.5
+Assigned description: provides updates on hockey teams and players. recall: 0.01 precision: 0.4
+Assigned description: - "discusses cryptographic security vulnerabilities. recall: 0.042 precision: 0.047619047619047616
+Assigned description: reports on a deal between Suhonen and Jokerit. recall: 0.002 precision: 1.0
+Assigned description: shares experiences in music education for the deaf. recall: 0.002 precision: 0.0
+Assigned description: - "discusses hockey teams and player ratings. recall: 0.022 precision: 0.2727272727272727
+Assigned description: seeks information on car events and model cars. recall: 0.012 precision: 0.0
+Assigned description: expresses concerns about the acceptability of divorce. recall: 0.018 precision: 0.0
+Assigned description: inquires about teaching music for deaf children. recall: 0.01 precision: 0.0
+Assigned description: discusses divorce and marriage implications. recall: 0.016 precision: 0.0
+Assigned description: shares travel plans and interests in car enthusiasts. recall: 0.004 precision: 0.0
+Assigned description: addresses concerns about cryptographic security. recall: 0.042 precision: 0.14285714285714285
+Assigned description: questions the legitimacy of divorce. recall: 0.022 precision: 0.0
+Assigned description: - "discusses implications of divorce and marriage. recall: 0.014 precision: 0.0
+Assigned description: addresses issues related to divorce and marriage. recall: 0.006 precision: 0.0
+Assigned description: seeks information on car shows and model cars. recall: 0.01 precision: 0.0
+Assigned description: requests participation in a music education research project. recall: 0.004 precision: 0.0
+Assigned description: lists potential attacks on secure electronic mail systems. recall: 0.026 precision: 0.0
+Assigned description: proposes a questionnaire on teaching music for deaf children. recall: 0.004 precision: 0.0
+Assigned description: - "discusses potential attacks on secure electronic mail. recall: 0.022 precision: 0.0
+Assigned description: shares news about a deal with Jokerit. recall: 0.002 precision: 0.0
+Assigned description: analyzes the performance of Finnish and Swedish hockey players. recall: 0.0 precision: 0.0
+Assigned description: raises questions about the future of Scandinavian hockey players. recall: 0.006 precision: 0.6666666666666666
+Assigned description: analyzes the performance of movie scaling. recall: 0.012 precision: 0.0
+Assigned description: announces a deal with Jokerit hockey team. recall: 0.002 precision: 0.0
+Assigned description: proposes a compromise for European teams in hockey. recall: 0.0 precision: 0.0
+Assigned description: - "discusses the implications of divorce and marriage. recall: 0.01 precision: 0.0
+Assigned description: discusses potential attacks on secure electronic mail. recall: 0.028 precision: 0.0
+Assigned description: analyzes racial representations in art and history. recall: 0.01 precision: 0.0
+Assigned description: analyzes historical and cultural representations. recall: 0.026 precision: 0.0
+Assigned description: shares opinions on gun safety and usage. recall: 0.02 precision: 0.0
+Assigned description: - "discusses archaeological controversies and historical representations. recall: 0.024 precision: 0.0
+Assigned description: analyzes video resolution and playback performance. recall: 0.004 precision: 0.0
+Assigned description: - "discusses 3D graphics software and hardware. recall: 0.018 precision: 0.0
+Assigned description: critiques religious interpretations and practices. recall: 0.044 precision: 0.0
+Assigned description: discusses medical diagnosis practices. recall: 0.028 precision: 0.14285714285714285
+Assigned description: compares different types of firearms and their safety features. recall: 0.004 precision: 0.0
+Assigned description: discusses firearm training and safety measures. recall: 0.006 precision: 0.0
+Assigned description: - "discusses interpretations of religious laws. recall: 0.042 precision: 0.0
+Assigned description: discusses medical misdiagnosis and insurance concerns. recall: 0.01 precision: 0.0
+Assigned description: compares 3D graphics software. recall: 0.01 precision: 0.0
+Assigned description: debates on historical and cultural representations. recall: 0.014 precision: 0.0
+Assigned description: analyzes religious laws and interpretations. recall: 0.02 precision: 0.0
+Assigned description: shares information about 3D modeling software and computer graphics. recall: 0.018 precision: 0.5555555555555556
+Assigned description: questions religious interpretations and practices. recall: 0.112 precision: 0.08928571428571429
+Assigned description: compares different gun models for law enforcement. recall: 0.0 precision: 0.0
+Assigned description: critiques representations of historical figures. recall: 0.022 precision: 0.0
+Assigned description: critiques nonsensical claims. recall: 0.186 precision: 0.3978494623655914
+Assigned description: shares insights on Lyme disease treatment. recall: 0.006 precision: 0.0
+Assigned description: - "discusses 3D modeling software and graphics contests. recall: 0.006 precision: 0.0
+Assigned description: critiques societal attitudes and behaviors. recall: 0.134 precision: 0.08955223880597014
+Assigned description: discusses video resolution and performance optimizations. recall: 0.018 precision: 0.1111111111111111
+Assigned description: examines societal reasoning and political events. recall: 0.11 precision: 0.05454545454545454
+Assigned description: questions biblical interpretations and religious laws. recall: 0.056 precision: 0.0
+Assigned description: debates gun safety features and training methods. recall: 0.006 precision: 0.0
+Assigned description: - "discusses gun handling and safety. recall: 0.018 precision: 0.0
+Assigned description: discusses medical practices and insurance concerns. recall: 0.024 precision: 0.0
+Assigned description: clarifies technical details about video resolution and playback performance. recall: 0.002 precision: 0.0
+Dropping 0 descriptions because they are too popular or too unpopular:
+Stage select select
+Unmatched count: 342
+Description: provides updates on hockey teams and players. Count: 5
+Description: reports on a deal between Suhonen and Jokerit. Count: 1
+Description: addresses concerns about cryptographic security. Count: 21
+Description: seeks information on car shows and model cars. Count: 4
+Description: raises questions about the future of Scandinavian hockey players. Count: 3
+Description: discusses medical misdiagnosis and insurance concerns. Count: 4
+Description: shares information about 3D modeling software and computer graphics. Count: 9
+Description: questions religious interpretations and practices. Count: 46
+Description: critiques nonsensical claims. Count: 65
+Clustering results saved at:  experiments/20news/2025-12-09-01-18-14

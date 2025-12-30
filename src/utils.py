@@ -14,15 +14,18 @@ openai.api_key = os.environ.get("OPENAI_API_KEY", "")
 GPT2TOKENIZER = GPT2Tokenizer.from_pretrained("gpt2")
 
 def setup_openai_api(model_name):
+    # Use the user-specified base URL by default, or the environment variable
+    base_url = os.environ.get("OPENAI_API_BASE", "http://203.145.214.98:11434/v1")
+    
     if model_name == "gpt-oss:20b":
         return openai.OpenAI(
-            base_url=os.environ.get("OPENAI_API_BASE", "http://127.0.0.1:11434/v1"),
+            base_url=base_url,
             api_key="ollama"
         )
     else:
         return openai.OpenAI(
-            base_url="https://api.openai.com/v1",
-            api_key=os.environ.get("OPENAI_API_KEY", "")
+            base_url=base_url,
+            api_key=os.environ.get("OPENAI_API_KEY", "ollama")
         )
 
 
