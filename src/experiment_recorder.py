@@ -139,6 +139,10 @@ class ExperimentRecorder:
         with open(os.path.join(self.output_dir, "cost_estimate.json"), "w") as f:
             json.dump(cost_estimate, f, indent=2)
 
+    def record_token_usage(self, usage_data):
+        with open(os.path.join(self.output_dir, "token_usage.json"), "w") as f:
+            json.dump(usage_data, f, indent=2)
+
     def next_iteration(self):
         self.iteration += 1
         os.makedirs(

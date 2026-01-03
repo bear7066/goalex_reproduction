@@ -24,7 +24,10 @@ from utils import (
     get_max_num_samples_in_proposer,
     get_avg_length,
     get_length_in_gpt2_tokens,
+    get_avg_length,
+    get_length_in_gpt2_tokens,
     estimate_querying_cost,
+    ChatGPTWrapperWithCost,
 )
 
 from experiment_recorder import ExperimentRecorder
@@ -609,6 +612,11 @@ def run(
         )
         cluster_assignment = np.argmax(selected_text_descriptions_matching, axis=1)
         recorder.record_select(selected_descriptions, cluster_assignment, "final")
+
+    # Record actual token usage
+    token_usage = ChatGPTWrapperWithCost.get_global_usage()
+    recorder.record_token_usage(token_usage)
+    print(f"Total Token Usage Recorded: {token_usage}")
 
     description2texts = {
         description: [

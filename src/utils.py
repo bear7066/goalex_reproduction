@@ -125,11 +125,24 @@ class ChatGPTWrapperWithCost:
     """
     A class for openai.ChatCompletion.create() that retries when and records the cost of the API.
     """
+    
+    # Class-level variables to track usage across all instances
+    total_prompt_tokens = 0
+    total_completion_tokens = 0
+    total_cost = 0.0
 
     def __init__(self):
         self.num_queries = 0
         self.num_tokens = 0
         self.cost = 0.0
+
+    @classmethod
+    def get_global_usage(cls):
+        return {
+            "total_prompt_tokens": cls.total_prompt_tokens,
+            "total_completion_tokens": cls.total_completion_tokens,
+            "total_cost": cls.total_cost
+        }
 
     def __call__(self, **args) -> Union[None, List[str]]:
         """
@@ -157,11 +170,20 @@ class ChatGPTWrapperWithCost:
                 responses = client.chat.completions.create(**args)
                 self.num_queries += 1
                 self.num_tokens += responses.usage.total_tokens
-                self.cost += estimate_querying_cost(
+                
+                # Calculate cost for this call
+                current_cost = estimate_querying_cost(
                     responses.usage.prompt_tokens,
                     responses.usage.completion_tokens,
                     args["model"],
                 )
+                self.cost += current_cost
+                
+                # Update global stats
+                ChatGPTWrapperWithCost.total_prompt_tokens += responses.usage.prompt_tokens
+                ChatGPTWrapperWithCost.total_completion_tokens += responses.usage.completion_tokens
+                ChatGPTWrapperWithCost.total_cost += current_cost
+
                 all_text_content_responses = [
                     c.message.content for c in responses.choices
                 ]
