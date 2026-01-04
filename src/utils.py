@@ -492,7 +492,7 @@ def get_context_length(model: str) -> int:
         return 32000
     elif model == "gpt-3.5-turbo":
         return 4096
-    elif model == "gpt-oss:20b":
+    elif model in ["gpt-oss:20b", "gpt-oss-20b"]:
         return 2048
     else:
         raise ValueError(f"Unknown model {model}")
