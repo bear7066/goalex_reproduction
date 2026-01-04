@@ -13,20 +13,129 @@ import numpy as np
 openai.api_key = os.environ.get("OPENAI_API_KEY", "")
 GPT2TOKENIZER = GPT2Tokenizer.from_pretrained("gpt2")
 
-def setup_openai_api(model_name):
-    # Use the user-specified base URL by default, or the environment variable
-    base_url = os.environ.get("OPENAI_API_BASE", "http://203.145.214.98:11434/v1")
-    
-    if model_name == "gpt-oss:20b":
-        return openai.OpenAI(
-            base_url=base_url,
-            api_key="ollama"
+import http.client
+import os
+
+class OuterMedusaLLM:
+    def __init__(self, model="gpt-oss-20b"):
+        self.model = model
+        self.cum_prompt_tokens = 0
+        self.cum_completion_tokens = 0
+
+        from dotenv import load_dotenv
+
+        load_dotenv()
+        self.OUTER_MEDUSA_ENDPOINT = os.environ.get("OUTER_MEDUSA_ENDPOINT", "")
+        self.OUTER_MEDUSA_API_KEY = os.environ.get("OUTER_MEDUSA_API_KEY", "")
+
+        if self.OUTER_MEDUSA_ENDPOINT == "":
+            raise ValueError("OUTER_MEDUSA_CLIENT is not set")
+        if self.OUTER_MEDUSA_API_KEY == "":
+            raise ValueError("OUTER_MEDUSA_API_KEY is not set")
+
+        # Parse and extract host[:port] from OUTER_MEDUSA_ENDPOINT if it is a URL
+        from urllib.parse import urlparse
+
+        parsed_endpoint = urlparse(
+            self.OUTER_MEDUSA_ENDPOINT
+            if self.OUTER_MEDUSA_ENDPOINT.startswith("http")
+            else "https://" + self.OUTER_MEDUSA_ENDPOINT
         )
-    else:
-        return openai.OpenAI(
-            base_url=base_url,
-            api_key=os.environ.get("OPENAI_API_KEY", "ollama")
+        host = (
+            parsed_endpoint.netloc if parsed_endpoint.netloc else parsed_endpoint.path
         )
+        # Remove any trailing slashes from host
+        self.host = host.rstrip("/")
+
+        conn = self._get_connection()
+        try:
+            response, response_data = self._get_response(
+                conn,
+                "GET",
+                "/v1/models",
+            )
+            if response.status != 200:
+                raise ValueError(
+                    f"Request failed: {response.status} {response.reason} - {response_data}"
+                )
+
+        finally:
+            conn.close()
+
+        print(f"Connected to Outer Medusa client at {self.OUTER_MEDUSA_ENDPOINT}")
+
+    def change_model(self, model: str):
+        import json
+
+        conn = self._get_connection()
+        try:
+            response, response_data = self._get_response(conn, "GET", "/v1/models")
+            if response.status != 200:
+                raise ValueError(
+                    f"Request failed: {response.status} {response.reason} - {response_data}"
+                )
+        finally:
+            conn.close()
+
+        data = json.loads(response_data)
+        models = data.get("data", [])
+        if model in [m["id"] for m in models]:
+            self.model = model
+            return
+        else:
+            raise ValueError(f"Model {model} not found in available models")
+
+    def __str__(self):
+        return f"OuterMedusaLLM(model={self.model})"
+
+    def _get_connection(self):
+        return http.client.HTTPSConnection(self.host)
+
+    def _get_response(self, conn, method, path, headers=None, body=None):
+        if headers is None:
+            headers = {
+                "Authorization": f"Bearer {self.OUTER_MEDUSA_API_KEY}",
+                "Content-Type": "application/json",
+            }
+        conn.request(method, path, body=body, headers=headers)
+        response = conn.getresponse()
+        response_data = response.read().decode()
+        return response, response_data
+
+    def generate(self, prompt: str, sys_prompt: str | None = None):
+        import json
+
+        path = "/v1/chat/completions"
+        payload = {"model": self.model, "messages": []}
+        if sys_prompt:
+            payload["messages"].append({"role": "system", "content": sys_prompt})
+        payload["messages"].append({"role": "user", "content": prompt})
+
+        conn = self._get_connection()
+        try:
+            response, response_data = self._get_response(
+                conn,
+                "POST",
+                path,
+                body=json.dumps(payload),
+            )
+            if response.status != 200:
+                raise ValueError(
+                    f"Request failed: {response.status} {response.reason} - {response_data}"
+                )
+            data = json.loads(response_data)
+            # Response shape: { "choices": [{ "message": { "content": ... } }], "usage": {"prompt_tokens": ..., "completion_tokens": ... } }
+            content = data.get("choices", [{}])[0].get("message", {}).get("content", "")
+            prompt_eval_count = data.get("usage", {}).get("prompt_tokens", 0)
+            eval_count = data.get("usage", {}).get("completion_tokens", 0)
+
+            # Update cumulative token counts
+            self.cum_prompt_tokens += prompt_eval_count
+            self.cum_completion_tokens += eval_count
+
+            return content, prompt_eval_count, eval_count
+        finally:
+            conn.close()
 
 
 DEFAULT_MESSAGE = [
@@ -57,15 +166,22 @@ def chat_gpt_wrapper(**args) -> Union[None, List[str]]:
 
     for _ in range(10):
         try:
-            client = setup_openai_api(args.get("model"))
-            # Remove model from args as it's passed to setup_openai_api but also needed for create
-            # However, client.chat.completions.create needs 'model' in args.
-            # setup_openai_api doesn't consume it from args, so it's fine.
+            model_name = args.get("model", "gpt-oss-20b")
+            llm = OuterMedusaLLM(model=model_name)
             
-            responses = client.chat.completions.create(**args)
-            all_text_content_responses = [c.message.content for c in responses.choices]
-            print(all_text_content_responses)
-            return all_text_content_responses
+            # Extract system prompt if present
+            sys_prompt = None
+            user_prompt = ""
+            
+            for msg in args["messages"]:
+                if msg["role"] == "system":
+                    sys_prompt = msg["content"]
+                elif msg["role"] == "user":
+                    user_prompt = msg["content"]
+
+            content, prompt_tokens, completion_tokens = llm.generate(prompt=user_prompt, sys_prompt=sys_prompt)
+            print(f"Generated content: {content[:50]}...")
+            return [content]
         except KeyboardInterrupt:
             raise KeyboardInterrupt
         except Exception as e:
@@ -112,7 +228,9 @@ def estimate_querying_cost(
         cost_per_prompt_token = 0
         cost_per_completion_token = 0
     else:
-        raise ValueError(f"Unknown model: {model}")
+        # Defaults for unknown models or assume 0
+        cost_per_prompt_token = 0
+        cost_per_completion_token = 0
 
     cost = (
         num_prompt_toks * cost_per_prompt_token
@@ -146,12 +264,12 @@ class ChatGPTWrapperWithCost:
 
     def __call__(self, **args) -> Union[None, List[str]]:
         """
-        A wrapper for openai.ChatCompletion.create() that retries 10 times if it fails.
+        A wrapper regarding OuterMedusaLLM that behaves like previous ChatGPT wrapper.
 
         Parameters
         ----------
         **args
-            The arguments to pass to openai.ChatCompletion.create(). This includes things like the prompt, the model, temperature, etc.
+            The arguments to pass.
 
         Returns
         -------
@@ -166,28 +284,41 @@ class ChatGPTWrapperWithCost:
 
         for _ in range(10):
             try:
-                client = setup_openai_api(args.get("model"))
-                responses = client.chat.completions.create(**args)
+                model_name = args.get("model", "gpt-oss-20b")
+                # Ensure model name is compatible if needed, or just pass it through
+                
+                llm = OuterMedusaLLM(model=model_name)
+                
+                 # Extract system prompt if present
+                sys_prompt = None
+                user_prompt = ""
+                
+                for msg in args["messages"]:
+                    if msg["role"] == "system":
+                        sys_prompt = msg["content"]
+                    elif msg["role"] == "user":
+                        user_prompt = msg["content"]
+                
+                content, prompt_tokens, completion_tokens = llm.generate(prompt=user_prompt, sys_prompt=sys_prompt)
+                
                 self.num_queries += 1
-                self.num_tokens += responses.usage.total_tokens
+                self.num_tokens += (prompt_tokens + completion_tokens)
                 
                 # Calculate cost for this call
                 current_cost = estimate_querying_cost(
-                    responses.usage.prompt_tokens,
-                    responses.usage.completion_tokens,
-                    args["model"],
+                    prompt_tokens,
+                    completion_tokens,
+                    model_name,
                 )
                 self.cost += current_cost
                 
                 # Update global stats
-                ChatGPTWrapperWithCost.total_prompt_tokens += responses.usage.prompt_tokens
-                ChatGPTWrapperWithCost.total_completion_tokens += responses.usage.completion_tokens
+                ChatGPTWrapperWithCost.total_prompt_tokens += prompt_tokens
+                ChatGPTWrapperWithCost.total_completion_tokens += completion_tokens
                 ChatGPTWrapperWithCost.total_cost += current_cost
 
-                all_text_content_responses = [
-                    c.message.content for c in responses.choices
-                ]
-                return all_text_content_responses
+                # Compatibility: return list of content
+                return [content]
             except KeyboardInterrupt:
                 raise KeyboardInterrupt
             except Exception as e:
@@ -199,34 +330,43 @@ class ChatGPTWrapperWithCost:
 
 def gpt3wrapper(max_repeat=20, **arguments) -> Union[None, object]:
     """
-    A wrapper for openai.Completion.create() that retries 20 times if it fails.
-
-    Parameters
-    ----------
-    max_repeat : int, optional
-        The maximum number of times to retry the API call, by default 20
-    **arguments
-        The arguments to pass to openai.Completion.create(). This includes things like the prompt, the model, temperature, etc.
-
-    Returns
-    -------
-    Union[None, openai.Completion]
-        The response from the API. If the API fails, this will be None.
+    A wrapper for using OuterMedusaLLM in a completion-like style.
+    NOTE: Return type changed from openai object to dict-like object to maintain minimum compat if needed, 
+    but mainly just returns a mock object with 'choices' if possible or simple string if usages allow.
+    However, seeing gpt3wrapper_texts below, it expects an object with .choices[0].text or .choices[].text
+    
+    Let's return a simple class that mimics the structure needed.
     """
+    
+    class MockChoice:
+        def __init__(self, text):
+            self.text = text
+            
+    class MockResponse:
+        def __init__(self, texts):
+            self.choices = [MockChoice(t) for t in texts]
 
     i = 0
     while i < max_repeat:
         try:
-            start_time = time.time()
-            client = setup_openai_api(arguments.get("model"))
-            response = client.completions.create(**arguments)
-            end_time = time.time()
-            # print('completed one query in', end_time - start_time)
-            return response
+            model_name = arguments.get("model", "gpt-oss-20b")
+            llm = OuterMedusaLLM(model=model_name)
+            
+            prompts = arguments.get("prompt")
+            if isinstance(prompts, str):
+                prompts = [prompts]
+                
+            results = []
+            for p in prompts:
+                content, _, _ = llm.generate(prompt=p)
+                results.append(content)
+            
+            return MockResponse(results)
+
         except KeyboardInterrupt:
             raise KeyboardInterrupt
         except Exception as e:
-            print(arguments["prompt"])
+            print(arguments.get("prompt", ""))
             print(e)
             print("now sleeping")
             time.sleep(30)
