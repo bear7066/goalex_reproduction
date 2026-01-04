@@ -23,8 +23,11 @@ class OuterMedusaLLM:
         self.cum_completion_tokens = 0
 
         try:
-            from dotenv import load_dotenv
-            load_dotenv()
+            try:
+                from dotenv import load_dotenv
+                load_dotenv()
+            except ImportError:
+                pass
         except ImportError:
             pass
         self.OUTER_MEDUSA_ENDPOINT = os.environ.get("OUTER_MEDUSA_ENDPOINT", "")

@@ -382,7 +382,7 @@ class GPTAssigner(Assigner):
         self, template: str, assigner_inputs: List[AssignerInput]
     ) -> List[float]:
         prompts = create_prompt_inputs_for_single_assigner(template, assigner_inputs)
-        if self.model in ("gpt-4", "gpt-3.5-turbo", "gpt-oss:20b"):
+        if self.model in ("gpt-4", "gpt-3.5-turbo", "gpt-oss:20b", "gpt-oss-20b"):
             chat_gpt = ChatGPTWrapperWithCost()
             for prompt in prompts:
                 response = chat_gpt(prompt=prompt, model=self.model, temperature=0.0)
@@ -412,7 +412,7 @@ class GPTAssigner(Assigner):
         prompts = create_prompt_inputs_for_multi_assigner(
             template, assigner_inputs, add_null_description
         )
-        if self.model in ("gpt-4", "gpt-3.5-turbo", "gpt-oss:20b"):
+        if self.model in ("gpt-4", "gpt-3.5-turbo", "gpt-oss:20b", "gpt-oss-20b"):
             chat_gpt = ChatGPTWrapperWithCost()
             for prompt in prompts:
                 responses = chat_gpt(prompt=prompt, model=self.model, temperature=0.0)
@@ -506,7 +506,7 @@ def assign_descriptions(
 
 
 def get_assigner(assigner_name, verbose=False, **kwargs):
-    gpt_assigner_names = ["gpt-4", "gpt-3.5-turbo", "gpt-oss:20b"]
+    gpt_assigner_names = ["gpt-4", "gpt-3.5-turbo", "gpt-oss:20b", "gpt-oss-20b"]
     if assigner_name in gpt_assigner_names:
         return GPTAssigner(assigner_name, verbose=verbose, **kwargs)
     else:
