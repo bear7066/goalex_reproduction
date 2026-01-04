@@ -229,7 +229,7 @@ def estimate_querying_cost(
     elif model.startswith("text-davinci-"):
         cost_per_prompt_token = 0.02 / 1000
         cost_per_completion_token = 0.02 / 1000
-    elif model == "gpt-oss:20b":
+    elif model in ["gpt-oss:20b", "gpt-oss-20b"]:
         cost_per_prompt_token = 0
         cost_per_completion_token = 0
     else:
