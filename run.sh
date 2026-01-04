@@ -17,9 +17,7 @@ DATASET=$1
     --iterative_max_rounds 2 \
     --verbose
     
-  LOG_FILE="experiments/$DATASET/log_$(date +%Y%m%d_%H%M%S).txt"
-
   python src/evaluate_only.py \
     --data_path processed_data/$DATASET \
     --exp_dir experiments/$DATASET
-} 2>&1 | tee "$LOG_FILE"
+} 2>&1 | tee "experiments/$DATASET/log_$(date +%Y%m%d_%H%M%S).txt"
