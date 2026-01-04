@@ -1,0 +1,1015 @@
+5hr 30 mins
+Unmatched count: 287 -> 256
+
+Here's a rough estimate of the cost; it might not be accurate and we are not responsible for any cost incurred.
+Each round costs 1.19, proposer spending 0.00, assigner spending 1.18. The final assignment costs 0.00.
+Total cost is 2.37
+Do you want to continue? (y/n)Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. A Mass Effect tarot deck would be awesome! That was exactly what I thought when I saw this.
+1. I'm so happy that this worked for you! Go forth, and have unashamed sex in my honour.
+2. I think it was [NAME] and I'm not even convinced [NAME] caught on to it lol. Then he was made to be the moron.
+3. I felt like a baby being nurtured 😂😂😂
+4. Actually I got mine right when they were getting banned
+5. This was definitely worth the $1000+ it cost to do
+6. My husband and I have been circling the drain for years. :(
+7. Either that, or his wife is *really* attractive.
+8. And the Isle of Man!
+9. Nobody would flop like that in practice
+10. Skypeia in One Piece has literally nothing to do with the main plot but I loved it. It also gave us the single greatest reaction image.
+11. We play some sexy football at times
+12. She better!!! .....nobody else will
+13. I may have awful taste, i would want this cake
+14. [NAME] and [NAME] were awesome.
+15. Then leave him. You're not married and sexually comparability is a huge part of making a relationship work. Don't underestimate this my friend.
+16. No it’s not! It’s much easier to pull in to the space and leave it there.
+17. I don’t think anyone on this show has ever joined a sport for exercise. [NAME] is awesome!!!
+18. Yeah [NAME] is a pretty weird guy.
+19. Yea, a doctor that diagnoses based on how healthy a patient looks isn’t qualified for professional work as a doctor
+20. I like [NAME] soo much! he’s such a sweet and honest person, and his voice is amazing
+21. Hi, [NAME]! I am here to offer you a robot hug, and to wish you the best day of your life! -HappyFriendlyBot
+22. If that's true, then you can't call what I would have with option 1 "omnipotence".
+23. A lot of people shit on wiki edits, but most of them give me a nice little chuckle
+24. You kinda arguing against him rn
+25. You're free to believe all of that, but we're going to have to wait and see how it actually all plays out.
+26. Yeah it isn't the same singer. 'Don't hug me I'm scared' is voiced by [NAME], the lead singer of KKB is [NAME]
+27. >he's also super handsome *( ͡° ͜ʖ ͡°)*
+28. Seriously, I’ve been catching and loving this one since it first came out.
+29. What a nice moment. Being in nature is super helpful to me for these moments :)
+30. People still expecting that are delusional regardless tbh. Messed up they'll never say what happened to Half Life but time to start using some context clues herr
+31. I've had them for as long as I can remember ;)
+32. Great. Then he can levy a fine against person who took the photo.
+33. Ahhh. A civil and interesting conversation on the internet. How refreshing.
+34. That's [NAME]!
+35. It's a perfectly cromulent scene.
+36. Yes. Get used to it, it's not going away soon.
+37. I actually should do that.....
+38. I appreciate that there's correct number of YES in there. It's so rare.
+39. I'm sure there's a trash bag full of 'em around there somewhere. Probably next to the insulin. You want some?
+40. Ok I tried to search the sub... is it too late to get a flair? It won’t work for me
+41. It’s interesting, especially if you do it every single day, but I’m here for it.
+42. Copyrights on the individual track designs? Maybe but I'd like to see them
+43. Must be a nice feeling...unless UDG is counted.
+44. Seems kind of literal
+45. Same clothes and the door is black on the other side - looks so real!!
+46. Omg a drop pass worked. 👀
+47. She still cute tho
+48. Not bad at all.
+49. This is why I’m afraid to fly.
+
+Here is our goal: Represent the positive and negative emotions expressed for clustering, such as following: - **Negative Emotions:** anger, disappointment, disgust, embarrassment. - **Positive Emotions:** admiration, amusement, approval, gratitude, pride. Please cluster them into 14 groups, with each group containing at least 3 items. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"shows pride and amusement"
+"expresses admiration and gratitude"
+
+
+Again, here's the goal: Represent the positive and negative emotions expressed for clustering, such as following: - **Negative Emotions:** anger, disappointment, disgust, embarrassment. - **Positive Emotions:** admiration, amusement, approval, gratitude, pride. Please cluster them into 14 groups, with each group containing at least 3 items.. Your responses are:
+- "
+Proposer model response:
+['"expresses gratitude and admiration"\n- "shows pride and amusement"\n- "conveys disappointment and embarrassment"\n- "displays anger and disgust"\n- "expresses approval and gratitude"\n- "conveys amusement and pride"\n- "shows admiration and gratitude"\n- "displays disappointment and embarrassment"\n- "expresses pride and amusement"\n- "conveys anger and disgust"\n- "displays approval and gratitude"\n- "expresses amusement and pride"\n- "conveys admiration and gratitude"\n- "shows disappointment and embarrassment"']
+Proposer Cost: $0.000843
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. A lot of people shit on wiki edits, but most of them give me a nice little chuckle
+1. Copyrights on the individual track designs? Maybe but I'd like to see them
+2. Must be a nice feeling...unless UDG is counted.
+3. Yea, a doctor that diagnoses based on how healthy a patient looks isn’t qualified for professional work as a doctor
+4. You kinda arguing against him rn
+5. >he's also super handsome *( ͡° ͜ʖ ͡°)*
+6. That's [NAME]!
+7. I felt like a baby being nurtured 😂😂😂
+8. Great. Then he can levy a fine against person who took the photo.
+9. Skypeia in One Piece has literally nothing to do with the main plot but I loved it. It also gave us the single greatest reaction image.
+10. And the Isle of Man!
+11. This is why I’m afraid to fly.
+12. What a nice moment. Being in nature is super helpful to me for these moments :)
+13. Hi, [NAME]! I am here to offer you a robot hug, and to wish you the best day of your life! -HappyFriendlyBot
+14. Then leave him. You're not married and sexually comparability is a huge part of making a relationship work. Don't underestimate this my friend.
+15. I like [NAME] soo much! he’s such a sweet and honest person, and his voice is amazing
+16. I appreciate that there's correct number of YES in there. It's so rare.
+17. It’s interesting, especially if you do it every single day, but I’m here for it.
+18. My husband and I have been circling the drain for years. :(
+19. She better!!! .....nobody else will
+20. A Mass Effect tarot deck would be awesome! That was exactly what I thought when I saw this.
+21. This was definitely worth the $1000+ it cost to do
+22. I may have awful taste, i would want this cake
+23. No it’s not! It’s much easier to pull in to the space and leave it there.
+24. I'm sure there's a trash bag full of 'em around there somewhere. Probably next to the insulin. You want some?
+25. Ok I tried to search the sub... is it too late to get a flair? It won’t work for me
+26. I'm so happy that this worked for you! Go forth, and have unashamed sex in my honour.
+27. I've had them for as long as I can remember ;)
+28. [NAME] and [NAME] were awesome.
+29. Either that, or his wife is *really* attractive.
+30. She still cute tho
+31. Yeah [NAME] is a pretty weird guy.
+32. I don’t think anyone on this show has ever joined a sport for exercise. [NAME] is awesome!!!
+33. Actually I got mine right when they were getting banned
+34. Seriously, I’ve been catching and loving this one since it first came out.
+35. Yes. Get used to it, it's not going away soon.
+36. Ahhh. A civil and interesting conversation on the internet. How refreshing.
+37. If that's true, then you can't call what I would have with option 1 "omnipotence".
+38. Same clothes and the door is black on the other side - looks so real!!
+39. I actually should do that.....
+40. Seems kind of literal
+41. Omg a drop pass worked. 👀
+42. People still expecting that are delusional regardless tbh. Messed up they'll never say what happened to Half Life but time to start using some context clues herr
+43. I think it was [NAME] and I'm not even convinced [NAME] caught on to it lol. Then he was made to be the moron.
+44. Not bad at all.
+45. We play some sexy football at times
+46. Yeah it isn't the same singer. 'Don't hug me I'm scared' is voiced by [NAME], the lead singer of KKB is [NAME]
+47. It's a perfectly cromulent scene.
+48. You're free to believe all of that, but we're going to have to wait and see how it actually all plays out.
+49. Nobody would flop like that in practice
+
+Here is our goal: Represent the positive and negative emotions expressed for clustering, such as following: - **Negative Emotions:** anger, disappointment, disgust, embarrassment. - **Positive Emotions:** admiration, amusement, approval, gratitude, pride. Please cluster them into 14 groups, with each group containing at least 3 items. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"shows disappointment and embarrassment"
+"shows pride and amusement"
+
+
+Again, here's the goal: Represent the positive and negative emotions expressed for clustering, such as following: - **Negative Emotions:** anger, disappointment, disgust, embarrassment. - **Positive Emotions:** admiration, amusement, approval, gratitude, pride. Please cluster them into 14 groups, with each group containing at least 3 items.. Your responses are:
+- "
+Proposer model response:
+['"expresses admiration and gratitude"\n- "conveys anger and disgust"\n- "displays pride and amusement"\n- "reflects disappointment and embarrassment"\n- "shows approval and gratitude"\n- "conveys anger and disgust"\n- "expresses admiration and pride"\n- "displays disappointment and embarrassment"\n- "reflects amusement and approval"\n- "conveys anger and disgust"\n- "expresses gratitude and pride"\n- "displays disappointment and embarrassment"\n- "reflects amusement and approval"']
+Proposer Cost: $0.000833
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. Not bad at all.
+1. What a nice moment. Being in nature is super helpful to me for these moments :)
+2. I actually should do that.....
+3. A Mass Effect tarot deck would be awesome! That was exactly what I thought when I saw this.
+4. Yea, a doctor that diagnoses based on how healthy a patient looks isn’t qualified for professional work as a doctor
+5. Great. Then he can levy a fine against person who took the photo.
+6. Either that, or his wife is *really* attractive.
+7. [NAME] and [NAME] were awesome.
+8. Must be a nice feeling...unless UDG is counted.
+9. I think it was [NAME] and I'm not even convinced [NAME] caught on to it lol. Then he was made to be the moron.
+10. She better!!! .....nobody else will
+11. No it’s not! It’s much easier to pull in to the space and leave it there.
+12. I don’t think anyone on this show has ever joined a sport for exercise. [NAME] is awesome!!!
+13. I felt like a baby being nurtured 😂😂😂
+14. Yeah it isn't the same singer. 'Don't hug me I'm scared' is voiced by [NAME], the lead singer of KKB is [NAME]
+15. Ok I tried to search the sub... is it too late to get a flair? It won’t work for me
+16. I've had them for as long as I can remember ;)
+17. And the Isle of Man!
+18. I appreciate that there's correct number of YES in there. It's so rare.
+19. You're free to believe all of that, but we're going to have to wait and see how it actually all plays out.
+20. Seriously, I’ve been catching and loving this one since it first came out.
+21. Then leave him. You're not married and sexually comparability is a huge part of making a relationship work. Don't underestimate this my friend.
+22. >he's also super handsome *( ͡° ͜ʖ ͡°)*
+23. Actually I got mine right when they were getting banned
+24. Seems kind of literal
+25. My husband and I have been circling the drain for years. :(
+26. I'm so happy that this worked for you! Go forth, and have unashamed sex in my honour.
+27. This was definitely worth the $1000+ it cost to do
+28. Ahhh. A civil and interesting conversation on the internet. How refreshing.
+29. This is why I’m afraid to fly.
+30. Copyrights on the individual track designs? Maybe but I'd like to see them
+31. If that's true, then you can't call what I would have with option 1 "omnipotence".
+32. I may have awful taste, i would want this cake
+33. Omg a drop pass worked. 👀
+34. Same clothes and the door is black on the other side - looks so real!!
+35. Skypeia in One Piece has literally nothing to do with the main plot but I loved it. It also gave us the single greatest reaction image.
+36. She still cute tho
+37. Nobody would flop like that in practice
+38. Yes. Get used to it, it's not going away soon.
+39. Hi, [NAME]! I am here to offer you a robot hug, and to wish you the best day of your life! -HappyFriendlyBot
+40. We play some sexy football at times
+41. You kinda arguing against him rn
+42. It’s interesting, especially if you do it every single day, but I’m here for it.
+43. That's [NAME]!
+44. People still expecting that are delusional regardless tbh. Messed up they'll never say what happened to Half Life but time to start using some context clues herr
+45. A lot of people shit on wiki edits, but most of them give me a nice little chuckle
+46. Yeah [NAME] is a pretty weird guy.
+47. I'm sure there's a trash bag full of 'em around there somewhere. Probably next to the insulin. You want some?
+48. It's a perfectly cromulent scene.
+49. I like [NAME] soo much! he’s such a sweet and honest person, and his voice is amazing
+
+Here is our goal: Represent the positive and negative emotions expressed for clustering, such as following: - **Negative Emotions:** anger, disappointment, disgust, embarrassment. - **Positive Emotions:** admiration, amusement, approval, gratitude, pride. Please cluster them into 14 groups, with each group containing at least 3 items. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"conveys disappointment and embarrassment"
+"conveys pride and approval"
+
+
+Again, here's the goal: Represent the positive and negative emotions expressed for clustering, such as following: - **Negative Emotions:** anger, disappointment, disgust, embarrassment. - **Positive Emotions:** admiration, amusement, approval, gratitude, pride. Please cluster them into 14 groups, with each group containing at least 3 items.. Your responses are:
+- "
+Proposer model response:
+['"expresses admiration and gratitude"\n- "conveys disappointment and embarrassment"\n- "shows pride and approval"\n- "reflects anger and disgust"\n- "conveys amusement and approval"\n- "expresses gratitude and pride"\n- "conveys disappointment and anger"\n- "reflects amusement and admiration"\n- "expresses disgust and embarrassment"\n- "conveys approval and gratitude"\n- "reflects anger and disappointment"\n- "conveys pride and admiration"\n- "expresses embarrassment and disgust"\n- "shows amusement and pride"']
+Proposer Cost: $0.000844
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. Not bad at all.
+1. That's [NAME]!
+2. We play some sexy football at times
+3. It’s interesting, especially if you do it every single day, but I’m here for it.
+4. I like [NAME] soo much! he’s such a sweet and honest person, and his voice is amazing
+5. Either that, or his wife is *really* attractive.
+6. Omg a drop pass worked. 👀
+7. Copyrights on the individual track designs? Maybe but I'd like to see them
+8. I think it was [NAME] and I'm not even convinced [NAME] caught on to it lol. Then he was made to be the moron.
+9. I may have awful taste, i would want this cake
+10. Hi, [NAME]! I am here to offer you a robot hug, and to wish you the best day of your life! -HappyFriendlyBot
+11. Yeah it isn't the same singer. 'Don't hug me I'm scared' is voiced by [NAME], the lead singer of KKB is [NAME]
+12. If that's true, then you can't call what I would have with option 1 "omnipotence".
+13. A lot of people shit on wiki edits, but most of them give me a nice little chuckle
+14. Ok I tried to search the sub... is it too late to get a flair? It won’t work for me
+15. You're free to believe all of that, but we're going to have to wait and see how it actually all plays out.
+16. Yea, a doctor that diagnoses based on how healthy a patient looks isn’t qualified for professional work as a doctor
+17. Yeah [NAME] is a pretty weird guy.
+18. I'm sure there's a trash bag full of 'em around there somewhere. Probably next to the insulin. You want some?
+19. Yes. Get used to it, it's not going away soon.
+20. I'm so happy that this worked for you! Go forth, and have unashamed sex in my honour.
+21. A Mass Effect tarot deck would be awesome! That was exactly what I thought when I saw this.
+22. She still cute tho
+23. No it’s not! It’s much easier to pull in to the space and leave it there.
+24. Seriously, I’ve been catching and loving this one since it first came out.
+25. My husband and I have been circling the drain for years. :(
+26. Nobody would flop like that in practice
+27. Then leave him. You're not married and sexually comparability is a huge part of making a relationship work. Don't underestimate this my friend.
+28. >he's also super handsome *( ͡° ͜ʖ ͡°)*
+29. I don’t think anyone on this show has ever joined a sport for exercise. [NAME] is awesome!!!
+30. Ahhh. A civil and interesting conversation on the internet. How refreshing.
+31. This was definitely worth the $1000+ it cost to do
+32. This is why I’m afraid to fly.
+33. You kinda arguing against him rn
+34. I've had them for as long as I can remember ;)
+35. I actually should do that.....
+36. Seems kind of literal
+37. I appreciate that there's correct number of YES in there. It's so rare.
+38. Skypeia in One Piece has literally nothing to do with the main plot but I loved it. It also gave us the single greatest reaction image.
+39. Actually I got mine right when they were getting banned
+40. And the Isle of Man!
+41. [NAME] and [NAME] were awesome.
+42. Must be a nice feeling...unless UDG is counted.
+43. She better!!! .....nobody else will
+44. It's a perfectly cromulent scene.
+45. I felt like a baby being nurtured 😂😂😂
+46. Same clothes and the door is black on the other side - looks so real!!
+47. What a nice moment. Being in nature is super helpful to me for these moments :)
+48. People still expecting that are delusional regardless tbh. Messed up they'll never say what happened to Half Life but time to start using some context clues herr
+49. Great. Then he can levy a fine against person who took the photo.
+
+Here is our goal: Represent the positive and negative emotions expressed for clustering, such as following: - **Negative Emotions:** anger, disappointment, disgust, embarrassment. - **Positive Emotions:** admiration, amusement, approval, gratitude, pride. Please cluster them into 14 groups, with each group containing at least 3 items. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"conveys pride and approval"
+"reflects anger and disgust"
+
+
+Again, here's the goal: Represent the positive and negative emotions expressed for clustering, such as following: - **Negative Emotions:** anger, disappointment, disgust, embarrassment. - **Positive Emotions:** admiration, amusement, approval, gratitude, pride. Please cluster them into 14 groups, with each group containing at least 3 items.. Your responses are:
+- "
+Proposer model response:
+['- "expresses admiration and gratitude"\n- "conveys disappointment and embarrassment"\n- "reflects anger and disgust"\n- "conveys pride and approval"\n- "expresses amusement and gratitude"\n- "conveys disappointment and disgust"\n- "reflects anger and embarrassment"\n- "expresses admiration and pride"\n- "conveys gratitude and approval"\n- "reflects anger and disappointment"\n- "expresses amusement and pride"\n- "conveys disgust and embarrassment"\n- "reflects anger and approval"\n- "expresses amusement and admiration"']
+Proposer Cost: $0.000849
+30 descriptions proposed in total. Here are the descriptions:
+expresses amusement and gratitude
+Conveys disappointment and embarrassment
+- "Expresses admiration and gratitude
+Expresses admiration and gratitude
+shows pride and approval
+reflects disappointment and embarrassment
+Shows pride and amusement
+expresses approval and gratitude
+reflects anger and embarrassment
+displays pride and amusement
+expresses admiration and pride
+displays disappointment and embarrassment
+conveys disappointment and embarrassment
+shows approval and gratitude
+reflects anger and disgust
+"expresses admiration and gratitude
+conveys anger and disgust
+shows admiration and gratitude
+- "expresses admiration and gratitude
+shows pride and amusement
+Shows disappointment and embarrassment
+reflects amusement and admiration
+displays anger and disgust
+"expresses gratitude and admiration
+expresses gratitude and pride
+Reflects anger and disgust
+Conveys pride and approval
+conveys pride and approval
+conveys disappointment and anger
+conveys disappointment and disgust
+GPTAssigner Cost 0.5907330000000013 $
+Stage Assign assign
+Assigned all recall: 0.5734126984126984
+Assigned all precision: 0.12802768166089964
+Assigned description: expresses amusement and gratitude. recall: 0.14682539682539683 precision: 0.02702702702702703
+Assigned description: Conveys disappointment and embarrassment. recall: 0.1984126984126984 precision: 0.01
+Assigned description: - "Expresses admiration and gratitude. recall: 0.08531746031746032 precision: 0.0
+Assigned description: Expresses admiration and gratitude. recall: 0.1388888888888889 precision: 0.014285714285714285
+Assigned description: shows pride and approval. recall: 0.07341269841269842 precision: 0.0
+Assigned description: reflects disappointment and embarrassment. recall: 0.18253968253968253 precision: 0.0
+Assigned description: Shows pride and amusement. recall: 0.07738095238095238 precision: 0.02564102564102564
+Assigned description: expresses approval and gratitude. recall: 0.1388888888888889 precision: 0.02857142857142857
+Assigned description: reflects anger and embarrassment. recall: 0.06547619047619048 precision: 0.0
+Assigned description: displays pride and amusement. recall: 0.05357142857142857 precision: 0.07407407407407407
+Assigned description: expresses admiration and pride. recall: 0.1130952380952381 precision: 0.07017543859649122
+Assigned description: displays disappointment and embarrassment. recall: 0.06746031746031746 precision: 0.0
+Assigned description: conveys disappointment and embarrassment. recall: 0.23412698412698413 precision: 0.0
+Assigned description: shows approval and gratitude. recall: 0.1111111111111111 precision: 0.0
+Assigned description: reflects anger and disgust. recall: 0.1349206349206349 precision: 0.0
+Assigned description: "expresses admiration and gratitude. recall: 0.10515873015873016 precision: 0.0
+Assigned description: conveys anger and disgust. recall: 0.15079365079365079 precision: 0.02631578947368421
+Assigned description: shows admiration and gratitude. recall: 0.11706349206349206 precision: 0.0
+Assigned description: - "expresses admiration and gratitude. recall: 0.07738095238095238 precision: 0.0
+Assigned description: shows pride and amusement. recall: 0.03373015873015873 precision: 0.0
+Assigned description: Shows disappointment and embarrassment. recall: 0.15674603174603174 precision: 0.02531645569620253
+Assigned description: reflects amusement and admiration. recall: 0.12896825396825398 precision: 0.03076923076923077
+Assigned description: displays anger and disgust. recall: 0.11904761904761904 precision: 0.0
+Assigned description: "expresses gratitude and admiration. recall: 0.06746031746031746 precision: 0.0
+Assigned description: expresses gratitude and pride. recall: 0.05555555555555555 precision: 0.0
+Assigned description: Reflects anger and disgust. recall: 0.1527777777777778 precision: 0.025974025974025976
+Assigned description: Conveys pride and approval. recall: 0.13095238095238096 precision: 0.07575757575757576
+Assigned description: conveys pride and approval. recall: 0.09523809523809523 precision: 0.0
+Assigned description: conveys disappointment and anger. recall: 0.2638888888888889 precision: 0.06015037593984962
+Assigned description: conveys disappointment and disgust. recall: 0.24801587301587302 precision: 0.024
+Dropping 0 descriptions because they are too popular or too unpopular:
+Stage select select
+Unmatched count: 287
+Description: expresses approval and gratitude. Count: 70
+Description: displays pride and amusement. Count: 15
+Description: conveys disappointment and anger. Count: 132
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. I'm sure there's a trash bag full of 'em around there somewhere. Probably next to the insulin. You want some?
+1. Following in the long tradition of network cop shows. Dat [NAME] ass tho.
+2. Copyrights on the individual track designs? Maybe but I'd like to see them
+3. Then leave him. You're not married and sexually comparability is a huge part of making a relationship work. Don't underestimate this my friend.
+4. You kinda arguing against him rn
+5. It’s interesting, especially if you do it every single day, but I’m here for it.
+6. >he's also super handsome *( ͡° ͜ʖ ͡°)*
+7. She better!!! .....nobody else will
+8. That face too. Everything was perfect.
+9. I'm so happy that this worked for you! Go forth, and have unashamed sex in my honour.
+10. Same clothes and the door is black on the other side - looks so real!!
+11. Actually I got mine right when they were getting banned
+12. Her camel toe is strong!
+13. I may have awful taste, i would want this cake
+14. Lets not forget that the Bay Area is the epicenter of the tech boom/revolution, and that will continue to be the case for the foreseeable future.
+15. And the Isle of Man!
+16. No it’s not! It’s much easier to pull in to the space and leave it there.
+17. This has the makings of a great painting.
+18. Seems kind of literal
+19. Yeah it isn't the same singer. 'Don't hug me I'm scared' is voiced by [NAME], the lead singer of KKB is [NAME]
+20. Great. Then he can levy a fine against person who took the photo.
+21. This look is fab you can't call everything cringe just because it's eureka
+22. Either that, or his wife is *really* attractive.
+23. I think it was [NAME] and I'm not even convinced [NAME] caught on to it lol. Then he was made to be the moron.
+24. Not bad at all.
+25. Must be a nice feeling...unless UDG is counted.
+26. U guys are super cute together.
+27. No problem. It will seem impossible at first but just keep your cool! Best of luck
+28. I appreciate that there's correct number of YES in there. It's so rare.
+29. I love how he bends down with his head in the 'loaded' guillotine to screw off the end cap.
+30. I actually should do that.....
+31. Seriously, I’ve been catching and loving this one since it first came out.
+32. I mean, I'm glad that we support human spaceflight and that there were ghosts in the courtroom?
+33. Classic Leslie!
+34. This was definitely worth the $1000+ it cost to do
+35. Welcome back to H town!
+36. [NAME] and [NAME] were awesome.
+37. It's a perfectly cromulent scene.
+38. She still cute tho
+39. Yeah [NAME] is a pretty weird guy.
+40. People still expecting that are delusional regardless tbh. Messed up they'll never say what happened to Half Life but time to start using some context clues herr
+41. Pretty cool that the same building is there just a different use.
+42. We play some sexy football at times
+43. Won't continue. But the positive thing is it's not on fire shooting. It's great ball movement.
+44. I don’t think anyone on this show has ever joined a sport for exercise. [NAME] is awesome!!!
+45. You're free to believe all of that, but we're going to have to wait and see how it actually all plays out.
+46. I've had them for as long as I can remember ;)
+47. I watched that same movie. Very generic Christmas movie but I liked it
+48. Nobody would flop like that in practice
+49. A lot of people shit on wiki edits, but most of them give me a nice little chuckle
+
+Here is our goal: Represent the positive and negative emotions expressed for clustering, such as following: - **Negative Emotions:** anger, disappointment, disgust, embarrassment. - **Positive Emotions:** admiration, amusement, approval, gratitude, pride. Please cluster them into 14 groups, with each group containing at least 3 items. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"conveys disappointment and embarrassment"
+"expresses admiration and gratitude"
+
+
+Again, here's the goal: Represent the positive and negative emotions expressed for clustering, such as following: - **Negative Emotions:** anger, disappointment, disgust, embarrassment. - **Positive Emotions:** admiration, amusement, approval, gratitude, pride. Please cluster them into 14 groups, with each group containing at least 3 items.. Your responses are:
+- "
+Proposer model response:
+['"conveys gratitude and admiration"\n"expresses pride and approval"\n"conveys disappointment and embarrassment"\n"expresses anger and disgust"\n"conveys amusement and approval"\n"expresses gratitude and pride"\n"conveys disappointment and disgust"\n"expresses anger and embarrassment"\n"conveys amusement and admiration"\n"expresses approval and gratitude"\n"conveys pride and amusement"\n"expresses anger and disappointment"\n"conveys disgust and embarrassment"\n"expresses admiration and pride"']
+Proposer Cost: $0.000799
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. I think it was [NAME] and I'm not even convinced [NAME] caught on to it lol. Then he was made to be the moron.
+1. We play some sexy football at times
+2. Won't continue. But the positive thing is it's not on fire shooting. It's great ball movement.
+3. Yeah it isn't the same singer. 'Don't hug me I'm scared' is voiced by [NAME], the lead singer of KKB is [NAME]
+4. Not bad at all.
+5. No problem. It will seem impossible at first but just keep your cool! Best of luck
+6. This was definitely worth the $1000+ it cost to do
+7. Then leave him. You're not married and sexually comparability is a huge part of making a relationship work. Don't underestimate this my friend.
+8. I mean, I'm glad that we support human spaceflight and that there were ghosts in the courtroom?
+9. Same clothes and the door is black on the other side - looks so real!!
+10. That face too. Everything was perfect.
+11. A lot of people shit on wiki edits, but most of them give me a nice little chuckle
+12. I love how he bends down with his head in the 'loaded' guillotine to screw off the end cap.
+13. This look is fab you can't call everything cringe just because it's eureka
+14. And the Isle of Man!
+15. Great. Then he can levy a fine against person who took the photo.
+16. She still cute tho
+17. Pretty cool that the same building is there just a different use.
+18. >he's also super handsome *( ͡° ͜ʖ ͡°)*
+19. Her camel toe is strong!
+20. I'm sure there's a trash bag full of 'em around there somewhere. Probably next to the insulin. You want some?
+21. It’s interesting, especially if you do it every single day, but I’m here for it.
+22. I may have awful taste, i would want this cake
+23. No it’s not! It’s much easier to pull in to the space and leave it there.
+24. Yeah [NAME] is a pretty weird guy.
+25. People still expecting that are delusional regardless tbh. Messed up they'll never say what happened to Half Life but time to start using some context clues herr
+26. Following in the long tradition of network cop shows. Dat [NAME] ass tho.
+27. Seriously, I’ve been catching and loving this one since it first came out.
+28. Lets not forget that the Bay Area is the epicenter of the tech boom/revolution, and that will continue to be the case for the foreseeable future.
+29. She better!!! .....nobody else will
+30. I watched that same movie. Very generic Christmas movie but I liked it
+31. Seems kind of literal
+32. This has the makings of a great painting.
+33. You kinda arguing against him rn
+34. I appreciate that there's correct number of YES in there. It's so rare.
+35. [NAME] and [NAME] were awesome.
+36. Classic Leslie!
+37. Either that, or his wife is *really* attractive.
+38. You're free to believe all of that, but we're going to have to wait and see how it actually all plays out.
+39. It's a perfectly cromulent scene.
+40. I don’t think anyone on this show has ever joined a sport for exercise. [NAME] is awesome!!!
+41. I've had them for as long as I can remember ;)
+42. I actually should do that.....
+43. Copyrights on the individual track designs? Maybe but I'd like to see them
+44. Nobody would flop like that in practice
+45. Actually I got mine right when they were getting banned
+46. U guys are super cute together.
+47. Welcome back to H town!
+48. Must be a nice feeling...unless UDG is counted.
+49. I'm so happy that this worked for you! Go forth, and have unashamed sex in my honour.
+
+Here is our goal: Represent the positive and negative emotions expressed for clustering, such as following: - **Negative Emotions:** anger, disappointment, disgust, embarrassment. - **Positive Emotions:** admiration, amusement, approval, gratitude, pride. Please cluster them into 14 groups, with each group containing at least 3 items. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"conveys pride and amusement"
+"conveys disappointment and embarrassment"
+
+
+Again, here's the goal: Represent the positive and negative emotions expressed for clustering, such as following: - **Negative Emotions:** anger, disappointment, disgust, embarrassment. - **Positive Emotions:** admiration, amusement, approval, gratitude, pride. Please cluster them into 14 groups, with each group containing at least 3 items.. Your responses are:
+- "
+Proposer model response:
+['"conveys amusement and approval"\n"conveys gratitude and pride"\n"conveys disappointment and embarrassment"\n"conveys anger and disgust"']
+Proposer Cost: $0.000695
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. Nobody would flop like that in practice
+1. I love how he bends down with his head in the 'loaded' guillotine to screw off the end cap.
+2. It's a perfectly cromulent scene.
+3. I'm sure there's a trash bag full of 'em around there somewhere. Probably next to the insulin. You want some?
+4. Yeah it isn't the same singer. 'Don't hug me I'm scared' is voiced by [NAME], the lead singer of KKB is [NAME]
+5. I mean, I'm glad that we support human spaceflight and that there were ghosts in the courtroom?
+6. She better!!! .....nobody else will
+7. Lets not forget that the Bay Area is the epicenter of the tech boom/revolution, and that will continue to be the case for the foreseeable future.
+8. Won't continue. But the positive thing is it's not on fire shooting. It's great ball movement.
+9. Copyrights on the individual track designs? Maybe but I'd like to see them
+10. Her camel toe is strong!
+11. No it’s not! It’s much easier to pull in to the space and leave it there.
+12. This has the makings of a great painting.
+13. Then leave him. You're not married and sexually comparability is a huge part of making a relationship work. Don't underestimate this my friend.
+14. U guys are super cute together.
+15. People still expecting that are delusional regardless tbh. Messed up they'll never say what happened to Half Life but time to start using some context clues herr
+16. Seriously, I’ve been catching and loving this one since it first came out.
+17. That face too. Everything was perfect.
+18. She still cute tho
+19. Must be a nice feeling...unless UDG is counted.
+20. I appreciate that there's correct number of YES in there. It's so rare.
+21. And the Isle of Man!
+22. No problem. It will seem impossible at first but just keep your cool! Best of luck
+23. You kinda arguing against him rn
+24. I don’t think anyone on this show has ever joined a sport for exercise. [NAME] is awesome!!!
+25. >he's also super handsome *( ͡° ͜ʖ ͡°)*
+26. Following in the long tradition of network cop shows. Dat [NAME] ass tho.
+27. It’s interesting, especially if you do it every single day, but I’m here for it.
+28. Classic Leslie!
+29. A lot of people shit on wiki edits, but most of them give me a nice little chuckle
+30. We play some sexy football at times
+31. Either that, or his wife is *really* attractive.
+32. I may have awful taste, i would want this cake
+33. I've had them for as long as I can remember ;)
+34. You're free to believe all of that, but we're going to have to wait and see how it actually all plays out.
+35. Same clothes and the door is black on the other side - looks so real!!
+36. I watched that same movie. Very generic Christmas movie but I liked it
+37. I'm so happy that this worked for you! Go forth, and have unashamed sex in my honour.
+38. [NAME] and [NAME] were awesome.
+39. This look is fab you can't call everything cringe just because it's eureka
+40. Actually I got mine right when they were getting banned
+41. Not bad at all.
+42. Pretty cool that the same building is there just a different use.
+43. This was definitely worth the $1000+ it cost to do
+44. I actually should do that.....
+45. I think it was [NAME] and I'm not even convinced [NAME] caught on to it lol. Then he was made to be the moron.
+46. Seems kind of literal
+47. Yeah [NAME] is a pretty weird guy.
+48. Welcome back to H town!
+49. Great. Then he can levy a fine against person who took the photo.
+
+Here is our goal: Represent the positive and negative emotions expressed for clustering, such as following: - **Negative Emotions:** anger, disappointment, disgust, embarrassment. - **Positive Emotions:** admiration, amusement, approval, gratitude, pride. Please cluster them into 14 groups, with each group containing at least 3 items. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"displays amusement and pride"
+"displays disappointment and embarrassment"
+
+
+Again, here's the goal: Represent the positive and negative emotions expressed for clustering, such as following: - **Negative Emotions:** anger, disappointment, disgust, embarrassment. - **Positive Emotions:** admiration, amusement, approval, gratitude, pride. Please cluster them into 14 groups, with each group containing at least 3 items.. Your responses are:
+- "
+Proposer model response:
+['"expresses admiration and gratitude"\n- "conveys disappointment and anger"\n- "displays pride and amusement"\n- "shows disgust and embarrassment"\n- "expresses approval and gratitude"\n- "conveys anger and disappointment"\n- "displays amusement and pride"\n- "shows disgust and embarrassment"\n- "expresses approval and gratitude"\n- "conveys anger and disappointment"\n- "displays amusement and pride"\n- "shows disgust and embarrassment"\n- "expresses approval and gratitude"']
+Proposer Cost: $0.000803
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. Nobody would flop like that in practice
+1. This was definitely worth the $1000+ it cost to do
+2. Actually I got mine right when they were getting banned
+3. Pretty cool that the same building is there just a different use.
+4. Great. Then he can levy a fine against person who took the photo.
+5. She better!!! .....nobody else will
+6. I've had them for as long as I can remember ;)
+7. We play some sexy football at times
+8. Copyrights on the individual track designs? Maybe but I'd like to see them
+9. I may have awful taste, i would want this cake
+10. This look is fab you can't call everything cringe just because it's eureka
+11. U guys are super cute together.
+12. Either that, or his wife is *really* attractive.
+13. I think it was [NAME] and I'm not even convinced [NAME] caught on to it lol. Then he was made to be the moron.
+14. People still expecting that are delusional regardless tbh. Messed up they'll never say what happened to Half Life but time to start using some context clues herr
+15. Must be a nice feeling...unless UDG is counted.
+16. Yeah it isn't the same singer. 'Don't hug me I'm scared' is voiced by [NAME], the lead singer of KKB is [NAME]
+17. Seems kind of literal
+18. Yeah [NAME] is a pretty weird guy.
+19. [NAME] and [NAME] were awesome.
+20. Following in the long tradition of network cop shows. Dat [NAME] ass tho.
+21. I'm sure there's a trash bag full of 'em around there somewhere. Probably next to the insulin. You want some?
+22. I watched that same movie. Very generic Christmas movie but I liked it
+23. No it’s not! It’s much easier to pull in to the space and leave it there.
+24. I appreciate that there's correct number of YES in there. It's so rare.
+25. >he's also super handsome *( ͡° ͜ʖ ͡°)*
+26. I'm so happy that this worked for you! Go forth, and have unashamed sex in my honour.
+27. And the Isle of Man!
+28. No problem. It will seem impossible at first but just keep your cool! Best of luck
+29. This has the makings of a great painting.
+30. Classic Leslie!
+31. It’s interesting, especially if you do it every single day, but I’m here for it.
+32. A lot of people shit on wiki edits, but most of them give me a nice little chuckle
+33. Not bad at all.
+34. Seriously, I’ve been catching and loving this one since it first came out.
+35. It's a perfectly cromulent scene.
+36. I don’t think anyone on this show has ever joined a sport for exercise. [NAME] is awesome!!!
+37. She still cute tho
+38. Same clothes and the door is black on the other side - looks so real!!
+39. You kinda arguing against him rn
+40. That face too. Everything was perfect.
+41. Lets not forget that the Bay Area is the epicenter of the tech boom/revolution, and that will continue to be the case for the foreseeable future.
+42. Won't continue. But the positive thing is it's not on fire shooting. It's great ball movement.
+43. Her camel toe is strong!
+44. Welcome back to H town!
+45. Then leave him. You're not married and sexually comparability is a huge part of making a relationship work. Don't underestimate this my friend.
+46. You're free to believe all of that, but we're going to have to wait and see how it actually all plays out.
+47. I love how he bends down with his head in the 'loaded' guillotine to screw off the end cap.
+48. I actually should do that.....
+49. I mean, I'm glad that we support human spaceflight and that there were ghosts in the courtroom?
+
+Here is our goal: Represent the positive and negative emotions expressed for clustering, such as following: - **Negative Emotions:** anger, disappointment, disgust, embarrassment. - **Positive Emotions:** admiration, amusement, approval, gratitude, pride. Please cluster them into 14 groups, with each group containing at least 3 items. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"displays disappointment and embarrassment"
+"expresses anger and disgust"
+
+
+Again, here's the goal: Represent the positive and negative emotions expressed for clustering, such as following: - **Negative Emotions:** anger, disappointment, disgust, embarrassment. - **Positive Emotions:** admiration, amusement, approval, gratitude, pride. Please cluster them into 14 groups, with each group containing at least 3 items.. Your responses are:
+- "
+Proposer model response:
+['"expresses gratitude and admiration"\n- "displays pride and approval"\n- "conveys amusement and approval"\n- "expresses disappointment and embarrassment"\n- "displays anger and disgust"\n- "conveys gratitude and pride"\n- "expresses amusement and admiration"\n- "displays approval and pride"\n- "conveys gratitude and amusement"\n- "expresses disappointment and anger"\n- "displays disgust and embarrassment"\n- "conveys pride and admiration"\n- "expresses amusement and gratitude"\n- "displays approval and amusement"']
+Proposer Cost: $0.000819
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. Classic Leslie!
+1. Then leave him. You're not married and sexually comparability is a huge part of making a relationship work. Don't underestimate this my friend.
+2. I watched that same movie. Very generic Christmas movie but I liked it
+3. I actually should do that.....
+4. Her camel toe is strong!
+5. That face too. Everything was perfect.
+6. Must be a nice feeling...unless UDG is counted.
+7. I may have awful taste, i would want this cake
+8. I don’t think anyone on this show has ever joined a sport for exercise. [NAME] is awesome!!!
+9. Nobody would flop like that in practice
+10. I think it was [NAME] and I'm not even convinced [NAME] caught on to it lol. Then he was made to be the moron.
+11. Not bad at all.
+12. You kinda arguing against him rn
+13. Yeah it isn't the same singer. 'Don't hug me I'm scared' is voiced by [NAME], the lead singer of KKB is [NAME]
+14. She better!!! .....nobody else will
+15. Lets not forget that the Bay Area is the epicenter of the tech boom/revolution, and that will continue to be the case for the foreseeable future.
+16. I'm so happy that this worked for you! Go forth, and have unashamed sex in my honour.
+17. Actually I got mine right when they were getting banned
+18. It's a perfectly cromulent scene.
+19. No it’s not! It’s much easier to pull in to the space and leave it there.
+20. Following in the long tradition of network cop shows. Dat [NAME] ass tho.
+21. She still cute tho
+22. Same clothes and the door is black on the other side - looks so real!!
+23. I'm sure there's a trash bag full of 'em around there somewhere. Probably next to the insulin. You want some?
+24. We play some sexy football at times
+25. This has the makings of a great painting.
+26. Seriously, I’ve been catching and loving this one since it first came out.
+27. Great. Then he can levy a fine against person who took the photo.
+28. A lot of people shit on wiki edits, but most of them give me a nice little chuckle
+29. Copyrights on the individual track designs? Maybe but I'd like to see them
+30. This was definitely worth the $1000+ it cost to do
+31. People still expecting that are delusional regardless tbh. Messed up they'll never say what happened to Half Life but time to start using some context clues herr
+32. I appreciate that there's correct number of YES in there. It's so rare.
+33. Seems kind of literal
+34. U guys are super cute together.
+35. And the Isle of Man!
+36. It’s interesting, especially if you do it every single day, but I’m here for it.
+37. Welcome back to H town!
+38. This look is fab you can't call everything cringe just because it's eureka
+39. You're free to believe all of that, but we're going to have to wait and see how it actually all plays out.
+40. I mean, I'm glad that we support human spaceflight and that there were ghosts in the courtroom?
+41. Won't continue. But the positive thing is it's not on fire shooting. It's great ball movement.
+42. Pretty cool that the same building is there just a different use.
+43. No problem. It will seem impossible at first but just keep your cool! Best of luck
+44. [NAME] and [NAME] were awesome.
+45. >he's also super handsome *( ͡° ͜ʖ ͡°)*
+46. I love how he bends down with his head in the 'loaded' guillotine to screw off the end cap.
+47. I've had them for as long as I can remember ;)
+48. Either that, or his wife is *really* attractive.
+49. Yeah [NAME] is a pretty weird guy.
+
+Here is our goal: Represent the positive and negative emotions expressed for clustering, such as following: - **Negative Emotions:** anger, disappointment, disgust, embarrassment. - **Positive Emotions:** admiration, amusement, approval, gratitude, pride. Please cluster them into 14 groups, with each group containing at least 3 items. 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"expresses admiration and gratitude"
+"conveys approval and gratitude"
+
+
+Again, here's the goal: Represent the positive and negative emotions expressed for clustering, such as following: - **Negative Emotions:** anger, disappointment, disgust, embarrassment. - **Positive Emotions:** admiration, amusement, approval, gratitude, pride. Please cluster them into 14 groups, with each group containing at least 3 items.. Your responses are:
+- "
+Proposer model response:
+['- "expresses amusement and approval"\n- "conveys admiration and pride"\n- "reflects disappointment and embarrassment"\n- "shows anger and disgust"\n- "displays gratitude and pride"\n- "expresses amusement and gratitude"\n- "conveys admiration and approval"\n- "reflects disappointment and disgust"\n- "shows anger and embarrassment"\n- "displays amusement and pride"\n- "expresses admiration and gratitude"\n- "conveys approval and pride"\n- "reflects disappointment and anger"']
+Proposer Cost: $0.000806
+49 descriptions proposed in total. Here are the descriptions:
+expresses amusement and gratitude
+Conveys disappointment and embarrassment
+- "Expresses admiration and gratitude
+Expresses admiration and gratitude
+shows pride and approval
+reflects disappointment and embarrassment
+Shows pride and amusement
+expresses approval and gratitude
+reflects anger and embarrassment
+displays pride and amusement
+expresses admiration and pride
+displays disappointment and embarrassment
+conveys disappointment and embarrassment
+shows approval and gratitude
+reflects anger and disgust
+"expresses admiration and gratitude
+conveys anger and disgust
+shows admiration and gratitude
+- "expresses admiration and gratitude
+shows pride and amusement
+Shows disappointment and embarrassment
+reflects amusement and admiration
+displays anger and disgust
+"expresses gratitude and admiration
+expresses gratitude and pride
+Reflects anger and disgust
+Conveys pride and approval
+conveys pride and approval
+conveys disappointment and anger
+conveys disappointment and disgust
+displays pride and approval
+shows disgust and embarrassment
+conveys pride and amusement
+expresses disappointment and embarrassment
+displays approval and pride
+reflects disappointment and disgust
+displays gratitude and pride
+conveys approval and gratitude
+expresses anger and disgust
+expresses amusement and admiration
+- "expresses amusement and approval
+conveys gratitude and pride
+displays amusement and pride
+expresses admiration and gratitude
+shows anger and disgust
+conveys admiration and approval
+"conveys amusement and approval"
+"conveys gratitude and pride"
+"conveys disappointment and embarrassment"
+"conveys anger and disgust
+"conveys gratitude and admiration"
+"expresses pride and approval"
+"conveys disappointment and embarrassment"
+"expresses anger and disgust"
+"conveys amusement and approval"
+"expresses gratitude and pride"
+"conveys disappointment and disgust"
+"expresses anger and embarrassment"
+"conveys amusement and admiration"
+"expresses approval and gratitude"
+"conveys pride and amusement"
+"expresses anger and disappointment"
+"conveys disgust and embarrassment"
+"expresses admiration and pride
+conveys anger and disappointment
+GPTAssigner Cost 0.402355500000004 $
+Stage Assign assign
+Assigned all recall: 0.628968253968254
+Assigned all precision: 0.07570977917981073
+Assigned description: expresses amusement and gratitude. recall: 0.14682539682539683 precision: 0.0
+Assigned description: Conveys disappointment and embarrassment. recall: 0.1984126984126984 precision: 0.01
+Assigned description: - "Expresses admiration and gratitude. recall: 0.08531746031746032 precision: 0.0
+Assigned description: Expresses admiration and gratitude. recall: 0.1388888888888889 precision: 0.0
+Assigned description: shows pride and approval. recall: 0.07341269841269842 precision: 0.0
+Assigned description: reflects disappointment and embarrassment. recall: 0.18253968253968253 precision: 0.0
+Assigned description: Shows pride and amusement. recall: 0.07738095238095238 precision: 0.0
+Assigned description: expresses approval and gratitude. recall: 0.1388888888888889 precision: 0.0
+Assigned description: reflects anger and embarrassment. recall: 0.06547619047619048 precision: 0.0
+Assigned description: displays pride and amusement. recall: 0.05357142857142857 precision: 0.0
+Assigned description: expresses admiration and pride. recall: 0.1130952380952381 precision: 0.0
+Assigned description: displays disappointment and embarrassment. recall: 0.06746031746031746 precision: 0.0
+Assigned description: conveys disappointment and embarrassment. recall: 0.23412698412698413 precision: 0.0
+Assigned description: shows approval and gratitude. recall: 0.1111111111111111 precision: 0.0
+Assigned description: reflects anger and disgust. recall: 0.1349206349206349 precision: 0.0
+Assigned description: "expresses admiration and gratitude. recall: 0.10515873015873016 precision: 0.0
+Assigned description: conveys anger and disgust. recall: 0.15079365079365079 precision: 0.0
+Assigned description: shows admiration and gratitude. recall: 0.11706349206349206 precision: 0.0
+Assigned description: - "expresses admiration and gratitude. recall: 0.07738095238095238 precision: 0.0
+Assigned description: shows pride and amusement. recall: 0.03373015873015873 precision: 0.0
+Assigned description: Shows disappointment and embarrassment. recall: 0.15674603174603174 precision: 0.012658227848101266
+Assigned description: reflects amusement and admiration. recall: 0.12896825396825398 precision: 0.0
+Assigned description: displays anger and disgust. recall: 0.11904761904761904 precision: 0.0
+Assigned description: "expresses gratitude and admiration. recall: 0.06746031746031746 precision: 0.0
+Assigned description: expresses gratitude and pride. recall: 0.05555555555555555 precision: 0.0
+Assigned description: Reflects anger and disgust. recall: 0.1527777777777778 precision: 0.0
+Assigned description: Conveys pride and approval. recall: 0.13095238095238096 precision: 0.0
+Assigned description: conveys pride and approval. recall: 0.09523809523809523 precision: 0.0
+Assigned description: conveys disappointment and anger. recall: 0.2638888888888889 precision: 0.045112781954887216
+Assigned description: conveys disappointment and disgust. recall: 0.24801587301587302 precision: 0.016
+Assigned description: displays pride and approval. recall: 0.07539682539682539 precision: 0.0
+Assigned description: shows disgust and embarrassment. recall: 0.125 precision: 0.015873015873015872
+Assigned description: conveys pride and amusement. recall: 0.13095238095238096 precision: 0.0
+Assigned description: expresses disappointment and embarrassment. recall: 0.16468253968253968 precision: 0.012048192771084338
+Assigned description: displays approval and pride. recall: 0.0496031746031746 precision: 0.0
+Assigned description: reflects disappointment and disgust. recall: 0.17857142857142858 precision: 0.0
+Assigned description: displays gratitude and pride. recall: 0.05357142857142857 precision: 0.0
+Assigned description: conveys approval and gratitude. recall: 0.11507936507936507 precision: 0.0
+Assigned description: expresses anger and disgust. recall: 0.17857142857142858 precision: 0.011111111111111112
+Assigned description: expresses amusement and admiration. recall: 0.16865079365079366 precision: 0.023529411764705882
+Assigned description: - "expresses amusement and approval. recall: 0.1349206349206349 precision: 0.04411764705882353
+Assigned description: conveys gratitude and pride. recall: 0.06349206349206349 precision: 0.0
+Assigned description: displays amusement and pride. recall: 0.04563492063492063 precision: 0.0
+Assigned description: expresses admiration and gratitude. recall: 0.1388888888888889 precision: 0.0
+Assigned description: shows anger and disgust. recall: 0.1488095238095238 precision: 0.0
+Assigned description: conveys admiration and approval. recall: 0.18452380952380953 precision: 0.03225806451612903
+Assigned description: "conveys amusement and approval"
+"conveys gratitude and pride"
+"conveys disappointment and embarrassment"
+"conveys anger and disgust. recall: 0.13690476190476192 precision: 0.0
+Assigned description: "conveys gratitude and admiration"
+"expresses pride and approval"
+"conveys disappointment and embarrassment"
+"expresses anger and disgust"
+"conveys amusement and approval"
+"expresses gratitude and pride"
+"conveys disappointment and disgust"
+"expresses anger and embarrassment"
+"conveys amusement and admiration"
+"expresses approval and gratitude"
+"conveys pride and amusement"
+"expresses anger and disappointment"
+"conveys disgust and embarrassment"
+"expresses admiration and pride. recall: 0.1626984126984127 precision: 0.036585365853658534
+Assigned description: conveys anger and disappointment. recall: 0.1746031746031746 precision: 0.0
+Dropping 0 descriptions because they are too popular or too unpopular:
+Stage select select
+Unmatched count: 256
+Description: conveys disappointment and anger. Count: 133
+Description: - "expresses amusement and approval. Count: 67
+Description: "conveys gratitude and admiration"
+"expresses pride and approval"
+"conveys disappointment and embarrassment"
+"expresses anger and disgust"
+"conveys amusement and approval"
+"expresses gratitude and pride"
+"conveys disappointment and disgust"
+"expresses anger and embarrassment"
+"conveys amusement and admiration"
+"expresses approval and gratitude"
+"conveys pride and amusement"
+"expresses anger and disappointment"
+"conveys disgust and embarrassment"
+"expresses admiration and pride. Count: 48
+Clustering results saved at:  experiments/goemotion/2025-12-05-09-31-56

@@ -1,0 +1,1565 @@
+9hr 30 ms 
+Unmatched count: 417 -> 417
+
+Here's a rough estimate of the cost; it might not be accurate and we are not responsible for any cost incurred.
+Each round costs 1.86, proposer spending 0.00, assigner spending 1.86. The final assignment costs 0.00.
+Total cost is 3.73
+Do you want to continue? (y/n)Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. Uh oh Ben Simmons will also have a Steph Curry type season 76ers better not trade him now https://t.co/kkpzfcTcSH
+1. @ShareZone5 @StockpickB You are a right bundle of laughs to take to the pictures Draft!
+2. @DonaldJTrumpJr If only he had a press Corp in the house...oh wait! Shut up Jr! Time to get fitted for those lovely orange jumpsuits! If you can't be orange anymore at least you can wear it!!!
+3. Mental shoot out ends. Silent pause. Sirens start 🚨 Always so perfectly timed 🚔🚓👍🏽 #LineOfDuty #LineofDuty6 #LOD6 #LOD
+4. "Should I wear my lime green pants?" dad its 4th of july...
+5. “it’s hotter in the america right now and it feels fine british people are just being dramatic 🙄” QUICK ARE YOU SAYING THIS INSIDE UR AIR CONDITIONED HOUSE ‼️‼️‼️
+6. Gosh sunderland twitter is a fun place to be tonight isn't it. One game. One game!!!
+7. victoria has a crush on maluma
+8. Do the #Hokies really have to play 5 against 6 tonight? Come on stripes
+9. I've been doing physics for 40 minutes I think I deserve a break 😂😂😂😭 I'm never going to get it all done at this rate
+10. it’s amazing how many people get mad at you for simply Raising Questions, such as “what if the vaccine makes your balls inflate like helium balloons and cause you to float away to never be seen again”
+11. i love ingesting poison and then wondering why my tummy is rumbling the next morning
+12. Today my pop-pop told me I was not “forced” to go to college 🙃 okay sure sureeee
+13. Where is the Chancellor? Please check the back of your sofas.
+14. Someone should’ve had me committed the day I decided to buy a pair of non-stretch denim jeans
+15. It’s been a blissful 2.5 hours of sleep tonight
+16. Lil Pump is the Nelson Mandela of our generation
+17. 🌶 Spiced Coconut curry 🥥
+
+.
+A weekend spent with friends brings a week of content... or something like that 😜
+
+.
+Started the weekend off with this yummy morsel, With was a fusion of miso sesame aubergine 🍆, broccoli… https://t.co/zyWiA0EX4u
+18. As if I didn't know this anyway!
+I'm an Owl according to the #BBCBodyClock quiz – what are you? https://t.co/vM07K82CTg
+19. @cassieecote413 you can copy mine
+20. dont you love it when youre just chilling in your room and then theres a spider and you kill it but when you kill it you spill soda all over your keyboard yeah me too
+21. I love when I learn about stuff I've apparently done and said from people😂
+22. fully vaxxed feeling very girlboss
+23. everyone pls stop shooting fireworks my dog is scared :(
+24. only have to physically be in uni for an hour a week looool mmmm take my 9k xxxxx
+25. can't wait til a bunch of pudgy suburban dads save the day with their firearms
+26. I’ve always known #Bez is my spirit animal but seeing the mess he makes on @MasterChefUK confirms it 100% what a legend that man is
+27. @Dancruz07 Sureeeeeee you do
+28. Just won 3 cents on HQ words...early retirement here I come 😍
+29. @terryflewers @lfcsonny Has he given any clarification regarding what age Harvey Elliott needs to be before you can tackle him?
+30. don't cry because it happened, smile because it's over &lt;3
+31. just found ive been walking on a broken foot for the past 6 months 🤪🤪🤪
+32. Ok, so @bytereview and I decided to record on the evening of the 6th, just as absolutely nothing newsworthy was happening! Perfect timing as always, to go over some of the best ITSBUPs of 2020 - and how we're settling into 2021! Listen: https://t.co/oaPLwrtcHP https://t.co/za3EHuqcWh
+33. Don’t you just love it when they dig up your road at 8:30am on a Saturday 😠
+34. Mad how many cars they make now without indicators 🙃
+35. Synthwave communities really love pessimism don't they haha
+Any upbeat energy and people get upset at ya
+36. do people with clear skin feel accomplished?? superior??? comfortable in their own skin???? what’s that like lmfao
+37. For a good laugh, follow me over on @vsheltonsports to see my best attempt at covering sports business news for class this semester.
+38. Football is turning into an anatomy lesson. COOL
+39. Are GoFundMe accounts a form of socialism?  I don’t have enough money to pay my bills, so let me create an account an ask for money to help pay my bills. ??
+40. Do you think anyone on Bachelor in Paradise has seen Oscar winner Parasite?
+41. @Moffstovoi Well done! With the better coaching now available, can we expect a decent wee victory tomorrow? 😅
+42. every time i send my mom pictures of me and one of my friends doing fun things the first question she asks is if we're on a date what are you trying to tell me mother
+43. James Harden is allowed to travel every time he drives apparently
+44. @richardosman @GMB @susannareid100 @piersmorgan You've a book out? I hadn't realised.
+
+Yes, you've already read this 8763 times this week, but hey.
+45. I unsubscribe from being an adult, its not for me
+46. Sooo... @adamlevine was that "Nice!" and double fist pump for the show or @shakira s ass that you were checking out? @NBCTheVoice
+47. Day 2348 in lockdown. Never in my life did I think I would utter the words "I've disinfected the chocolate". #coronalockdownuk
+48. Yay - snow day, I can work from home - oh wait....
+49. “I don’t really like partying” Oh is that why you’ve gone to parties twice in the last week? Because you just can’t stand it? Makes complete sense.
+
+Here is our goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.'] 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"exaggerates for effect"
+"employs clever understatement"
+
+
+Again, here's the goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.']. Your responses are:
+- "
+Proposer model response:
+['- "employs biting sarcasm"\n- "utilizes subtle irony"\n- "employs sharp wit"\n- "uses exaggerated satire"\n- "employs dry humor"\n- "employs rhetorical questions"']
+Proposer Cost: $0.000991
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. everyone pls stop shooting fireworks my dog is scared :(
+1. every time i send my mom pictures of me and one of my friends doing fun things the first question she asks is if we're on a date what are you trying to tell me mother
+2. James Harden is allowed to travel every time he drives apparently
+3. @cassieecote413 you can copy mine
+4. only have to physically be in uni for an hour a week looool mmmm take my 9k xxxxx
+5. @Dancruz07 Sureeeeeee you do
+6. Mad how many cars they make now without indicators 🙃
+7. Mental shoot out ends. Silent pause. Sirens start 🚨 Always so perfectly timed 🚔🚓👍🏽 #LineOfDuty #LineofDuty6 #LOD6 #LOD
+8. Ok, so @bytereview and I decided to record on the evening of the 6th, just as absolutely nothing newsworthy was happening! Perfect timing as always, to go over some of the best ITSBUPs of 2020 - and how we're settling into 2021! Listen: https://t.co/oaPLwrtcHP https://t.co/za3EHuqcWh
+9. it’s amazing how many people get mad at you for simply Raising Questions, such as “what if the vaccine makes your balls inflate like helium balloons and cause you to float away to never be seen again”
+10. Do the #Hokies really have to play 5 against 6 tonight? Come on stripes
+11. “I don’t really like partying” Oh is that why you’ve gone to parties twice in the last week? Because you just can’t stand it? Makes complete sense.
+12. @terryflewers @lfcsonny Has he given any clarification regarding what age Harvey Elliott needs to be before you can tackle him?
+13. I love when I learn about stuff I've apparently done and said from people😂
+14. It’s been a blissful 2.5 hours of sleep tonight
+15. dont you love it when youre just chilling in your room and then theres a spider and you kill it but when you kill it you spill soda all over your keyboard yeah me too
+16. Football is turning into an anatomy lesson. COOL
+17. @Moffstovoi Well done! With the better coaching now available, can we expect a decent wee victory tomorrow? 😅
+18. Gosh sunderland twitter is a fun place to be tonight isn't it. One game. One game!!!
+19. Today my pop-pop told me I was not “forced” to go to college 🙃 okay sure sureeee
+20. Uh oh Ben Simmons will also have a Steph Curry type season 76ers better not trade him now https://t.co/kkpzfcTcSH
+21. “it’s hotter in the america right now and it feels fine british people are just being dramatic 🙄” QUICK ARE YOU SAYING THIS INSIDE UR AIR CONDITIONED HOUSE ‼️‼️‼️
+22. Where is the Chancellor? Please check the back of your sofas.
+23. Lil Pump is the Nelson Mandela of our generation
+24. Are GoFundMe accounts a form of socialism?  I don’t have enough money to pay my bills, so let me create an account an ask for money to help pay my bills. ??
+25. Do you think anyone on Bachelor in Paradise has seen Oscar winner Parasite?
+26. @ShareZone5 @StockpickB You are a right bundle of laughs to take to the pictures Draft!
+27. just found ive been walking on a broken foot for the past 6 months 🤪🤪🤪
+28. Someone should’ve had me committed the day I decided to buy a pair of non-stretch denim jeans
+29. victoria has a crush on maluma
+30. Day 2348 in lockdown. Never in my life did I think I would utter the words "I've disinfected the chocolate". #coronalockdownuk
+31. As if I didn't know this anyway!
+I'm an Owl according to the #BBCBodyClock quiz – what are you? https://t.co/vM07K82CTg
+32. 🌶 Spiced Coconut curry 🥥
+
+.
+A weekend spent with friends brings a week of content... or something like that 😜
+
+.
+Started the weekend off with this yummy morsel, With was a fusion of miso sesame aubergine 🍆, broccoli… https://t.co/zyWiA0EX4u
+33. "Should I wear my lime green pants?" dad its 4th of july...
+34. Just won 3 cents on HQ words...early retirement here I come 😍
+35. do people with clear skin feel accomplished?? superior??? comfortable in their own skin???? what’s that like lmfao
+36. Don’t you just love it when they dig up your road at 8:30am on a Saturday 😠
+37. fully vaxxed feeling very girlboss
+38. I unsubscribe from being an adult, its not for me
+39. For a good laugh, follow me over on @vsheltonsports to see my best attempt at covering sports business news for class this semester.
+40. @richardosman @GMB @susannareid100 @piersmorgan You've a book out? I hadn't realised.
+
+Yes, you've already read this 8763 times this week, but hey.
+41. Sooo... @adamlevine was that "Nice!" and double fist pump for the show or @shakira s ass that you were checking out? @NBCTheVoice
+42. don't cry because it happened, smile because it's over &lt;3
+43. @DonaldJTrumpJr If only he had a press Corp in the house...oh wait! Shut up Jr! Time to get fitted for those lovely orange jumpsuits! If you can't be orange anymore at least you can wear it!!!
+44. Yay - snow day, I can work from home - oh wait....
+45. i love ingesting poison and then wondering why my tummy is rumbling the next morning
+46. I’ve always known #Bez is my spirit animal but seeing the mess he makes on @MasterChefUK confirms it 100% what a legend that man is
+47. Synthwave communities really love pessimism don't they haha
+Any upbeat energy and people get upset at ya
+48. can't wait til a bunch of pudgy suburban dads save the day with their firearms
+49. I've been doing physics for 40 minutes I think I deserve a break 😂😂😂😭 I'm never going to get it all done at this rate
+
+Here is our goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.'] 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"exaggerates for effect"
+"- "employs biting sarcasm"
+
+
+Again, here's the goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.']. Your responses are:
+- "
+Proposer model response:
+['- "employs biting sarcasm"\n- "utilizes subtle irony"\n- "employs exaggerated satire"\n- "employs rhetorical questions"\n- "employs understated humor"\n- "employs overstatement for effect"']
+Proposer Cost: $0.000997
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. Yay - snow day, I can work from home - oh wait....
+1. @terryflewers @lfcsonny Has he given any clarification regarding what age Harvey Elliott needs to be before you can tackle him?
+2. For a good laugh, follow me over on @vsheltonsports to see my best attempt at covering sports business news for class this semester.
+3. Uh oh Ben Simmons will also have a Steph Curry type season 76ers better not trade him now https://t.co/kkpzfcTcSH
+4. @cassieecote413 you can copy mine
+5. Ok, so @bytereview and I decided to record on the evening of the 6th, just as absolutely nothing newsworthy was happening! Perfect timing as always, to go over some of the best ITSBUPs of 2020 - and how we're settling into 2021! Listen: https://t.co/oaPLwrtcHP https://t.co/za3EHuqcWh
+6. victoria has a crush on maluma
+7. Someone should’ve had me committed the day I decided to buy a pair of non-stretch denim jeans
+8. James Harden is allowed to travel every time he drives apparently
+9. @DonaldJTrumpJr If only he had a press Corp in the house...oh wait! Shut up Jr! Time to get fitted for those lovely orange jumpsuits! If you can't be orange anymore at least you can wear it!!!
+10. Today my pop-pop told me I was not “forced” to go to college 🙃 okay sure sureeee
+11. Lil Pump is the Nelson Mandela of our generation
+12. 🌶 Spiced Coconut curry 🥥
+
+.
+A weekend spent with friends brings a week of content... or something like that 😜
+
+.
+Started the weekend off with this yummy morsel, With was a fusion of miso sesame aubergine 🍆, broccoli… https://t.co/zyWiA0EX4u
+13. Mental shoot out ends. Silent pause. Sirens start 🚨 Always so perfectly timed 🚔🚓👍🏽 #LineOfDuty #LineofDuty6 #LOD6 #LOD
+14. I’ve always known #Bez is my spirit animal but seeing the mess he makes on @MasterChefUK confirms it 100% what a legend that man is
+15. Do you think anyone on Bachelor in Paradise has seen Oscar winner Parasite?
+16. just found ive been walking on a broken foot for the past 6 months 🤪🤪🤪
+17. Do the #Hokies really have to play 5 against 6 tonight? Come on stripes
+18. Football is turning into an anatomy lesson. COOL
+19. can't wait til a bunch of pudgy suburban dads save the day with their firearms
+20. Just won 3 cents on HQ words...early retirement here I come 😍
+21. It’s been a blissful 2.5 hours of sleep tonight
+22. @Dancruz07 Sureeeeeee you do
+23. "Should I wear my lime green pants?" dad its 4th of july...
+24. @richardosman @GMB @susannareid100 @piersmorgan You've a book out? I hadn't realised.
+
+Yes, you've already read this 8763 times this week, but hey.
+25. Gosh sunderland twitter is a fun place to be tonight isn't it. One game. One game!!!
+26. @ShareZone5 @StockpickB You are a right bundle of laughs to take to the pictures Draft!
+27. “it’s hotter in the america right now and it feels fine british people are just being dramatic 🙄” QUICK ARE YOU SAYING THIS INSIDE UR AIR CONDITIONED HOUSE ‼️‼️‼️
+28. Don’t you just love it when they dig up your road at 8:30am on a Saturday 😠
+29. “I don’t really like partying” Oh is that why you’ve gone to parties twice in the last week? Because you just can’t stand it? Makes complete sense.
+30. every time i send my mom pictures of me and one of my friends doing fun things the first question she asks is if we're on a date what are you trying to tell me mother
+31. fully vaxxed feeling very girlboss
+32. Where is the Chancellor? Please check the back of your sofas.
+33. Sooo... @adamlevine was that "Nice!" and double fist pump for the show or @shakira s ass that you were checking out? @NBCTheVoice
+34. I unsubscribe from being an adult, its not for me
+35. it’s amazing how many people get mad at you for simply Raising Questions, such as “what if the vaccine makes your balls inflate like helium balloons and cause you to float away to never be seen again”
+36. Day 2348 in lockdown. Never in my life did I think I would utter the words "I've disinfected the chocolate". #coronalockdownuk
+37. I've been doing physics for 40 minutes I think I deserve a break 😂😂😂😭 I'm never going to get it all done at this rate
+38. do people with clear skin feel accomplished?? superior??? comfortable in their own skin???? what’s that like lmfao
+39. I love when I learn about stuff I've apparently done and said from people😂
+40. i love ingesting poison and then wondering why my tummy is rumbling the next morning
+41. only have to physically be in uni for an hour a week looool mmmm take my 9k xxxxx
+42. @Moffstovoi Well done! With the better coaching now available, can we expect a decent wee victory tomorrow? 😅
+43. Mad how many cars they make now without indicators 🙃
+44. don't cry because it happened, smile because it's over &lt;3
+45. everyone pls stop shooting fireworks my dog is scared :(
+46. As if I didn't know this anyway!
+I'm an Owl according to the #BBCBodyClock quiz – what are you? https://t.co/vM07K82CTg
+47. Are GoFundMe accounts a form of socialism?  I don’t have enough money to pay my bills, so let me create an account an ask for money to help pay my bills. ??
+48. Synthwave communities really love pessimism don't they haha
+Any upbeat energy and people get upset at ya
+49. dont you love it when youre just chilling in your room and then theres a spider and you kill it but when you kill it you spill soda all over your keyboard yeah me too
+
+Here is our goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.'] 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"exaggerates for effect"
+"utilizes sharp satire"
+
+
+Again, here's the goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.']. Your responses are:
+- "
+Proposer model response:
+['- "employs biting sarcasm"\n- "employs subtle irony"\n- "uses exaggerated understatement"\n- "employs sharp satire"\n- "utilizes rhetorical questions"\n- "employs overstatement for effect"']
+Proposer Cost: $0.000995
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. Yay - snow day, I can work from home - oh wait....
+1. Mad how many cars they make now without indicators 🙃
+2. i love ingesting poison and then wondering why my tummy is rumbling the next morning
+3. @Moffstovoi Well done! With the better coaching now available, can we expect a decent wee victory tomorrow? 😅
+4. dont you love it when youre just chilling in your room and then theres a spider and you kill it but when you kill it you spill soda all over your keyboard yeah me too
+5. victoria has a crush on maluma
+6. Sooo... @adamlevine was that "Nice!" and double fist pump for the show or @shakira s ass that you were checking out? @NBCTheVoice
+7. every time i send my mom pictures of me and one of my friends doing fun things the first question she asks is if we're on a date what are you trying to tell me mother
+8. @DonaldJTrumpJr If only he had a press Corp in the house...oh wait! Shut up Jr! Time to get fitted for those lovely orange jumpsuits! If you can't be orange anymore at least you can wear it!!!
+9. Where is the Chancellor? Please check the back of your sofas.
+10. I love when I learn about stuff I've apparently done and said from people😂
+11. I’ve always known #Bez is my spirit animal but seeing the mess he makes on @MasterChefUK confirms it 100% what a legend that man is
+12. fully vaxxed feeling very girlboss
+13. everyone pls stop shooting fireworks my dog is scared :(
+14. Do you think anyone on Bachelor in Paradise has seen Oscar winner Parasite?
+15. can't wait til a bunch of pudgy suburban dads save the day with their firearms
+16. @cassieecote413 you can copy mine
+17. As if I didn't know this anyway!
+I'm an Owl according to the #BBCBodyClock quiz – what are you? https://t.co/vM07K82CTg
+18. Are GoFundMe accounts a form of socialism?  I don’t have enough money to pay my bills, so let me create an account an ask for money to help pay my bills. ??
+19. do people with clear skin feel accomplished?? superior??? comfortable in their own skin???? what’s that like lmfao
+20. @ShareZone5 @StockpickB You are a right bundle of laughs to take to the pictures Draft!
+21. Uh oh Ben Simmons will also have a Steph Curry type season 76ers better not trade him now https://t.co/kkpzfcTcSH
+22. Day 2348 in lockdown. Never in my life did I think I would utter the words "I've disinfected the chocolate". #coronalockdownuk
+23. Lil Pump is the Nelson Mandela of our generation
+24. Just won 3 cents on HQ words...early retirement here I come 😍
+25. Gosh sunderland twitter is a fun place to be tonight isn't it. One game. One game!!!
+26. I've been doing physics for 40 minutes I think I deserve a break 😂😂😂😭 I'm never going to get it all done at this rate
+27. It’s been a blissful 2.5 hours of sleep tonight
+28. @Dancruz07 Sureeeeeee you do
+29. 🌶 Spiced Coconut curry 🥥
+
+.
+A weekend spent with friends brings a week of content... or something like that 😜
+
+.
+Started the weekend off with this yummy morsel, With was a fusion of miso sesame aubergine 🍆, broccoli… https://t.co/zyWiA0EX4u
+30. Don’t you just love it when they dig up your road at 8:30am on a Saturday 😠
+31. “it’s hotter in the america right now and it feels fine british people are just being dramatic 🙄” QUICK ARE YOU SAYING THIS INSIDE UR AIR CONDITIONED HOUSE ‼️‼️‼️
+32. “I don’t really like partying” Oh is that why you’ve gone to parties twice in the last week? Because you just can’t stand it? Makes complete sense.
+33. only have to physically be in uni for an hour a week looool mmmm take my 9k xxxxx
+34. just found ive been walking on a broken foot for the past 6 months 🤪🤪🤪
+35. For a good laugh, follow me over on @vsheltonsports to see my best attempt at covering sports business news for class this semester.
+36. @richardosman @GMB @susannareid100 @piersmorgan You've a book out? I hadn't realised.
+
+Yes, you've already read this 8763 times this week, but hey.
+37. Football is turning into an anatomy lesson. COOL
+38. it’s amazing how many people get mad at you for simply Raising Questions, such as “what if the vaccine makes your balls inflate like helium balloons and cause you to float away to never be seen again”
+39. "Should I wear my lime green pants?" dad its 4th of july...
+40. Do the #Hokies really have to play 5 against 6 tonight? Come on stripes
+41. Someone should’ve had me committed the day I decided to buy a pair of non-stretch denim jeans
+42. James Harden is allowed to travel every time he drives apparently
+43. Today my pop-pop told me I was not “forced” to go to college 🙃 okay sure sureeee
+44. Synthwave communities really love pessimism don't they haha
+Any upbeat energy and people get upset at ya
+45. Mental shoot out ends. Silent pause. Sirens start 🚨 Always so perfectly timed 🚔🚓👍🏽 #LineOfDuty #LineofDuty6 #LOD6 #LOD
+46. I unsubscribe from being an adult, its not for me
+47. @terryflewers @lfcsonny Has he given any clarification regarding what age Harvey Elliott needs to be before you can tackle him?
+48. don't cry because it happened, smile because it's over &lt;3
+49. Ok, so @bytereview and I decided to record on the evening of the 6th, just as absolutely nothing newsworthy was happening! Perfect timing as always, to go over some of the best ITSBUPs of 2020 - and how we're settling into 2021! Listen: https://t.co/oaPLwrtcHP https://t.co/za3EHuqcWh
+
+Here is our goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.'] 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"delivers subtle irony"
+"employs clever understatement"
+
+
+Again, here's the goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.']. Your responses are:
+- "
+Proposer model response:
+['- "employs biting sarcasm"\n- "delivers sharp satire"\n- "utilizes dry wit"\n- "employs exaggerated overstatement"\n- "uses subtle irony"\n- "employs clever understatement"']
+Proposer Cost: $0.000994
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. Don’t you just love it when they dig up your road at 8:30am on a Saturday 😠
+1. Mental shoot out ends. Silent pause. Sirens start 🚨 Always so perfectly timed 🚔🚓👍🏽 #LineOfDuty #LineofDuty6 #LOD6 #LOD
+2. Day 2348 in lockdown. Never in my life did I think I would utter the words "I've disinfected the chocolate". #coronalockdownuk
+3. don't cry because it happened, smile because it's over &lt;3
+4. Today my pop-pop told me I was not “forced” to go to college 🙃 okay sure sureeee
+5. Do the #Hokies really have to play 5 against 6 tonight? Come on stripes
+6. can't wait til a bunch of pudgy suburban dads save the day with their firearms
+7. Where is the Chancellor? Please check the back of your sofas.
+8. @richardosman @GMB @susannareid100 @piersmorgan You've a book out? I hadn't realised.
+
+Yes, you've already read this 8763 times this week, but hey.
+9. Yay - snow day, I can work from home - oh wait....
+10. everyone pls stop shooting fireworks my dog is scared :(
+11. only have to physically be in uni for an hour a week looool mmmm take my 9k xxxxx
+12. "Should I wear my lime green pants?" dad its 4th of july...
+13. @cassieecote413 you can copy mine
+14. victoria has a crush on maluma
+15. Someone should’ve had me committed the day I decided to buy a pair of non-stretch denim jeans
+16. I've been doing physics for 40 minutes I think I deserve a break 😂😂😂😭 I'm never going to get it all done at this rate
+17. i love ingesting poison and then wondering why my tummy is rumbling the next morning
+18. For a good laugh, follow me over on @vsheltonsports to see my best attempt at covering sports business news for class this semester.
+19. Lil Pump is the Nelson Mandela of our generation
+20. @ShareZone5 @StockpickB You are a right bundle of laughs to take to the pictures Draft!
+21. Football is turning into an anatomy lesson. COOL
+22. it’s amazing how many people get mad at you for simply Raising Questions, such as “what if the vaccine makes your balls inflate like helium balloons and cause you to float away to never be seen again”
+23. Uh oh Ben Simmons will also have a Steph Curry type season 76ers better not trade him now https://t.co/kkpzfcTcSH
+24. every time i send my mom pictures of me and one of my friends doing fun things the first question she asks is if we're on a date what are you trying to tell me mother
+25. 🌶 Spiced Coconut curry 🥥
+
+.
+A weekend spent with friends brings a week of content... or something like that 😜
+
+.
+Started the weekend off with this yummy morsel, With was a fusion of miso sesame aubergine 🍆, broccoli… https://t.co/zyWiA0EX4u
+26. just found ive been walking on a broken foot for the past 6 months 🤪🤪🤪
+27. dont you love it when youre just chilling in your room and then theres a spider and you kill it but when you kill it you spill soda all over your keyboard yeah me too
+28. “I don’t really like partying” Oh is that why you’ve gone to parties twice in the last week? Because you just can’t stand it? Makes complete sense.
+29. @DonaldJTrumpJr If only he had a press Corp in the house...oh wait! Shut up Jr! Time to get fitted for those lovely orange jumpsuits! If you can't be orange anymore at least you can wear it!!!
+30. Mad how many cars they make now without indicators 🙃
+31. Do you think anyone on Bachelor in Paradise has seen Oscar winner Parasite?
+32. Just won 3 cents on HQ words...early retirement here I come 😍
+33. As if I didn't know this anyway!
+I'm an Owl according to the #BBCBodyClock quiz – what are you? https://t.co/vM07K82CTg
+34. I’ve always known #Bez is my spirit animal but seeing the mess he makes on @MasterChefUK confirms it 100% what a legend that man is
+35. It’s been a blissful 2.5 hours of sleep tonight
+36. “it’s hotter in the america right now and it feels fine british people are just being dramatic 🙄” QUICK ARE YOU SAYING THIS INSIDE UR AIR CONDITIONED HOUSE ‼️‼️‼️
+37. Synthwave communities really love pessimism don't they haha
+Any upbeat energy and people get upset at ya
+38. I love when I learn about stuff I've apparently done and said from people😂
+39. I unsubscribe from being an adult, its not for me
+40. Ok, so @bytereview and I decided to record on the evening of the 6th, just as absolutely nothing newsworthy was happening! Perfect timing as always, to go over some of the best ITSBUPs of 2020 - and how we're settling into 2021! Listen: https://t.co/oaPLwrtcHP https://t.co/za3EHuqcWh
+41. James Harden is allowed to travel every time he drives apparently
+42. @Moffstovoi Well done! With the better coaching now available, can we expect a decent wee victory tomorrow? 😅
+43. @Dancruz07 Sureeeeeee you do
+44. do people with clear skin feel accomplished?? superior??? comfortable in their own skin???? what’s that like lmfao
+45. Gosh sunderland twitter is a fun place to be tonight isn't it. One game. One game!!!
+46. @terryflewers @lfcsonny Has he given any clarification regarding what age Harvey Elliott needs to be before you can tackle him?
+47. Sooo... @adamlevine was that "Nice!" and double fist pump for the show or @shakira s ass that you were checking out? @NBCTheVoice
+48. fully vaxxed feeling very girlboss
+49. Are GoFundMe accounts a form of socialism?  I don’t have enough money to pay my bills, so let me create an account an ask for money to help pay my bills. ??
+
+Here is our goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.'] 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"employs clever understatement"
+"exaggerates for effect"
+
+
+Again, here's the goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.']. Your responses are:
+- "
+Proposer model response:
+['- "employs subtle sarcasm"\n- "utilizes biting irony"\n- "employs sharp satire"\n- "uses exaggerated overstatement"\n- "employs witty understatement"\n- "includes rhetorical questions"']
+Proposer Cost: $0.000992
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. @ShareZone5 @StockpickB You are a right bundle of laughs to take to the pictures Draft!
+1. every time i send my mom pictures of me and one of my friends doing fun things the first question she asks is if we're on a date what are you trying to tell me mother
+2. “it’s hotter in the america right now and it feels fine british people are just being dramatic 🙄” QUICK ARE YOU SAYING THIS INSIDE UR AIR CONDITIONED HOUSE ‼️‼️‼️
+3. Mental shoot out ends. Silent pause. Sirens start 🚨 Always so perfectly timed 🚔🚓👍🏽 #LineOfDuty #LineofDuty6 #LOD6 #LOD
+4. “I don’t really like partying” Oh is that why you’ve gone to parties twice in the last week? Because you just can’t stand it? Makes complete sense.
+5. Lil Pump is the Nelson Mandela of our generation
+6. Sooo... @adamlevine was that "Nice!" and double fist pump for the show or @shakira s ass that you were checking out? @NBCTheVoice
+7. @Dancruz07 Sureeeeeee you do
+8. @terryflewers @lfcsonny Has he given any clarification regarding what age Harvey Elliott needs to be before you can tackle him?
+9. victoria has a crush on maluma
+10. @cassieecote413 you can copy mine
+11. Just won 3 cents on HQ words...early retirement here I come 😍
+12. Where is the Chancellor? Please check the back of your sofas.
+13. As if I didn't know this anyway!
+I'm an Owl according to the #BBCBodyClock quiz – what are you? https://t.co/vM07K82CTg
+14. Day 2348 in lockdown. Never in my life did I think I would utter the words "I've disinfected the chocolate". #coronalockdownuk
+15. just found ive been walking on a broken foot for the past 6 months 🤪🤪🤪
+16. do people with clear skin feel accomplished?? superior??? comfortable in their own skin???? what’s that like lmfao
+17. i love ingesting poison and then wondering why my tummy is rumbling the next morning
+18. For a good laugh, follow me over on @vsheltonsports to see my best attempt at covering sports business news for class this semester.
+19. fully vaxxed feeling very girlboss
+20. Synthwave communities really love pessimism don't they haha
+Any upbeat energy and people get upset at ya
+21. don't cry because it happened, smile because it's over &lt;3
+22. dont you love it when youre just chilling in your room and then theres a spider and you kill it but when you kill it you spill soda all over your keyboard yeah me too
+23. Don’t you just love it when they dig up your road at 8:30am on a Saturday 😠
+24. Uh oh Ben Simmons will also have a Steph Curry type season 76ers better not trade him now https://t.co/kkpzfcTcSH
+25. I unsubscribe from being an adult, its not for me
+26. Mad how many cars they make now without indicators 🙃
+27. I've been doing physics for 40 minutes I think I deserve a break 😂😂😂😭 I'm never going to get it all done at this rate
+28. I love when I learn about stuff I've apparently done and said from people😂
+29. it’s amazing how many people get mad at you for simply Raising Questions, such as “what if the vaccine makes your balls inflate like helium balloons and cause you to float away to never be seen again”
+30. only have to physically be in uni for an hour a week looool mmmm take my 9k xxxxx
+31. Gosh sunderland twitter is a fun place to be tonight isn't it. One game. One game!!!
+32. Are GoFundMe accounts a form of socialism?  I don’t have enough money to pay my bills, so let me create an account an ask for money to help pay my bills. ??
+33. Ok, so @bytereview and I decided to record on the evening of the 6th, just as absolutely nothing newsworthy was happening! Perfect timing as always, to go over some of the best ITSBUPs of 2020 - and how we're settling into 2021! Listen: https://t.co/oaPLwrtcHP https://t.co/za3EHuqcWh
+34. It’s been a blissful 2.5 hours of sleep tonight
+35. "Should I wear my lime green pants?" dad its 4th of july...
+36. @richardosman @GMB @susannareid100 @piersmorgan You've a book out? I hadn't realised.
+
+Yes, you've already read this 8763 times this week, but hey.
+37. Do the #Hokies really have to play 5 against 6 tonight? Come on stripes
+38. everyone pls stop shooting fireworks my dog is scared :(
+39. can't wait til a bunch of pudgy suburban dads save the day with their firearms
+40. @DonaldJTrumpJr If only he had a press Corp in the house...oh wait! Shut up Jr! Time to get fitted for those lovely orange jumpsuits! If you can't be orange anymore at least you can wear it!!!
+41. I’ve always known #Bez is my spirit animal but seeing the mess he makes on @MasterChefUK confirms it 100% what a legend that man is
+42. Today my pop-pop told me I was not “forced” to go to college 🙃 okay sure sureeee
+43. 🌶 Spiced Coconut curry 🥥
+
+.
+A weekend spent with friends brings a week of content... or something like that 😜
+
+.
+Started the weekend off with this yummy morsel, With was a fusion of miso sesame aubergine 🍆, broccoli… https://t.co/zyWiA0EX4u
+44. Yay - snow day, I can work from home - oh wait....
+45. Someone should’ve had me committed the day I decided to buy a pair of non-stretch denim jeans
+46. @Moffstovoi Well done! With the better coaching now available, can we expect a decent wee victory tomorrow? 😅
+47. Do you think anyone on Bachelor in Paradise has seen Oscar winner Parasite?
+48. Football is turning into an anatomy lesson. COOL
+49. James Harden is allowed to travel every time he drives apparently
+
+Here is our goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.'] 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"utilizes sharp satire"
+"- "employs biting sarcasm"
+
+
+Again, here's the goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.']. Your responses are:
+- "
+Proposer model response:
+['- "employs biting sarcasm"\n- "utilizes dry irony"\n- "employs subtle satire"\n- "uses exaggerated overstatement"\n- "employs rhetorical questions"\n- "utilizes understated irony"']
+Proposer Cost: $0.000994
+30 descriptions proposed in total. Here are the descriptions:
+employs overstatement for effect
+employs sharp satire
+uses subtle irony
+employs clever understatement
+delivers subtle irony
+employs subtle satire
+utilizes rhetorical questions
+delivers sharp satire
+utilizes understated irony
+utilizes dry irony
+utilizes subtle irony
+exaggerates for effect
+- "employs subtle sarcasm
+uses exaggerated overstatement
+employs exaggerated satire
+poses rhetorical questions
+employs rhetorical questions
+employs witty understatement
+uses exaggerated understatement
+utilizes sharp satire
+includes rhetorical questions
+employs understated humor
+- "employs biting sarcasm
+uses exaggerated satire
+employs subtle irony
+employs sharp wit
+utilizes dry wit
+utilizes biting irony
+employs dry humor
+employs exaggerated overstatement
+GPTAssigner Cost 1.0668944999999996 $
+Stage Assign assign
+Assigned all recall: 0.9001203369434416
+Assigned all precision: 0.0481283422459893
+Assigned description: employs overstatement for effect. recall: 0.4825511432009627 precision: 0.0024937655860349127
+Assigned description: employs sharp satire. recall: 0.28399518652226236 precision: 0.00423728813559322
+Assigned description: uses subtle irony. recall: 0.3200962695547533 precision: 0.0
+Assigned description: employs clever understatement. recall: 0.18531889290012032 precision: 0.0
+Assigned description: delivers subtle irony. recall: 0.26714801444043323 precision: 0.0
+Assigned description: employs subtle satire. recall: 0.27918170878459686 precision: 0.0
+Assigned description: utilizes rhetorical questions. recall: 0.3345367027677497 precision: 0.0
+Assigned description: delivers sharp satire. recall: 0.19975932611311673 precision: 0.0
+Assigned description: utilizes understated irony. recall: 0.18050541516245489 precision: 0.0
+Assigned description: utilizes dry irony. recall: 0.22623345367027678 precision: 0.0
+Assigned description: utilizes subtle irony. recall: 0.18892900120336945 precision: 0.0
+Assigned description: exaggerates for effect. recall: 0.7015643802647413 precision: 0.024013722126929673
+Assigned description: - "employs subtle sarcasm. recall: 0.11311672683513839 precision: 0.0
+Assigned description: uses exaggerated overstatement. recall: 0.7196149217809867 precision: 0.013377926421404682
+Assigned description: employs exaggerated satire. recall: 0.5030084235860409 precision: 0.0023923444976076554
+Assigned description: poses rhetorical questions. recall: 0.470517448856799 precision: 0.005115089514066497
+Assigned description: employs rhetorical questions. recall: 0.4620938628158845 precision: 0.0
+Assigned description: employs witty understatement. recall: 0.3164861612515042 precision: 0.0038022813688212928
+Assigned description: uses exaggerated understatement. recall: 0.4139590854392298 precision: 0.014534883720930232
+Assigned description: utilizes sharp satire. recall: 0.14199759326113118 precision: 0.0
+Assigned description: includes rhetorical questions. recall: 0.49578820697954273 precision: 0.0024271844660194173
+Assigned description: employs understated humor. recall: 0.21058965102286403 precision: 0.0
+Assigned description: - "employs biting sarcasm. recall: 0.04091456077015644 precision: 0.0
+Assigned description: uses exaggerated satire. recall: 0.45126353790613716 precision: 0.0026666666666666666
+Assigned description: employs subtle irony. recall: 0.22623345367027678 precision: 0.0
+Assigned description: employs sharp wit. recall: 0.07942238267148015 precision: 0.0
+Assigned description: utilizes dry wit. recall: 0.07460890493381468 precision: 0.0
+Assigned description: utilizes biting irony. recall: 0.18170878459687123 precision: 0.0
+Assigned description: employs dry humor. recall: 0.27075812274368233 precision: 0.0
+Assigned description: employs exaggerated overstatement. recall: 0.6558363417569194 precision: 0.001834862385321101
+Dropping 10 descriptions because they are too popular or too unpopular:
+Stage select select
+Unmatched count: 417
+Description: utilizes rhetorical questions. Count: 278
+Description: employs witty understatement. Count: 136
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. don't cry because it happened, smile because it's over &lt;3
+1. Men will literally fake an injury on the football field instead of going to therapy
+2. only have to physically be in uni for an hour a week looool mmmm take my 9k xxxxx
+3. I’ve always known #Bez is my spirit animal but seeing the mess he makes on @MasterChefUK confirms it 100% what a legend that man is
+4. fully vaxxed feeling very girlboss
+5. Ahhh I get to listen to a cement mixer all day. Awesome.
+6. ate a bagel with cream cheese earlier and the impending doom immediately vanished from my mind
+7. Happy birthday to me. I got pinged and can't leave the house 🥰🤡
+8. Oh wow, trolls really have a lot of time on there hands, jeez 🙄 they really don’t like getting banned #twitchtrolls
+9. "You're not a normal white girl" lol ok
+10. victoria has a crush on maluma
+11. Mental shoot out ends. Silent pause. Sirens start 🚨 Always so perfectly timed 🚔🚓👍🏽 #LineOfDuty #LineofDuty6 #LOD6 #LOD
+12. Falling asleep at your laptop is always fun
+13. i love ingesting poison and then wondering why my tummy is rumbling the next morning
+14. thanks @SovietWomble for ratting my location out on stream and then embarrassing me 😂 it made my day though https://t.co/3b7Cjql2GO
+15. I'm hoping my social work class party is going to involve tequila and chip and salsa 💃🍹🎉👨
+16. Lil Pump is the Nelson Mandela of our generation
+17. @SkySportsBoxing if i think you would have a chance against fury i mean its easy for some broken bodied old boy to beat the best in the world
+18. @ShareZone5 @StockpickB You are a right bundle of laughs to take to the pictures Draft!
+19. Synthwave communities really love pessimism don't they haha
+Any upbeat energy and people get upset at ya
+20. @heathoween @tylerrjoseph Yes, because we need literally every single fucking celebrity to speak up on a topic that's been forced down everyone's throats for the past four months. I use the internet to get away from these fucking real life problems; not everyone needs to weigh in.
+21. I love how men know they have a baby on the way in one month and they decide to go out and buy a brand new mustang wow
+22. Ok, so @bytereview and I decided to record on the evening of the 6th, just as absolutely nothing newsworthy was happening! Perfect timing as always, to go over some of the best ITSBUPs of 2020 - and how we're settling into 2021! Listen: https://t.co/oaPLwrtcHP https://t.co/za3EHuqcWh
+23. Sooo... @adamlevine was that "Nice!" and double fist pump for the show or @shakira s ass that you were checking out? @NBCTheVoice
+24. I've been doing physics for 40 minutes I think I deserve a break 😂😂😂😭 I'm never going to get it all done at this rate
+25. @MatthewStadlen @sajidjavid Thank you so much for your insightful thoughts- I’m sure @sajidjavid is overjoyed that you “quite like him”
+26. This is awkward... @hollywills is a Diet Coke ambassador 🤯. #ThisMorning
+27. maybe i am a cyber bully
+28. 🌶 Spiced Coconut curry 🥥
+
+.
+A weekend spent with friends brings a week of content... or something like that 😜
+
+.
+Started the weekend off with this yummy morsel, With was a fusion of miso sesame aubergine 🍆, broccoli… https://t.co/zyWiA0EX4u
+29. Oh my goodness. It’s the first week of the summer holidays and Harrison has found his recorder. 
+
+Give.
+Me.
+Strength.
+30. Day 2348 in lockdown. Never in my life did I think I would utter the words "I've disinfected the chocolate". #coronalockdownuk
+31. Gosh sunderland twitter is a fun place to be tonight isn't it. One game. One game!!!
+32. 2 things I love:
+1. Being woken up by construction work an hour before my alarm.
+2. Sarcasm.
+33. virgos are leos in a vest
+34. @Dancruz07 Sureeeeeee you do
+35. too many dudes are wearing birks with socks on. grow up. get the fucking toes out man.
+36. I love to pick my modules on a first come first served basis at the same time as everyone in my entire year on a website that hasn’t been updated since 1995 . Thrilling ❤️
+37. it'd be nice if missguided actually had stock for once🙂🙂🙂
+38. going to be running on three hours of sleep at work tonight! so excited!!!
+39. It’s been a blissful 2.5 hours of sleep tonight
+40. can't wait til a bunch of pudgy suburban dads save the day with their firearms
+41. ITS COMING HOOOOOME
+42. Yay - snow day, I can work from home - oh wait....
+43. ima get up early tomorrow and make some tea and sit on the patio oh how I love to imagine things im never gonna do
+44. So nice of my family to decide that I’m hosting a Mother’s Day brunch for everyone at my house. https://t.co/DWZI9ltALK
+45. I love when I learn about stuff I've apparently done and said from people😂
+46. @cassieecote413 you can copy mine
+47. Happy birthday to me!! I’m 30! 😭
+48. For a good laugh, follow me over on @vsheltonsports to see my best attempt at covering sports business news for class this semester.
+49. Uh oh Ben Simmons will also have a Steph Curry type season 76ers better not trade him now https://t.co/kkpzfcTcSH
+
+Here is our goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.'] 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"employs dry humor"
+"uses exaggerated overstatement"
+
+
+Again, here's the goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.']. Your responses are:
+- "
+Proposer model response:
+['- "employs subtle irony"\n- "utilizes biting sarcasm"\n- "employs witty satire"\n- "uses clever understatement"\n- "employs sharp rhetorical questions"\n- "utilizes exaggerated overstatement"']
+Proposer Cost: $0.000967
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. Sooo... @adamlevine was that "Nice!" and double fist pump for the show or @shakira s ass that you were checking out? @NBCTheVoice
+1. Yay - snow day, I can work from home - oh wait....
+2. ima get up early tomorrow and make some tea and sit on the patio oh how I love to imagine things im never gonna do
+3. Synthwave communities really love pessimism don't they haha
+Any upbeat energy and people get upset at ya
+4. I've been doing physics for 40 minutes I think I deserve a break 😂😂😂😭 I'm never going to get it all done at this rate
+5. maybe i am a cyber bully
+6. @Dancruz07 Sureeeeeee you do
+7. I’ve always known #Bez is my spirit animal but seeing the mess he makes on @MasterChefUK confirms it 100% what a legend that man is
+8. 2 things I love:
+1. Being woken up by construction work an hour before my alarm.
+2. Sarcasm.
+9. victoria has a crush on maluma
+10. Oh wow, trolls really have a lot of time on there hands, jeez 🙄 they really don’t like getting banned #twitchtrolls
+11. Uh oh Ben Simmons will also have a Steph Curry type season 76ers better not trade him now https://t.co/kkpzfcTcSH
+12. Oh my goodness. It’s the first week of the summer holidays and Harrison has found his recorder. 
+
+Give.
+Me.
+Strength.
+13. I love how men know they have a baby on the way in one month and they decide to go out and buy a brand new mustang wow
+14. I'm hoping my social work class party is going to involve tequila and chip and salsa 💃🍹🎉👨
+15. @heathoween @tylerrjoseph Yes, because we need literally every single fucking celebrity to speak up on a topic that's been forced down everyone's throats for the past four months. I use the internet to get away from these fucking real life problems; not everyone needs to weigh in.
+16. going to be running on three hours of sleep at work tonight! so excited!!!
+17. ITS COMING HOOOOOME
+18. ate a bagel with cream cheese earlier and the impending doom immediately vanished from my mind
+19. Falling asleep at your laptop is always fun
+20. don't cry because it happened, smile because it's over &lt;3
+21. Ahhh I get to listen to a cement mixer all day. Awesome.
+22. i love ingesting poison and then wondering why my tummy is rumbling the next morning
+23. Lil Pump is the Nelson Mandela of our generation
+24. It’s been a blissful 2.5 hours of sleep tonight
+25. can't wait til a bunch of pudgy suburban dads save the day with their firearms
+26. Men will literally fake an injury on the football field instead of going to therapy
+27. Gosh sunderland twitter is a fun place to be tonight isn't it. One game. One game!!!
+28. thanks @SovietWomble for ratting my location out on stream and then embarrassing me 😂 it made my day though https://t.co/3b7Cjql2GO
+29. Happy birthday to me. I got pinged and can't leave the house 🥰🤡
+30. Happy birthday to me!! I’m 30! 😭
+31. @ShareZone5 @StockpickB You are a right bundle of laughs to take to the pictures Draft!
+32. @SkySportsBoxing if i think you would have a chance against fury i mean its easy for some broken bodied old boy to beat the best in the world
+33. fully vaxxed feeling very girlboss
+34. 🌶 Spiced Coconut curry 🥥
+
+.
+A weekend spent with friends brings a week of content... or something like that 😜
+
+.
+Started the weekend off with this yummy morsel, With was a fusion of miso sesame aubergine 🍆, broccoli… https://t.co/zyWiA0EX4u
+35. I love to pick my modules on a first come first served basis at the same time as everyone in my entire year on a website that hasn’t been updated since 1995 . Thrilling ❤️
+36. virgos are leos in a vest
+37. Ok, so @bytereview and I decided to record on the evening of the 6th, just as absolutely nothing newsworthy was happening! Perfect timing as always, to go over some of the best ITSBUPs of 2020 - and how we're settling into 2021! Listen: https://t.co/oaPLwrtcHP https://t.co/za3EHuqcWh
+38. I love when I learn about stuff I've apparently done and said from people😂
+39. it'd be nice if missguided actually had stock for once🙂🙂🙂
+40. So nice of my family to decide that I’m hosting a Mother’s Day brunch for everyone at my house. https://t.co/DWZI9ltALK
+41. @cassieecote413 you can copy mine
+42. Day 2348 in lockdown. Never in my life did I think I would utter the words "I've disinfected the chocolate". #coronalockdownuk
+43. only have to physically be in uni for an hour a week looool mmmm take my 9k xxxxx
+44. For a good laugh, follow me over on @vsheltonsports to see my best attempt at covering sports business news for class this semester.
+45. Mental shoot out ends. Silent pause. Sirens start 🚨 Always so perfectly timed 🚔🚓👍🏽 #LineOfDuty #LineofDuty6 #LOD6 #LOD
+46. This is awkward... @hollywills is a Diet Coke ambassador 🤯. #ThisMorning
+47. too many dudes are wearing birks with socks on. grow up. get the fucking toes out man.
+48. @MatthewStadlen @sajidjavid Thank you so much for your insightful thoughts- I’m sure @sajidjavid is overjoyed that you “quite like him”
+49. "You're not a normal white girl" lol ok
+
+Here is our goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.'] 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"employs dry humor"
+"- "employs biting sarcasm"
+
+
+Again, here's the goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.']. Your responses are:
+- "
+Proposer model response:
+['- "employs biting sarcasm"\n- "contains subtle irony"\n- "utilizes rhetorical questions"\n- "employs exaggerated overstatement"\n- "displays sharp satire"\n- "employs dry wit"']
+Proposer Cost: $0.000965
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. For a good laugh, follow me over on @vsheltonsports to see my best attempt at covering sports business news for class this semester.
+1. Oh my goodness. It’s the first week of the summer holidays and Harrison has found his recorder. 
+
+Give.
+Me.
+Strength.
+2. it'd be nice if missguided actually had stock for once🙂🙂🙂
+3. don't cry because it happened, smile because it's over &lt;3
+4. Synthwave communities really love pessimism don't they haha
+Any upbeat energy and people get upset at ya
+5. 2 things I love:
+1. Being woken up by construction work an hour before my alarm.
+2. Sarcasm.
+6. Happy birthday to me. I got pinged and can't leave the house 🥰🤡
+7. thanks @SovietWomble for ratting my location out on stream and then embarrassing me 😂 it made my day though https://t.co/3b7Cjql2GO
+8. ima get up early tomorrow and make some tea and sit on the patio oh how I love to imagine things im never gonna do
+9. only have to physically be in uni for an hour a week looool mmmm take my 9k xxxxx
+10. Falling asleep at your laptop is always fun
+11. Lil Pump is the Nelson Mandela of our generation
+12. @SkySportsBoxing if i think you would have a chance against fury i mean its easy for some broken bodied old boy to beat the best in the world
+13. I’ve always known #Bez is my spirit animal but seeing the mess he makes on @MasterChefUK confirms it 100% what a legend that man is
+14. This is awkward... @hollywills is a Diet Coke ambassador 🤯. #ThisMorning
+15. can't wait til a bunch of pudgy suburban dads save the day with their firearms
+16. Gosh sunderland twitter is a fun place to be tonight isn't it. One game. One game!!!
+17. Oh wow, trolls really have a lot of time on there hands, jeez 🙄 they really don’t like getting banned #twitchtrolls
+18. going to be running on three hours of sleep at work tonight! so excited!!!
+19. @MatthewStadlen @sajidjavid Thank you so much for your insightful thoughts- I’m sure @sajidjavid is overjoyed that you “quite like him”
+20. 🌶 Spiced Coconut curry 🥥
+
+.
+A weekend spent with friends brings a week of content... or something like that 😜
+
+.
+Started the weekend off with this yummy morsel, With was a fusion of miso sesame aubergine 🍆, broccoli… https://t.co/zyWiA0EX4u
+21. I'm hoping my social work class party is going to involve tequila and chip and salsa 💃🍹🎉👨
+22. maybe i am a cyber bully
+23. fully vaxxed feeling very girlboss
+24. So nice of my family to decide that I’m hosting a Mother’s Day brunch for everyone at my house. https://t.co/DWZI9ltALK
+25. ate a bagel with cream cheese earlier and the impending doom immediately vanished from my mind
+26. Men will literally fake an injury on the football field instead of going to therapy
+27. Ahhh I get to listen to a cement mixer all day. Awesome.
+28. virgos are leos in a vest
+29. Uh oh Ben Simmons will also have a Steph Curry type season 76ers better not trade him now https://t.co/kkpzfcTcSH
+30. Yay - snow day, I can work from home - oh wait....
+31. Ok, so @bytereview and I decided to record on the evening of the 6th, just as absolutely nothing newsworthy was happening! Perfect timing as always, to go over some of the best ITSBUPs of 2020 - and how we're settling into 2021! Listen: https://t.co/oaPLwrtcHP https://t.co/za3EHuqcWh
+32. i love ingesting poison and then wondering why my tummy is rumbling the next morning
+33. @cassieecote413 you can copy mine
+34. I love when I learn about stuff I've apparently done and said from people😂
+35. victoria has a crush on maluma
+36. Happy birthday to me!! I’m 30! 😭
+37. "You're not a normal white girl" lol ok
+38. I love to pick my modules on a first come first served basis at the same time as everyone in my entire year on a website that hasn’t been updated since 1995 . Thrilling ❤️
+39. I love how men know they have a baby on the way in one month and they decide to go out and buy a brand new mustang wow
+40. Mental shoot out ends. Silent pause. Sirens start 🚨 Always so perfectly timed 🚔🚓👍🏽 #LineOfDuty #LineofDuty6 #LOD6 #LOD
+41. I've been doing physics for 40 minutes I think I deserve a break 😂😂😂😭 I'm never going to get it all done at this rate
+42. ITS COMING HOOOOOME
+43. @Dancruz07 Sureeeeeee you do
+44. Day 2348 in lockdown. Never in my life did I think I would utter the words "I've disinfected the chocolate". #coronalockdownuk
+45. Sooo... @adamlevine was that "Nice!" and double fist pump for the show or @shakira s ass that you were checking out? @NBCTheVoice
+46. @ShareZone5 @StockpickB You are a right bundle of laughs to take to the pictures Draft!
+47. It’s been a blissful 2.5 hours of sleep tonight
+48. too many dudes are wearing birks with socks on. grow up. get the fucking toes out man.
+49. @heathoween @tylerrjoseph Yes, because we need literally every single fucking celebrity to speak up on a topic that's been forced down everyone's throats for the past four months. I use the internet to get away from these fucking real life problems; not everyone needs to weigh in.
+
+Here is our goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.'] 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"employs dry humor"
+"employs sharp wit"
+
+
+Again, here's the goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.']. Your responses are:
+- "
+Proposer model response:
+['- "employs biting sarcasm"\n- "utilizes subtle irony"\n- "employs exaggerated overstatement"\n- "uses witty satire"\n- "employs clever understatement"\n- "includes rhetorical questions"']
+Proposer Cost: $0.000964
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. For a good laugh, follow me over on @vsheltonsports to see my best attempt at covering sports business news for class this semester.
+1. @Dancruz07 Sureeeeeee you do
+2. Mental shoot out ends. Silent pause. Sirens start 🚨 Always so perfectly timed 🚔🚓👍🏽 #LineOfDuty #LineofDuty6 #LOD6 #LOD
+3. ITS COMING HOOOOOME
+4. @heathoween @tylerrjoseph Yes, because we need literally every single fucking celebrity to speak up on a topic that's been forced down everyone's throats for the past four months. I use the internet to get away from these fucking real life problems; not everyone needs to weigh in.
+5. Happy birthday to me. I got pinged and can't leave the house 🥰🤡
+6. @cassieecote413 you can copy mine
+7. Yay - snow day, I can work from home - oh wait....
+8. only have to physically be in uni for an hour a week looool mmmm take my 9k xxxxx
+9. i love ingesting poison and then wondering why my tummy is rumbling the next morning
+10. I love how men know they have a baby on the way in one month and they decide to go out and buy a brand new mustang wow
+11. This is awkward... @hollywills is a Diet Coke ambassador 🤯. #ThisMorning
+12. Ok, so @bytereview and I decided to record on the evening of the 6th, just as absolutely nothing newsworthy was happening! Perfect timing as always, to go over some of the best ITSBUPs of 2020 - and how we're settling into 2021! Listen: https://t.co/oaPLwrtcHP https://t.co/za3EHuqcWh
+13. Sooo... @adamlevine was that "Nice!" and double fist pump for the show or @shakira s ass that you were checking out? @NBCTheVoice
+14. can't wait til a bunch of pudgy suburban dads save the day with their firearms
+15. @MatthewStadlen @sajidjavid Thank you so much for your insightful thoughts- I’m sure @sajidjavid is overjoyed that you “quite like him”
+16. Synthwave communities really love pessimism don't they haha
+Any upbeat energy and people get upset at ya
+17. @ShareZone5 @StockpickB You are a right bundle of laughs to take to the pictures Draft!
+18. It’s been a blissful 2.5 hours of sleep tonight
+19. I love to pick my modules on a first come first served basis at the same time as everyone in my entire year on a website that hasn’t been updated since 1995 . Thrilling ❤️
+20. Men will literally fake an injury on the football field instead of going to therapy
+21. don't cry because it happened, smile because it's over &lt;3
+22. Happy birthday to me!! I’m 30! 😭
+23. Lil Pump is the Nelson Mandela of our generation
+24. 🌶 Spiced Coconut curry 🥥
+
+.
+A weekend spent with friends brings a week of content... or something like that 😜
+
+.
+Started the weekend off with this yummy morsel, With was a fusion of miso sesame aubergine 🍆, broccoli… https://t.co/zyWiA0EX4u
+25. ate a bagel with cream cheese earlier and the impending doom immediately vanished from my mind
+26. "You're not a normal white girl" lol ok
+27. I'm hoping my social work class party is going to involve tequila and chip and salsa 💃🍹🎉👨
+28. maybe i am a cyber bully
+29. @SkySportsBoxing if i think you would have a chance against fury i mean its easy for some broken bodied old boy to beat the best in the world
+30. virgos are leos in a vest
+31. Ahhh I get to listen to a cement mixer all day. Awesome.
+32. Uh oh Ben Simmons will also have a Steph Curry type season 76ers better not trade him now https://t.co/kkpzfcTcSH
+33. I've been doing physics for 40 minutes I think I deserve a break 😂😂😂😭 I'm never going to get it all done at this rate
+34. Gosh sunderland twitter is a fun place to be tonight isn't it. One game. One game!!!
+35. it'd be nice if missguided actually had stock for once🙂🙂🙂
+36. So nice of my family to decide that I’m hosting a Mother’s Day brunch for everyone at my house. https://t.co/DWZI9ltALK
+37. going to be running on three hours of sleep at work tonight! so excited!!!
+38. victoria has a crush on maluma
+39. fully vaxxed feeling very girlboss
+40. Oh wow, trolls really have a lot of time on there hands, jeez 🙄 they really don’t like getting banned #twitchtrolls
+41. thanks @SovietWomble for ratting my location out on stream and then embarrassing me 😂 it made my day though https://t.co/3b7Cjql2GO
+42. ima get up early tomorrow and make some tea and sit on the patio oh how I love to imagine things im never gonna do
+43. Falling asleep at your laptop is always fun
+44. too many dudes are wearing birks with socks on. grow up. get the fucking toes out man.
+45. I’ve always known #Bez is my spirit animal but seeing the mess he makes on @MasterChefUK confirms it 100% what a legend that man is
+46. I love when I learn about stuff I've apparently done and said from people😂
+47. Oh my goodness. It’s the first week of the summer holidays and Harrison has found his recorder. 
+
+Give.
+Me.
+Strength.
+48. Day 2348 in lockdown. Never in my life did I think I would utter the words "I've disinfected the chocolate". #coronalockdownuk
+49. 2 things I love:
+1. Being woken up by construction work an hour before my alarm.
+2. Sarcasm.
+
+Here is our goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.'] 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"utilizes subtle irony"
+"uses exaggerated overstatement"
+
+
+Again, here's the goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.']. Your responses are:
+- "
+Proposer model response:
+['- "employs biting sarcasm"\n- "employs dry wit"\n- "utilizes sharp irony"\n- "employs subtle satire"\n- "uses exaggerated overstatement"\n- "employs rhetorical questions"']
+Proposer Cost: $0.000964
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. virgos are leos in a vest
+1. I’ve always known #Bez is my spirit animal but seeing the mess he makes on @MasterChefUK confirms it 100% what a legend that man is
+2. Happy birthday to me!! I’m 30! 😭
+3. Day 2348 in lockdown. Never in my life did I think I would utter the words "I've disinfected the chocolate". #coronalockdownuk
+4. Falling asleep at your laptop is always fun
+5. Oh wow, trolls really have a lot of time on there hands, jeez 🙄 they really don’t like getting banned #twitchtrolls
+6. @MatthewStadlen @sajidjavid Thank you so much for your insightful thoughts- I’m sure @sajidjavid is overjoyed that you “quite like him”
+7. i love ingesting poison and then wondering why my tummy is rumbling the next morning
+8. So nice of my family to decide that I’m hosting a Mother’s Day brunch for everyone at my house. https://t.co/DWZI9ltALK
+9. For a good laugh, follow me over on @vsheltonsports to see my best attempt at covering sports business news for class this semester.
+10. Sooo... @adamlevine was that "Nice!" and double fist pump for the show or @shakira s ass that you were checking out? @NBCTheVoice
+11. I've been doing physics for 40 minutes I think I deserve a break 😂😂😂😭 I'm never going to get it all done at this rate
+12. fully vaxxed feeling very girlboss
+13. Synthwave communities really love pessimism don't they haha
+Any upbeat energy and people get upset at ya
+14. Happy birthday to me. I got pinged and can't leave the house 🥰🤡
+15. thanks @SovietWomble for ratting my location out on stream and then embarrassing me 😂 it made my day though https://t.co/3b7Cjql2GO
+16. "You're not a normal white girl" lol ok
+17. Mental shoot out ends. Silent pause. Sirens start 🚨 Always so perfectly timed 🚔🚓👍🏽 #LineOfDuty #LineofDuty6 #LOD6 #LOD
+18. it'd be nice if missguided actually had stock for once🙂🙂🙂
+19. Lil Pump is the Nelson Mandela of our generation
+20. Men will literally fake an injury on the football field instead of going to therapy
+21. going to be running on three hours of sleep at work tonight! so excited!!!
+22. victoria has a crush on maluma
+23. don't cry because it happened, smile because it's over &lt;3
+24. Yay - snow day, I can work from home - oh wait....
+25. @SkySportsBoxing if i think you would have a chance against fury i mean its easy for some broken bodied old boy to beat the best in the world
+26. Gosh sunderland twitter is a fun place to be tonight isn't it. One game. One game!!!
+27. @heathoween @tylerrjoseph Yes, because we need literally every single fucking celebrity to speak up on a topic that's been forced down everyone's throats for the past four months. I use the internet to get away from these fucking real life problems; not everyone needs to weigh in.
+28. Uh oh Ben Simmons will also have a Steph Curry type season 76ers better not trade him now https://t.co/kkpzfcTcSH
+29. only have to physically be in uni for an hour a week looool mmmm take my 9k xxxxx
+30. @Dancruz07 Sureeeeeee you do
+31. can't wait til a bunch of pudgy suburban dads save the day with their firearms
+32. 🌶 Spiced Coconut curry 🥥
+
+.
+A weekend spent with friends brings a week of content... or something like that 😜
+
+.
+Started the weekend off with this yummy morsel, With was a fusion of miso sesame aubergine 🍆, broccoli… https://t.co/zyWiA0EX4u
+33. @ShareZone5 @StockpickB You are a right bundle of laughs to take to the pictures Draft!
+34. This is awkward... @hollywills is a Diet Coke ambassador 🤯. #ThisMorning
+35. I'm hoping my social work class party is going to involve tequila and chip and salsa 💃🍹🎉👨
+36. Ahhh I get to listen to a cement mixer all day. Awesome.
+37. too many dudes are wearing birks with socks on. grow up. get the fucking toes out man.
+38. I love how men know they have a baby on the way in one month and they decide to go out and buy a brand new mustang wow
+39. I love when I learn about stuff I've apparently done and said from people😂
+40. 2 things I love:
+1. Being woken up by construction work an hour before my alarm.
+2. Sarcasm.
+41. ima get up early tomorrow and make some tea and sit on the patio oh how I love to imagine things im never gonna do
+42. ITS COMING HOOOOOME
+43. maybe i am a cyber bully
+44. I love to pick my modules on a first come first served basis at the same time as everyone in my entire year on a website that hasn’t been updated since 1995 . Thrilling ❤️
+45. ate a bagel with cream cheese earlier and the impending doom immediately vanished from my mind
+46. Oh my goodness. It’s the first week of the summer holidays and Harrison has found his recorder. 
+
+Give.
+Me.
+Strength.
+47. @cassieecote413 you can copy mine
+48. Ok, so @bytereview and I decided to record on the evening of the 6th, just as absolutely nothing newsworthy was happening! Perfect timing as always, to go over some of the best ITSBUPs of 2020 - and how we're settling into 2021! Listen: https://t.co/oaPLwrtcHP https://t.co/za3EHuqcWh
+49. It’s been a blissful 2.5 hours of sleep tonight
+
+Here is our goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.'] 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"uses exaggerated overstatement"
+"employs dry humor"
+
+
+Again, here's the goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.']. Your responses are:
+- "
+Proposer model response:
+['- "employs subtle irony"\n- "utilizes biting sarcasm"\n- "employs sharp wit"\n- "uses exaggerated overstatement"\n- "employs dry humor"\n- "employs rhetorical questions"']
+Proposer Cost: $0.000964
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. Men will literally fake an injury on the football field instead of going to therapy
+1. Yay - snow day, I can work from home - oh wait....
+2. Ahhh I get to listen to a cement mixer all day. Awesome.
+3. I’ve always known #Bez is my spirit animal but seeing the mess he makes on @MasterChefUK confirms it 100% what a legend that man is
+4. Uh oh Ben Simmons will also have a Steph Curry type season 76ers better not trade him now https://t.co/kkpzfcTcSH
+5. Lil Pump is the Nelson Mandela of our generation
+6. @cassieecote413 you can copy mine
+7. maybe i am a cyber bully
+8. Oh my goodness. It’s the first week of the summer holidays and Harrison has found his recorder. 
+
+Give.
+Me.
+Strength.
+9. Happy birthday to me. I got pinged and can't leave the house 🥰🤡
+10. Synthwave communities really love pessimism don't they haha
+Any upbeat energy and people get upset at ya
+11. 🌶 Spiced Coconut curry 🥥
+
+.
+A weekend spent with friends brings a week of content... or something like that 😜
+
+.
+Started the weekend off with this yummy morsel, With was a fusion of miso sesame aubergine 🍆, broccoli… https://t.co/zyWiA0EX4u
+12. i love ingesting poison and then wondering why my tummy is rumbling the next morning
+13. @ShareZone5 @StockpickB You are a right bundle of laughs to take to the pictures Draft!
+14. Happy birthday to me!! I’m 30! 😭
+15. Gosh sunderland twitter is a fun place to be tonight isn't it. One game. One game!!!
+16. I love to pick my modules on a first come first served basis at the same time as everyone in my entire year on a website that hasn’t been updated since 1995 . Thrilling ❤️
+17. Mental shoot out ends. Silent pause. Sirens start 🚨 Always so perfectly timed 🚔🚓👍🏽 #LineOfDuty #LineofDuty6 #LOD6 #LOD
+18. it'd be nice if missguided actually had stock for once🙂🙂🙂
+19. Ok, so @bytereview and I decided to record on the evening of the 6th, just as absolutely nothing newsworthy was happening! Perfect timing as always, to go over some of the best ITSBUPs of 2020 - and how we're settling into 2021! Listen: https://t.co/oaPLwrtcHP https://t.co/za3EHuqcWh
+20. too many dudes are wearing birks with socks on. grow up. get the fucking toes out man.
+21. Day 2348 in lockdown. Never in my life did I think I would utter the words "I've disinfected the chocolate". #coronalockdownuk
+22. @heathoween @tylerrjoseph Yes, because we need literally every single fucking celebrity to speak up on a topic that's been forced down everyone's throats for the past four months. I use the internet to get away from these fucking real life problems; not everyone needs to weigh in.
+23. virgos are leos in a vest
+24. don't cry because it happened, smile because it's over &lt;3
+25. I love when I learn about stuff I've apparently done and said from people😂
+26. @Dancruz07 Sureeeeeee you do
+27. "You're not a normal white girl" lol ok
+28. I love how men know they have a baby on the way in one month and they decide to go out and buy a brand new mustang wow
+29. victoria has a crush on maluma
+30. I've been doing physics for 40 minutes I think I deserve a break 😂😂😂😭 I'm never going to get it all done at this rate
+31. ate a bagel with cream cheese earlier and the impending doom immediately vanished from my mind
+32. It’s been a blissful 2.5 hours of sleep tonight
+33. 2 things I love:
+1. Being woken up by construction work an hour before my alarm.
+2. Sarcasm.
+34. I'm hoping my social work class party is going to involve tequila and chip and salsa 💃🍹🎉👨
+35. fully vaxxed feeling very girlboss
+36. So nice of my family to decide that I’m hosting a Mother’s Day brunch for everyone at my house. https://t.co/DWZI9ltALK
+37. Oh wow, trolls really have a lot of time on there hands, jeez 🙄 they really don’t like getting banned #twitchtrolls
+38. Sooo... @adamlevine was that "Nice!" and double fist pump for the show or @shakira s ass that you were checking out? @NBCTheVoice
+39. @MatthewStadlen @sajidjavid Thank you so much for your insightful thoughts- I’m sure @sajidjavid is overjoyed that you “quite like him”
+40. only have to physically be in uni for an hour a week looool mmmm take my 9k xxxxx
+41. This is awkward... @hollywills is a Diet Coke ambassador 🤯. #ThisMorning
+42. Falling asleep at your laptop is always fun
+43. @SkySportsBoxing if i think you would have a chance against fury i mean its easy for some broken bodied old boy to beat the best in the world
+44. For a good laugh, follow me over on @vsheltonsports to see my best attempt at covering sports business news for class this semester.
+45. thanks @SovietWomble for ratting my location out on stream and then embarrassing me 😂 it made my day though https://t.co/3b7Cjql2GO
+46. ITS COMING HOOOOOME
+47. can't wait til a bunch of pudgy suburban dads save the day with their firearms
+48. going to be running on three hours of sleep at work tonight! so excited!!!
+49. ima get up early tomorrow and make some tea and sit on the patio oh how I love to imagine things im never gonna do
+
+Here is our goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.'] 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"employs sharp wit"
+"- "employs biting sarcasm"
+
+
+Again, here's the goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.']. Your responses are:
+- "
+Proposer model response:
+['- "employs biting sarcasm"\n- "contains subtle irony"\n- "utilizes rhetorical questions"\n- "employs exaggerated overstatement"\n- "displays dry understatement"\n- "employs satirical humor"']
+Proposer Cost: $0.000968
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. 🌶 Spiced Coconut curry 🥥
+
+.
+A weekend spent with friends brings a week of content... or something like that 😜
+
+.
+Started the weekend off with this yummy morsel, With was a fusion of miso sesame aubergine 🍆, broccoli… https://t.co/zyWiA0EX4u
+1. @cassieecote413 you can copy mine
+2. @heathoween @tylerrjoseph Yes, because we need literally every single fucking celebrity to speak up on a topic that's been forced down everyone's throats for the past four months. I use the internet to get away from these fucking real life problems; not everyone needs to weigh in.
+3. Oh wow, trolls really have a lot of time on there hands, jeez 🙄 they really don’t like getting banned #twitchtrolls
+4. Sooo... @adamlevine was that "Nice!" and double fist pump for the show or @shakira s ass that you were checking out? @NBCTheVoice
+5. only have to physically be in uni for an hour a week looool mmmm take my 9k xxxxx
+6. it'd be nice if missguided actually had stock for once🙂🙂🙂
+7. Mental shoot out ends. Silent pause. Sirens start 🚨 Always so perfectly timed 🚔🚓👍🏽 #LineOfDuty #LineofDuty6 #LOD6 #LOD
+8. Synthwave communities really love pessimism don't they haha
+Any upbeat energy and people get upset at ya
+9. Oh my goodness. It’s the first week of the summer holidays and Harrison has found his recorder. 
+
+Give.
+Me.
+Strength.
+10. I love how men know they have a baby on the way in one month and they decide to go out and buy a brand new mustang wow
+11. going to be running on three hours of sleep at work tonight! so excited!!!
+12. victoria has a crush on maluma
+13. Uh oh Ben Simmons will also have a Steph Curry type season 76ers better not trade him now https://t.co/kkpzfcTcSH
+14. Yay - snow day, I can work from home - oh wait....
+15. I'm hoping my social work class party is going to involve tequila and chip and salsa 💃🍹🎉👨
+16. I love to pick my modules on a first come first served basis at the same time as everyone in my entire year on a website that hasn’t been updated since 1995 . Thrilling ❤️
+17. Falling asleep at your laptop is always fun
+18. For a good laugh, follow me over on @vsheltonsports to see my best attempt at covering sports business news for class this semester.
+19. Men will literally fake an injury on the football field instead of going to therapy
+20. @ShareZone5 @StockpickB You are a right bundle of laughs to take to the pictures Draft!
+21. thanks @SovietWomble for ratting my location out on stream and then embarrassing me 😂 it made my day though https://t.co/3b7Cjql2GO
+22. i love ingesting poison and then wondering why my tummy is rumbling the next morning
+23. @MatthewStadlen @sajidjavid Thank you so much for your insightful thoughts- I’m sure @sajidjavid is overjoyed that you “quite like him”
+24. Ok, so @bytereview and I decided to record on the evening of the 6th, just as absolutely nothing newsworthy was happening! Perfect timing as always, to go over some of the best ITSBUPs of 2020 - and how we're settling into 2021! Listen: https://t.co/oaPLwrtcHP https://t.co/za3EHuqcWh
+25. virgos are leos in a vest
+26. fully vaxxed feeling very girlboss
+27. too many dudes are wearing birks with socks on. grow up. get the fucking toes out man.
+28. Day 2348 in lockdown. Never in my life did I think I would utter the words "I've disinfected the chocolate". #coronalockdownuk
+29. Happy birthday to me!! I’m 30! 😭
+30. @SkySportsBoxing if i think you would have a chance against fury i mean its easy for some broken bodied old boy to beat the best in the world
+31. I love when I learn about stuff I've apparently done and said from people😂
+32. Gosh sunderland twitter is a fun place to be tonight isn't it. One game. One game!!!
+33. @Dancruz07 Sureeeeeee you do
+34. ITS COMING HOOOOOME
+35. Lil Pump is the Nelson Mandela of our generation
+36. don't cry because it happened, smile because it's over &lt;3
+37. Happy birthday to me. I got pinged and can't leave the house 🥰🤡
+38. 2 things I love:
+1. Being woken up by construction work an hour before my alarm.
+2. Sarcasm.
+39. maybe i am a cyber bully
+40. So nice of my family to decide that I’m hosting a Mother’s Day brunch for everyone at my house. https://t.co/DWZI9ltALK
+41. ate a bagel with cream cheese earlier and the impending doom immediately vanished from my mind
+42. I’ve always known #Bez is my spirit animal but seeing the mess he makes on @MasterChefUK confirms it 100% what a legend that man is
+43. It’s been a blissful 2.5 hours of sleep tonight
+44. ima get up early tomorrow and make some tea and sit on the patio oh how I love to imagine things im never gonna do
+45. I've been doing physics for 40 minutes I think I deserve a break 😂😂😂😭 I'm never going to get it all done at this rate
+46. Ahhh I get to listen to a cement mixer all day. Awesome.
+47. can't wait til a bunch of pudgy suburban dads save the day with their firearms
+48. This is awkward... @hollywills is a Diet Coke ambassador 🤯. #ThisMorning
+49. "You're not a normal white girl" lol ok
+
+Here is our goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.'] 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"utilizes subtle irony"
+"employs dry humor"
+
+
+Again, here's the goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.']. Your responses are:
+- "
+Proposer model response:
+['- "employs biting sarcasm"\n- "utilizes sharp wit"\n- "employs exaggerated overstatement"\n- "uses subtle irony"\n- "employs dry humor"\n- "utilizes rhetorical questions"']
+Proposer Cost: $0.000964
+Running the proposer model...
+In this task you will need to come up with categories to group the text together based on a goal, where each category can be described with a natural language predicate. For example
+
+0. How are you doing?
+1. How do I apply for visa?
+2. Isn't it ridiculous?
+3. How to get there by bus?
+4. How is it going?
+5. Aren't technological advancement good for the humanity?
+
+Here is our goal: I want to cluster the questions based on their functionalities. Your responses are:
+- "is a rhetorical quesiton"
+- "is meant for greetings"
+- "is asking for practically useful information"
+
+(note that all of them need to be natural language predicates that can be validated on the given samples)
+
+Here are some texts:
+
+0. can't wait til a bunch of pudgy suburban dads save the day with their firearms
+1. Synthwave communities really love pessimism don't they haha
+Any upbeat energy and people get upset at ya
+2. "You're not a normal white girl" lol ok
+3. don't cry because it happened, smile because it's over &lt;3
+4. Gosh sunderland twitter is a fun place to be tonight isn't it. One game. One game!!!
+5. Uh oh Ben Simmons will also have a Steph Curry type season 76ers better not trade him now https://t.co/kkpzfcTcSH
+6. Yay - snow day, I can work from home - oh wait....
+7. ITS COMING HOOOOOME
+8. For a good laugh, follow me over on @vsheltonsports to see my best attempt at covering sports business news for class this semester.
+9. going to be running on three hours of sleep at work tonight! so excited!!!
+10. victoria has a crush on maluma
+11. @heathoween @tylerrjoseph Yes, because we need literally every single fucking celebrity to speak up on a topic that's been forced down everyone's throats for the past four months. I use the internet to get away from these fucking real life problems; not everyone needs to weigh in.
+12. i love ingesting poison and then wondering why my tummy is rumbling the next morning
+13. So nice of my family to decide that I’m hosting a Mother’s Day brunch for everyone at my house. https://t.co/DWZI9ltALK
+14. Ahhh I get to listen to a cement mixer all day. Awesome.
+15. Men will literally fake an injury on the football field instead of going to therapy
+16. Happy birthday to me!! I’m 30! 😭
+17. This is awkward... @hollywills is a Diet Coke ambassador 🤯. #ThisMorning
+18. I love how men know they have a baby on the way in one month and they decide to go out and buy a brand new mustang wow
+19. ate a bagel with cream cheese earlier and the impending doom immediately vanished from my mind
+20. I love to pick my modules on a first come first served basis at the same time as everyone in my entire year on a website that hasn’t been updated since 1995 . Thrilling ❤️
+21. thanks @SovietWomble for ratting my location out on stream and then embarrassing me 😂 it made my day though https://t.co/3b7Cjql2GO
+22. Falling asleep at your laptop is always fun
+23. Oh wow, trolls really have a lot of time on there hands, jeez 🙄 they really don’t like getting banned #twitchtrolls
+24. fully vaxxed feeling very girlboss
+25. @MatthewStadlen @sajidjavid Thank you so much for your insightful thoughts- I’m sure @sajidjavid is overjoyed that you “quite like him”
+26. Lil Pump is the Nelson Mandela of our generation
+27. Day 2348 in lockdown. Never in my life did I think I would utter the words "I've disinfected the chocolate". #coronalockdownuk
+28. maybe i am a cyber bully
+29. I’ve always known #Bez is my spirit animal but seeing the mess he makes on @MasterChefUK confirms it 100% what a legend that man is
+30. virgos are leos in a vest
+31. it'd be nice if missguided actually had stock for once🙂🙂🙂
+32. Happy birthday to me. I got pinged and can't leave the house 🥰🤡
+33. Sooo... @adamlevine was that "Nice!" and double fist pump for the show or @shakira s ass that you were checking out? @NBCTheVoice
+34. I love when I learn about stuff I've apparently done and said from people😂
+35. Oh my goodness. It’s the first week of the summer holidays and Harrison has found his recorder. 
+
+Give.
+Me.
+Strength.
+36. @Dancruz07 Sureeeeeee you do
+37. too many dudes are wearing birks with socks on. grow up. get the fucking toes out man.
+38. Mental shoot out ends. Silent pause. Sirens start 🚨 Always so perfectly timed 🚔🚓👍🏽 #LineOfDuty #LineofDuty6 #LOD6 #LOD
+39. @cassieecote413 you can copy mine
+40. It’s been a blissful 2.5 hours of sleep tonight
+41. @ShareZone5 @StockpickB You are a right bundle of laughs to take to the pictures Draft!
+42. ima get up early tomorrow and make some tea and sit on the patio oh how I love to imagine things im never gonna do
+43. I'm hoping my social work class party is going to involve tequila and chip and salsa 💃🍹🎉👨
+44. Ok, so @bytereview and I decided to record on the evening of the 6th, just as absolutely nothing newsworthy was happening! Perfect timing as always, to go over some of the best ITSBUPs of 2020 - and how we're settling into 2021! Listen: https://t.co/oaPLwrtcHP https://t.co/za3EHuqcWh
+45. 2 things I love:
+1. Being woken up by construction work an hour before my alarm.
+2. Sarcasm.
+46. 🌶 Spiced Coconut curry 🥥
+
+.
+A weekend spent with friends brings a week of content... or something like that 😜
+
+.
+Started the weekend off with this yummy morsel, With was a fusion of miso sesame aubergine 🍆, broccoli… https://t.co/zyWiA0EX4u
+47. I've been doing physics for 40 minutes I think I deserve a break 😂😂😂😭 I'm never going to get it all done at this rate
+48. only have to physically be in uni for an hour a week looool mmmm take my 9k xxxxx
+49. @SkySportsBoxing if i think you would have a chance against fury i mean its easy for some broken bodied old boy to beat the best in the world
+
+Here is our goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.'] 
+Please suggest me a few descriptions, one in a line, starting with "-" and surrounded by quotes"". In terms of formatting, each of them needs to be a predicate about a text, for example:
+- "uses double negation"
+- "has a conservative stance"
+
+Do not output anything else. (Note that the examples might not be goal related, and your response should be both formatted correct as above and related to the goal.)
+Here are some example predicates; the generated predicates should have a similar granularity and perspective:
+
+"- "employs biting sarcasm"
+"employs dry humor"
+
+
+Again, here's the goal: ['Represent the fine-grained sarcastic emotions for clustering, for example, sarcasm, irony, satire, understatement, overstatement, rhetorical_question. Please cluster them into 6 groups, with each group containing at least 3 items.']. Your responses are:
+- "
+Proposer model response:
+['- "employs sarcastic understatement"\n- "uses biting irony"\n- "employs satirical humor"\n- "employs rhetorical questions for sarcasm"\n- "employs exaggerated overstatement"\n- "uses dry wit for sarcasm"']
+Proposer Cost: $0.000975
+48 descriptions proposed in total. Here are the descriptions:
+employs overstatement for effect
+employs sharp satire
+uses subtle irony
+employs clever understatement
+delivers subtle irony
+employs subtle satire
+utilizes rhetorical questions
+delivers sharp satire
+utilizes understated irony
+utilizes dry irony
+utilizes subtle irony
+exaggerates for effect
+- "employs subtle sarcasm
+uses exaggerated overstatement
+employs exaggerated satire
+poses rhetorical questions
+employs rhetorical questions
+employs witty understatement
+uses exaggerated understatement
+utilizes sharp satire
+includes rhetorical questions
+employs understated humor
+- "employs biting sarcasm
+uses exaggerated satire
+employs subtle irony
+employs sharp wit
+utilizes dry wit
+utilizes biting irony
+employs dry humor
+employs exaggerated overstatement
+utilizes biting sarcasm
+uses witty satire
+employs rhetorical questions for sarcasm
+displays dry understatement
+- "employs sarcastic understatement
+utilizes sharp wit
+uses biting irony
+employs dry wit
+utilizes sharp irony
+- "employs subtle irony
+employs satirical humor
+employs sharp rhetorical questions
+uses dry wit for sarcasm
+employs witty satire
+displays sharp satire
+contains subtle irony
+uses clever understatement
+utilizes exaggerated overstatement
+GPTAssigner Cost 0.6409035000000075 $
+Stage Assign assign
+Assigned all recall: 0.9097472924187726
+Assigned all precision: 0.03306878306878307
+Assigned description: employs overstatement for effect. recall: 0.4825511432009627 precision: 0.0024937655860349127
+Assigned description: employs sharp satire. recall: 0.28399518652226236 precision: 0.0
+Assigned description: uses subtle irony. recall: 0.3200962695547533 precision: 0.0
+Assigned description: employs clever understatement. recall: 0.18531889290012032 precision: 0.0
+Assigned description: delivers subtle irony. recall: 0.26714801444043323 precision: 0.0
+Assigned description: employs subtle satire. recall: 0.27918170878459686 precision: 0.0
+Assigned description: utilizes rhetorical questions. recall: 0.3345367027677497 precision: 0.0
+Assigned description: delivers sharp satire. recall: 0.19975932611311673 precision: 0.0
+Assigned description: utilizes understated irony. recall: 0.18050541516245489 precision: 0.0
+Assigned description: utilizes dry irony. recall: 0.22623345367027678 precision: 0.0
+Assigned description: utilizes subtle irony. recall: 0.18892900120336945 precision: 0.0
+Assigned description: exaggerates for effect. recall: 0.7015643802647413 precision: 0.0137221269296741
+Assigned description: - "employs subtle sarcasm. recall: 0.11311672683513839 precision: 0.0
+Assigned description: uses exaggerated overstatement. recall: 0.7196149217809867 precision: 0.008361204013377926
+Assigned description: employs exaggerated satire. recall: 0.5030084235860409 precision: 0.0023923444976076554
+Assigned description: poses rhetorical questions. recall: 0.470517448856799 precision: 0.0025575447570332483
+Assigned description: employs rhetorical questions. recall: 0.4620938628158845 precision: 0.0
+Assigned description: employs witty understatement. recall: 0.3164861612515042 precision: 0.0
+Assigned description: uses exaggerated understatement. recall: 0.4139590854392298 precision: 0.005813953488372093
+Assigned description: utilizes sharp satire. recall: 0.14199759326113118 precision: 0.0
+Assigned description: includes rhetorical questions. recall: 0.49578820697954273 precision: 0.0
+Assigned description: employs understated humor. recall: 0.21058965102286403 precision: 0.0
+Assigned description: - "employs biting sarcasm. recall: 0.04091456077015644 precision: 0.0
+Assigned description: uses exaggerated satire. recall: 0.45126353790613716 precision: 0.0026666666666666666
+Assigned description: employs subtle irony. recall: 0.22623345367027678 precision: 0.0
+Assigned description: employs sharp wit. recall: 0.07942238267148015 precision: 0.0
+Assigned description: utilizes dry wit. recall: 0.07460890493381468 precision: 0.0
+Assigned description: utilizes biting irony. recall: 0.18170878459687123 precision: 0.0
+Assigned description: employs dry humor. recall: 0.27075812274368233 precision: 0.0
+Assigned description: employs exaggerated overstatement. recall: 0.6558363417569194 precision: 0.001834862385321101
+Assigned description: utilizes biting sarcasm. recall: 0.3164861612515042 precision: 0.0038022813688212928
+Assigned description: uses witty satire. recall: 0.1444043321299639 precision: 0.0
+Assigned description: employs rhetorical questions for sarcasm. recall: 0.46329723225030084 precision: 0.0025974025974025974
+Assigned description: displays dry understatement. recall: 0.15403128760529483 precision: 0.0078125
+Assigned description: - "employs sarcastic understatement. recall: 0.2779783393501805 precision: 0.0
+Assigned description: utilizes sharp wit. recall: 0.036101083032490974 precision: 0.0
+Assigned description: uses biting irony. recall: 0.2972322503008424 precision: 0.0
+Assigned description: employs dry wit. recall: 0.10469314079422383 precision: 0.0
+Assigned description: utilizes sharp irony. recall: 0.2888086642599278 precision: 0.0
+Assigned description: - "employs subtle irony. recall: 0.07460890493381468 precision: 0.0
+Assigned description: employs satirical humor. recall: 0.3658243080625752 precision: 0.0
+Assigned description: employs sharp rhetorical questions. recall: 0.246690734055355 precision: 0.0
+Assigned description: uses dry wit for sarcasm. recall: 0.19855595667870035 precision: 0.0
+Assigned description: employs witty satire. recall: 0.2563176895306859 precision: 0.0
+Assigned description: displays sharp satire. recall: 0.20216606498194944 precision: 0.0
+Assigned description: contains subtle irony. recall: 0.5282791817087846 precision: 0.002277904328018223
+Assigned description: uses clever understatement. recall: 0.20336943441636582 precision: 0.0
+Assigned description: utilizes exaggerated overstatement. recall: 0.7244283995186522 precision: 0.0016611295681063123
+Dropping 13 descriptions because they are too popular or too unpopular:
+Stage select select
+Unmatched count: 417
+Description: utilizes rhetorical questions. Count: 278
+Description: employs witty understatement. Count: 136
+Clustering results saved at:  experiments/sarcasm/2025-12-05-14-56-08
