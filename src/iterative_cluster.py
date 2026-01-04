@@ -140,7 +140,12 @@ def estimate_cost_for_clustering(
         final_assignment_cost = estimate_querying_cost(
             assigner_one_prompt_tokens, assigner_one_completion_tokens, assigner_name
         ) or 0.0
-        final_assignment_cost *= cluster_num_clusters * len(problem.texts)
+        num_clusters_to_assign = (
+            cluster_num_clusters
+            if cluster_num_clusters is not None
+            else proposer_num_descriptions_to_propose
+        )
+        final_assignment_cost *= num_clusters_to_assign * len(problem.texts)
 
     total = (
         proposer_cost_per_iteration + assigner_cost_per_iteration
