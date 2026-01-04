@@ -45,8 +45,8 @@ def test_baseline():
         taxonomy = depth2_clustering(
             problem=problem,
             problem_id=999,
-            proposer_model="gpt-oss:20b", # Will use OuterMedusaLLM
-            assigner_name="gpt-oss:20b",  # Will use OuterMedusaLLM
+            proposer_model="gpt-oss-20b", # Will use OuterMedusaLLM
+            assigner_name="gpt-oss-20b",  # Will use OuterMedusaLLM
             num_clusters=2,
             overlap_penalty=0.1,
             not_cover_penalty=0.5,
