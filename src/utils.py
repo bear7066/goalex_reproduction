@@ -22,9 +22,11 @@ class OuterMedusaLLM:
         self.cum_prompt_tokens = 0
         self.cum_completion_tokens = 0
 
-        from dotenv import load_dotenv
-
-        load_dotenv()
+        try:
+            from dotenv import load_dotenv
+            load_dotenv()
+        except ImportError:
+            pass
         self.OUTER_MEDUSA_ENDPOINT = os.environ.get("OUTER_MEDUSA_ENDPOINT", "")
         self.OUTER_MEDUSA_API_KEY = os.environ.get("OUTER_MEDUSA_API_KEY", "")
 
