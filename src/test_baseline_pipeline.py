@@ -9,6 +9,9 @@ sys.path.append(os.path.join(os.path.dirname(__file__), "."))
 from cluster_problem import ClusterProblem as Problem
 from recursive_cluster import depth2_clustering
 from utils import OuterMedusaLLM
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def test_baseline():
     print("Setting up baseline test...")

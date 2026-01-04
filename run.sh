@@ -19,4 +19,4 @@ python src/iterative_cluster.py \
 
 python src/evaluate_only.py \
   --data_path processed_data/$DATASET \
-  --exp_dir experiments/$DATASET
+  --exp_dir experiments/score/$DATASET
