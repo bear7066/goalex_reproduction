@@ -56,7 +56,7 @@ def cluster_subtree(
     num_clusters: int
         The number of clusters to cluster the texts into.
     overlap_penalty: float
-        The penalty for overlapping clusters. \lambda in the paper.
+        The penalty for overlapping clusters. \\lambda in the paper.
     not_cover_penalty: float
         The penalty for not covering all the texts. by default 1
     random_seed: int
@@ -148,7 +148,7 @@ def depth2_clustering(
     num_clusters: int
         The number of clusters to cluster the texts into.
     overlap_penalty: float
-        The penalty for overlapping clusters. \lambda in the paper.
+        The penalty for overlapping clusters. \\lambda in the paper.
     not_cover_penalty: float
         The penalty for not covering all the texts. by default 1
     random_seed: int
