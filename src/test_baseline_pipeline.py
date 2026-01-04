@@ -56,8 +56,13 @@ def test_baseline():
         )
         
         print("\nClustering completed successfully!")
+        result_dict = taxonomy.to_dict()
         print("Resulting Taxonomy:")
-        print(json.dumps(taxonomy.to_dict(), indent=2))
+        print(json.dumps(result_dict, indent=2))
+        
+        with open("baseline_results.json", "w") as f:
+            json.dump(result_dict, f, indent=2)
+        print("\nResults saved to baseline_results.json")
         
     except Exception as e:
         print(f"\nExecution failed: {e}")

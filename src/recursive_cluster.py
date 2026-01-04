@@ -173,6 +173,7 @@ def depth2_clustering(
         not_cover_penalty=not_cover_penalty,
         random_seed=random_seed,
         iterative_max_rounds=iterative_max_rounds,
+        minimal_size=minimal_size,
     )
     print_taxonomy(root_taxonomy)
 
