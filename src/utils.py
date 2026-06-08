@@ -18,77 +18,67 @@ import os
 
 class OuterMedusaLLM:
     def __init__(self, model="gpt-oss-20b"):
-        self.model = model
+        # Map model name to OpenRouter ID if necessary
+        self.model = self._map_model(model)
         self.cum_prompt_tokens = 0
         self.cum_completion_tokens = 0
 
         try:
-            try:
-                from dotenv import load_dotenv
-                load_dotenv()
-            except ImportError:
-                pass
+            from dotenv import load_dotenv
+            load_dotenv()
         except ImportError:
             pass
+
+        self.OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
         self.OUTER_MEDUSA_ENDPOINT = os.environ.get("OUTER_MEDUSA_ENDPOINT", "")
         self.OUTER_MEDUSA_API_KEY = os.environ.get("OUTER_MEDUSA_API_KEY", "")
 
-        if self.OUTER_MEDUSA_ENDPOINT == "":
-            raise ValueError("OUTER_MEDUSA_CLIENT is not set")
-        if self.OUTER_MEDUSA_API_KEY == "":
-            raise ValueError("OUTER_MEDUSA_API_KEY is not set")
-
-        # Parse and extract host[:port] from OUTER_MEDUSA_ENDPOINT if it is a URL
-        from urllib.parse import urlparse
-
-        parsed_endpoint = urlparse(
-            self.OUTER_MEDUSA_ENDPOINT
-            if self.OUTER_MEDUSA_ENDPOINT.startswith("http")
-            else "https://" + self.OUTER_MEDUSA_ENDPOINT
-        )
-        host = (
-            parsed_endpoint.netloc if parsed_endpoint.netloc else parsed_endpoint.path
-        )
-        # Remove any trailing slashes from host
-        self.host = host.rstrip("/")
+        if self.OPENROUTER_API_KEY:
+            self.is_openrouter = True
+            self.host = "openrouter.ai"
+            print(f"Using OpenRouter with model {self.model}")
+        elif self.OUTER_MEDUSA_ENDPOINT:
+            self.is_openrouter = False
+            from urllib.parse import urlparse
+            parsed_endpoint = urlparse(
+                self.OUTER_MEDUSA_ENDPOINT
+                if self.OUTER_MEDUSA_ENDPOINT.startswith("http")
+                else "https://" + self.OUTER_MEDUSA_ENDPOINT
+            )
+            host = (
+                parsed_endpoint.netloc if parsed_endpoint.netloc else parsed_endpoint.path
+            )
+            self.host = host.rstrip("/")
+            print(f"Connected to Outer Medusa client at {self.OUTER_MEDUSA_ENDPOINT}")
+        else:
+            raise ValueError("Neither OPENROUTER_API_KEY nor OUTER_MEDUSA_ENDPOINT is set")
 
         conn = self._get_connection()
         try:
+            path = "/api/v1/models" if self.is_openrouter else "/v1/models"
             response, response_data = self._get_response(
                 conn,
                 "GET",
-                "/v1/models",
+                path,
             )
             if response.status != 200:
                 raise ValueError(
                     f"Request failed: {response.status} {response.reason} - {response_data}"
                 )
-
         finally:
             conn.close()
 
-        print(f"Connected to Outer Medusa client at {self.OUTER_MEDUSA_ENDPOINT}")
+    def _map_model(self, model: str) -> str:
+        mapping = {
+            "oss20b": "openai/gpt-oss-20b",
+            "oss120b": "openai/gpt-oss-120b",
+            "gpt-oss:20b": "openai/gpt-oss-20b",
+            "gpt-oss-20b": "openai/gpt-oss-20b",
+        }
+        return mapping.get(model, model)
 
     def change_model(self, model: str):
-        import json
-
-        conn = self._get_connection()
-        try:
-            response, response_data = self._get_response(conn, "GET", "/v1/models")
-            if response.status != 200:
-                raise ValueError(
-                    f"Request failed: {response.status} {response.reason} - {response_data}"
-                )
-        finally:
-            conn.close()
-
-        data = json.loads(response_data)
-        models = data.get("data", [])
-        if model in [m["id"] for m in models]:
-            self.model = model
-            return
-        else:
-            raise ValueError(f"Model {model} not found in available models")
+        self.model = self._map_model(model)
 
     def __str__(self):
         return f"OuterMedusaLLM(model={self.model})"
@@ -98,10 +88,15 @@ class OuterMedusaLLM:
 
     def _get_response(self, conn, method, path, headers=None, body=None):
         if headers is None:
+            api_key = self.OPENROUTER_API_KEY if self.is_openrouter else self.OUTER_MEDUSA_API_KEY
             headers = {
-                "Authorization": f"Bearer {self.OUTER_MEDUSA_API_KEY}",
+                "Authorization": f"Bearer {api_key}",
                 "Content-Type": "application/json",
             }
+            if self.is_openrouter:
+                headers["HTTP-Referer"] = "https://github.com/goalex-reproduction" # Optional
+                headers["X-Title"] = "Goalex Reproduction" # Optional
+                
         conn.request(method, path, body=body, headers=headers)
         response = conn.getresponse()
         response_data = response.read().decode()
@@ -110,7 +105,7 @@ class OuterMedusaLLM:
     def generate(self, prompt: str, sys_prompt: str | None = None):
         import json
 
-        path = "/v1/chat/completions"
+        path = "/api/v1/chat/completions" if self.is_openrouter else "/v1/chat/completions"
         payload = {"model": self.model, "messages": []}
         if sys_prompt:
             payload["messages"].append({"role": "system", "content": sys_prompt})
@@ -131,8 +126,9 @@ class OuterMedusaLLM:
             data = json.loads(response_data)
             # Response shape: { "choices": [{ "message": { "content": ... } }], "usage": {"prompt_tokens": ..., "completion_tokens": ... } }
             content = data.get("choices", [{}])[0].get("message", {}).get("content", "")
-            prompt_eval_count = data.get("usage", {}).get("prompt_tokens", 0)
-            eval_count = data.get("usage", {}).get("completion_tokens", 0)
+            usage = data.get("usage", {})
+            prompt_eval_count = usage.get("prompt_tokens", usage.get("input_tokens", 0))
+            eval_count = usage.get("completion_tokens", usage.get("output_tokens", 0))
 
             # Update cumulative token counts
             self.cum_prompt_tokens += prompt_eval_count
@@ -229,9 +225,14 @@ def estimate_querying_cost(
     elif model.startswith("text-davinci-"):
         cost_per_prompt_token = 0.02 / 1000
         cost_per_completion_token = 0.02 / 1000
-    elif model in ["gpt-oss:20b", "gpt-oss-20b"]:
-        cost_per_prompt_token = 0
-        cost_per_completion_token = 0
+    elif model in ["openai/gpt-oss-20b", "gpt-oss:20b", "gpt-oss-20b"]:
+        # OpenRouter pricing approx $0.029 / 1M input, $0.14 / 1M output
+        cost_per_prompt_token = 0.029 / 1000000
+        cost_per_completion_token = 0.14 / 1000000
+    elif model in ["openai/gpt-oss-120b"]:
+        # OpenRouter pricing approx $0.039 / 1M input, $0.18 / 1M output
+        cost_per_prompt_token = 0.039 / 1000000
+        cost_per_completion_token = 0.18 / 1000000
     else:
         # Defaults for unknown models or assume 0
         cost_per_prompt_token = 0
@@ -497,8 +498,10 @@ def get_context_length(model: str) -> int:
         return 32000
     elif model == "gpt-3.5-turbo":
         return 4096
-    elif model in ["gpt-oss:20b", "gpt-oss-20b"]:
-        return 2048
+    elif "gpt-oss-120b" in model or "oss120b" in model:
+        return 131072
+    elif "gpt-oss" in model or "oss20b" in model:
+        return 131072
     else:
         raise ValueError(f"Unknown model {model}")
 

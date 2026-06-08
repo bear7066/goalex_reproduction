@@ -10,11 +10,13 @@ DATASET=$1
   python src/iterative_cluster.py \
     --data_path processed_data/$DATASET \
     --exp_dir experiments/$DATASET \
-    --proposer_model gpt-oss-20b \
-    --assigner_name gpt-oss-20b \
+    --proposer_model oss120b \
+    --assigner_name oss20b \
+
     --proposer_num_descriptions_to_propose 30 \
     --assigner_for_final_assignment_template templates/t5_multi_assigner_one_output.txt \
     --iterative_max_rounds 2 \
+    --turn_off_approval_before_running \
     --verbose
     
   python src/evaluate_only.py \

@@ -382,11 +382,14 @@ class GPTAssigner(Assigner):
         self, template: str, assigner_inputs: List[AssignerInput]
     ) -> List[float]:
         prompts = create_prompt_inputs_for_single_assigner(template, assigner_inputs)
-        if self.model in ("gpt-4", "gpt-3.5-turbo", "gpt-oss:20b", "gpt-oss-20b"):
+        if self.model in ("gpt-4", "gpt-3.5-turbo", "gpt-oss:20b", "gpt-oss-20b") or "gpt-oss" in self.model or "oss120b" in self.model or "oss20b" in self.model:
             chat_gpt = ChatGPTWrapperWithCost()
             for prompt in prompts:
                 response = chat_gpt(prompt=prompt, model=self.model, temperature=0.0)
-                yield 1 if "yes" in response[0].lower() else 0
+                if response is None:
+                    yield 0
+                else:
+                    yield 1 if "yes" in response[0].lower() else 0
             if self.verbose:
                 print("GPTAssigner Cost", chat_gpt.cost, "$")
         elif self.model.startswith("text-davinci"):
@@ -412,11 +415,14 @@ class GPTAssigner(Assigner):
         prompts = create_prompt_inputs_for_multi_assigner(
             template, assigner_inputs, add_null_description
         )
-        if self.model in ("gpt-4", "gpt-3.5-turbo", "gpt-oss:20b", "gpt-oss-20b"):
+        if self.model in ("gpt-4", "gpt-3.5-turbo", "gpt-oss:20b", "gpt-oss-20b") or "gpt-oss" in self.model or "oss120b" in self.model or "oss20b" in self.model:
             chat_gpt = ChatGPTWrapperWithCost()
             for prompt in prompts:
                 responses = chat_gpt(prompt=prompt, model=self.model, temperature=0.0)
-                yield parse_mutli_assigner_output(responses[0], num_descriptions)
+                if responses is None:
+                    yield [0] * num_descriptions
+                else:
+                    yield parse_mutli_assigner_output(responses[0], num_descriptions)
             if self.verbose:
                 print("GPTSingleAssigner Cost", chat_gpt.cost, "$")
         elif self.model.startswith("text-davinci"):
@@ -506,8 +512,8 @@ def assign_descriptions(
 
 
 def get_assigner(assigner_name, verbose=False, **kwargs):
-    gpt_assigner_names = ["gpt-4", "gpt-3.5-turbo", "gpt-oss:20b", "gpt-oss-20b"]
-    if assigner_name in gpt_assigner_names:
+    gpt_assigner_names = ["gpt-4", "gpt-3.5-turbo", "gpt-oss:20b", "gpt-oss-20b", "oss20b", "oss120b"]
+    if assigner_name in gpt_assigner_names or "gpt-oss" in assigner_name:
         return GPTAssigner(assigner_name, verbose=verbose, **kwargs)
     else:
         return T5Assigner(assigner_name, verbose=verbose, **kwargs)
